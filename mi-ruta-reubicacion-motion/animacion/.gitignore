@@ -1,0 +1,8 @@
+frames/
+muestras/
+bg/
+mezcla.wav
+_tmp_*.wav
+render.log
+encode.log
+__pycache__/

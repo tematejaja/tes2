@@ -973,3 +973,20 @@ Ejecutada con Google Cloud TTS el 12 de octubre de 2026, sobre los SSML del Anex
 **Calibración final (Neural2-A, `speakingRate` 0,95):** 176,8 s de audio, tasa efectiva 2,72 p/s, **duración proyectada 3:16,6**. Cumple el mínimo de 2,3 p/s y la banda 3:10–3:50, y queda dentro del límite obligatorio de 2:00–4:00. **Puerta G1 superada en lo que respecta a la duración.**
 
 Los audios `narracion/wav/*_v01.wav` y sus marcas `narracion/timepoints/*_v01.json` son el borrador de narración (voz sintética). Los archivos `casting_*` sirven para la escucha a ciegas de §8.2: la elección definitiva de la voz es una decisión humana.
+
+## Anexo G · Primera versión producida (v1 del video)
+
+Archivo: `render/mi_ruta_reubicacion_v1.mp4` (1920×1080, 24 fps, H.264 + AAC). **Duración 3:16,6** (196,6 s), dentro del límite de 2:00–4:00. Sonoridad medida −13,9 LUFS integrados. Subtítulos en `subtitulos/mi_ruta_es.srt` y `.vtt` (53 cuadros). Código de las escenas y del render en `animacion/` (ver `animacion/LEEME.md`).
+
+**Qué cumple del plan:** los 12 bloques (E0–E2, C1–C6, E9, créditos) sincronizados con las marcas reales de la voz; rótulos obligatorios de §2.3; ficha continua con responsable visible; mesa colectiva y espacio privado separados; hoja de devolución; alerta con cierre comprobado; "Preparación entregada" distinto del traslado; 350 puntos neutros sin proporciones; tres sistemas de estado separados; subtítulos como capa propia; voz sintética declarada en E1 y en créditos.
+
+**Decisiones y desviaciones de esta v1 (para revisar):**
+| Tema | Decisión en la v1 |
+| --- | --- |
+| Personajes | Ilustración vectorial plana y muy simplificada, hecha por código; no hay animación de personajes con rig (§12.1). Sirve como versión base/animatic de alta fidelidad en textos, tiempos y estructura. |
+| Tipografía | Inter en todo el video (Atkinson Hyperlegible no estaba disponible en el entorno de producción). |
+| Música y efectos | Pad ambiental y efectos suaves sintetizados para este video (producción propia, sin licencias externas). Sustituible por una pieza musical elegida por el equipo. |
+| Video de ubicación | Rótulos quemados tapados con rótulos propios; coordenadas y dirección de Street View eliminadas; personas de la toma de calle **difuminadas** (incluida la niña); atribuciones de Esri y de Google visibles. Falta verificar las condiciones de uso de Google y Esri (§10.2) antes de publicar. |
+| Voz | `es-US-Neural2-A`, velocidad 0,95. Decisión final de voz pendiente de escucha a ciegas (§8.2). |
+| Créditos | "Equipo del proyecto · DGIP 2026": sustituir por los nombres reales. |
+| Validación | **No se ha hecho** la puerta G2b (revisión con delegados comunitarios) ni la prueba de comprensión del Anexo E. Sin ellas, el video no debe presentarse como validado. |
