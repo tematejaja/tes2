@@ -144,10 +144,32 @@ def cmd_sintetizar(a):
         print(f"{b}_v01.wav {duracion(WAV / f'{b}_v01.wav'):.1f} s · {len(tps)} marcas")
 
 
+MUESTRA = ("Mi Ruta de Reubicación es un piloto propuesto, por validar con la comunidad y las entidades. "
+           "Más que un traslado, un nuevo comienzo. Un desacuerdo no congela el caso: se revisa, "
+           "se escala si hace falta, y lo demás sigue.")
+
+
+def cmd_muestras(a):
+    """Misma frase con varias voces (texto plano, MP3) para escucha comparada."""
+    out = AQUI / "muestras_voz"; out.mkdir(exist_ok=True)
+    for i, voz in enumerate(a.voces, 1):
+        loc = "-".join(voz.split("-")[:2])
+        cuerpo = {"input": {"text": MUESTRA}, "voice": {"languageCode": loc, "name": voz},
+                  "audioConfig": {"audioEncoding": "MP3", "speakingRate": a.rate}}
+        try:
+            r = llamar(f"{V1}/text:synthesize", cuerpo)
+        except SystemExit as e:
+            print(f"{voz}: no disponible ({str(e)[:80]})"); continue
+        (out / f"{i:02d}_{voz}.mp3").write_bytes(base64.b64decode(r["audioContent"]))
+        print(f"{i:02d}_{voz}.mp3")
+
+
 p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 s = p.add_subparsers(dest="cmd", required=True)
 s.add_parser("voces").set_defaults(f=cmd_voces)
 s.add_parser("casting").set_defaults(f=cmd_casting)
+q = s.add_parser("muestras"); q.set_defaults(f=cmd_muestras)
+q.add_argument("voces", nargs="+"); q.add_argument("--rate", type=float, default=1.0)
 for nombre, f in (("calibrar", cmd_calibrar), ("sintetizar", cmd_sintetizar)):
     q = s.add_parser(nombre); q.set_defaults(f=f)
     q.add_argument("--voz", default="es-US-Neural2-A"); q.add_argument("--rate", type=float, default=1.0)
