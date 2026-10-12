@@ -46,10 +46,13 @@ const DIMS = [['Vivienda y entorno', 'casa'], ['Economía y medios de vida', 'ol
 function ficha(x, y, o = {}) {
   const w = 760; let cy = 0; let g = '';
   const rows = o.rows, pr = o.prior;
-  const h = 150 + (pr ? 96 : 0) + (rows ? 5 * 62 + 24 : 0) + ((o.extra || []).length * 44) + (o.contacts ? 70 : 0) + 64;
+  const h = 186 + (pr ? 96 : 0) + (rows ? 5 * 62 + 24 : 0) + ((o.extra || []).length * 44) + (o.contacts ? 70 : 0) + 64;
   g += rect(x + 8, y + 10, w, h, { r: 22, fill: 'rgba(0,0,0,.22)' });
   g += rect(x, y, w, h, { r: 22, fill: C.ivory, stroke: C.ink, sw: 3 });
-  g += text(x + 28, y + 46, 'HOGAR H-0000 · caso ilustrativo', { size: 26, weight: 800 });
+  g += rect(x, y, w, 50, { r: 22, fill: C.navy }) + rect(x, y + 28, w, 22, { fill: C.navy });
+  g += text(x + 28, y + 35, 'FICHA DE CARACTERIZACIÓN FAMILIAR', { size: 22, weight: 800, fill: C.teal, ls: 1 });
+  y += 36;
+  g += text(x + 28, y + 46, 'Hogar H-0000 · caso ilustrativo', { size: 26, weight: 800 });
   const rc = o.resp?.color ?? C.roofb;
   g += text(x + 28, y + 88, 'Responsable:', { size: 24, weight: 600 }) + circ(x + 228, y + 80, 15, { fill: rc, stroke: C.ink, sw: 2.5 }) + circ(x + 228, y + 75, 6, { fill: C.ivory }) +
     text(x + 254, y + 88, o.resp?.label ?? 'Gestora social', { size: 24, weight: 700 });
@@ -76,8 +79,8 @@ function ficha(x, y, o = {}) {
   }
   for (const e of (o.extra || [])) { g += text(x + 28, cy + 32, e, { size: 23, weight: 600 }); cy += 44; }
   if (o.contacts) { g += line(x + 20, cy + 4, x + w - 20, cy + 4, { stroke: C.slate, sw: 2 }) + icon('calendario', x + 46, cy + 36, 30) + text(x + 76, cy + 31, 'Contactos programados: 30 · 90 · 150 · 180 días', { size: 20, weight: 600 }) + text(x + 76, cy + 55, 'desde el ingreso al piloto', { size: 20, weight: 600 }); cy += 70; }
-  g += line(x + 20, y + h - 52, x + w - 20, y + h - 52, { stroke: C.slate, sw: 2 });
-  g += text(x + 28, y + h - 18, o.foot ?? 'Propuestas · Acciones · Próximo contacto', { size: 21, weight: 600, fill: C.noned });
+  g += line(x + 20, y + h - 88, x + w - 20, y + h - 88, { stroke: C.slate, sw: 2 });
+  g += text(x + 28, y + h - 54, o.foot ?? 'Propuestas · Compromisos · Próximo contacto', { size: 21, weight: 600, fill: C.noned });
   return { svg: g, h };
 }
 const ETAPAS = ['Diagnóstico y caracterización', 'Plan de reubicación', 'Articulación institucional', 'Ejecución', 'Acompañamiento', 'Cierre y seguimiento'];
@@ -95,7 +98,7 @@ function minimap(cur) {
 }
 function topLabels(t) {
   let g = rect(1290, 22, 490, 48, { r: 12, fill: 'rgba(19,32,43,.88)' }) + text(1535, 55, 'PILOTO PROPUESTO · POR VALIDAR', { size: 22, weight: 800, fill: C.teal, anchor: 'middle', ls: 1 });
-  const ilus = t >= 13.4 && t < TL.blocks.E9.start;
+  const ilus = (t >= 12.3 && t < TL.blocks.E9.start) || (t >= TL.marks.E9_final - .3 && t < TL.cr_start);
   if (ilus) g += rect(1290, 76, 490, 44, { r: 12, fill: 'rgba(244,239,230,.94)', stroke: C.ink, sw: 2 }) + text(1535, 106, 'RECREACIÓN ILUSTRADA · FAMILIA FICTICIA', { size: 19, weight: 800, anchor: 'middle', ls: .5 });
   return g;
 }
@@ -109,16 +112,16 @@ function subtitles(t) {
   const ls = wrapLines(c.text); const n = ls.length;
   const widest = Math.max(...ls.map(l => l.length)); const bw = Math.min(1700, widest * 25.5 + 70), bh = n * 58 + 26;
   const x = W / 2 - bw / 2, y = 986 - bh;
-  let g = rect(x, y, bw, bh, { r: 14, fill: 'rgba(19,32,43,.78)' });
+  let g = '<g id="subs">' + rect(x, y, bw, bh, { r: 14, fill: 'rgba(19,32,43,.78)' });
   ls.forEach((l, i) => { g += text(W / 2, y + 52 + i * 58, l, { size: 46, weight: 700, fill: '#fff', anchor: 'middle' }); });
-  return g;
+  return g + '</g>';
 }
 // tarjeta de capítulo: aparece al inicio del bloque
 function chapterCard(t, i, b) {
-  const lt = t - TL.blocks[b].start; if (lt < 0 || lt > 2.4) return '';
-  const a = eo(prog(lt, 0, .4)) * (1 - prog(lt, 1.9, 2.4));
+  const lt = t - TL.blocks[b].start; if (lt < 0 || lt > 2.2) return '';
+  const a = eo(prog(lt, 0, .35)) * (1 - prog(lt, 1.8, 2.2));
   const dx = (1 - eo(prog(lt, 0, .5))) * -80;
-  let g = `<g opacity="${F(a)}" transform="translate(${F(dx)},0)">`;
+  let g = rect(0, 0, W, H, { fill: C.navy, op: F(.62 * a) }) + `<g data-qa="skip" opacity="${F(a)}" transform="translate(${F(dx)},0)">`;
   g += rect(0, 300, 1130, 150, { r: 0, fill: 'rgba(19,32,43,.92)' }) + rect(0, 300, 14, 150, { fill: C.teal });
   g += text(70, 358, `ETAPA ${i}`, { size: 28, weight: 700, fill: C.teal, ls: 4 });
   g += text(70, 416, ETAPAS[i - 1].toUpperCase(), { size: 54, weight: 800, fill: '#fff', ls: 2 });

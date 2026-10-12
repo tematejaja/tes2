@@ -47,7 +47,7 @@ function arrow(x1, y1, x2, y2, o = {}) {
 // etiqueta redondeada con texto
 function tag(x, y, s, o = {}) {
   const size = o.size ?? 30, pad = o.pad ?? 22, w = o.w ?? (s.length * size * .56 + pad * 2), h = size + 24;
-  return `<g>${rect(x, y, w, h, { r: o.r ?? 14, fill: o.fill ?? C.ivory, stroke: o.stroke ?? C.ink, sw: o.sw ?? 2.5 })}` +
+  return `<g class="tag" data-pad="${pad}" data-center="${o.center ? 1 : 0}" data-min="${o.min ?? 0}">${rect(x, y, w, h, { r: o.r ?? 14, fill: o.fill ?? C.ivory, stroke: o.stroke ?? C.ink, sw: o.sw ?? 2.5 })}` +
     text(x + (o.center ? w / 2 : pad), y + h / 2 + size * .36, s, { size, weight: o.weight ?? 700, fill: o.color ?? C.ink, anchor: o.center ? 'middle' : 'start' }) + '</g>';
 }
 // ===== Iconos (centrados en x,y; tamaño s) =====
@@ -120,4 +120,14 @@ function bubble(x, y, w, h, s, o = {}) {
   const tx = o.tx ?? x + 40;
   return `<g>${path(`M${x+16} ${y} H${x+w-16} Q${x+w} ${y} ${x+w} ${y+16} V${y+h-16} Q${x+w} ${y+h} ${x+w-16} ${y+h} H${tx+30} L${tx} ${y+h+26} L${tx+6} ${y+h} H${x+16} Q${x} ${y+h} ${x} ${y+h-16} V${y+16} Q${x} ${y} ${x+16} ${y}Z`, { fill: C.ivory, stroke: C.ink, sw: 2.5 })}` +
     text(x + w / 2, y + h / 2 + (o.size ?? 28) * .36, s, { size: o.size ?? 28, weight: 700, anchor: 'middle' }) + '</g>';
+}
+
+// Ajusta el ancho de cada rótulo a su texto real (evita textos que desbordan su recuadro)
+function fitTags(root) {
+  for (const g of root.querySelectorAll('g.tag')) {
+    const r = g.querySelector('rect'), t = g.querySelector('text'); if (!r || !t) continue;
+    const pad = +g.dataset.pad, w = Math.max(+g.dataset.min, t.getComputedTextLength() + 2 * pad);
+    if (g.dataset.center === '1') { const cx = +t.getAttribute('x'); r.setAttribute('x', cx - w / 2); }
+    r.setAttribute('width', w);
+  }
 }

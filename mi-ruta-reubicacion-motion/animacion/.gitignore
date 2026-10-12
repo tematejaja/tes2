@@ -6,3 +6,5 @@ _tmp_*.wav
 render.log
 encode.log
 __pycache__/
+bg2/
+bg2.log

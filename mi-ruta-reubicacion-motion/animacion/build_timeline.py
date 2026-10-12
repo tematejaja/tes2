@@ -5,15 +5,17 @@ import json, re, wave
 from pathlib import Path
 R = Path(__file__).resolve().parent.parent
 BLOQUES = ["E0","E1","E2","C1","C2","C3","C4","C5","C6","E9"]
-REMATE = dict(E0=0.4,E1=1.0,E2=0.6,C1=0.6,C2=0.6,C3=1.5,C4=1.5,C5=0.6,C6=1.0,E9=1.0)
-CR = 11.0
+import os
+V = os.environ.get("GUION_VERSION", "v02")
+REMATE = dict(E0=0.3,E1=0.6,E2=0.5,C1=0.5,C2=0.5,C3=1.4,C4=1.4,C5=0.5,C6=0.8,E9=0.5)
+CR = 10.0
 tl = {"fps": 24, "blocks": {}, "marks": {}, "cues": []}
 t = 0.0
 for b in BLOQUES:
-    w = wave.open(str(R/f"narracion/wav/{b}_v01.wav")); dur = w.getnframes()/w.getframerate()
-    tps = json.load(open(R/f"narracion/timepoints/{b}_v01.json"))
+    w = wave.open(str(R/f"narracion/wav/{b}_{V}.wav")); dur = w.getnframes()/w.getframerate()
+    tps = json.load(open(R/f"narracion/timepoints/{b}_{V}.json"))
     marks = [(m["markName"], m["timeSeconds"]) for m in tps]
-    ssml = (R/f"narracion/ssml/{b}_v01.ssml").read_text()
+    ssml = (R/f"narracion/ssml/{b}_{V}.ssml").read_text()
     # segmentos de texto entre marcas
     body = ssml.replace("<speak>","").replace("</speak>","")
     pieces = re.split(r'<mark name="([^"]+)"/>', body)
@@ -61,4 +63,6 @@ def f(x, sep):
 srt = "\n".join(f"{i+1}\n{f(c['s'],',')} --> {f(c['e'],',')}\n{c['text']}\n" for i,c in enumerate(final))
 vtt = "WEBVTT\n\n" + "\n".join(f"{f(c['s'],'.')} --> {f(c['e'],'.')}\n{c['text']}\n" for c in final)
 (R/"subtitulos").mkdir(exist_ok=True)
-(R/"subtitulos/mi_ruta_es.srt").write_text(srt); (R/"subtitulos/mi_ruta_es.vtt").write_text(vtt)
+(R/f"subtitulos/mi_ruta_es_{V}.srt").write_text(srt); (R/f"subtitulos/mi_ruta_es_{V}.vtt").write_text(vtt)
+
+open(Path(__file__).parent/"timeline.js","w").write("const TL = "+json.dumps(tl,ensure_ascii=False)+";\n")

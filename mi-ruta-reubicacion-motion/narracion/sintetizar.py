@@ -86,7 +86,11 @@ def duracion(wav_path):
         return w.getnframes() / w.getframerate()
 
 
-def leer(b, version="v01"):
+VERSION = os.environ.get("GUION_VERSION", "v01")
+
+
+def leer(b, version=None):
+    version = version or VERSION
     return (SSML / f"{b}_{version}.ssml").read_text()
 
 
@@ -140,8 +144,8 @@ def cmd_calibrar(a):
 def cmd_sintetizar(a):
     for b in (a.bloques or BLOQUES):
         audio, tps = sintetizar_ssml(leer(b), a.voz, a.rate)
-        guardar(f"{b}_v01", audio, tps)
-        print(f"{b}_v01.wav {duracion(WAV / f'{b}_v01.wav'):.1f} s · {len(tps)} marcas")
+        guardar(f"{b}_{VERSION}", audio, tps)
+        print(f"{b}_{VERSION}.wav {duracion(WAV / f'{b}_{VERSION}.wav'):.1f} s · {len(tps)} marcas")
 
 
 MUESTRA = ("Mi Ruta de Reubicación es un piloto propuesto, por validar con la comunidad y las entidades. "

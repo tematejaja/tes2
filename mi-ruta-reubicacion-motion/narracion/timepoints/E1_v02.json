@@ -1,0 +1,34 @@
+[
+ {
+  "markName": "E1_problema",
+  "timeSeconds": 0.014999999664723873
+ },
+ {
+  "markName": "E1_equipos",
+  "timeSeconds": 4.123249530792236
+ },
+ {
+  "markName": "E1_preguntas",
+  "timeSeconds": 5.325374603271484
+ },
+ {
+  "markName": "E1_compromisos",
+  "timeSeconds": 6.851457118988037
+ },
+ {
+  "markName": "E1_titulo",
+  "timeSeconds": 9.217289924621582
+ },
+ {
+  "markName": "E1_complementa",
+  "timeSeconds": 11.765706062316895
+ },
+ {
+  "markName": "E1_validar",
+  "timeSeconds": 15.234664916992188
+ },
+ {
+  "markName": "E1_idea",
+  "timeSeconds": 18.787460327148438
+ }
+]

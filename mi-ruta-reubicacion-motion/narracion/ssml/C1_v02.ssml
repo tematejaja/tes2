@@ -1,0 +1,11 @@
+<speak>
+  <break time="400ms"/>
+  <mark name="C1_familia"/>Sigamos a una familia ficticia. La mamá prepara almuerzos y los vende en el barrio; <break time="100ms"/>
+  <mark name="C1_vecina"/>mientras trabaja, una vecina le cuida a los niños. <break time="400ms"/>
+  <mark name="C1_escucha"/>En la primera etapa, la gestora la visita y, sobre todo, la escucha: qué quiere conservar y qué propone. <break time="250ms"/>
+  <mark name="C1_ficha"/>Con eso diligencia la ficha de caracterización,
+  <mark name="C1_dimensiones"/>en cinco dimensiones: vivienda, economía, redes de cuidado, servicios y participación. <break time="250ms"/>
+  <mark name="C1_corrige"/>La familia la revisa y la corrige. <break time="250ms"/>
+  <mark name="C1_nogarantiza"/>Y queda claro que participar no garantiza una vivienda, ni obliga a aceptar una alternativa. <break time="400ms"/>
+  <mark name="C1_urgencia"/>Eso sí: ante un riesgo inmediato para la vida, no se espera ninguna etapa; se activa el canal de emergencia.
+</speak>

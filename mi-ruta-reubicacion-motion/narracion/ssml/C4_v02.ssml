@@ -1,0 +1,8 @@
+<speak>
+  <break time="400ms"/>
+  <mark name="C4_ejecuta"/>En la cuarta etapa, cada entidad cumple lo ya confirmado, y el piloto acompaña y registra. <break time="350ms"/>
+  <mark name="C4_nomudanza"/>Pero ojo: <prosody rate="92%">preparación entregada no es mudanza.</prosody> <break time="200ms"/>
+  <mark name="C4_condiciones"/>Antes del traslado, la entidad competente verifica las condiciones: vivienda, servicios, economía del hogar y cuidado. <break time="350ms"/>
+  <mark name="C4_entrega"/>Y frente a la familia, la gestora entrega la ficha al equipo siguiente,
+  <mark name="C4_confirma"/>que confirma haberla recibido.
+</speak>

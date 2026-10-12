@@ -1,0 +1,9 @@
+<speak>
+  <break time="400ms"/>
+  <mark name="C2_plan"/>En la segunda etapa se arma el plan de reubicación. <break time="200ms"/>
+  <mark name="C2_opciones"/>Se comparan las opciones realmente disponibles: su costo y su cercanía al trabajo, al colegio y a la red de cuidado. <break time="250ms"/>
+  <mark name="C2_presupuesto"/>También se calcula el saldo del hogar: <break time="100ms"/>
+  <mark name="C2_saldo"/>ingresos netos menos gastos esenciales, hoy y en la nueva vivienda. <break time="300ms"/>
+  <mark name="C2_propuesta"/>Y la familia propone seguir vendiendo almuerzos cerca de su nuevo hogar; <break time="100ms"/>
+  <mark name="C2_codigo"/>la propuesta queda registrada, con alguien responsable de responderla.
+</speak>

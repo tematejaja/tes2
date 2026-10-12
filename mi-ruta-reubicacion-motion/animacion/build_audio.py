@@ -5,6 +5,8 @@ import json, subprocess, wave, numpy as np
 from pathlib import Path
 R = Path(__file__).resolve().parent.parent; A = Path(__file__).parent
 SR = 48000
+import os
+V = os.environ.get("GUION_VERSION", "v02")
 tl = json.load(open(A / "timeline.json")); N = int((tl["total"] + 1.0) * SR)
 
 def leer(p):
@@ -13,7 +15,7 @@ def leer(p):
 voz = np.zeros(N, np.float32)
 for b, v in tl["blocks"].items():
     tmp = A / f"_tmp_{b}.wav"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(R / f"narracion/wav/{b}_v01.wav"), "-ar", str(SR), "-ac", "1", str(tmp)], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(R / f"narracion/wav/{b}_{V}.wav"), "-ar", str(SR), "-ac", "1", str(tmp)], check=True)
     x = leer(tmp); s = int(v["start"] * SR); voz[s:s + len(x)] += x; tmp.unlink()
 # --- pad ambiental: progresión lenta Am – F – C – G, 8 s por acorde
 rng = np.random.default_rng(3)
@@ -57,15 +59,15 @@ def pulso(t, f=110, amp=.2):
     y = np.sin(2 * np.pi * f * tt) * np.exp(-tt * 4) * amp
     e = min(N, s + n); sfx[s:e] += y[:e - s].astype(np.float32)
 M = tl["marks"]; B = tl["blocks"]
-campana(13.9, 660, .10)                                  # la línea nace
+campana(M["E1_titulo"] + .1, 660, .10)                  # la línea nace con el título
 for b in ("C1", "C2", "C3", "C4", "C5", "C6"): campana(B[b]["start"] + .05, 523, .08)   # cambio de etapa
-campana(M["C1_corrige"] + .2, 784, .10)                  # ficha revisada
-pulso(M["C1_urgencia"] + .6, 98, .22)                    # canal de emergencia
-campana(M["C3_ajustes"] + .3, 988, .09)                  # propuesta aceptada con ajustes
-campana(B["C3"]["start"] + B["C3"]["audio"], 587, .12)   # preparación entregada
-campana(M["C4_confirma"] + .6, 880, .10)                 # recibido
-pulso(M["C5_alerta"] + .3, 98, .22)                      # alerta
-campana(M["C5_cierre"] + 3.6, 1046, .11)                 # alerta cerrada con confirmación
+campana(M["C1_corrige"] + .3, 784, .10)                  # ficha revisada por el hogar
+pulso(M["C1_urgencia"] + .5, 98, .22)                    # canal de emergencia
+campana(M["C3_incidencia"] + .4, 988, .09)               # propuesta aceptada con ajustes
+campana(M["C3_entregada"] + .3, 587, .12)                # preparación entregada
+campana(M["C4_confirma"] + .2, 880, .10)                 # recibido
+pulso(M["C5_alerta"] + .4, 98, .22)                      # alerta
+campana(M["C5_cierre"] + .7, 1046, .11)                  # alerta cerrada con confirmación
 campana(M["C6_llaves"] + .1, 440, .10)                   # llaves
 mix = voz * 1.0 + mus * 1.0 + sfx
 pico = np.max(np.abs(mix)); mix = mix / max(1, pico / .89)

@@ -1,0 +1,9 @@
+<speak>
+  <break time="800ms"/>
+  <mark name="E0_bogota"/>Bogotá. <break time="1300ms"/>
+  <mark name="E0_cbolivar"/>Al sur, Ciudad Bolívar. <break time="1200ms"/>
+  <mark name="E0_bellaflor"/>Y en la parte alta de Bella Flor, familias que levantaron aquí sus casas,
+  <mark name="E0_calle"/>su trabajo y una red de vecinos. <break time="800ms"/>
+  <mark name="E0_pregunta"/>Cuando a una de ellas le hablan de reubicarse, la pregunta no es solo a qué casa va a llegar. <break time="300ms"/>
+  <mark name="E0_demas"/><prosody rate="92%">Es qué va a pasar con todo lo demás.</prosody>
+</speak>

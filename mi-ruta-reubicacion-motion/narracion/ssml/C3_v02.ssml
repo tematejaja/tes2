@@ -1,0 +1,11 @@
+<speak>
+  <break time="400ms"/>
+  <mark name="C3_entidades"/>En la tercera etapa, las entidades responden. <break time="150ms"/>
+  <mark name="C3_mesa"/>En la mesa técnica, con delegados de la comunidad, se revisan los asuntos colectivos, y cada entidad dice qué puede hacer y en qué plazo. <break time="250ms"/>
+  <mark name="C3_privado"/>El caso de la familia, en cambio, se revisa aparte, con ella, para proteger su información. <break time="250ms"/>
+  <mark name="C3_incidencia"/>Y su propuesta sí cambia el plan: se acepta con ajustes,
+  <mark name="C3_noviable"/>y lo que no es viable se explica, con alternativas. <break time="250ms"/>
+  <mark name="C3_hoja"/>Todo queda en una hoja de devolución: qué se decidió, por qué y qué sigue. <break time="250ms"/>
+  <mark name="C3_desacuerdo"/>Si hay un desacuerdo, el caso no se congela: se escala a quien decide y lo demás sigue avanzando. <break time="250ms"/>
+  <mark name="C3_entregada"/>Así, la preparación queda entregada.
+</speak>

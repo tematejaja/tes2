@@ -1,0 +1,22 @@
+[
+ {
+  "markName": "C5_traslado",
+  "timeSeconds": 0.39641663432121277
+ },
+ {
+  "markName": "C5_alerta",
+  "timeSeconds": 4.60237455368042
+ },
+ {
+  "markName": "C5_tarjeta",
+  "timeSeconds": 9.534040451049805
+ },
+ {
+  "markName": "C5_nocierra",
+  "timeSeconds": 11.966541290283203
+ },
+ {
+  "markName": "C5_cierre",
+  "timeSeconds": 15.15162467956543
+ }
+]

@@ -1,0 +1,8 @@
+<speak>
+  <break time="400ms"/>
+  <mark name="C5_traslado"/>Con el traslado hecho, llega la quinta etapa: el acompañamiento. <break time="300ms"/>
+  <mark name="C5_alerta"/>Si los ingresos caen de forma importante, o falta lo básico, se activa una alerta,
+  <mark name="C5_tarjeta"/>con responsable, acción y fecha. <break time="300ms"/>
+  <mark name="C5_nocierra"/>Y no se cierra porque se envió un oficio o una remisión: <break time="100ms"/>
+  <mark name="C5_cierre"/>se cierra cuando la ayuda llega y la familia lo confirma.
+</speak>
