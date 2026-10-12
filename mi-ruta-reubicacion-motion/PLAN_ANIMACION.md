@@ -1,11 +1,12 @@
 # Plan de animación en motion graphics
 ## Mi Ruta de Reubicación — Bella Flor parte alta, Ciudad Bolívar, Bogotá
 
-**Versión del plan:** 1.0 (borrador previo a auditoría) · 12 de octubre de 2026
+**Versión del plan:** 1.1 — corregida tras auditoría independiente (ver `AUDITORIA_PLAN.md`) · 12 de octubre de 2026
 **Documento fuente:** *Mi Ruta de Reubicación. Diseño final del prototipo para Bella Flor parte alta* (versión 12/10/2026), en adelante **"el prototipo"**. Las referencias "§n" remiten a sus secciones.
-**Material audiovisual de partida:** `Bellaflor_ubicacion_con_Street_View.mp4` (zoom espacial).
-**Narración:** Google Cloud Text-to-Speech (configuración del equipo).
-**Restricción de duración:** el video final dura **entre 2:00 y 4:00**. Objetivo de producción: **3:35 ± 0:15**.
+**Material audiovisual de partida:** `Bellaflor_ubicacion_con_Street_View.mp4` (zoom espacial, 18 s).
+**Narración:** Google Cloud Text-to-Speech (cuenta configurada por el equipo).
+**Restricción obligatoria:** el video final dura **entre 2:00 y 4:00**.
+**Objetivo de producción:** **3:30** nominal; banda aceptable 3:10–3:50 (cálculo en §8.6).
 
 ---
 
@@ -13,15 +14,16 @@
 
 | Parámetro | Especificación |
 | --- | --- |
-| Duración | Objetivo 3:35 (215 s). Banda de producción 3:20–3:50. Límite contractual 2:00–4:00. |
+| Duración | Nominal 3:31 (211 s, calculada desde el SSML del Anexo B a 2,5 palabras/s). Banda de producción 3:10–3:50. Límite obligatorio 2:00–4:00. |
 | Formato | 1920 × 1080, 16:9, progresivo. |
-| Cuadros por segundo | 24 fps (igual al video de ubicación, evita conversión de cadencia). |
-| Códec de entrega | H.264 High, MP4, 12–16 Mbps VBR 2 pasadas; master intermedio ProRes 422 HQ o PNG secuencia. |
-| Audio | 48 kHz, 24 bit (master), AAC 320 kbps (entrega). Estéreo; voz centrada. |
+| Cuadros por segundo | 24 fps (igual al video de ubicación; evita conversión de cadencia). |
+| Códec de entrega | H.264 High, MP4, 12–16 Mbps VBR 2 pasadas. Master intermedio ProRes 422 HQ o secuencia PNG. |
+| Audio | Master 48 kHz / 24 bit (la voz TTS se genera a 24 kHz y se remuestrea en la mezcla). Entrega AAC 320 kbps estéreo; voz centrada. |
 | Idioma | Español; registro latinoamericano neutro con léxico colombiano. |
-| Narración | Voz sintética Google Cloud TTS (ver §8). |
-| Subtítulos | Español, archivo `.srt` y `.vtt` + versión con subtítulos incrustados. |
+| Narración | Voz sintética Google Cloud TTS (§8), declarada en pantalla y en créditos. |
+| Subtítulos | Español: `.srt` y `.vtt` + versión con subtítulos incrustados. |
 | Versiones | (1) Master limpio + subtítulos externos; (2) master con subtítulos incrustados; (3) liviana 720p para mensajería. |
+| Material complementario | Ficha de fuentes y alcance (texto para la descripción del video o PDF adjunto), ver Anexo D. |
 
 ---
 
@@ -29,80 +31,98 @@
 
 ### 1.1 Propósito
 
-Explicar en menos de cuatro minutos **cómo funcionaría** el piloto propuesto *Mi Ruta de Reubicación*: una ruta de seis etapas, dos componentes transversales y tres mecanismos (ficha que continúa, propuestas que reciben respuesta, plan económico que se comprueba), mostrados a través de una familia ficticia.
+Explicar en menos de cuatro minutos **cómo funcionaría** el piloto propuesto *Mi Ruta de Reubicación*: seis etapas, dos componentes transversales y tres mecanismos centrales (§1), mostrados a través de una familia ficticia:
+
+1. **Una ficha familiar que continúa**, a cargo de una gestora identificable.
+2. **Propuestas que reciben respuesta y pueden cambiar decisiones.**
+3. **Un plan económico que se comprueba** antes y después del traslado.
+
+El piloto **complementa** el acompañamiento institucional existente; no lo sustituye (§1, §22).
 
 ### 1.2 Audiencias
 
 | Audiencia | Qué necesita entender | Riesgo a evitar |
 | --- | --- | --- |
-| Jurado y profesor (presentación académica DGIP) | Participación efectiva, respuesta a la caída de ingresos, gestión de desacuerdos (§2). | Que parezca una campaña informativa o una ficha digital aislada (§18). |
-| Comunidad de Bella Flor parte alta | Qué puede proponer, quién responde, que participar no obliga ni garantiza. | Crear expectativas de vivienda, estigmatizar el barrio. |
-| Entidades (vivienda, riesgo, hábitat, oferta social) | Que el piloto complementa y no sustituye competencias. | Insinuar aval, caricaturizar funcionarios, atribuir compromisos no adquiridos. |
+| Jurado y profesor (presentación académica DGIP) | Participación efectiva con incidencia demostrable, respuesta a la caída de ingresos, gestión de desacuerdos (§2). | Que parezca una campaña informativa o una ficha digital aislada (§18). |
+| Comunidad de Bella Flor parte alta | Qué puede proponer, quién responde, que participar no obliga ni garantiza, que su caso se trata en privado. | Crear expectativas de vivienda; estigmatizar el barrio. |
+| Entidades (vivienda, gestión del riesgo, hábitat, oferta social) | Que el piloto complementa y no sustituye competencias; que cada entidad decide lo suyo. | Insinuar aval, caricaturizar funcionarios, atribuir compromisos no adquiridos. |
 
 ### 1.3 Mensaje central
 
 > "Lo que la familia necesita antes de trasladarse se convierte en compromisos que se acompañan y se comprueban después." (§20)
 
-Lema de apoyo: **"Más que un traslado, un nuevo comienzo."**
+Lema de apoyo: **"Más que un traslado, un nuevo comienzo."** (idea central del prototipo).
 
 ### 1.4 Resultados esperados en quien ve el video
 
-Al terminar, una persona debe poder responder correctamente (ver prueba de comprensión, Anexo E):
+Al terminar, una persona debe poder responder correctamente (prueba de comprensión, Anexo E):
 
-1. Es un piloto **propuesto**, no un programa en marcha ni un resultado.
-2. Participar **no garantiza vivienda ni obliga** a aceptar una alternativa.
-3. La ficha **pasa a un responsable que confirma** recibirla.
-4. Una propuesta puede ser aceptada, ajustada o no viable, pero **siempre recibe respuesta motivada**.
-5. **"Preparación entregada" no es una mudanza.**
-6. Una **alerta económica** activa gestión y se cierra solo con respuesta comprobada.
-7. Ante **peligro inmediato** se activa la emergencia sin esperar etapas.
+1. Es un piloto **propuesto**, por validar; no es un programa en marcha ni un resultado.
+2. **Complementa** el acompañamiento de las entidades.
+3. Participar **no garantiza vivienda ni obliga** a aceptar una alternativa.
+4. La ficha **pasa a un responsable que confirma** haberla recibido.
+5. Una propuesta familiar puede **cambiar el plan**; lo no viable **se explica**; si una respuesta no llega, el caso **se escala**.
+6. **"Preparación entregada" no es una mudanza.**
+7. Una **alerta** se activa ante una caída importante de ingresos o una necesidad básica desatendida, y se cierra solo cuando la atención llega y la familia lo confirma.
+8. Ante un **riesgo inmediato para la vida** se activa el canal de emergencia sin esperar etapas.
+9. La meta es acompañar **350 hogares**, **no** trasladar 350 hogares.
 
 ---
 
 ## 2. Principios de fondo: fidelidad al prototipo
 
-El video representa un **diseño para validar**, no resultados. Cada afirmación narrada o escrita debe tener respaldo en el documento (matriz en Anexo A).
+El video representa un **diseño para validar**, no resultados. Cada afirmación narrada **o escrita en pantalla** tiene respaldo en el documento (matriz en Anexo A, secciones A1 narración y A2 textos).
 
 ### 2.1 Lo que el video debe decir o mostrar
 
-| Elemento | Fuente |
-| --- | --- |
-| "Piloto propuesto", visible durante todo el video. | §20 reglas |
-| Las seis etapas con los nombres exactos de la imagen del equipo. | §1, §20 |
-| Los dos transversales: resiliencia (cinco dimensiones) y mesas de trabajo con mentora. | §5 |
-| La ficha como recurso continuo que cambia de manos con un receptor identificable. | §20 |
-| Comunidad proponiendo e incidiendo, no solo escuchando. | §20 reglas |
-| Una respuesta no favorable con explicación y búsqueda de alternativas. | §20 reglas, §8 paso 2.3 |
-| Un desacuerdo que se escala sin congelar lo demás. | §10, §20 |
-| Punto D "preparación entregada" diferenciado del traslado. | §9, §20 |
-| Una alerta económica gestionada con evidencia. | §12, §20 |
-| Protección urgente sin esperar la secuencia. | §3, §20 |
-| Cierre con pendientes transferidos, no "éxito cerrado". | §13, §20 |
+| Elemento | Dónde | Fuente |
+| --- | --- | --- |
+| "Piloto propuesto · por validar", visible toda la pieza. | Rótulo permanente | Estado; §20 |
+| Que complementa el acompañamiento institucional existente. | E1 (narrado) | §1, §22 |
+| Las seis etapas con sus nombres exactos. | E2, tarjetas de capítulo | §1, §20 |
+| Los dos transversales con sus nombres exactos: "Resiliencia" y "Mesas de trabajo con acompañamiento de una mentora". | E2, C1, C3 | §1, §5 |
+| La mentora como función de la gestora de cada hogar, no una persona única. | E2 (narrado), hoja de personajes | §5 transversal 2 |
+| La ficha que cambia de manos con receptor identificable. | E2, C4 | §1, §20 |
+| Comunidad proponiendo e incidiendo (mesa comunitaria y mesa técnica). | C1, C3 | §5, §20 |
+| Caso familiar tratado en espacio privado, separado de la mesa colectiva. | C3 | §4, §5, §9 paso 2 |
+| Una propuesta que cambia el plan, con devolución (decisión, razón, siguiente paso, responsable, fecha). | C3, C6 | §2, §9 paso 6, §15, §19 |
+| Una respuesta no favorable explicada, con alternativas. | C3 | §8 paso 2.3, §20 |
+| Un desacuerdo que se revisa y se escala sin congelar lo demás. | C3 | §10 |
+| "Preparación entregada" diferenciada del traslado. | C3–C4 | §9 punto D, §20 |
+| Traslado efectivo diferenciado de preparación y de seguimiento. | Transición C4→C5 | §15, §20 |
+| Alerta económica gestionada y cerrada con evidencia. | C5 | §12 |
+| Protección urgente por un canal propio y paralelo. | C1 | §3, §22 |
+| Cierre con pendientes transferidos y tres tipos de resultado. | C6 | §13 |
+| Meta de 350 hogares acompañados, no 350 traslados; distribución por conocer. | E9 | §3 |
 
 ### 2.2 Lo que el video no puede decir ni sugerir
 
 | Prohibición | Fuente | Control en el plan |
 | --- | --- | --- |
-| Que el piloto garantiza vivienda, subsidio, empleo o ingresos. | §1, §3, §4 | Frase explícita en C1; revisión de guion. |
-| Que los 350 hogares se trasladan en 12 meses. | §3, §20 | E9 muestra 350 hogares en estados distintos; solo unos pocos trasladados. |
-| Logotipos institucionales o aval de entidades. | §20 | Entidades rotuladas por función genérica (ver §4.6). |
-| Datos reales de salud, ingresos, identificación o direcciones. | §15, §20 | Ficha con código ficticio `H-0000`; barras sin cifras. |
+| Que el piloto garantiza vivienda, subsidio, empleo o ingresos. | §1, §3, §4 | Frase narrada en C1; revisión de guion (G1). |
+| Que los 350 hogares se trasladan, o cualquier proporción entre grupos. | §3, §20 | E9: 350 puntos neutros + "distribución por conocer"; narración "no de trescientos cincuenta traslados". |
+| Logotipos institucionales o aval de entidades. | §4, §20 | Entidades rotuladas por función (§4.6). |
+| Datos reales de salud, ingresos, identificación, direcciones o coordenadas. | §15, §20 | Ficha `H-0000`; barras sin cifras; coordenadas y dirección eliminadas del video de ubicación. |
 | Escenas ilustradas presentadas como testimonio real. | §20 | Rótulo "Recreación ilustrada · familia ficticia". |
-| Funcionarios indiferentes o caricaturizados. | §20 | Dirección de arte de personajes (§4.5). |
-| Que el gestor o el piloto autorizan el traslado o declaran riesgo. | §4, §11 | En C4 la verificación la hace "entidad competente". |
-| Que un taller o una remisión resuelven la necesidad. | §11 | No se representa ningún curso como solución. |
-| Imágenes catastróficas (deslizamientos, ruinas) del barrio real. | Criterio ético, §15 | Riesgo representado con iconografía abstracta. |
-| Inventar una segunda oferta para simular elección. | §8 paso 2.1 | C2 compara "disponible / en evaluación / sin viabilidad acreditada". |
+| Funcionarios indiferentes o caricaturizados. | §20 | Dirección de personajes (§4.5). |
+| Que el piloto o la gestora autorizan el traslado o declaran riesgo. | §4, §11 | C4: la verificación la hace "entidad competente"; la gestora documenta. |
+| Que un taller o una remisión resuelven la necesidad. | §11, §12 | No se representa ningún curso como solución; la alerta se cierra con atención recibida. |
+| Casos familiares expuestos ante delegados u otros hogares. | §4, §5, §9 | C3 separa mesa colectiva y espacio privado. |
+| Seguimientos no financiados presentados como hitos garantizados (48–72 h, 2 semanas). | §12 | No se muestran; el calendario usa los contactos 30·90·150·180 días desde el ingreso. |
+| Inventar una segunda oferta para simular elección. | §8 paso 2.1 | C2: una tarjeta "opción disponible" + propuestas "en evaluación". |
+| Imágenes catastróficas (deslizamientos, ruinas) o asociar el barrio real al riesgo. | Ética; §15 | Riesgo con iconografía abstracta; la palabra "reasentamiento" llega ya sobre la ilustración. |
+| Afirmar que el punto del mapa delimita la "parte alta". | §3, §6 | Rótulo "Ámbito del piloto: parte alta · delimitación por validar". |
 
 ### 2.3 Rótulos obligatorios en pantalla
 
-| Rótulo | Cuándo |
+| Rótulo (texto exacto) | Cuándo |
 | --- | --- |
 | `PILOTO PROPUESTO · POR VALIDAR` | Toda la pieza, esquina superior derecha. |
-| `RECREACIÓN ILUSTRADA · FAMILIA FICTICIA` | Desde el paso de imagen real a ilustración (fin de E0) hasta el fin de C6. |
-| `Imágenes: Esri, Vantor, Earthstar Geographics y GIS User Community` | Durante el zoom satelital. |
-| `Imagen: Google Street View (abr. 2025)` | Durante la toma de calle. |
-| `Punto de referencia · sin delimitación del asentamiento` | Durante el zoom satelital. |
+| `RECREACIÓN ILUSTRADA · FAMILIA FICTICIA` | Desde el fin de la toma real (E0) hasta el fin de C6, bajo el rótulo anterior. |
+| `Narración con voz sintética` | E1, 4 s, esquina inferior izquierda por encima de la franja de subtítulos. |
+| `Imágenes: Esri, Vantor, Earthstar Geographics y GIS User Community` | Tramo satelital (atribución original del video, conservada). |
+| `Punto de referencia suministrado · Sin delimitación del asentamiento` | Tramo satelital (pie original, textual). |
+| Atribución original de Google ("Google Maps" / "© 2025 Google", fecha de captura) | Tramo Street View, sin recortar ni tapar. |
 
 ---
 
@@ -110,7 +130,7 @@ El video representa un **diseño para validar**, no resultados. Cada afirmación
 
 ### 3.1 Idea rectora: "El punto se convierte en ruta"
 
-El video de ubicación termina con un **punto turquesa** sobre Bella Flor. Ese punto es la semilla visual de toda la pieza: se transforma en la **línea de la ruta**, que avanza de izquierda a derecha por seis estaciones. La cámara viaja por esa línea en un único plano panorámico continuo. Así, el territorio real y la explicación ilustrada quedan unidos por un solo gesto.
+El zoom termina con un **punto turquesa** sobre Bella Flor. Ese punto es la semilla de la pieza: tras la toma real, reaparece sobre la ilustración y se estira en la **línea de la ruta**, que avanza de izquierda a derecha por seis estaciones (dirección de lectura = avance). La cámara recorre esa línea en un plano panorámico continuo, sobre un fondo que pasa de la ladera (izquierda) a la ciudad (derecha). El territorio real y la explicación ilustrada quedan unidos por un gesto, y la frontera entre imagen real y recreación es explícita.
 
 ### 3.2 Recurso continuo: la ficha que viaja (§20)
 
@@ -118,18 +138,20 @@ Una **ficha familiar** acompaña a la familia ficticia en todas las escenas. En 
 
 - se añade información (nunca desaparece la anterior);
 - muestra siempre el **avatar del responsable actual**;
-- al cambiar de equipo, **pasa de una mano a otra** y el receptor marca "recibido".
+- al cambiar de equipo, **pasa de una mano a otra** y el receptor marca "Recibido ✓".
+
+La ficha es un instrumento: la gestora está siempre junto a ella (§1: "La ficha es un instrumento. El prototipo completo es el servicio").
 
 ### 3.3 Los dos transversales
 
 | Transversal | Representación visual |
 | --- | --- |
-| **Resiliencia (cinco dimensiones)** | Cinco hilos finos de color corren bajo la línea de la ruta, de principio a fin. Cada hilo tiene un nodo de estado en cada estación (atendida, en gestión, crítica, sin información). |
-| **Mesas de trabajo con mentora** | Un ícono de mesa redonda y el avatar de la mentora viajan en un carril por encima de la ruta. Se "abren" en C1 (mesa comunitaria) y C3 (mesa técnica con delegados). |
+| **Resiliencia** (cinco dimensiones) | Cinco hilos finos color pizarra claro (`#C9D3DC`) corren bajo la ruta, cada uno con su ícono al inicio. En cada estación, un **nodo de estado** sobre cada hilo (atendida, en gestión, crítica, sin información suficiente). El hilo no lleva color propio: el color es solo del estado (sin doble codificación). |
+| **Mesas de trabajo con acompañamiento de una mentora** | Ícono de mesa redonda con el avatar de la gestora (mentora de referencia) en un carril sobre la ruta. Se "abre" en C1 (mesa comunitaria) y C3 (mesa técnica). |
 
 ### 3.4 Tono
 
-Cálido, sobrio, digno y preciso. La comunidad aparece con agencia (habla, propone, corrige). Las instituciones aparecen como interlocutoras que responden. El ritmo es pausado: una idea por momento.
+Cálido, sobrio, digno y preciso. La comunidad aparece con agencia (habla, propone, corrige). Las instituciones aparecen como interlocutoras que responden y se coordinan. Ritmo pausado: una idea por momento.
 
 ---
 
@@ -137,93 +159,121 @@ Cálido, sobrio, digno y preciso. La comunidad aparece con agencia (habla, propo
 
 ### 4.1 Estilo
 
-- **Ilustración vectorial plana 2.5D** con texturas sutiles (grano de papel, trama de ladrillo y teja de zinc), parallax de 3–4 capas.
+- **Ilustración vectorial plana 2.5D** con texturas sutiles (grano de papel, trama de ladrillo y teja de zinc) y parallax de 3–4 capas.
 - Personajes **semi-realistas estilizados** (proporción 1:6,5), sin rasgos exagerados.
-- Paisaje inspirado en las imágenes reales: ladera, casas de ladrillo a la vista de 2–4 pisos, tejas azules y rojas, postes con cableado, escaleras, cielo nublado bogotano.
+- Paisaje **original** inspirado en las características del lugar (ladera, ladrillo a la vista de 2–4 pisos, tejas azules y rojas, postes con cableado, escaleras, cielo nublado). **No se calca** la captura de Street View ni la imagen satelital.
 - Personas abrigadas (chaquetas, buzos, ruana en adultos mayores): Bogotá es fría.
+- Vivienda de destino **genérica** (no identificable con un proyecto real).
 
-### 4.2 Paleta (muestreada del video de ubicación y ampliada)
+### 4.2 Paleta y sistemas de estado
 
-| Rol | Color | Hex | Origen |
+**Paleta base** (muestreada del video de ubicación y ampliada):
+
+| Rol | Hex | Origen | Uso permitido |
 | --- | --- | --- | --- |
-| Fondo de interfaz / noche | Azul territorial | `#13202B` | Paneles del video (`#1B2026`, `#1C262C`) |
-| Acento de la ruta | Turquesa ruta | `#3CDFC2` | Punto y barra del video |
-| Ladrillo | Terracota medio | `#93624A` | Street View |
-| Ladrillo sombra | Terracota oscuro | `#682C1E` | Street View |
-| Teja | Azul teja | `#2F6DB5` | Techos en satélite |
-| Papel de la ficha | Marfil | `#F4EFE6` | — |
-| Texto | Tinta | `#1B2026` | — |
+| Azul territorial (fondo de interfaz) | `#13202B` | Paneles del video (`#1B2026`, `#1C262C`) | Fondos, cajas de rótulo y subtítulo. |
+| Turquesa ruta | `#3CDFC2` | Punto y barra del video | Línea de ruta y acentos **sobre fondos oscuros** (9,9:1 sobre `#13202B`). Nunca como texto sobre fondo claro (1,5:1). |
+| Terracota medio / oscuro | `#93624A` / `#682C1E` | Ladrillo en Street View | Solo paisaje. |
+| Azul teja | `#2F6DB5` | Techos en satélite | Solo paisaje. |
+| Marfil (papel de ficha) | `#F4EFE6` | — | Fondo de la ficha y tarjetas. |
+| Tinta | `#1B2026` | — | Todo texto sobre marfil (14,3:1). |
+| Pizarra claro | `#C9D3DC` | — | Hilos de dimensiones. |
 
-**Estados de seguimiento** (§5, transversal 1) — color **más** forma **más** texto, nunca solo color:
+**Regla de contraste:** el texto de los estados va **siempre en tinta `#1B2026`** sobre marfil. El color del estado vive en el ícono, que lleva **contorno de 2 px en tinta** (garantiza ≥ 3:1 para objetos gráficos, WCAG 1.4.11). Si un texto de estado debe ir en color sobre marfil, se usa la variante oscura.
 
-| Estado | Color | Forma | Texto |
+**A. Estados de seguimiento de dimensiones (§5, transversal 1)** — color + forma + texto completo:
+
+| Estado (texto exacto) | Ícono (relleno) | Forma | Variante oscura para texto (sobre marfil) |
 | --- | --- | --- | --- |
-| Atendida | Verde `#2E9E6A` | Círculo lleno con ✓ | "Atendida" |
-| En gestión | Ámbar `#F2B233` | Círculo medio lleno con reloj | "En gestión" |
-| Crítica | Rojo `#D64541` | Triángulo con ! | "Crítica" |
-| Sin información suficiente | Gris `#9AA4AE` | Círculo punteado con ? | "Sin información" |
+| Atendida | `#2E9E6A` | Círculo lleno con ✓ | `#1F7A50` (4,6:1) |
+| En gestión | `#F2B233` | Círculo medio lleno | `#8A5A00` (5,2:1) |
+| Crítica | `#D64541` | Triángulo con ! | `#B3261E` (5,7:1) |
+| Sin información suficiente | `#9AA4AE` | Círculo punteado con ? | `#5E6873` (5,0:1) |
 
-**Estados de compromisos** (§9): Confirmada (✓ verde), Condicionada (candado ámbar), Solicitada (sobre gris azulado), No viable (✕ con globo "explicación"), Sin respuesta (reloj rojo → flecha de escalamiento).
+**B. Respuesta a una propuesta (§8 paso 2.3)** — etiqueta adherida a la tarjeta de propuesta (`P-01`): Aceptada · Aceptada con ajustes · Requiere información · Remitida a otra competencia · No viable con explicación.
 
-**Dimensiones** (hilos), con ícono propio: Vivienda y entorno (casa) `#C8643B`; Economía y medios de vida (moneda/olla) `#2F6DB5`; Redes y cuidados (manos) `#A0508C`; Servicios y acceso (cruz/libro/bus) `#1E8C9A`; Participación y confianza (globo de diálogo) `#7E7AD6`.
+**C. Estado de una acción (§9)** — columnas del tablero de la mesa técnica: Confirmada (✓) · Condicionada (candado) · Solicitada (sobre) · No viable (✕ + globo "explicación") · Sin respuesta (sobre con flecha ascendente = escalar).
+
+**D. Cadena de trazabilidad (§15)**, visible en C3: `P-01 · Aceptada con ajustes` → genera `A-01 · Confirmada` y `A-02 · Solicitada`.
+
+Los sistemas B y C no comparten etiquetas ni íconos en pantalla. Rojo y ámbar se reservan **exclusivamente** para estados; no aparecen en hilos ni en fondos de interfaz. Validación con simulador de daltonismo (deuteranopia, protanopia, tritanopia) **en F2, sobre los fotogramas clave**, no solo en QA.
+
+**Íconos de las cinco dimensiones** (en tinta sobre marfil; en pizarra claro sobre azul): Vivienda y entorno (casa) · Economía y medios de vida (olla con moneda) · Redes y cuidados (manos) · Servicios y acceso (cruz, libro y bus) · Participación y confianza (globo de diálogo).
 
 ### 4.3 Tipografía
 
 | Uso | Familia | Peso / tamaño mínimo a 1080p |
 | --- | --- | --- |
-| Títulos de capítulo, rótulos territoriales | Inter (OFL) | ExtraBold, mayúsculas, tracking +4 %, ≥ 64 px |
+| Títulos de capítulo, rótulos territoriales | Inter (licencia OFL) | ExtraBold, mayúsculas, tracking +4 %, ≥ 64 px |
 | Ficha, etiquetas, palabras clave | Atkinson Hyperlegible (OFL) | Regular/Bold, ≥ 36 px |
-| Subtítulos | Atkinson Hyperlegible | Bold 46 px, caja `#13202B` al 75 % |
+| Subtítulos | Atkinson Hyperlegible | Bold 46 px, caja `#13202B` al 75 % (≥ 7:1) |
 
 ### 4.4 Retícula y zonas
 
 - Zona segura de títulos: 90 % del cuadro.
-- **Franja inferior reservada (20 % del alto) para subtítulos**: ningún texto ni elemento clave de la ficha entra allí.
-- Superior izquierda: **mini-mapa de la ruta** (6 nodos; el actual se ilumina).
-- Superior derecha: rótulo `PILOTO PROPUESTO · POR VALIDAR` y, debajo, `RECREACIÓN ILUSTRADA · FAMILIA FICTICIA` cuando aplique.
+- **Franja inferior reservada (20 % del alto) para subtítulos**: ningún texto ni elemento clave entra allí.
+- Superior izquierda: **mini-mapa de la ruta** (6 nodos; el actual se ilumina). **Oculto durante E2**, cuando la ruta completa ya está en pantalla.
+- Superior derecha: `PILOTO PROPUESTO · POR VALIDAR` y, debajo, `RECREACIÓN ILUSTRADA · FAMILIA FICTICIA` cuando aplique.
 
 ### 4.5 Personajes (hoja de personajes)
 
 | Personaje | Descripción | Función narrativa |
 | --- | --- | --- |
-| Madre | 30–40 años, delantal sobre chaqueta; cocina y vende alimentos. | Protagonista del caso ilustrativo (§19). |
+| Madre | 30–40 años, delantal sobre chaqueta; cocina y vende desde casa. | Protagonista del caso ilustrativo (§19). |
 | Hijo e hija | 6–10 años. | Muestran la red de cuidado. |
 | Vecina cuidadora | 60+ años, ruana. | Red de cuidado que sostiene el ingreso. |
-| Mentora / gestora social | 30–45 años, chaleco neutro sin logo, tableta o carpeta. | Responsable de referencia (§5 transversal 2). |
-| Delegada y delegado comunitarios | Diversos en edad; uno usa bastón o silla de ruedas. | Voz colectiva en mesas (§5). |
-| Participantes de mesa comunitaria | Mujer cuidadora, adulto mayor, joven, persona con discapacidad, hogar ya reasentado. | Diversidad de voces exigida en §5. |
-| Enlaces institucionales (3) | Ropa formal sencilla, carné sin logo. Rótulos: "Entidad de vivienda", "Entidad de gestión del riesgo", "Entidad de oferta social". | Responden, deciden lo de su competencia, se coordinan. |
-| Equipo de acompañamiento posterior | Profesional con chaleco de otro color. | Receptor de la ficha (C4). |
+| Gestora social (mentora de referencia) | 30–45 años, chaleco neutro sin logo, carpeta o tableta. Rótulo al presentarla: "Gestora social · mentora de referencia". | Contacto titular del hogar; ejerce la función de mentora (§5). |
+| Gestor de respaldo | Aparece una vez junto a la gestora en E2. | Muestra que hay respaldo para ausencias (§5). |
+| Delegada y delegado comunitarios | Edades distintas; uno usa bastón o silla de ruedas. | Voz colectiva en la mesa técnica (§5). |
+| Participantes de mesa comunitaria | Mujer cuidadora, adulto mayor, joven, persona con discapacidad, persona de un hogar ya reasentado. | Diversidad de voces exigida en §5. |
+| Enlaces institucionales (3) | Ropa formal sencilla, carné sin logo. Rótulos: "Entidad de vivienda", "Entidad de gestión del riesgo", "Entidad de oferta social". | Precisan, deciden lo de su competencia, se coordinan. |
+| Profesional del equipo de acompañamiento posterior | Chaleco de otro color. | Receptor de la ficha (C4). |
+| Receptor de continuidad | Profesional con rótulo "Receptor de continuidad". | Recibe pendientes (C6). |
 
-Criterios: diversidad étnica y etaria realista, sin estereotipos de pobreza; expresiones atentas y activas; funcionarios escuchando, anotando, respondiendo.
+Criterios: diversidad étnica y etaria realista; sin estereotipos de pobreza; expresiones atentas; funcionarios escuchando, anotando y respondiendo.
 
 ### 4.6 Representación de entidades
 
-Las entidades **no se nombran con siglas ni logotipos** en las escenas: se rotulan por función (§4 del prototipo: no se presume su participación). Las fuentes institucionales y normativas se citan solo en los créditos finales.
+Las entidades **no se nombran con siglas ni logotipos** en las escenas: se rotulan por función (§4 del prototipo: no se presume su participación). Las fuentes institucionales y normativas se citan en la ficha de fuentes (Anexo D), con la nota "Fuentes consultadas; no implican aval ni participación".
 
 ### 4.7 La ficha: especificación de diseño
 
+Ancho 760 px (permite nombres completos de dimensiones y estados en una o dos líneas).
+
 ```
-┌──────────────────────────────────────────┐
-│ HOGAR H-0000 · caso ilustrativo           │
-│ Responsable: [avatar] Gestora social      │
-├──────────────────────────────────────────┤
-│ Prioridades: • Seguir vendiendo alimentos │
-│              • Conservar apoyo de cuidado │
-├──────────────────────────────────────────┤
-│ [casa]   Vivienda y entorno     ◐ En gestión│
-│ [olla]   Economía y medios      ◐ En gestión│
-│ [manos]  Redes y cuidados       ◐ En gestión│
-│ [cruz]   Servicios y acceso     ◌ Sin inform.│
-│ [globo]  Participación          ● Atendida │
-├──────────────────────────────────────────┤
-│ Propuestas · Compromisos · Próximo contacto│
-└──────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────┐
+│ HOGAR H-0000 · caso ilustrativo                       │
+│ Responsable: [avatar] Gestora social                  │
+│ Situación habitacional: sin traslado                  │
+├─────────────────────────────────────────────────────┤
+│ Prioridades: • Seguir vendiendo comida                │
+│              • Conservar el apoyo de cuidado          │
+├─────────────────────────────────────────────────────┤
+│ [casa]  Vivienda y entorno ............ ◐ En gestión  │
+│ [olla]  Economía y medios de vida ..... ◐ En gestión  │
+│ [manos] Redes y cuidados .............. ◐ En gestión  │
+│ [cruz]  Servicios y acceso ..... ◌ Sin información    │
+│                                         suficiente    │
+│ [globo] Participación y confianza ..... ● Atendida    │
+├─────────────────────────────────────────────────────┤
+│ Propuestas · Acciones · Próximo contacto              │
+└─────────────────────────────────────────────────────┘
 ```
 
-- Sin nombres, cédulas, direcciones ni cifras monetarias reales; la economía se muestra con **barras sin valores**.
-- Sello "Revisada por el hogar ✓" en C1.
-- Evolución por capítulo: ver §7.
+- Sin nombres, cédulas, direcciones ni cifras monetarias: la economía se muestra con **barras sin valores**.
+- El campo **"Situación habitacional"** se registra aparte de la etapa (§15): "sin traslado" → "reubicación definitiva" solo en la transición C4→C5.
+
+**Evolución por capítulo:**
+
+| Bloque | Se añade | Responsable visible |
+| --- | --- | --- |
+| E2 | Ficha vacía, código, campo responsable | Gestora (respaldo indicado) |
+| C1 | Prioridades, cinco dimensiones con estado, sello "Revisada por el hogar ✓" | Gestora |
+| C2 | Opción disponible, plan económico (Hoy / Esperado), propuesta `P-01` | Gestora |
+| C3 | Respuesta a `P-01`, acciones `A-01` y `A-02`, hoja de devolución, sello "Preparación entregada" | Gestora |
+| C4 | Lista de condiciones (verificadas por entidad competente), "Recibido ✓", nuevo responsable; situación habitacional actualizada | Equipo de acompañamiento |
+| C5 | Alerta económica y su cierre con evidencia | Equipo de acompañamiento |
+| C6 | Cumplido / Pendiente, `P-01 · comprobada con el hogar ✓`, resultado al cierre, receptor de continuidad | Receptor de continuidad |
 
 ---
 
@@ -231,154 +281,193 @@ Las entidades **no se nombran con siglas ni logotipos** en las escenas: se rotul
 
 | Aspecto | Regla |
 | --- | --- |
-| Curvas | Entradas: ease-out cúbica. Transformaciones: ease-in-out. Nada lineal salvo la línea de ruta que "se dibuja". |
-| Duraciones | Elementos de interfaz 8–12 cuadros; personajes 18–30 cuadros; cambios de estado 12 cuadros con un pulso suave. |
-| Lectura | Texto en pantalla visible mínimo 3 s o 0,3 s por palabra + 1 s. |
-| Cámara | Travelling lateral continuo por la ruta; parallax 3–4 capas; zoom suave (máx. 110 %) para enfocar la ficha. |
-| Transiciones entre capítulos | La cámara viaja por la línea turquesa a la siguiente estación (no cortinas genéricas). |
-| Sincronía | Cada acción clave se ancla a una marca SSML de la narración (§8.5). |
-| Accesibilidad | Sin destellos (> 3 por segundo), sin sacudidas de cámara, contraste ≥ 4.5:1 en textos. |
-| Principio de redundancia | En pantalla solo palabras clave que reafirmen la narración; nunca párrafos duplicados (los subtítulos son una capa aparte). |
+| Curvas | Entradas ease-out cúbica; transformaciones ease-in-out; la línea de ruta "se dibuja" a velocidad constante. |
+| Duraciones | Interfaz 8–12 cuadros; personajes 18–30 cuadros; cambio de estado 12 cuadros con pulso suave. |
+| Lectura | Todo texto en pantalla visible ≥ 0,3 s por palabra + 1 s (mín. 2 s). Se verifica en el storyboard (§7.0). |
+| Cámara | Travelling lateral continuo; parallax 3–4 capas; zoom suave (máx. 110 %) para enfocar la ficha. |
+| Transiciones entre capítulos | La cámara viaja por la línea turquesa a la siguiente estación; la tarjeta de capítulo aparece 0,5 s antes de la voz. |
+| Sincronía | Cada acción clave inicia en su marca SSML (§8.5). Los tiempos de §7 son **nominales** y se sustituyen por los timepoints reales. |
+| Accesibilidad | Sin destellos (> 3 por segundo), sin sacudidas, contrastes según §4.2. |
+| Principio de redundancia | En pantalla solo palabras clave que reafirman la narración; los límites clave se **narran**, no solo se escriben. |
+| Revelado progresivo | Nunca más de 3 elementos nuevos a la vez (p. ej., E2: estaciones → hilos → carril de mesa). |
 
 ---
 
 ## 6. Estructura y escaleta
 
-Duraciones nominales calculadas con 2,5 palabras/s más pausas (443 palabras narradas en total, ver §8.6).
+Tiempos **nominales** calculados desde el SSML del Anexo B: palabras a 2,5 palabras/s, más pausas `<break>`, más el efecto de `<prosody rate="92%">`, más un remate visual sin voz al final de cada bloque. Detalle en §8.6.
 
 | # | Bloque | Entrada | Salida | Dur. | Idea que debe entenderse |
 | --- | --- | --- | --- | --- | --- |
-| E0 | Prólogo territorial | 0:00 | 0:23 | 23 s | Dónde ocurre y a quién concierne. |
-| E1 | Título e idea | 0:23 | 0:36 | 13 s | Es un piloto propuesto; más que un traslado. |
-| E2 | La ficha y el mapa de la ruta | 0:36 | 0:56 | 20 s | Ficha continua; 6 etapas + 2 transversales. |
-| C1 | 1. Diagnóstico y caracterización | 0:56 | 1:31 | 35 s | Se escucha cómo vive el hogar; no garantiza ni obliga; urgencia sin espera. |
-| C2 | 2. Plan de reubicación | 1:31 | 1:55 | 24 s | Opciones reales, plan económico, la familia propone. |
-| C3 | 3. Articulación institucional | 1:55 | 2:20 | 25 s | Compromisos vs. solicitudes; no viable explicado; desacuerdo escalado. |
-| C4 | 4. Ejecución | 2:20 | 2:40 | 20 s | Preparación ≠ mudanza; entrega del caso entre equipos. |
-| C5 | 5. Acompañamiento | 2:40 | 2:59 | 19 s | Seguimiento; alerta económica con respuesta comprobada. |
-| C6 | 6. Cierre y seguimiento | 2:59 | 3:15 | 16 s | Pendientes transferidos; llaves ≠ todo resuelto. |
-| E9 | Mensaje central | 3:15 | 3:32 | 17 s | Frase central; 350 hogares acompañados, 12 meses. |
-| CR | Créditos y fuentes | 3:32 | 3:39 | 7 s | Autoría, fuentes, licencias. |
-| | **Total** | | | **3:39** | |
+| E0 | Prólogo territorial | 0:00.0 | 0:18.7 | 18,7 s | Dónde ocurre y a quién concierne. |
+| E1 | Título e idea | 0:18.7 | 0:33.2 | 14,5 s | Piloto propuesto que complementa; más que un traslado. |
+| E2 | Gestora, ficha y mapa de la ruta | 0:33.2 | 0:52.4 | 19,2 s | Gestora + ficha continua; 6 etapas + 2 transversales. |
+| C1 | 1. Diagnóstico y caracterización | 0:52.4 | 1:22.8 | 30,4 s | Se escucha y se registra; no garantiza ni obliga; urgencia por canal propio. |
+| C2 | 2. Plan de reubicación | 1:22.8 | 1:41.4 | 18,6 s | Opciones reales, plan económico, la familia propone. |
+| C3 | 3. Articulación institucional | 1:41.4 | 2:10.8 | 29,4 s | Mesa colectiva y caso privado; la propuesta cambia el plan; desacuerdo escalado. |
+| C4 | 4. Ejecución | 2:10.8 | 2:31.7 | 20,9 s | Cada entidad ejecuta; preparar ≠ mudarse; entrega del caso. |
+| C5 | 5. Acompañamiento | 2:31.7 | 2:48.8 | 17,1 s | Seguimiento; alerta con cierre comprobado. |
+| C6 | 6. Cierre y seguimiento | 2:48.8 | 3:02.1 | 13,3 s | Pendientes transferidos; llaves ≠ todo resuelto. |
+| E9 | Mensaje central | 3:02.1 | 3:20.5 | 18,4 s | Frase central; 350 acompañados, no 350 traslados. |
+| CR | Créditos (dos placas) | 3:20.5 | 3:31.5 | 11,0 s | Autoría, atribuciones, voz sintética, música. |
+| | **Total nominal** | | | **3:31.5** | |
 
-Distribución: contexto 25 % (E0–E2), ruta 63 % (C1–C6), cierre 11 %.
+Distribución: contexto 25 % (E0–E2), ruta 61 % (C1–C6), cierre 14 % (E9–CR).
 
 ---
 
 ## 7. Guion técnico escena por escena
 
-Convenciones: **V/O** = narración; **TXT** = texto en pantalla; **SFX** = efectos; `⟨marca⟩` = marca SSML de sincronía.
+### 7.0 Storyboard (26 cuadros clave)
 
-### E0 · Prólogo territorial (0:00–0:23)
+Cada cuadro se dibuja en F2 a 1920×1080 en escala de grises con anotaciones; luego se colorean 6 (uno por capítulo) como fotogramas de estilo.
 
-**Material:** video de ubicación reeditado (ver §10).
+| # | Tiempo | Plano | Contenido clave |
+| --- | --- | --- | --- |
+| 1 | 0:00 | Satélite general | Bogotá, rótulo territorial. |
+| 2 | 0:03 | Satélite medio | Ciudad Bolívar. |
+| 3 | 0:06 | Satélite cercano | Bella Flor, punto turquesa, rótulo de ámbito. |
+| 4 | 0:10 | Street View completo | Calle en pendiente, atribución Google intacta. |
+| 5 | 0:13 | Fundido | Ilustración original de la ladera; punto turquesa reaparece. |
+| 6 | 0:16 | Ilustración | La línea se estira hacia la derecha. |
+| 7 | 0:19 | Título | Logotipo tipográfico trazado por la línea. |
+| 8 | 0:26 | Título + puerta | "Complementa…" — puertas de entidades a la derecha. |
+| 9 | 0:34 | Gestora + ficha | Gestora y respaldo; ficha vacía. |
+| 10 | 0:41 | Ficha pasando | Mano a mano; globo "repetir historia" tachado. |
+| 11 | 0:44 | Ruta completa | Seis estaciones → hilos → carril de mesa. |
+| 12 | 0:53 | Casa en ladera | Madre cocinando; vecina con los niños. |
+| 13 | 1:01 | Puerta de la casa | Gestora escucha; mesa comunitaria en inserto. |
+| 14 | 1:06 | Ficha | Cinco dimensiones con estados; madre corrige. |
+| 15 | 1:15 | Ruta + canal paralelo | Flecha perpendicular al canal de emergencia. |
+| 16 | 1:23 | Mesa con tarjetas | Opción disponible + propuestas en evaluación. |
+| 17 | 1:32 | Barras | Hoy / Esperado; fórmula del saldo. |
+| 18 | 1:37 | Tarjeta P-01 | Madre escribe su propuesta. |
+| 19 | 1:42 | Mesa técnica | Delegados y entidades ante tablero colectivo. |
+| 20 | 1:51 | Espacio privado | Madre, gestora, un enlace; P-01 → aceptada con ajustes; hoja de devolución. |
+| 21 | 2:02 | Tablero | Desacuerdo sube por escalamiento; otras tarjetas avanzan; sello "Preparación entregada". |
+| 22 | 2:11 | Lista de condiciones | Entidad competente verifica; una condición pendiente se resuelve. |
+| 23 | 2:25 | Encuentro de transición | Ficha cambia de mano; "Recibido ✓"; copia para la madre. |
+| 24 | 2:30 | Traslado efectivo | Llaves; situación habitacional actualizada. |
+| 25 | 2:35 | Nuevo hogar + ficha | Economía → Crítica; tarjeta de alerta; cierre con confirmación. |
+| 26 | 2:49 | Cierre | Cumplido/Pendiente; receptor; tres resultados; llaves junto a la ficha. |
+| (E9) | 3:02 | Plano general + retícula | Ruta completa; 350 puntos neutros. |
+
+Convenciones del guion: **V/O** = narración; **TXT** = texto en pantalla; `⟨marca⟩` = marca SSML (tiempo nominal absoluto entre corchetes).
+
+### E0 · Prólogo territorial (0:00.0–0:18.7)
+
+**Material:** video de ubicación reeditado según §10. El zoom se re-temporiza para que cada rótulo coincida con su marca.
 
 | Tiempo | Imagen | V/O | TXT | Sonido |
 | --- | --- | --- | --- | --- |
-| 0:00–0:05 | Satélite: Bogotá completa, zoom lento. | `⟨E0_bogota⟩` "Bogotá." | `BOGOTÁ · COLOMBIA` | Música entra suave (ambiente cálido), viento lejano. |
-| 0:05–0:10 | Zoom a Ciudad Bolívar. | `⟨E0_cbolivar⟩` "Al sur, Ciudad Bolívar." | `CIUDAD BOLÍVAR` | — |
-| 0:10–0:13 | Zoom a Bella Flor; aparece punto turquesa pulsando. | `⟨E0_bellaflor⟩` "En la parte alta de Bella Flor viven familias que construyeron aquí…" | `BELLA FLOR · PARTE ALTA` + `Punto de referencia · sin delimitación del asentamiento` | Pulso suave del punto. |
-| 0:13–0:17 | Fundido a Street View (calle en pendiente, casas de ladrillo), push-in lento. | `⟨E0_calle⟩` "…su vida, sus redes y su sustento." | `Imagen: Google Street View (abr. 2025)` | Ambiente de barrio muy bajo. |
-| 0:17–0:23 | La foto se desatura y se "redibuja" en el estilo ilustrado; el punto turquesa reaparece y se estira en línea hacia la derecha. | `⟨E0_reasent⟩` "Para algunas, el reasentamiento ya ocurrió; para otras, podría ser necesario." | Aparece `RECREACIÓN ILUSTRADA · FAMILIA FICTICIA` | Transición musical; el ambiente real se apaga. |
+| 0:00.0–0:02.6 | Satélite: Bogotá, zoom (tramo original 0–5 s acelerado). | `⟨E0_bogota⟩` [0:00.8] "Bogotá." | `BOGOTÁ · COLOMBIA` · atribución Esri · pie original | Música entra suave; viento lejano. |
+| 0:02.6–0:05.6 | Zoom a Ciudad Bolívar (tramo original 5–10 s). | `⟨E0_cbolivar⟩` [0:02.8] "Al sur, Ciudad Bolívar." | `CIUDAD BOLÍVAR` | — |
+| 0:05.6–0:10.0 | Zoom a Bella Flor (tramo original 10–12 s, ralentizado) con el punto turquesa pulsando. | `⟨E0_bellaflor⟩` [0:05.8] "En la parte alta de Bella Flor, familias que construyeron aquí…" | `BELLA FLOR` / `Ámbito del piloto: parte alta · delimitación por validar` (sin coordenadas) | Pulso suave del punto. |
+| 0:10.0–0:13.0 | Corte por fundido a la captura de Street View **completa, sin recorte ni zoom**, con atribución de Google visible. | `⟨E0_calle⟩` [0:10.2] "…su vida, sus redes y su sustento." | — (la atribución de Google ya está en la imagen) | Ambiente de barrio muy bajo. |
+| 0:13.0–0:14.0 | Fundido cruzado a una **ilustración original** de la ladera (no calcada). | — (pausa de 1 s) | Aparece `RECREACIÓN ILUSTRADA · FAMILIA FICTICIA` | El ambiente real se apaga. |
+| 0:14.0–0:18.7 | El punto turquesa reaparece sobre la ilustración y se estira en línea hacia la derecha. | `⟨E0_reasent⟩` [0:14.0] "Algunas ya fueron reasentadas; otras siguen aquí, con situaciones distintas." | — | Transición musical. |
 
-### E1 · Título e idea (0:23–0:36)
+### E1 · Título e idea (0:18.7–0:33.2)
 
-- **Imagen:** la línea turquesa traza el logotipo tipográfico "Mi Ruta de Reubicación". Debajo, en ilustración, una puerta de casa que se abre hacia la luz (sin mostrar destino).
-- **V/O:** `⟨E1_titulo⟩` "Mi Ruta de Reubicación es un piloto propuesto, `⟨E1_validar⟩` aún por validar con la comunidad y las entidades. `⟨E1_idea⟩` Su idea: más que un traslado, un nuevo comienzo."
-- **TXT:** `MI RUTA DE REUBICACIÓN` · `Piloto propuesto · por validar` · en `⟨E1_idea⟩`: `Más que un traslado, un nuevo comienzo.`
+- **Imagen:** la línea turquesa traza el logotipo tipográfico "Mi Ruta de Reubicación". En `⟨E1_complementa⟩`, a la derecha se encienden discretamente tres puertas rotuladas por función ("Vivienda", "Gestión del riesgo", "Oferta social") unidas a la línea: el piloto conecta, no reemplaza. En `⟨E1_idea⟩`, una puerta de casa se abre hacia la luz (sin mostrar destino).
+- **V/O:** `⟨E1_titulo⟩` [0:18.7] "Mi Ruta de Reubicación es un piloto propuesto, `⟨E1_validar⟩` [0:22.1] por validar con la comunidad y las entidades. `⟨E1_complementa⟩` [0:25.8] Complementa el acompañamiento institucional que ya existe. `⟨E1_idea⟩` [0:29.2] Más que un traslado, un nuevo comienzo."
+- **TXT:** `MI RUTA DE REUBICACIÓN` · `Piloto propuesto · por validar` · en `⟨E1_idea⟩`: `Más que un traslado, un nuevo comienzo.` · rótulo `Narración con voz sintética` (0:19–0:23).
 - **Sonido:** acento musical leve en el título.
 
-### E2 · La ficha y el mapa de la ruta (0:36–0:56)
+### E2 · Gestora, ficha y mapa de la ruta (0:33.2–0:52.4)
 
-- **Imagen 1 (0:36–0:46):** una ficha en blanco cae en manos de la mentora; se ve el campo "Responsable". La ficha pasa de una mano a otra (mentora → profesional) y un globo de diálogo con "1, 2, 3…" se tacha: no hay que repetir la historia.
-- **V/O:** `⟨E2_ficha⟩` "Una ficha familiar acompaña a cada hogar: se actualiza, `⟨E2_responsable⟩` pasa siempre a un responsable identificable `⟨E2_cero⟩` y evita que la familia repita su historia desde cero."
-- **Imagen 2 (0:46–0:56):** la cámara se aleja: aparece la ruta completa con 6 estaciones numeradas y sus nombres; bajo ella se dibujan los 5 hilos (resiliencia) y por encima el carril de la mesa con la mentora.
-- **V/O:** `⟨E2_ruta⟩` "La ruta tiene seis etapas `⟨E2_transv⟩` y dos apoyos que la recorren completa: `⟨E2_resil⟩` la resiliencia `⟨E2_mesas⟩` y las mesas de trabajo con una mentora."
-- **TXT:** `1 Diagnóstico y caracterización · 2 Plan de reubicación · 3 Articulación institucional · 4 Ejecución · 5 Acompañamiento · 6 Cierre y seguimiento` · `Resiliencia` · `Mesas de trabajo con mentora`.
+- **Imagen 1 (0:33.2–0:44.0):** la gestora entra con un gestor de respaldo detrás (rótulo "Gestora social · mentora de referencia" y, pequeño, "respaldo"). En `⟨E2_ficha⟩` recibe una ficha en blanco con el campo "Responsable". La ficha pasa de su mano a la de otro profesional y vuelve a actualizarse. En `⟨E2_historia⟩` un globo con "1, 2, 3…" se tacha: no hay que repetir la historia.
+- **V/O:** `⟨E2_gestora⟩` [0:33.2] "Cada hogar tiene una gestora identificable `⟨E2_ficha⟩` [0:35.6] y una ficha que se actualiza y pasa de un responsable a otro: `⟨E2_historia⟩` [0:41.0] la familia no repite su historia."
+- **Imagen 2 (0:44.0–0:52.4), revelado progresivo:** `⟨E2_ruta⟩` las seis estaciones numeradas se encienden una a una sobre la línea; `⟨E2_resil⟩` bajo la ruta se dibujan los cinco hilos con el rótulo "Resiliencia"; `⟨E2_mesas⟩` sobre la ruta aparece el carril de la mesa con la gestora y el rótulo "Mesas de trabajo con acompañamiento de una mentora". Mini-mapa oculto.
+- **V/O:** `⟨E2_ruta⟩` [0:44.0] "La ruta tiene seis etapas, `⟨E2_resil⟩` [0:46.2] atravesadas por la resiliencia `⟨E2_mesas⟩` [0:47.8] y por mesas de trabajo con la gestora como mentora."
+- **TXT:** nombres de etapa (uno por estación, ≥ 36 px): `1 Diagnóstico y caracterización` · `2 Plan de reubicación` · `3 Articulación institucional` · `4 Ejecución` · `5 Acompañamiento` · `6 Cierre y seguimiento`.
 
-### C1 · Diagnóstico y caracterización (0:56–1:31)
+### C1 · Diagnóstico y caracterización (0:52.4–1:22.8)
 
-- **Tarjeta (1,5 s):** `1 · DIAGNÓSTICO Y CARACTERIZACIÓN`.
-- **Beat 1 (0:58–1:05):** casa de ladrillo en ladera. La madre empaca alimentos; la vecina recibe a los niños.
-  **V/O:** `⟨C1_familia⟩` "Sigamos a una familia ficticia. La madre vende alimentos que prepara en casa; una vecina le cuida a los niños."
-- **Beat 2 (1:05–1:16):** la mentora conversa en la puerta (no dentro de un despacho). Aparecen globos: "conservar mis compradores", "no perder el apoyo de la vecina". Inserto breve de **mesa comunitaria** con voces diversas, alguien levanta la mano y propone. Los cinco hilos se llenan en la ficha.
-  **V/O:** `⟨C1_escucha⟩` "Primero, se escucha qué quiere conservar, qué le preocupa y qué propone. `⟨C1_dimensiones⟩` La mentora lo registra en cinco dimensiones: vivienda, economía, redes, servicios y participación."
-  **TXT:** filas de la ficha con íconos y estados (ver §4.7).
-- **Beat 3 (1:16–1:23):** la madre toca la ficha y corrige un dato; sello `Revisada por el hogar ✓`.
-  **V/O:** `⟨C1_revisa⟩` "La familia revisa su ficha. `⟨C1_nogarantiza⟩` Participar no garantiza vivienda ni obliga a aceptar una alternativa."
-  **TXT:** `No garantiza vivienda · No obliga a aceptar`.
-- **Beat 4 · Protección urgente (1:23–1:31):** un pulso rojo; una flecha recta salta por encima de las seis estaciones directamente a un ícono de escudo `Atención de emergencia · autoridad competente`. La ficha queda en pausa al costado (no bloquea).
-  **V/O:** `⟨C1_urgencia⟩` "Ante un peligro inmediato para la vida, no se esperan etapas: se activa de inmediato la atención de emergencia."
-  **TXT:** `Urgencia: sin esperar ficha, mesa ni acuerdo`.
-  **Sonido:** cambio de textura musical breve, sin sirenas ni alarmas estridentes.
+- **Tarjeta (desde 0:52.4, 2 s):** `1 · DIAGNÓSTICO Y CARACTERIZACIÓN`.
+- **Beat 1 · La familia** `⟨C1_familia⟩` [0:52.9–1:00.8]: casa de ladrillo en ladera. La madre cocina y empaca; un cliente compra en la puerta; la vecina recibe a los niños.
+  **V/O:** "Sigamos a una familia ficticia: la madre cocina y vende desde casa; una vecina cuida a los niños."
+- **Beat 2 · Escucha** `⟨C1_escucha⟩` [1:00.8–1:05.9]: la gestora conversa en la puerta (no en un despacho). Globos: "conservar mis clientes", "no perder el apoyo de la vecina". Inserto breve de **mesa comunitaria** con voces diversas; alguien levanta la mano y propone.
+  **V/O:** "La gestora escucha a la familia: qué quiere conservar y qué propone."
+- **Beat 3 · Registro y corrección** `⟨C1_dimensiones⟩` [1:05.9] / `⟨C1_corrige⟩` [1:07.9]: el ícono "Resiliencia" del hilo se despliega en las cinco filas de la ficha, con su estado. La madre toca la ficha y corrige un dato; sello `Revisada por el hogar ✓`.
+  **V/O:** "Lo registra en cinco dimensiones, y el hogar corrige su ficha."
+  **TXT:** `Resiliencia: cinco dimensiones` (las filas de la ficha, §4.7).
+- **Beat 4 · Límites** `⟨C1_nogarantiza⟩` [1:10.8–1:15.4]: plano cercano de la madre y la gestora; dos etiquetas aparecen junto a la ficha.
+  **V/O:** "Participar no garantiza vivienda ni obliga a aceptar una alternativa."
+  **TXT:** `No garantiza vivienda` · `No obliga a aceptar`.
+- **Beat 5 · Protección urgente** `⟨C1_urgencia⟩` [1:15.4–1:22.8]: plano general de la ruta. Un pulso rojo sale **perpendicular** desde la estación 1 hacia un **canal paralelo** rotulado `Canal de emergencia · autoridad competente` (ícono de escudo). La ficha **sigue** en la ruta; una línea punteada entre ambos indica coordinación con registros separados.
+  **V/O:** "Ante un riesgo inmediato para la vida, se activa enseguida el canal de emergencia, sin esperar etapas."
+  **TXT:** `Riesgo inmediato → canal de emergencia` · `Sin esperar ficha, mesa ni acuerdo`.
+  **Sonido:** cambio breve de textura musical, sin sirenas ni alarmas.
 
-**Evolución de la ficha:** prioridades + cinco dimensiones + sello de revisión.
-
-### C2 · Plan de reubicación (1:31–1:55)
+### C2 · Plan de reubicación (1:22.8–1:41.4)
 
 - **Tarjeta:** `2 · PLAN DE REUBICACIÓN`.
-- **Beat 1 (1:33–1:41):** tres tarjetas de opción sobre una mesa: `Disponible`, `En evaluación`, `Sin viabilidad acreditada`. Íconos comparan espacio, costos, transporte y distancia al trabajo y a la red de cuidado.
-  **V/O:** `⟨C2_opciones⟩` "Luego, el plan: se comparan las opciones realmente disponibles, con sus costos, su transporte y su cercanía al trabajo y al cuidado."
-- **Beat 2 (1:41–1:46):** barras "Hoy" vs. "Esperado" (ingresos netos, gastos esenciales, saldo). Fórmula breve.
-  **V/O:** `⟨C2_presupuesto⟩` "Un presupuesto sencillo compara el saldo mensual de hoy con el esperado."
+- **Beat 1 · Opciones** `⟨C2_opciones⟩` [1:23.3–1:31.6]: sobre una mesa, **una** tarjeta grande `Opción disponible` con íconos de costo, transporte, distancia al trabajo y a la red de cuidado. A un lado, separadas y en gris: `Propuesta de la familia · en evaluación` y `Autoconstrucción · propuesta comunitaria · requiere evaluación` (§8 paso 2.1).
+  **V/O:** "Luego, el plan: se examinan las opciones realmente disponibles, sus costos y su cercanía al trabajo y al cuidado."
+- **Beat 2 · Presupuesto** `⟨C2_presupuesto⟩` [1:31.6–1:36.8]: barras sin cifras "Hoy" y "Esperado" (ingresos netos, gastos esenciales, saldo), con una tercera barra tenue "Escenario adverso".
+  **V/O:** "Un presupuesto sencillo compara el saldo mensual de hoy con el esperado."
   **TXT:** `Saldo mensual = ingresos netos − gastos esenciales` (§8 paso 2.2).
-- **Beat 3 (1:46–1:55):** la madre escribe una tarjeta de propuesta; recibe código `P-01`, avatar de responsable y estado `En evaluación`.
-  **V/O:** `⟨C2_propuesta⟩` "La familia propone seguir vendiendo cerca del nuevo hogar, `⟨C2_codigo⟩` y su propuesta recibe código, responsable y respuesta."
+- **Beat 3 · Propuesta** `⟨C2_propuesta⟩` [1:36.8–1:41.4]: la madre escribe una tarjeta; recibe el código `P-01` y el avatar de la gestora como responsable.
+  **V/O:** "Y la familia propone seguir vendiendo cerca del nuevo hogar."
+  **TXT:** `P-01 · Seguir vendiendo cerca del nuevo hogar` · `Responsable: gestora`.
 
-**Evolución de la ficha:** comparación de opciones + plan económico + propuesta P-01.
-
-### C3 · Articulación institucional (1:55–2:20)
+### C3 · Articulación institucional (1:41.4–2:10.8)
 
 - **Tarjeta:** `3 · ARTICULACIÓN INSTITUCIONAL`.
-- **Beat 1 (1:57–2:05):** mesa técnica: tres enlaces institucionales, mentora, delegada y delegado comunitarios. La delegada señala una propuesta colectiva en el tablero; un enlace anota y responde. Nadie aparece indiferente.
-  **V/O:** `⟨C3_mesa⟩` "En la mesa técnica, con delegados de la comunidad, cada entidad precisa qué puede decidir, con qué recursos y en qué plazo."
-- **Beat 2 (2:05–2:12):** el tablero se ordena en columnas `Confirmada` · `Condicionada` · `Solicitada`. P-01 pasa a `Aceptada con ajustes`. Otra tarjeta queda `No viable` con globo `Explicación` y una flecha a `Alternativas`.
-  **V/O:** `⟨C3_confirmado⟩` "Lo confirmado se separa de lo solicitado; `⟨C3_noviable⟩` lo no viable se explica y se buscan alternativas."
-- **Beat 3 (2:12–2:20):** una tarjeta marcada `Desacuerdo` sube por una flecha de escalamiento a `Nivel que decide`; mientras tanto, las demás tarjetas siguen moviéndose (orientación, servicios).
-  **V/O:** `⟨C3_desacuerdo⟩` "Y un desacuerdo no congela el caso: se escala a quien decide, mientras lo demás avanza."
-- **Cierre del capítulo (2:19–2:20):** la ficha recibe el sello `Preparación entregada (punto D)`.
+- **Beat 1 · Mesa técnica colectiva** `⟨C3_mesa⟩` [1:41.9–1:51.1]: tres enlaces, gestora, delegada y delegado comunitarios ante un tablero con un **asunto colectivo** (`Transporte y cuidado compartidos`). La delegada señala y propone; un enlace anota y responde; otro consulta a su colega. En el tablero aparecen columnas de **estado de la acción**: `Confirmada · Condicionada · Solicitada · Sin respuesta`.
+  **V/O:** "En la mesa técnica, entidades y delegados comunitarios revisan los asuntos colectivos: quién decide, con qué recursos y en qué plazo."
+- **Beat 2 · Espacio privado** `⟨C3_privado⟩` [1:51.1–1:55.4]: corte a una sala pequeña con puerta entornada (`Espacio privado`): la madre, la gestora y un enlace.
+  **V/O:** "El caso de la familia se revisa aparte, con ella."
+- **Beat 3 · Incidencia** `⟨C3_incidencia⟩` [1:55.4] / `⟨C3_ajustes⟩` [1:57.6] / `⟨C3_noviable⟩` [1:59.2]: la tarjeta `P-01` recibe la etiqueta de respuesta `Aceptada con ajustes`; el plan de la ficha se redibuja visiblemente (un trazo cambia: "venta en punto cercano autorizado"). De `P-01` nacen `A-01 · Confirmada` y `A-02 · Solicitada`. Una parte marcada `No viable con explicación` muestra un globo de razón y una flecha a `Alternativas`. La gestora entrega una **hoja de devolución** con cinco campos: `Decisión · Razón · Siguiente paso · Responsable · Fecha de revisión`.
+  **V/O:** "Su propuesta cambia el plan: se acepta con ajustes, y lo no viable se explica."
+- **Beat 4 · Desacuerdo** `⟨C3_desacuerdo⟩` [2:02.2–2:09.3]: de vuelta al tablero, una tarjeta `Desacuerdo` pasa por `Revisión` y sube por una flecha a `Nivel que decide`. Mientras, las demás tarjetas siguen moviéndose (orientación, servicios).
+  **V/O:** "Un desacuerdo no congela el caso: se revisa, se escala si hace falta, y lo demás sigue."
+- **Remate (2:09.3–2:10.8, sin voz):** la ficha recibe el sello `Preparación entregada`.
 
-**Evolución de la ficha:** matriz de compromisos (estados) + sello punto D.
-
-### C4 · Ejecución (2:20–2:40)
+### C4 · Ejecución (2:10.8–2:31.7)
 
 - **Tarjeta:** `4 · EJECUCIÓN`.
-- **Beat 1 (2:22–2:31):** acciones confirmadas se marcan (gestión documental, acuerdo de cuidado). Aparece una lista de condiciones previas al traslado: `Solución habitacional · Servicios y acceso · Economía · Cuidados · Logística · Continuidad`. Una mano rotulada `Entidad competente` marca las verificaciones; la mentora solo documenta. Bajo el sello punto D aparece la nota `No autoriza la mudanza`.
-  **V/O:** `⟨C4_ejecuta⟩` "Con la preparación entregada se ejecutan las acciones confirmadas. `⟨C4_nomudanza⟩` Pero preparar no es mudarse: la entidad competente verifica antes las condiciones del traslado."
-- **Beat 2 (2:31–2:40):** encuentro de transición: madre, mentora y profesional del equipo posterior. La ficha pasa de mano; el receptor toca `Recibido ✓`; la madre recibe su copia y un contacto.
-  **V/O:** `⟨C4_entrega⟩` "Y la ficha no se pierde: pasa, frente a la familia, al equipo que la acompañará después, `⟨C4_confirma⟩` que confirma recibirla."
+- **Beat 1 · Ejecución por competencias** `⟨C4_ejecuta⟩` [2:11.3–2:18.1]: tres carriles, uno por entidad, ejecutan las acciones confirmadas (`A-01`, gestión documental, acuerdo de cuidado). La gestora acompaña y registra en la ficha. Las acciones solo solicitadas quedan en gris, sin avanzar.
+  **V/O:** "Con la preparación entregada, cada entidad ejecuta lo ya confirmado, y el piloto acompaña y registra."
+- **Beat 2 · Preparar no es mudarse** `⟨C4_nomudanza⟩` [2:18.1–2:24.6]: bajo el sello aparece `No autoriza la mudanza`. Una lista de condiciones previas al traslado: `Solución habitacional · Servicios y acceso · Economía · Cuidados · Logística · Continuidad`. Una mano rotulada `Entidad competente` verifica; `Cuidados` queda un momento `En gestión · pendiente visible` y se verifica después de resolverse. La gestora solo documenta.
+  **V/O:** "Pero preparar no es mudarse: la entidad competente verifica antes las condiciones del traslado."
+- **Beat 3 · Entrega del caso** `⟨C4_entrega⟩` [2:24.6] / `⟨C4_confirma⟩` [2:28.6]: encuentro de transición con la madre, la gestora y la profesional del equipo posterior. La ficha cambia de mano; la receptora toca `Recibido ✓`; la madre recibe su copia y un contacto.
+  **V/O:** "Frente a la familia, la ficha pasa al equipo siguiente, que firma el recibido."
+- **Remate · Traslado efectivo (2:30.2–2:31.7, sin voz, continúa sobre el inicio de C5):** la familia recibe unas llaves. Rótulo `Traslado efectivo · decidido y verificado por la entidad competente`. En la ficha, `Situación habitacional: reubicación definitiva`.
 
-**Evolución de la ficha:** lista de condiciones + cambio de responsable.
-
-### C5 · Acompañamiento (2:40–2:59)
+### C5 · Acompañamiento (2:31.7–2:48.8)
 
 - **Tarjeta:** `5 · ACOMPAÑAMIENTO`.
-- **Beat 1 (2:42–2:49):** vivienda nueva genérica (no identificable con un proyecto real). Calendario de seguimiento con hitos `48–72 h` y `2 semanas` tras el traslado.
-  **V/O:** `⟨C5_seguimiento⟩` "En el nuevo hogar, el seguimiento continúa. `⟨C5_alerta⟩` Si sus ingresos caen o una necesidad básica queda sin atender, se activa una alerta."
-  **Imagen en `⟨C5_alerta⟩`:** el hilo de Economía pasa a `Crítica` (triángulo rojo).
-- **Beat 2 (2:49–2:59):** tarjeta de alerta: `Responsable · Acción · Fecha de revisión`. La mentora/equipo gestiona; luego la madre confirma con un gesto; el estado pasa a `En gestión` y después a `Atendida` con evidencia.
-  **V/O:** `⟨C5_cierre⟩` "Tiene responsable, acción y fecha, y solo se cierra con una respuesta real, comprobada con la familia."
+- **Beat 1 · Seguimiento** `⟨C5_seguimiento⟩` [2:32.2–2:35.0]: vivienda nueva genérica; la madre cocina en su nuevo espacio. Calendario pequeño: `Contactos: 30 · 90 · 150 · 180 días desde el ingreso`.
+  **V/O:** "Tras el traslado, el seguimiento continúa."
+- **Beat 2 · Alerta** `⟨C5_alerta⟩` [2:35.0] / `⟨C5_tarjeta⟩` [2:41.0]: el nodo de Economía pasa a `Crítica` (triángulo). Se despliega la tarjeta de alerta `Responsable · Acción · Fecha de revisión`, con la nota pequeña `Umbral de prueba: caída importante del ingreso neto o necesidad básica desatendida`.
+  **V/O:** "Si los ingresos caen de forma importante o falta lo básico, se activa una alerta con responsable, acción y fecha."
+- **Beat 3 · Cierre de la alerta** `⟨C5_cierre⟩` [2:43.4–2:48.8]: una remisión aparece como `Derivación` (no cierra la alerta). Luego llega una atención efectiva (`Atención recibida`), la madre la confirma con un gesto y el estado pasa de `En gestión` a `Atendida`.
+  **V/O:** "Solo se cierra cuando la atención llega y la familia lo confirma."
 
-### C6 · Cierre y seguimiento (2:59–3:15)
+### C6 · Cierre y seguimiento (2:48.8–3:02.1)
 
 - **Tarjeta:** `6 · CIERRE Y SEGUIMIENTO`.
-- **Beat 1 (3:01–3:10):** la familia revisa la ficha con la mentora: columna `Cumplido ✓` y columna `Pendiente`. En pendientes, entre otros: `Respuesta sobre el predio de origen · en evaluación por autoridad competente` (§14). Los pendientes se entregan a un `Receptor de continuidad` con `Próxima acción: fecha`.
-  **V/O:** `⟨C6_revisa⟩` "Al cierre se revisa qué se cumplió. `⟨C6_pendiente⟩` Lo pendiente no se declara resuelto: se entrega a quien continuará, con fecha y contacto."
-- **Beat 2 (3:10–3:15):** primer plano de unas llaves en la mano de la madre; al lado, la ficha abierta con pendientes visibles.
-  **V/O:** `⟨C6_llaves⟩` "Porque entregar las llaves no significa que todo esté resuelto."
+- **Beat 1 · Balance** `⟨C6_revisa⟩` [2:49.3] / `⟨C6_pendiente⟩` [2:52.3]: la familia revisa la ficha con la gestora. Columna `Cumplido ✓` (incluye `P-01 · comprobada con el hogar ✓`) y columna `Pendiente` (incluye `Respuesta sobre el predio de origen · en evaluación por autoridad competente`, §14). Los pendientes pasan al `Receptor de continuidad` con `Próxima acción: fecha`. Tres etiquetas aparecen en fila: `Preparación fortalecida · Adaptación observada · Atención pendiente`; se ilumina **Atención pendiente** para este caso (§13, §19 paso 6).
+  **V/O:** "Al cierre se revisa qué se cumplió; lo pendiente pasa a quien continuará, con fecha y contacto."
+- **Beat 2 · Llaves** `⟨C6_llaves⟩` [2:57.1–3:02.1]: plano cercano de las llaves sobre la mesa, junto a la ficha abierta con los pendientes visibles.
+  **V/O:** "Porque entregar las llaves no significa que todo esté resuelto."
 
-### E9 · Mensaje central (3:15–3:32)
+### E9 · Mensaje central (3:02.1–3:20.5)
 
-- **Imagen 1:** la cámara se aleja: toda la ruta y sus hilos. La línea turquesa conecta un "antes" (ladera) con un "después" (nuevo hogar).
-  **V/O:** `⟨E9_frase⟩` "Lo que la familia necesita antes de trasladarse se convierte en compromisos que se acompañan y se comprueban después."
-  **TXT:** la frase central, por bloques sincronizados.
-- **Imagen 2:** 350 puntos pequeños (hogares) en una retícula; la mayoría en tonos de "preparación", algunos marcados "ya reasentado", pocos "trasladado en el piloto". No hay migración masiva.
-  **V/O:** `⟨E9_piloto⟩` "Mi Ruta de Reubicación: un piloto propuesto de doce meses, con una meta de trescientos cincuenta hogares acompañados."
-  **TXT:** `350 hogares · 12 meses · Piloto propuesto, por validar con la comunidad y las entidades`. Nota pequeña: `350 = meta de diseño; no es censo ni meta de traslados.`
+- **Imagen 1** `⟨E9_frase⟩` [3:02.7]: la cámara se aleja: toda la ruta con sus hilos y la mesa; la línea turquesa conecta la ladera con el nuevo hogar. La frase aparece por bloques sincronizados.
+  **V/O:** "Lo que la familia necesita antes de trasladarse se convierte en compromisos que se acompañan y se comprueban después."
+- **Imagen 2** `⟨E9_piloto⟩` [3:11.9]: retícula de 350 puntos **neutros, todos iguales**. Leyenda con las tres situaciones de ingreso posibles (`permanece en el sector` · `vinculado a una ruta institucional` · `ya reasentado`) **sin asignar proporciones**. En `⟨E9_notraslados⟩` [3:17.5] los puntos no se mueven: ninguno "migra".
+  **V/O:** "Mi Ruta de Reubicación: doce meses, una meta de trescientos cincuenta hogares acompañados, no de trescientos cincuenta traslados."
+  **TXT:** `350 hogares acompañados · 12 meses` · `Distribución por conocer con la vinculación real` (lectura ≥ 4 s; 12 palabras).
 
-### CR · Créditos y fuentes (3:32–3:39)
+### CR · Créditos (3:20.5–3:31.5), dos placas
 
-Texto legible (≥ 7 s): autoría del equipo, curso/programa, fecha; fuentes: CVP *Programa de Reasentamientos* (2026); Decreto Distrital 653 de 2025; IDIGER Concepto 2026EE19018; atribuciones de imagen (Esri y socios; Google Street View); narración generada con Google Cloud Text-to-Speech; música (título, autor, licencia); tipografías Inter y Atkinson Hyperlegible (OFL). Nota: "Las mesas, la mentora, el punto D, los tiempos y las metas son propuestas del piloto, no disposiciones oficiales."
+- **Placa 1 (6 s, 18 palabras):** `Imágenes: Esri y socios · Google Street View (abr. 2025)` · `Narración: voz sintética, Google Cloud Text-to-Speech` · `Música: [título · autor · licencia]`.
+- **Placa 2 (5 s, 12 palabras):** `Equipo [nombres] · DGIP 2026` · `Fuentes y alcance: ver documento adjunto` · rótulo final `Piloto propuesto · por validar`.
+
+Las fuentes normativas e institucionales y la nota "Las mesas, la mentora, el punto D, los tiempos y las metas son propuestas del piloto, no disposiciones oficiales" van en el documento adjunto o la descripción (Anexo D), donde se pueden leer.
 
 ---
 
@@ -387,21 +476,27 @@ Texto legible (≥ 7 s): autoría del equipo, curso/programa, fecha; fuentes: CV
 ### 8.1 Perfil de voz
 
 - **Carácter:** cálida, serena, cercana; ni publicitaria ni institucional fría.
-- **Acento:** latinoamericano neutro (no hay voz `es-CO` en el catálogo de Google; se usa `es-US`).
-- **Género:** se recomienda voz femenina por coherencia con la mentora; decisión final tras prueba A/B.
+- **Acento:** latinoamericano neutro. Google no ofrece voces `es-CO`; se usa `es-US`.
+- **Género:** se recomienda voz femenina por coherencia con la gestora; decisión final tras la prueba A/B.
 
-### 8.2 Selección (prueba de casting)
+### 8.2 Casting y calibración (fase F0, **antes** de congelar el guion)
 
-1. Listar voces disponibles en la cuenta:
+1. Listar las voces disponibles (con credenciales de usuario se requiere el proyecto de cuota):
    ```bash
    curl -s -H "Authorization: Bearer $(gcloud auth print-access-token)" \
-     "https://texttospeech.googleapis.com/v1/voices?languageCode=es-US" | jq '.voices[].name'
+        -H "x-goog-user-project: TU_PROYECTO" \
+        "https://texttospeech.googleapis.com/v1/voices?languageCode=es-US" | jq -r '.voices[].name'
    ```
-2. Sintetizar E1 y C3 con tres candidatas y escuchar a ciegas con 3 personas del equipo (si es posible, una de la comunidad):
-   - `es-US-Neural2-A` (femenina; admite SSML completo y marcas) — **preferida**.
-   - Una voz `es-US-Chirp3-HD-*` femenina (más natural; SSML limitado: usar texto plano y pausas por puntuación).
-   - `es-US-Studio-B` o `es-US-Neural2-B` (masculina) como contraste.
-3. Criterios (1–5): naturalidad, claridad, calidez, pronunciación de "Bolívar", "reasentamiento", "trescientos cincuenta".
+2. Candidatas (verificar disponibilidad en el listado):
+
+   | Voz | SSML | Marcas `<mark>` / timepoints | Observación |
+   | --- | --- | --- | --- |
+   | `es-US-Neural2-A` (femenina) | Subconjunto SSML de Google (`break`, `prosody`, `say-as`, `sub`, `mark`, `phoneme` según voz) | Sí | **Preferida**: permite el flujo de §8.5 tal cual. |
+   | `es-US-Chirp3-HD-*` (femenina) | No admite SSML; texto plano y pausas por puntuación o *markup* propio de Chirp | No | Más natural; exige síntesis por frase (§8.5 paso 5). |
+   | `es-US-Studio-B` o `es-US-Neural2-B` (masculina) | Studio admite SSML parcial (sin `<mark>`, según documentación vigente) | Studio: no / Neural2: sí | Contraste. |
+
+3. Sintetizar E1 y C3 con cada candidata. Escucha a ciegas con 3 personas del equipo y, si es posible, una de la comunidad. Criterios de 1 a 5: naturalidad, claridad, calidez, pronunciación ("Bolívar", "reasentadas", "trescientos cincuenta").
+4. **Calibración de velocidad:** sintetizar el guion completo con la voz ganadora a `speakingRate` 1,0 y medir la duración. Calcular la tasa efectiva = 425 palabras ÷ (duración − 20,75 s de pausas). **Requisito: ≥ 2,3 palabras/s.** Si no se alcanza, subir `speakingRate` (hasta 1,08) o aplicar los recortes de §8.6. Solo entonces se congela el guion (G1).
 
 ### 8.3 Configuración base de síntesis
 
@@ -411,8 +506,8 @@ Texto legible (≥ 7 s): autoría del equipo, curso/programa, fecha; fuentes: CV
   "voice": { "languageCode": "es-US", "name": "es-US-Neural2-A" },
   "audioConfig": {
     "audioEncoding": "LINEAR16",
-    "sampleRateHertz": 48000,
-    "speakingRate": 0.97,
+    "sampleRateHertz": 24000,
+    "speakingRate": 1.0,
     "pitch": 0.0,
     "volumeGainDb": 0.0
   },
@@ -420,51 +515,78 @@ Texto legible (≥ 7 s): autoría del equipo, curso/programa, fecha; fuentes: CV
 }
 ```
 
-- Endpoint con marcas de tiempo: `POST https://texttospeech.googleapis.com/v1beta1/text:synthesize`.
-- **Un archivo por bloque** (`E0.wav`, `E1.wav`, … `E9.wav`) más su `E0.timepoints.json`. Permite reemplazar una frase sin regenerar todo.
-- `speakingRate` ajustable entre 0,92 y 1,05 para cuadrar la duración (§8.6).
+- Endpoint con marcas de tiempo: `POST https://texttospeech.googleapis.com/v1beta1/text:synthesize` (la respuesta incluye `timepoints[] { markName, timeSeconds }`).
+- `sampleRateHertz` 24000: tasa nativa de Neural2; el remuestreo a 48 kHz se hace en la mezcla.
+- `<prosody rate="92%">` se multiplica por `speakingRate` (con 1,0 → 0,92 efectivo); ya está incluido en el cálculo de §8.6.
+- **Un archivo por bloque y versión:** `narracion/wav/C3_v02.wav` + `narracion/timepoints/C3_v02.json` + `narracion/ssml/C3_v02.ssml`. Permite rehacer una frase sin regenerar todo.
+- Costo: el guion tiene unos 2.600 caracteres; incluso con decenas de iteraciones el consumo es marginal (verificar la tarifa y la cuota gratuita vigentes de la cuenta).
 
 ### 8.4 Reglas de escritura para TTS
 
-- Sin siglas en la narración (CVP, IDIGER, SDHT no se leen); si fueran necesarias: `<sub alias="ce ve pe">CVP</sub>`.
-- Números escritos en palabras ("doce", "trescientos cincuenta").
-- Pausas: `<break time="300ms"/>` entre cláusulas; `600–700ms` entre ideas; pausas largas solo en E0 para sincronizar con el zoom.
-- Énfasis por ritmo, no por volumen: `<prosody rate="92%">` en la frase central y en "preparar no es mudarse".
-- Revisar acentos tónicos en "Bolívar", "ficticia", "mentora", "reubicación".
+- Sin siglas en la narración. Si alguna fuera imprescindible: `<sub alias="ce ve pe">CVP</sub>`.
+- Números en palabras ("doce", "trescientos cincuenta").
+- Pausas: 200–300 ms entre cláusulas; 400–600 ms entre ideas; 500 ms al inicio de cada capítulo (la tarjeta aparece 0,5 s antes de la voz); pausas mayores solo en E0.
+- Énfasis por ritmo, no por volumen: `<prosody rate="92%">` en el lema, en "preparar no es mudarse" y en la frase central.
+- Sujetos explícitos donde importa la responsabilidad: "la gestora", "cada entidad", "la entidad competente".
+- `<phoneme>` solo como plan B y probado con la voz elegida (el soporte varía por voz).
 
-### 8.5 Sincronía audio → animación (flujo "audio primero")
+### 8.5 Sincronía audio → animación ("audio primero")
 
-1. Sintetizar narración v1.
-2. Extraer `timepoints` de cada marca (`markName`, `timeSeconds`).
+1. Sintetizar narración v1 por bloque (Anexo B).
+2. Extraer los `timepoints` de cada marca.
 3. Construir el animatic sobre el audio: cada beat de §7 inicia en su marca.
-4. Generar subtítulos desde el texto y los tiempos de marca (máx. 2 líneas, 42 caracteres por línea, ≤ 17 caracteres/s, 1–7 s por subtítulo).
-5. Si se cambia de voz a Chirp 3 HD (sin marcas), sintetizar por frase y obtener tiempos de cada archivo; ensamblar en la línea de tiempo.
+4. Generar subtítulos desde el texto y los tiempos (máx. 2 líneas, 42 caracteres por línea, ≤ 17 caracteres/s, 1–7 s por subtítulo; revisión manual).
+5. **Si gana una voz sin marcas** (Chirp 3 HD o Studio): sintetizar **una frase por archivo** según las marcas del Anexo B, medir cada archivo con `ffprobe` y ensamblar en la línea de tiempo con los silencios del SSML como huecos. Los tiempos de marca equivalen al inicio de cada archivo.
 
 ### 8.6 Presupuesto de duración
 
-| Bloque | Palabras | Voz estimada (2,5 p/s) | Rango (2,7–2,3 p/s) | Duración del bloque |
-| --- | --- | --- | --- | --- |
-| E0 | 35 | 14,0 s | 13,0–15,2 | 23 s (incluye esperas del zoom) |
-| E1 | 26 | 10,4 s | 9,6–11,3 | 13 s |
-| E2 | 47 | 18,8 s | 17,4–20,4 | 20 s |
-| C1 | 79 | 31,6 s | 29,3–34,3 | 35 s |
-| C2 | 51 | 20,4 s | 18,9–22,2 | 24 s |
-| C3 | 54 | 21,6 s | 20,0–23,5 | 25 s |
-| C4 | 43 | 17,2 s | 15,9–18,7 | 20 s |
-| C5 | 39 | 15,6 s | 14,4–17,0 | 19 s |
-| C6 | 32 | 12,8 s | 11,9–13,9 | 16 s |
-| E9 | 37 | 14,8 s | 13,7–16,1 | 17 s |
-| CR | 0 | — | — | 7 s |
-| **Total** | **443** | **177 s** | **164–193 s** | **219 s = 3:39** |
+Cálculo por bloque desde el Anexo B: duración de audio = palabras ÷ tasa (con el factor 0,92 donde hay `prosody`) + pausas `<break>`. Remate = imagen sin voz al final del bloque.
 
-**Regla de ajuste tras medir la voz real:**
-- Si el animatic supera 3:50 → (1) subir `speakingRate` hasta 1,03; (2) reducir tarjetas de capítulo de 1,5 a 1,0 s y el hold del título; (3) créditos a 5 s.
-- Si queda por debajo de 3:20 → ampliar respiraciones visuales (no añadir texto).
-- **Bajo ninguna circunstancia** el master puede salir de 2:00–4:00; verificación con `ffprobe` en QA.
+| Bloque | Palabras | Pausas SSML | Audio a 2,2 p/s | Audio a 2,5 p/s | Audio a 2,8 p/s | Remate | Bloque nominal |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| E0 | 33 | 5,10 s | 20,1 | 18,3 | 16,9 | 0,4 | 18,7 |
+| E1 | 30 | 1,30 s | 15,2 | 13,5 | 12,2 | 1,0 | 14,5 |
+| E2 | 44 | 1,05 s | 21,0 | 18,6 | 16,8 | 0,6 | 19,2 |
+| C1 | 68 | 2,60 s | 33,5 | 29,8 | 26,9 | 0,6 | 30,4 |
+| C2 | 41 | 1,65 s | 20,3 | 18,0 | 16,3 | 0,6 | 18,6 |
+| C3 | 63 | 2,65 s | 31,3 | 27,9 | 25,1 | 1,5 | 29,4 |
+| C4 | 44 | 1,65 s | 21,8 | 19,4 | 17,5 | 1,5 | 20,9 |
+| C5 | 38 | 1,30 s | 18,6 | 16,5 | 14,9 | 0,6 | 17,1 |
+| C6 | 27 | 1,50 s | 13,8 | 12,3 | 11,1 | 1,0 | 13,3 |
+| E9 | 37 | 1,95 s | 19,5 | 17,4 | 15,8 | 1,0 | 18,4 |
+| CR | — | — | — | — | — | 11,0 | 11,0 |
+| **Total** | **425** | **20,75 s** | **215,1** | **191,7** | **173,5** | **19,8** | **211,5 s** |
+
+**Duración total por escenario:**
+
+| Tasa efectiva de la voz | Total | Estado |
+| --- | --- | --- |
+| 2,8 p/s (voz rápida) | 3:13 | Dentro de banda y de límite. |
+| 2,5 p/s (nominal) | 3:31 | Objetivo. |
+| 2,3 p/s (mínimo exigido en calibración) | ≈ 3:46 | Dentro de banda. |
+| 2,2 p/s | 3:55 | Dentro del límite obligatorio, fuera de banda → aplicar recortes. |
+| < 2,2 p/s | > 3:55 | **No admitido**: lo impide la calibración de §8.2 paso 4. |
+
+**Recortes preparados** (en orden; cada uno indica la edición concreta):
+
+| # | Edición | Ahorro aprox. |
+| --- | --- | --- |
+| R1 | `speakingRate` 1,0 → 1,05 (regenerar). | −8 s |
+| R2 | E0: `break` de 1600/1400 ms → 1100/1000 ms y zoom re-temporizado. | −0,9 s |
+| R3 | Inicio de capítulos: `break` de 500 → 300 ms (×6). | −1,2 s |
+| R4 | Remates: C3 y C4 de 1,5 → 1,0 s; E1, C6 y E9 de 1,0 → 0,6 s. | −2,2 s |
+| R5 | C3: "quién decide, con qué recursos y en qué plazo" → "quién decide y en qué plazo". | −1,4 s |
+| R6 | CR: placa 1 de 6 → 5 s. | −1 s |
+
+Si el animatic queda **por debajo de 3:10**, se amplían respiraciones visuales (remates), nunca texto. **Bajo ninguna circunstancia** el master sale de 2:00–4:00; verificación con `ffprobe` en G5.
 
 ### 8.7 Control de calidad de la voz
 
-Escucha completa con audífonos: errores de pronunciación, entonación interrogativa indebida, cortes, clics, ritmos robóticos en enumeraciones (dividir con comas o `<break>`), coherencia de volumen entre bloques (normalizar cada clip a −18 LUFS antes de mezclar).
+Escucha completa con audífonos: pronunciación, entonación interrogativa indebida, cortes, clics, ritmo robótico en enumeraciones (separar con comas o `<break>`), coherencia de volumen entre bloques (normalizar cada clip a −18 LUFS antes de mezclar).
+
+### 8.8 Plan B
+
+Si la API falla (cuota, credenciales) o ninguna voz supera 3/5 en naturalidad: (a) usar la segunda voz del casting, ya sintetizada en F0; (b) locución humana de respaldo con el mismo guion y las mismas marcas como puntos de edición.
 
 ---
 
@@ -472,11 +594,11 @@ Escucha completa con audífonos: errores de pronunciación, entonación interrog
 
 | Elemento | Especificación |
 | --- | --- |
-| Música | Pieza instrumental cálida (guitarra/piano con textura sutil), 70–90 BPM, licencia verificada (CC BY o librería con licencia educativa). Evitar clichés folclóricos exagerados. |
+| Música | Pieza instrumental cálida (guitarra o piano con textura sutil), 70–90 BPM. **Licencia que cubra difusión pública no comercial**, incluida la mensajería (CC BY con atribución, o librería con esa cobertura). Evitar clichés folclóricos. |
 | Estructura musical | Intro contemplativa (E0) → motivo de la ruta (E1–E2) → pulso estable (C1–C5) → resolución abierta, no triunfal (C6–E9). |
-| SFX | Trazado de línea, papel de la ficha, sello suave, "recibido", pulso de alerta grave (no alarma), ambiente de barrio solo en la toma real. |
+| SFX | Trazado de línea, papel de la ficha, sello suave, "recibido", pulso grave para la alerta y la urgencia (no alarma); ambiente de barrio solo en la toma real. |
 | Mezcla | Voz como guía; música con ducking de −10 a −14 dB bajo la voz. |
-| Loudness | Master web: −14 LUFS integrado, pico real ≤ −1 dBTP. |
+| Loudness | Master web −14 LUFS integrado; pico real ≤ −1 dBTP. |
 
 ---
 
@@ -486,56 +608,89 @@ Escucha completa con audífonos: errores de pronunciación, entonación interrog
 
 | Tramo original | Contenido | Observación |
 | --- | --- | --- |
-| 0–5 s | Satélite Bogotá, rótulo `BOGOTÁ · COLOMBIA`, escala 20 km → 5 km. | Útil. |
-| 5–10 s | Ciudad Bolívar, escala 1 km → 200 m. | Útil. |
-| 10–12 s | Rótulo `BELLAFLOR` y coordenadas `4.54437, −74.16182`, punto turquesa. | Corregir grafía a "Bella Flor"; precisión de coordenadas excesiva. |
-| 12–18 s | Captura de Google Street View con interfaz (buscador, dirección "73c Sur 33 Tv. 27b", fecha abr. 2025), personas caminando. | Revisar derechos, privacidad y limpiar interfaz. |
-| Todo | Pie: "Punto de referencia suministrado · Sin delimitación del asentamiento" y atribución Esri. | Conservar. |
+| 0–5 s | Satélite Bogotá, rótulo `BOGOTÁ · COLOMBIA`, escala 20 km → 5 km. Pie "Punto de referencia suministrado · Sin delimitación del asentamiento" y atribución Esri. | Útil. |
+| 5–10 s | Ciudad Bolívar, escala 1 km → 200 m; mismo pie y atribución. | Útil. |
+| 10–12 s | Rótulo `BELLAFLOR` y coordenadas `4.54437, −74.16182`, punto turquesa; mismo pie y atribución. | Grafía distinta a "Bella Flor"; coordenadas precisas innecesarias. |
+| 12–18 s | Captura de Google Street View en *pillarbox* con interfaz de Google Maps (buscador, panel con dirección "73c Sur 33 Tv. 27b", fecha abr. 2025, minimapa "BELLA FLOR") y atribución de Google en el borde inferior. Personas caminando, entre ellas una niña. Leve movimiento. **Sin pie ni atribución Esri.** | Derechos, privacidad e interfaz por resolver. |
+
+Los rótulos y coordenadas están **quemados** en el MP4.
 
 ### 10.2 Tratamiento
 
-1. Re-renderizar los rótulos con la tipografía del plan: `BOGOTÁ · COLOMBIA`, `CIUDAD BOLÍVAR`, `BELLA FLOR · PARTE ALTA`.
-2. Eliminar o redondear las coordenadas (p. ej. a tres decimales) y retirar la dirección textual de Street View.
-3. Conservar atribuciones de imagen (Esri y socios; Google) visibles.
-4. Verificar que los rostros estén difuminados; si alguna persona, especialmente menores, resulta identificable, sustituir la toma por una fotografía propia con consentimiento o por una recreación ilustrada rotulada.
-5. Ajustar la velocidad del zoom (rampas) para que cada rótulo coincida con su marca de narración.
-6. Diseñar la transición "foto → ilustración" como frontera explícita entre imagen real y recreación.
+1. **Proyecto fuente.** Preguntar al autor del zoom si existe el proyecto o script de origen. Si existe, re-renderizar con: rótulo `BELLA FLOR` + subrótulo `Ámbito del piloto: parte alta · delimitación por validar`, **sin coordenadas**, pie original textual y nuevas duraciones por tramo (0–2,6 s Bogotá; 2,6–5,6 s Ciudad Bolívar; 5,6–10 s Bella Flor). Si no existe, **enmascarar** las placas quemadas con placas nuevas del mismo tamaño y estilo, y re-temporizar con rampas de velocidad e interpolación de cuadros.
+2. **Atribuciones.** Mantener la atribución Esri y socios en todo el tramo satelital. Verificar las condiciones de uso de Esri World Imagery para video y registrar fecha y enlace en el registro de derechos (§12.4).
+3. **Street View.** Usar la captura **completa, sin recortar, sin zoom y sin alterar la atribución de Google**. Si se oculta el panel con la dirección, que sea con un recuadro propio que no tape el logotipo ni el "© Google". Verificar las condiciones vigentes (Google Maps/Earth Additional Terms y Geo Guidelines, google.com/permissions/geoguidelines) y registrarlas.
+4. **Privacidad.** Comprobar el difuminado de rostros de Google. Si la niña u otra persona es identificable, o si las condiciones de Google no permiten tratar la imagen, **sustituir la toma** por (a) una fotografía propia de la calle con consentimiento y sin personas identificables, o (b) una ilustración original rotulada como recreación. Decisión registrada en G2b.
+5. **Frontera real/ilustrado.** Fundido cruzado de la captura a una ilustración **original** (no calcada), antes de la frase sobre reasentamiento.
+6. **Sincronía.** Cada rótulo coincide con su marca de narración (E0 en §7).
 
 ---
 
 ## 11. Accesibilidad
 
 - Subtítulos completos (archivo externo y versión incrustada), revisados manualmente.
-- Contraste de texto ≥ 4.5:1; estados con forma y texto además del color; prueba con simulador de daltonismo.
-- Velocidad de narración moderada; vocabulario sencillo; sin siglas.
+- Contraste según §4.2: texto ≥ 4.5:1, objetos gráficos ≥ 3:1. Estados con forma y texto, además de color.
+- Prueba con simulador de daltonismo en F2 y QA.
+- Narración moderada, vocabulario sencillo, sin siglas. Los límites clave se narran (no dependen solo de texto en pantalla).
 - Sin destellos ni movimientos bruscos.
-- Opcional: versión con recuadro de Lengua de Señas Colombiana si se presenta a la comunidad.
+- Opcional: versión con recuadro de Lengua de Señas Colombiana para la presentación a la comunidad.
 
 ---
 
-## 12. Flujo de producción y herramientas
+## 12. Producción: herramientas, equipo, recursos y registros
 
-### 12.1 Opción A (recomendada, reproducible): animación por código
+### 12.1 Flujo recomendado (híbrido)
 
-- **Remotion** (React/TypeScript) para componer escenas a 1920×1080, 24 fps.
-- Ilustraciones vectoriales en Figma/Illustrator exportadas como SVG por capas.
-- Script de síntesis TTS (Node o Python) que genera `wav` + `timepoints.json` por bloque.
-- Las marcas de tiempo alimentan directamente los fotogramas de inicio de cada beat.
-- `ffmpeg` para mezcla final y normalización (`loudnorm` en dos pasadas).
+- **Gráfica, interfaz, ficha, tablero, mapas y textos:** animación por código con **Remotion** (React/TypeScript, 1920×1080, 24 fps). Las marcas de tiempo del TTS alimentan los fotogramas de inicio de cada beat. Reproducible y versionable.
+- **Personajes:** After Effects con rig (Duik) **o**, si no hay animador de personajes, animación **pose a pose** (2–3 poses por acción, transiciones de 6–8 cuadros) exportada como secuencias o Lottie e integrada en Remotion.
+- **Ilustración:** Illustrator o Figma; capas exportadas como SVG.
+- **Audio:** script de síntesis TTS (Python o Node) → `wav` + `timepoints.json`; mezcla y normalización con `ffmpeg` (`loudnorm` en dos pasadas) o DaVinci Resolve.
 
-### 12.2 Opción B: flujo tradicional
+**Alternativa tradicional:** Illustrator → After Effects → DaVinci Resolve/Premiere para edición, mezcla y subtítulos.
 
-Illustrator → After Effects (rig de personajes con Duik) → DaVinci Resolve/Premiere para edición, mezcla y subtítulos.
+### 12.2 Equipo y responsabilidades (RACI)
 
-### 12.3 Estructura de carpetas
+| Tarea | Responsable (R) | Aprueba (A) | Consultado (C) | Informado (I) |
+| --- | --- | --- | --- | --- |
+| Guion y fidelidad de fondo | Guionista del equipo | Coordinación del equipo académico | Autor del documento del prototipo | Todo el equipo |
+| Casting y síntesis TTS | Responsable de audio | Coordinación | Equipo; persona de la comunidad | — |
+| Diseño, storyboard y personajes | Diseñador/a | Coordinación | Delegados comunitarios (G2b) | Animación |
+| Animación | Animador/a | Coordinación | Diseñador/a | Equipo |
+| Sonido y subtítulos | Responsable de audio | Coordinación | — | Equipo |
+| Derechos y consentimientos | Productor/a | Coordinación | Profesor o asesor | Equipo |
+| QA de fondo, forma y técnica | Revisor/a independiente (no autor del guion) | Coordinación | — | Equipo |
+
+### 12.3 Recursos estimados
+
+| Fase | Horas aprox. |
+| --- | --- |
+| Casting, calibración y guion | 10 |
+| Diseño, storyboard y personajes | 30 |
+| Animatic | 10 |
+| Animación (gráfica + personajes pose a pose) | 70–90 |
+| Sonido, mezcla y subtítulos | 12 |
+| QA, validación y ajustes | 16 |
+| **Total** | **≈ 150–170 h** |
+
+Requisitos: cuenta de Google Cloud con TTS habilitado y facturación o cuota disponible; licencias de software (o alternativas libres); licencia musical.
+
+### 12.4 Registros obligatorios
+
+- **Registro de derechos y consentimientos:** cada material externo (Esri, Google, música, tipografías, fotografía si se usa) con licencia, enlace, fecha de verificación y restricciones.
+- **Control de versiones:** `BLOQUE_vNN` para SSML, wav y timepoints; `animatic_vNN.mp4`; `master_vNN.mp4`. Registro de cambios con fecha y motivo.
+
+### 12.5 Estructura de carpetas
 
 ```
 mi-ruta-reubicacion-motion/
 ├── PLAN_ANIMACION.md
+├── AUDITORIA_PLAN.md
 ├── narracion/      (ssml/, wav/, timepoints/)
 ├── assets/         (ilustraciones/, tipografias/, musica/, sfx/, video_ubicacion/)
-├── animacion/      (proyecto Remotion o AE)
+├── storyboard/
+├── animacion/      (proyecto Remotion y/o AE)
 ├── subtitulos/     (.srt, .vtt)
+├── registros/      (derechos.md, versiones.md, qa.md)
 └── render/         (masters y versiones)
 ```
 
@@ -545,23 +700,31 @@ mi-ruta-reubicacion-motion/
 
 | Fase | Duración | Entregable | Puerta de aprobación |
 | --- | --- | --- | --- |
-| F0 Congelar guion | 2 días | Guion y SSML aprobados por el equipo | G1: guion fiel (Anexo A) |
-| F1 Diseño | 3 días | Hoja de personajes, ficha, 6 fotogramas clave | G2: estilo aprobado |
-| F2 Voz y animatic | 2 días | TTS v1, animatic con duración medida | G3: duración 3:20–3:50 |
-| F3 Animación | 7–8 días | Escenas completas | G4: bloqueo de imagen |
-| F4 Sonido y subtítulos | 2 días | Mezcla, subtítulos | — |
-| F5 QA y validación | 2–3 días | Checklists + prueba de comprensión | G5: QA aprobado |
-| F6 Ajustes y masters | 2 días | Tres versiones finales | Entrega |
+| F0 Casting y calibración de voz | 1 día | Voz elegida, tasa medida (≥ 2,3 p/s) | — |
+| F1 Congelar guion y SSML | 1 día | Guion v1 (Anexo B) con matriz de trazabilidad | **G1**: fidelidad (Anexo A) + duración proyectada 3:10–3:50 |
+| F2 Diseño y storyboard | 4 días | Hoja de personajes, ficha, 26 cuadros, 6 fotogramas de estilo, prueba de daltonismo | **G2**: estilo aprobado |
+| F2b Validación de representación | 2–3 días | Revisión del storyboard con 2–3 delegados comunitarios y, si es posible, un enlace institucional; decisión sobre la toma de Street View | **G2b**: representación aceptada |
+| F3 Animatic con TTS | 2 días | Animatic sobre audio real, duración medida | **G3**: 3:10–3:50 |
+| F4 Animación | 10–12 días | Escenas completas | **G4**: bloqueo de imagen |
+| F5 Sonido y subtítulos | 2 días | Mezcla, subtítulos | — |
+| F6 QA y prueba de comprensión | 3 días | Checklists (§14) + Anexo E con 8–10 personas | **G5**: QA aprobado |
+| F7 Ajustes y masters | 2 días | Tres versiones finales + material complementario | Entrega |
+| **Total** | **≈ 5–6 semanas** | | |
 
 ---
 
-## 14. Control de calidad
+## 14. Control de calidad y criterios de aceptación
 
-**Fondo:** cada frase con fuente (Anexo A); rótulos obligatorios presentes; ninguna prohibición de §2.2 vulnerada.
-**Forma:** paleta y tipografía coherentes; franja de subtítulos libre; legibilidad.
-**Técnico:** duración 2:00–4:00 (`ffprobe`); 24 fps; −14 LUFS; sin cortes de audio.
-**Derechos:** licencias de música, tipografías, imágenes satelitales y Street View documentadas.
-**Accesibilidad:** subtítulos sincronizados; prueba de daltonismo.
+| Área | Criterio verificable |
+| --- | --- |
+| Fondo | Cada frase narrada y cada texto en pantalla figura en el Anexo A con su fuente. Ninguna prohibición de §2.2 se vulnera. Rótulos de §2.3 presentes. Revisión hecha por alguien que no escribió el guion. |
+| Comprensión | ≥ 80 % de respuestas correctas en cada pregunta del Anexo E. |
+| Duración | `ffprobe -show_entries format=duration` entre 120 y 240 s; objetivo 190–230 s. |
+| Técnica | 1920×1080, 24 fps, −14 LUFS ±1, pico real ≤ −1 dBTP, sin cortes de audio. |
+| Forma | Paleta y tipografía según §4; franja de subtítulos libre; regla de lectura cumplida en cada texto. |
+| Accesibilidad | Contrastes de §4.2; subtítulos ≤ 17 caracteres/s; prueba de daltonismo superada. |
+| Derechos | Registro de derechos completo (Esri, Google, música, tipografías); atribuciones visibles. |
+| Privacidad | Sin coordenadas, direcciones ni personas identificables sin consentimiento. |
 
 ---
 
@@ -569,133 +732,173 @@ mi-ruta-reubicacion-motion/
 
 | Riesgo | Mitigación |
 | --- | --- |
-| La voz sintética suena robótica o extranjera. | Casting A/B; ajustes SSML; alternativa Chirp 3 HD. |
-| Exceso de duración. | Presupuesto §8.6 y reglas de ajuste. |
-| Generar expectativas de vivienda. | Frases y rótulos de §2; revisión con la comunidad. |
-| Estigmatizar el barrio. | Dirección de arte digna; sin imágenes catastróficas. |
-| Insinuar aval institucional. | Entidades genéricas; sin logos. |
-| Problemas de derechos de imagen. | Verificación de licencias; sustitución de tomas dudosas. |
-| Sobrecarga de información. | Una idea por beat; texto mínimo. |
+| La voz sintética suena robótica o extranjera. | Casting A/B (§8.2); ajustes SSML; plan B (§8.8). |
+| Exceso de duración. | Calibración antes de congelar el guion; presupuesto y recortes (§8.6). |
+| Generar expectativas de vivienda. | Frases narradas y rótulos (§2); validación G2b. |
+| Exponer casos familiares. | Separación mesa colectiva / espacio privado (C3). |
+| Estigmatizar el barrio. | Dirección de arte digna; sin imágenes catastróficas; "reasentamiento" ya sobre la ilustración. |
+| Insinuar aval institucional. | Entidades genéricas; sin logos; nota en fuentes. |
+| Derechos de imagen (Google, Esri). | Uso sin alteración de atribuciones; verificación registrada; sustitución si hay duda. |
+| Sobrecarga de información. | Revelado progresivo; regla de lectura; una idea por beat. |
+| Carga de animación de personajes. | Flujo híbrido y pose a pose (§12.1). |
 
 ---
 
-## Anexo A · Matriz de trazabilidad (narración → prototipo)
+## Anexo A · Matriz de trazabilidad
+
+### A1. Narración
 
 | Bloque | Frase | Respaldo |
 | --- | --- | --- |
-| E0 | "Bogotá. Al sur, Ciudad Bolívar. En la parte alta de Bella Flor viven familias…" | Ámbito (encabezado). |
-| E0 | "Para algunas, el reasentamiento ya ocurrió; para otras, podría ser necesario." | §3 tres situaciones de ingreso. |
-| E1 | "…piloto propuesto, aún por validar con la comunidad y las entidades." | Estado (encabezado). |
+| E0 | "Bogotá. Al sur, Ciudad Bolívar. En la parte alta de Bella Flor…" | Ámbito (encabezado). |
+| E0 | "…familias que construyeron aquí su vida, sus redes y su sustento." | Recurso narrativo con respaldo parcial: §2 (huertas, sustento), §5 (redes y cuidados). |
+| E0 | "Algunas ya fueron reasentadas; otras siguen aquí, con situaciones distintas." | §3 tres situaciones de ingreso. |
+| E1 | "…piloto propuesto, por validar con la comunidad y las entidades." | Estado (encabezado). |
+| E1 | "Complementa el acompañamiento institucional que ya existe." | §1 (la CVP ya contempla acompañamiento; el piloto mejora la conexión); §22. |
 | E1 | "Más que un traslado, un nuevo comienzo." | Idea central (encabezado). |
-| E2 | "Una ficha familiar acompaña a cada hogar…" | §1 mecanismo 1; §20 recurso continuo. |
-| E2 | "La ruta tiene seis etapas y dos apoyos…" | §1. |
-| C1 | "Sigamos a una familia ficticia…" | §19 caso ilustrativo. |
-| C1 | "Primero, se escucha… cinco dimensiones…" | §7 1.1 y 1.2; §5 transversal 1. |
-| C1 | "La familia revisa su ficha. Participar no garantiza vivienda ni obliga…" | §7 1.1 paso 1; 1.2 paso 5. |
-| C1 | "Ante un peligro inmediato para la vida…" | §3 protección urgente. |
-| C2 | "Se comparan las opciones realmente disponibles…" | §8 paso 2.1. |
-| C2 | "Un presupuesto sencillo compara el saldo mensual…" | §8 paso 2.2. |
-| C2 | "La familia propone… código, responsable y respuesta." | §8 paso 2.3; §19. |
-| C3 | "En la mesa técnica, con delegados…" | §5 mesa técnica; §9 pasos 2–4. |
-| C3 | "Lo confirmado se separa de lo solicitado; lo no viable se explica…" | §9 tabla de estados. |
-| C3 | "Un desacuerdo no congela el caso…" | §10. |
-| C4 | "Con la preparación entregada… preparar no es mudarse…" | §9 punto D; §11 comprobación previa. |
-| C4 | "La ficha… pasa, frente a la familia, al equipo… que confirma recibirla." | §11 entrega del caso. |
-| C5 | "Si sus ingresos caen o una necesidad básica…" | §12 alertas. |
-| C5 | "…solo se cierra con una respuesta real, comprobada con la familia." | §12 evidencia para cerrar. |
-| C6 | "Lo pendiente no se declara resuelto…" | §13. |
-| C6 | "Entregar las llaves no significa que todo esté resuelto." | §20 tabla de capítulos. |
+| E2 | "Cada hogar tiene una gestora identificable y una ficha que se actualiza y pasa de un responsable a otro: la familia no repite su historia." | §1 (gestor identificable; mecanismo 1); §5 (contacto titular y respaldo). |
+| E2 | "La ruta tiene seis etapas, atravesadas por la resiliencia y por mesas de trabajo con la gestora como mentora." | §1; §5 transversal 2 (función incorporada a los gestores). |
+| C1 | "Sigamos a una familia ficticia: la madre cocina y vende desde casa; una vecina cuida a los niños." | §19. |
+| C1 | "La gestora escucha a la familia: qué quiere conservar y qué propone. Lo registra en cinco dimensiones, y el hogar corrige su ficha." | §7 1.1 pasos 2 y 5; 1.2 pasos 3 y 5; §5 transversal 1. |
+| C1 | "Participar no garantiza vivienda ni obliga a aceptar una alternativa." | §7 1.1 paso 1; §3. |
+| C1 | "Ante un riesgo inmediato para la vida, se activa enseguida el canal de emergencia, sin esperar etapas." | §3 protección urgente. |
+| C2 | "…se examinan las opciones realmente disponibles, sus costos y su cercanía al trabajo y al cuidado." | §8 paso 2.1. |
+| C2 | "Un presupuesto sencillo compara el saldo mensual de hoy con el esperado." | §8 paso 2.2. |
+| C2 | "Y la familia propone seguir vendiendo cerca del nuevo hogar." | §19 paso 1. |
+| C3 | "En la mesa técnica, entidades y delegados comunitarios revisan los asuntos colectivos: quién decide, con qué recursos y en qué plazo." | §5 mesa técnica; §9 pasos 2–4. |
+| C3 | "El caso de la familia se revisa aparte, con ella." | §9 paso 2; §5; §4 (delegados). |
+| C3 | "Su propuesta cambia el plan: se acepta con ajustes, y lo no viable se explica." | §8 paso 2.3; §15 (incidencia); §19 paso 2 (caso ilustrativo). |
+| C3 | "Un desacuerdo no congela el caso: se revisa, se escala si hace falta, y lo demás sigue." | §10 pasos 1–6. |
+| C4 | "Con la preparación entregada, cada entidad ejecuta lo ya confirmado, y el piloto acompaña y registra." | §9 punto D; §4 tabla de etapas (conducción de la ejecución); §11. |
+| C4 | "Pero preparar no es mudarse: la entidad competente verifica antes las condiciones del traslado." | §9 punto D; §11 comprobación previa. |
+| C4 | "Frente a la familia, la ficha pasa al equipo siguiente, que firma el recibido." | §11 entrega del caso. |
+| C5 | "Tras el traslado, el seguimiento continúa." | §12. |
+| C5 | "Si los ingresos caen de forma importante o falta lo básico, se activa una alerta con responsable, acción y fecha." | §12 alertas (caída relevante; necesidad básica). |
+| C5 | "Solo se cierra cuando la atención llega y la familia lo confirma." | §12 evidencia para cerrar. |
+| C6 | "Al cierre se revisa qué se cumplió; lo pendiente pasa a quien continuará, con fecha y contacto." | §13. |
+| C6 | "Porque entregar las llaves no significa que todo esté resuelto." | §20 tabla de capítulos. |
 | E9 | Frase central. | §20. |
-| E9 | "…doce meses… trescientos cincuenta hogares acompañados." | Encabezado; §3. |
+| E9 | "…doce meses, una meta de trescientos cincuenta hogares acompañados, no de trescientos cincuenta traslados." | Encabezado; §3. |
 
-## Anexo B · SSML por bloque
+### A2. Textos en pantalla
+
+| Bloque | Texto | Respaldo |
+| --- | --- | --- |
+| E0 | `Ámbito del piloto: parte alta · delimitación por validar` | §3, §6 actividad 2. |
+| E2 | Nombres de etapas; `Resiliencia`; `Mesas de trabajo con acompañamiento de una mentora`; `Gestora social · mentora de referencia` | §1, §5. |
+| C1 | Estados de dimensiones; `Revisada por el hogar ✓` | §5; §7 1.2 paso 5. |
+| C1 | `Riesgo inmediato → canal de emergencia` · `Sin esperar ficha, mesa ni acuerdo` | §3. |
+| C2 | `Opción disponible` · `en evaluación` · `Autoconstrucción · propuesta comunitaria · requiere evaluación` | §8 paso 2.1. |
+| C2 | `Saldo mensual = ingresos netos − gastos esenciales`; `Escenario adverso` | §8 paso 2.2. |
+| C3 | Columnas `Confirmada · Condicionada · Solicitada · Sin respuesta`; `No viable con explicación` | §9; §8 paso 2.3. |
+| C3 | `Aceptada con ajustes`; `P-01 → A-01 / A-02` | §8 paso 2.3; §15. |
+| C3 | Hoja `Decisión · Razón · Siguiente paso · Responsable · Fecha de revisión` | §9 paso 6. |
+| C3 | `Revisión` → `Nivel que decide` | §10 pasos 1–5. |
+| C3 | `Preparación entregada` | §9 punto D. |
+| C4 | `No autoriza la mudanza`; lista de seis condiciones; `En gestión · pendiente visible` | §9; §11. |
+| C4 | `Recibido ✓` | §11. |
+| C4→C5 | `Traslado efectivo · decidido y verificado por la entidad competente`; `Situación habitacional: reubicación definitiva` | §11; §15. |
+| C5 | `Contactos: 30 · 90 · 150 · 180 días desde el ingreso` | §12. |
+| C5 | `Umbral de prueba: caída importante del ingreso neto o necesidad básica desatendida`; `Derivación`; `Atención recibida` | §12. |
+| C6 | `P-01 · comprobada con el hogar ✓`; `Respuesta sobre el predio de origen · en evaluación por autoridad competente`; `Receptor de continuidad` | §15; §14; §13. |
+| C6 | `Preparación fortalecida · Adaptación observada · Atención pendiente` | §13. |
+| E9 | `350 hogares acompañados · 12 meses`; `Distribución por conocer con la vinculación real`; tres situaciones de ingreso | §3. |
+
+## Anexo B · SSML por bloque (guion congelable)
+
+Generado y medido con el script de presupuesto; cualquier cambio de texto obliga a recalcular §6 y §8.6.
 
 ```xml
 <!-- E0 -->
 <speak>
-  <break time="1000ms"/><mark name="E0_bogota"/>Bogotá.<break time="3000ms"/>
-  <mark name="E0_cbolivar"/>Al sur, Ciudad Bolívar.<break time="2200ms"/>
-  <mark name="E0_bellaflor"/>En la parte alta de Bella Flor viven familias que construyeron aquí
-  <mark name="E0_calle"/>su vida, sus redes y su sustento.<break time="900ms"/>
-  <mark name="E0_reasent"/>Para algunas, el reasentamiento ya ocurrió;<break time="300ms"/> para otras, podría ser necesario.
+  <break time="800ms"/>
+  <mark name="E0_bogota"/>Bogotá. <break time="1600ms"/>
+  <mark name="E0_cbolivar"/>Al sur, Ciudad Bolívar. <break time="1400ms"/>
+  <mark name="E0_bellaflor"/>En la parte alta de Bella Flor, familias que construyeron aquí
+  <mark name="E0_calle"/>su vida, sus redes y su sustento. <break time="1000ms"/>
+  <mark name="E0_reasent"/>Algunas ya fueron reasentadas; <break time="300ms"/> otras siguen aquí, con situaciones distintas.
 </speak>
 
 <!-- E1 -->
 <speak>
-  <mark name="E1_titulo"/>Mi Ruta de Reubicación<break time="250ms"/> es un piloto propuesto,
-  <mark name="E1_validar"/>aún por validar con la comunidad y las entidades.<break time="600ms"/>
-  <mark name="E1_idea"/>Su idea:<break time="250ms"/> <prosody rate="92%">más que un traslado, un nuevo comienzo.</prosody>
+  <mark name="E1_titulo"/>Mi Ruta de Reubicación es un piloto propuesto, <break time="200ms"/>
+  <mark name="E1_validar"/>por validar con la comunidad y las entidades. <break time="500ms"/>
+  <mark name="E1_complementa"/>Complementa el acompañamiento institucional que ya existe. <break time="600ms"/>
+  <mark name="E1_idea"/><prosody rate="92%">Más que un traslado, un nuevo comienzo.</prosody>
 </speak>
 
 <!-- E2 -->
 <speak>
-  <mark name="E2_ficha"/>Una ficha familiar acompaña a cada hogar:<break time="250ms"/> se actualiza,
-  <mark name="E2_responsable"/>pasa siempre a un responsable identificable
-  <mark name="E2_cero"/>y evita que la familia repita su historia desde cero.<break time="700ms"/>
-  <mark name="E2_ruta"/>La ruta tiene seis etapas
-  <mark name="E2_transv"/>y dos apoyos que la recorren completa:<break time="250ms"/>
-  <mark name="E2_resil"/>la resiliencia<break time="200ms"/> <mark name="E2_mesas"/>y las mesas de trabajo con una mentora.
+  <mark name="E2_gestora"/>Cada hogar tiene una gestora identificable
+  <mark name="E2_ficha"/>y una ficha que se actualiza y pasa de un responsable a otro: <break time="250ms"/>
+  <mark name="E2_historia"/>la familia no repite su historia. <break time="600ms"/>
+  <mark name="E2_ruta"/>La ruta tiene seis etapas, <break time="200ms"/>
+  <mark name="E2_resil"/>atravesadas por la resiliencia
+  <mark name="E2_mesas"/>y por mesas de trabajo con la gestora como mentora.
 </speak>
 
 <!-- C1 -->
 <speak>
-  <break time="1500ms"/>
-  <mark name="C1_familia"/>Sigamos a una familia ficticia.<break time="300ms"/> La madre vende alimentos que prepara en casa;<break time="250ms"/> una vecina le cuida a los niños.<break time="600ms"/>
-  <mark name="C1_escucha"/>Primero, se escucha qué quiere conservar, qué le preocupa y qué propone.<break time="400ms"/>
-  <mark name="C1_dimensiones"/>La mentora lo registra en cinco dimensiones:<break time="200ms"/> vivienda,<break time="150ms"/> economía,<break time="150ms"/> redes,<break time="150ms"/> servicios<break time="150ms"/> y participación.<break time="600ms"/>
-  <mark name="C1_revisa"/>La familia revisa su ficha.<break time="300ms"/>
-  <mark name="C1_nogarantiza"/>Participar no garantiza vivienda ni obliga a aceptar una alternativa.<break time="700ms"/>
-  <mark name="C1_urgencia"/>Ante un peligro inmediato para la vida, no se esperan etapas:<break time="250ms"/> se activa de inmediato la atención de emergencia.
+  <break time="500ms"/>
+  <mark name="C1_familia"/>Sigamos a una familia ficticia: la madre cocina y vende desde casa; <break time="200ms"/> una vecina cuida a los niños. <break time="500ms"/>
+  <mark name="C1_escucha"/>La gestora escucha a la familia: qué quiere conservar y qué propone. <break time="300ms"/>
+  <mark name="C1_dimensiones"/>Lo registra en cinco dimensiones,
+  <mark name="C1_corrige"/>y el hogar corrige su ficha. <break time="500ms"/>
+  <mark name="C1_nogarantiza"/>Participar no garantiza vivienda ni obliga a aceptar una alternativa. <break time="600ms"/>
+  <mark name="C1_urgencia"/>Ante un riesgo inmediato para la vida, se activa enseguida el canal de emergencia, sin esperar etapas.
 </speak>
 
 <!-- C2 -->
 <speak>
-  <break time="1500ms"/>
-  <mark name="C2_opciones"/>Luego, el plan:<break time="250ms"/> se comparan las opciones realmente disponibles, con sus costos, su transporte y su cercanía al trabajo y al cuidado.<break time="600ms"/>
-  <mark name="C2_presupuesto"/>Un presupuesto sencillo compara el saldo mensual de hoy con el esperado.<break time="600ms"/>
-  <mark name="C2_propuesta"/>La familia propone seguir vendiendo cerca del nuevo hogar,
-  <mark name="C2_codigo"/>y su propuesta recibe código,<break time="150ms"/> responsable<break time="150ms"/> y respuesta.
+  <break time="500ms"/>
+  <mark name="C2_opciones"/>Luego, el plan: <break time="250ms"/> se examinan las opciones realmente disponibles, sus costos y su cercanía al trabajo y al cuidado. <break time="500ms"/>
+  <mark name="C2_presupuesto"/>Un presupuesto sencillo compara el saldo mensual de hoy con el esperado. <break time="400ms"/>
+  <mark name="C2_propuesta"/>Y la familia propone seguir vendiendo cerca del nuevo hogar.
 </speak>
 
 <!-- C3 -->
 <speak>
-  <break time="1500ms"/>
-  <mark name="C3_mesa"/>En la mesa técnica, con delegados de la comunidad, cada entidad precisa qué puede decidir, con qué recursos y en qué plazo.<break time="600ms"/>
-  <mark name="C3_confirmado"/>Lo confirmado se separa de lo solicitado;<break time="300ms"/>
-  <mark name="C3_noviable"/>lo no viable se explica y se buscan alternativas.<break time="600ms"/>
-  <mark name="C3_desacuerdo"/>Y un desacuerdo no congela el caso:<break time="250ms"/> se escala a quien decide, mientras lo demás avanza.
+  <break time="500ms"/>
+  <mark name="C3_mesa"/>En la mesa técnica, entidades y delegados comunitarios revisan los asuntos colectivos: <break time="200ms"/> quién decide, con qué recursos y en qué plazo. <break time="600ms"/>
+  <mark name="C3_privado"/>El caso de la familia se revisa aparte, con ella. <break time="300ms"/>
+  <mark name="C3_incidencia"/>Su propuesta cambia el plan: <break time="200ms"/>
+  <mark name="C3_ajustes"/>se acepta con ajustes,
+  <mark name="C3_noviable"/>y lo no viable se explica. <break time="600ms"/>
+  <mark name="C3_desacuerdo"/>Un desacuerdo no congela el caso: <break time="250ms"/> se revisa, se escala si hace falta, y lo demás sigue.
 </speak>
 
 <!-- C4 -->
 <speak>
-  <break time="1500ms"/>
-  <mark name="C4_ejecuta"/>Con la preparación entregada se ejecutan las acciones confirmadas.<break time="400ms"/>
-  <mark name="C4_nomudanza"/>Pero <prosody rate="92%">preparar no es mudarse:</prosody><break time="250ms"/> la entidad competente verifica antes las condiciones del traslado.<break time="600ms"/>
-  <mark name="C4_entrega"/>Y la ficha no se pierde:<break time="250ms"/> pasa, frente a la familia, al equipo que la acompañará después,
-  <mark name="C4_confirma"/>que confirma recibirla.
+  <break time="500ms"/>
+  <mark name="C4_ejecuta"/>Con la preparación entregada, cada entidad ejecuta lo ya confirmado, y el piloto acompaña y registra. <break time="400ms"/>
+  <mark name="C4_nomudanza"/>Pero <prosody rate="92%">preparar no es mudarse:</prosody><break time="250ms"/> la entidad competente verifica antes las condiciones del traslado. <break time="500ms"/>
+  <mark name="C4_entrega"/>Frente a la familia, la ficha pasa al equipo siguiente,
+  <mark name="C4_confirma"/>que firma el recibido.
 </speak>
 
 <!-- C5 -->
 <speak>
-  <break time="1500ms"/>
-  <mark name="C5_seguimiento"/>En el nuevo hogar, el seguimiento continúa.<break time="400ms"/>
-  <mark name="C5_alerta"/>Si sus ingresos caen o una necesidad básica queda sin atender, se activa una alerta.<break time="500ms"/>
-  <mark name="C5_cierre"/>Tiene responsable, acción y fecha,<break time="200ms"/> y solo se cierra con una respuesta real, comprobada con la familia.
+  <break time="500ms"/>
+  <mark name="C5_seguimiento"/>Tras el traslado, el seguimiento continúa. <break time="400ms"/>
+  <mark name="C5_alerta"/>Si los ingresos caen de forma importante o falta lo básico, se activa una alerta
+  <mark name="C5_tarjeta"/>con responsable, acción y fecha. <break time="400ms"/>
+  <mark name="C5_cierre"/>Solo se cierra cuando la atención llega y la familia lo confirma.
 </speak>
 
 <!-- C6 -->
 <speak>
-  <break time="1500ms"/>
-  <mark name="C6_revisa"/>Al cierre se revisa qué se cumplió.<break time="400ms"/>
-  <mark name="C6_pendiente"/>Lo pendiente no se declara resuelto:<break time="250ms"/> se entrega a quien continuará, con fecha y contacto.<break time="900ms"/>
+  <break time="500ms"/>
+  <mark name="C6_revisa"/>Al cierre se revisa qué se cumplió; <break time="200ms"/>
+  <mark name="C6_pendiente"/>lo pendiente pasa a quien continuará, con fecha y contacto. <break time="800ms"/>
   <mark name="C6_llaves"/>Porque entregar las llaves no significa que todo esté resuelto.
 </speak>
 
 <!-- E9 -->
 <speak>
-  <break time="800ms"/>
+  <break time="600ms"/>
   <mark name="E9_frase"/><prosody rate="92%">Lo que la familia necesita antes de trasladarse se convierte en compromisos que se acompañan y se comprueban después.</prosody><break time="900ms"/>
-  <mark name="E9_piloto"/>Mi Ruta de Reubicación:<break time="250ms"/> un piloto propuesto de doce meses, con una meta de trescientos cincuenta hogares acompañados.
+  <mark name="E9_piloto"/>Mi Ruta de Reubicación: <break time="250ms"/> doce meses, una meta de trescientos cincuenta hogares acompañados, <break time="200ms"/>
+  <mark name="E9_notraslados"/>no de trescientos cincuenta traslados.
 </speak>
 ```
 
@@ -703,34 +906,47 @@ mi-ruta-reubicacion-motion/
 
 | Término | Riesgo | Solución |
 | --- | --- | --- |
-| Bolívar | Acento en la "a" final | Verificar; si falla: `<phoneme alphabet="ipa" ph="boˈliβaɾ">Bolívar</phoneme>` |
-| Bella Flor | Pausa entre palabras | Sin coma; verificar |
-| reasentamiento | Silabeo | Verificar |
-| trescientos cincuenta | — | Escrito en palabras |
+| Bolívar | Acento desplazado | Verificar en el casting; plan B: `<phoneme alphabet="ipa" ph="boˈliβaɾ">Bolívar</phoneme>`, probado con la voz elegida. |
+| Bella Flor | Pausa entre palabras | Sin coma; verificar. |
+| reasentadas | Silabeo | Verificar. |
+| trescientos cincuenta | — | Escrito en palabras. |
+| "firma el recibido" | Entonación | Verificar que suene como expresión, no como pregunta. |
 
-## Anexo D · Plantilla de créditos
+## Anexo D · Ficha de fuentes y alcance (descripción del video o PDF adjunto)
 
 ```
-MI RUTA DE REUBICACIÓN · Piloto propuesto para Bella Flor parte alta
+MI RUTA DE REUBICACIÓN · Piloto propuesto para Bella Flor parte alta (Ciudad Bolívar, Bogotá)
 Equipo: [nombres] · [Programa / curso DGIP] · Bogotá, octubre de 2026
-Fuentes: Caja de la Vivienda Popular, Programa de Reasentamientos (2026);
-Decreto Distrital 653 de 2025; IDIGER, Concepto 2026EE19018 de 2026.
+
+Alcance: el video representa un diseño para validar con la comunidad y las entidades. No muestra
+resultados ni compromisos institucionales. La familia es ficticia. Las mesas, la mentora, la
+"preparación entregada" (punto D), los tiempos, las alertas y las metas son propuestas del piloto,
+no disposiciones oficiales. 350 hogares es una meta de diseño: no es un censo ni una meta de traslados.
+
+Fuentes consultadas (no implican aval ni participación de las entidades):
+- Caja de la Vivienda Popular. Programa de Reasentamientos (2026).
+- Decreto Distrital 653 de 2025 (Decreto Único del Sector Hábitat).
+- Decreto 111 de 2025.
+- IDIGER. Concepto 2026EE19018 de 2026.
+
 Imágenes satelitales: Esri, Vantor, Earthstar Geographics y GIS User Community.
-Imagen de calle: Google Street View (abr. 2025).
-Narración: voz sintética, Google Cloud Text-to-Speech.
+Imagen de calle: Google Street View (captura abr. 2025), © Google.
+Narración: voz sintética generada con Google Cloud Text-to-Speech.
 Música: [título] · [autor] · [licencia].
-Ilustraciones y animación: recreación; la familia es ficticia.
-Las mesas, la mentora, el punto D, los tiempos y las metas son propuestas del piloto.
+Tipografías: Inter y Atkinson Hyperlegible (SIL Open Font License).
 ```
 
-## Anexo E · Prueba de comprensión (validación con 8–10 personas)
+## Anexo E · Prueba de comprensión (8–10 personas, incluidas personas de la comunidad)
 
-1. ¿El video presenta un programa en marcha o una propuesta? *(Propuesta / piloto por validar.)*
-2. ¿Participar garantiza una vivienda? *(No.)*
-3. ¿Qué pasa con la información de la familia cuando cambia de equipo? *(La ficha pasa a un responsable que confirma recibirla.)*
-4. ¿Qué pasa si una propuesta no es viable? *(Se explica y se buscan alternativas.)*
-5. ¿"Preparación entregada" significa que la familia se muda? *(No.)*
-6. ¿Qué activa una alerta y cuándo se cierra? *(Caída de ingresos o necesidad básica; con respuesta comprobada.)*
-7. ¿Qué ocurre ante un peligro inmediato para la vida? *(Atención de emergencia sin esperar.)*
+1. ¿El video presenta un programa en marcha o una propuesta? *(Propuesta; piloto por validar.)*
+2. ¿El piloto reemplaza a las entidades? *(No; complementa su acompañamiento.)*
+3. ¿Participar garantiza una vivienda u obliga a aceptarla? *(No.)*
+4. ¿Qué pasa con la información de la familia cuando cambia de equipo? *(La ficha pasa a un responsable que confirma haberla recibido.)*
+5. ¿Qué pasó con la propuesta de la familia? *(Cambió el plan: se aceptó con ajustes y lo no viable se explicó.)*
+6. ¿Dónde se revisa el caso de una familia? *(Aparte, con ella; no en la mesa colectiva.)*
+7. ¿"Preparación entregada" significa que la familia se muda? *(No.)*
+8. ¿Qué activa una alerta y cuándo se cierra? *(Caída importante de ingresos o falta de lo básico; cuando la atención llega y la familia lo confirma.)*
+9. ¿Qué ocurre ante un riesgo inmediato para la vida? *(Se activa el canal de emergencia sin esperar etapas.)*
+10. ¿Cuántos hogares se trasladarán en el piloto? *(No se sabe; la meta es acompañar 350, no trasladar 350.)*
 
-Criterio: ≥ 80 % de respuestas correctas en cada pregunta; si alguna queda por debajo, revisar la escena correspondiente.
+Criterio: ≥ 80 % de respuestas correctas en cada pregunta. Si alguna queda por debajo, revisar la escena correspondiente antes de la entrega.
