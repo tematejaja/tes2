@@ -79,5 +79,6 @@ function sceneE2(t) {
     m += G(t, M.E2_mesas, `${line(160, 395, 1760, 395, { stroke: C.slate, sw: 5, dash: '14 10' })}${circ(300, 395, 36, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('mesa', 300, 395, 50, C.ink)}${circ(420, 395, 26, { fill: C.roofb, stroke: '#fff', sw: 3 })}${circ(420, 388, 10, { fill: C.ivory })}${text(160, 340, 'MESAS DE TRABAJO CON ACOMPAÑAMIENTO DE UNA MENTORA', { size: 30, weight: 800, fill: C.teal, ls: 1 })}`, { dy: -10 });
     g += `<g opacity="${F(eo(prog(t, tR - .05, tR + .35)))}">${m}</g></g>`;
   }
+  g += rect(0, 0, W, H, { fill: C.navy, op: F(1 - prog(t, B.E2.start, B.E2.start + .45)) });
   return g;
 }

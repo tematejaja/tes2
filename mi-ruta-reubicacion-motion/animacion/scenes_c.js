@@ -20,7 +20,7 @@ function sceneC4(t) {
   b += text(1500, 318, 'Verifica: entidad competente', { size: 22, weight: 800, fill: C.roofb, anchor: 'end' });
   const conds = ['Vivienda', 'Servicios y acceso', 'Economía del hogar', 'Cuidado', 'Logística del traslado', 'Quién sigue acompañando'];
   conds.forEach((c, i) => {
-    const y = 380 + i * 66, t0 = M.C4_condiciones + .5 + i * .55, care = i === 3, done = care ? t > t0 + .9 : t > t0;
+    const y = 380 + i * 66, t0 = M.C4_condiciones + .4 + i * .42, care = i === 3, done = care ? t > t0 + .7 : t > t0;
     b += text(450, y + 8, c, { size: 30, weight: 700 }) + line(430, y + 28, 1490, y + 28, { stroke: C.slate, sw: 2 });
     if (done) b += stIcon('atendida', 1330, y - 2, 19) + text(1362, y + 8, 'Verificada', { size: 25, weight: 700, fill: C.okd });
     else if (care && t > t0) b += tag(1150, y - 24, 'Pendiente visible', { size: 22, fill: '#FFF1B8', stroke: C.warnd });
@@ -77,6 +77,7 @@ function sceneC6(t) {
   const f = ficha(0, 0, { resp: { color: '#2F7A8A', label: 'Receptor de continuidad' }, hab: 'reubicación definitiva', extra: ['Pendiente: respuesta sobre el predio de origen', 'Próxima acción: fecha acordada'] });
   b += G(t, M.C6_llaves - .1, scaled(860, 150, .9, f.svg), { dy: 24 });
   g += win(t, M.C6_llaves, undefined, b);
+  g += rect(0, 0, W, H, { fill: C.navy, op: F(prog(t, B.C6.end - .45, B.C6.end - .05)) });
   return g;
 }
 function sceneE9(t) {
@@ -112,7 +113,7 @@ function sceneCR(t) {
   let s = ''; L.forEach((l, i) => { s += text(960, 330 + i * 95, l[0], { size: l[1], weight: l[2], fill: l[3], anchor: 'middle' }); });
   let g = navyBg();
   if (lt < .9) g += `<g opacity="${F(1 - eo(prog(lt, 0, .9)))}">${sceneE9(TL.cr_start - .001)}</g>`;
-  return g + `<g opacity="${F(a)}">${s}</g>` + rect(0, 0, W, H, { fill: '#000', op: F(prog(lt, 5.2, 6.5)) });
+  return g + `<g opacity="${F(a)}">${s}</g>` + rect(0, 0, W, H, { fill: '#000', op: F(prog(lt, 5.2, 6.3)) });
 }
 function frameSVG(t) {
   let blk = null; for (const b of Object.keys(B)) if (t >= B[b].start && t < B[b].end) blk = b;
@@ -121,7 +122,8 @@ function frameSVG(t) {
   const S = { E0: sceneE0, E1: sceneE1, E2: sceneE2, C1: sceneC1, C2: sceneC2, C3: sceneC3, C4: sceneC4, C5: sceneC5, C6: sceneC6, E9: sceneE9, CR: sceneCR };
   if (blk) g += S[blk](t);
   if (blk in idx) g += minimap(idx[blk]) + chapterCard(t, idx[blk] + 1, blk);
-  g += topLabels(t) + (blk === 'CR' ? '' : subtitles(t));
+  const fin = blk === 'CR' ? 1 - prog(t - TL.cr_start, 5.2, 6.3) : 1;
+  g += `<g opacity="${F(fin)}">${topLabels(t)}</g>` + (blk === 'CR' ? '' : subtitles(t));
   return g;
 }
 const NBG = 240;

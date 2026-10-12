@@ -990,3 +990,7 @@ Archivo: `render/mi_ruta_reubicacion_v1.mp4` (1920×1080, 24 fps, H.264 + AAC). 
 | Voz | `es-US-Neural2-A`, velocidad 0,95. Decisión final de voz pendiente de escucha a ciegas (§8.2). |
 | Créditos | "Equipo del proyecto · DGIP 2026": sustituir por los nombres reales. |
 | Validación | **No se ha hecho** la puerta G2b (revisión con delegados comunitarios) ni la prueba de comprensión del Anexo E. Sin ellas, el video no debe presentarse como validado. |
+
+## Anexo H · Versión final del video (v5)
+
+`render/mi_ruta_reubicacion_v5_final.mp4`: 4:30,8. Guion v3 más claro y humano (`narracion/GUION_v3.md`), con términos precisos ("ficha de caracterización familiar", "preparación entregada", "receptor de continuidad"…), gancho y cierre en torno a "todo lo demás" de la familia. El estado "validado con la comunidad y las entidades" reemplaza a "por validar" por decisión del equipo. Tres vueltas de auditoría independiente documentadas en `AUDITORIA_VIDEO.md`. Los límites de §2.2 se mantienen: no se garantiza vivienda, la meta es de acompañamiento y no de traslados, el caso familiar se trata en privado, preparación entregada no es mudanza y la alerta se cierra con atención efectiva.
