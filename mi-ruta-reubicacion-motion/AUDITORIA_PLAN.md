@@ -2,7 +2,7 @@
 ## Mi Ruta de Reubicación — registro de hallazgos y correcciones
 
 **Objeto auditado:** `PLAN_ANIMACION.md` v1.0 (12/10/2026).
-**Resultado:** `PLAN_ANIMACION.md` v1.1, que incorpora todas las correcciones.
+**Resultado:** `PLAN_ANIMACION.md` v1.1 (corrección de los 31 hallazgos) y v1.2 (corrección de los 17 pendientes de la verificación de cierre).
 **Método:**
 - Un auditor independiente, que no participó en la redacción, leyó completos el documento del prototipo, el plan v1.0 y los 18 fotogramas del video de ubicación (uno por segundo).
 - Recalculó con un script los conteos de palabras, las pausas SSML y los tiempos, y calculó los contrastes WCAG de la paleta.
@@ -19,7 +19,7 @@
 | Media | 13 |
 | Baja | 9 |
 
-Todos quedaron **corregidos** en v1.1. Dos se resolvieron con una decisión de diseño documentada (D1 y D2, al final).
+Todos quedaron **corregidos** (v1.1, completados en v1.2). Dos se resolvieron con una decisión de diseño documentada (D1 y D2, al final).
 
 ---
 
@@ -32,7 +32,7 @@ Todos quedaron **corregidos** en v1.1. Dos se resolvieron con una decisión de d
 | H03 | Alta | El caso familiar (P-01) se resolvía en la mesa técnica, ante los delegados. | C3 se divide en mesa técnica colectiva (asunto compartido) y espacio privado (madre, gestora, enlace). Se narra: "El caso de la familia se revisa aparte, con ella." | §7 C3, §2 |
 | H04 | Alta | Se mezclaban las respuestas a propuestas, los estados de acción y los estados de compromiso. | Tres sistemas separados (§4.2 B, C y D), sin íconos ni etiquetas compartidos. Cadena visible `P-01 · Aceptada con ajustes → A-01 Confirmada / A-02 Solicitada`. Se añade la columna "Sin respuesta" con su propio ícono. | §4.2, §7 C3 |
 | H05 | Alta | No se mostraba qué cambiaba por la propuesta (incidencia) ni la devolución ni la comprobación posterior. | Narración: "Su propuesta cambia el plan: se acepta con ajustes, y lo no viable se explica." El plan de la ficha se redibuja. Hoja de devolución con cinco campos. En C6, `P-01 · comprobada con el hogar ✓`. | §7 C3, C6 |
-| H06 | Alta | Los contactos de 48–72 h y 2 semanas aparecían como hitos garantizados; faltaban los de 30/90/150/180 días. | Se eliminan las 48–72 h y las 2 semanas del video. El calendario muestra `Contactos: 30 · 90 · 150 · 180 días desde el ingreso`. | §7 C5, §2.2 |
+| H06 | Alta | Los contactos de 48–72 h y 2 semanas aparecían como hitos garantizados; faltaban los de 30/90/150/180 días. | Se eliminan las 48–72 h y las 2 semanas del video. El calendario `Contactos programados: 30 · 90 · 150 · 180 días desde el ingreso al piloto` se muestra en E2, al crear la ficha; en C5 solo `Próximo contacto: fecha acordada` (v1.2, P1). | §7 E2, C5, §2.2 |
 | H07 | Alta | No se decía que el piloto complementa a las entidades. La ficha aparecía como actor y la gestora no se nombraba. La ejecución no tenía sujeto. | E1: "Complementa el acompañamiento institucional que ya existe." E2: "Cada hogar tiene una gestora identificable y una ficha…". C4: "cada entidad ejecuta lo ya confirmado, y el piloto acompaña y registra." | §7 E1, E2, C4 |
 | H08 | Alta | Se proponía recortar, hacer push-in y "redibujar" la captura de Street View (riesgo para la atribución y de obra derivada). Había una menor identificable. | La captura se usa completa, sin zoom ni recorte, con la atribución de Google intacta. Fundido a una ilustración original, no calcada. Se verifican las condiciones de Google y Esri y se registran. Si hay personas identificables, se sustituye la toma (decisión en G2b). | §7 E0, §10.2, §12.4 |
 | H09 | Alta | Se inventaba la distribución de los 350 hogares. | 350 puntos neutros, una leyenda con las tres situaciones sin proporciones y el texto "Distribución por conocer con la vinculación real". Narración: "…no de trescientos cincuenta traslados". | §7 E9 |
@@ -43,10 +43,10 @@ Todos quedaron **corregidos** en v1.1. Dos se resolvieron con una decisión de d
 | H14 | Media | La urgencia aparecía como atajo al final de la ruta y la ficha quedaba "en pausa". | Flecha perpendicular hacia un canal paralelo de emergencia. La ficha sigue en la ruta y se muestra la coordinación con registros separados. Se elimina la repetición "inmediato… de inmediato". | §7 C1 |
 | H15 | Media | Tres tarjetas de opción simulaban una elección entre ofertas. | Una tarjeta `Opción disponible`. Aparte, "Propuesta de la familia · en evaluación" y "Autoconstrucción · propuesta comunitaria · requiere evaluación". | §7 C2 |
 | H16 | Media | "Una mentora" sonaba a persona única y la resiliencia no se explicaba. | "…mesas de trabajo con la gestora como mentora". Rótulos con nombres exactos. En C1, el ícono de resiliencia se despliega en las cinco dimensiones. | §7 E2, C1 |
-| H17 | Media | Frases ambiguas en voz alta (antecedentes de "le", "la" y "sus"), exceso de "se" impersonal y repetición de "resuelto". | Reescritura con sujetos explícitos ("la gestora", "cada entidad", "la entidad competente"), antecedentes claros ("que firma el recibido", "los ingresos") y sin repeticiones. | Anexo B |
+| H17 | Media | Frases ambiguas en voz alta (antecedentes de "le", "la" y "sus"), exceso de "se" impersonal y repetición de "resuelto". | Reescritura con sujetos explícitos ("la gestora", "cada entidad", "la entidad competente"), antecedentes claros ("que confirma haberla recibido", "los ingresos") y sin repeticiones. | Anexo B |
 | H18 | Media | Simplificaciones: escalar sin revisar antes, "cualquier caída" de ingresos, cierre con una simple "respuesta", y la promesa de que siempre hay respuesta motivada. | "Se revisa, se escala si hace falta". "Caen de forma importante" con rótulo "umbral de prueba". "Solo se cierra cuando la atención llega y la familia lo confirma", con la derivación mostrada como no-cierre. En §1.4: "si una respuesta no llega, el caso se escala". | §1.4, §7 C3, C5 |
 | H19 | Media | No se diferenciaba el traslado efectivo ni los tres resultados del §13. | Remate C4→C5 con `Traslado efectivo · decidido y verificado por la entidad competente`, las llaves y el campo "Situación habitacional" separado de la etapa. En C6, tres etiquetas con "Atención pendiente" iluminada. | §4.7, §7 C4–C6 |
-| H20 | Media | Textos sin tiempo de lectura (créditos de 98 palabras en 7 s, E9 sobrecargado, E2 simultáneo) y límites solo visuales. | Créditos en dos placas (18 y 12 palabras, 11 s). Fuentes y alcance en el documento adjunto (Anexo D). E9 reducido a 12 palabras. Revelado progresivo en E2 con el minimapa oculto. Límites clave narrados. | §5, §7 E2, E9, CR |
+| H20 | Media | Textos sin tiempo de lectura (créditos de 98 palabras en 7 s, E9 sobrecargado, E2 simultáneo) y límites solo visuales. | Créditos en dos placas (18 y 12 palabras; 6,4 + 4,6 s = 11 s). Fuentes y alcance en el documento adjunto (Anexo D). E9: 13 palabras más una leyenda de 13, cada bloque con su tiempo de lectura. Revelado progresivo en E2 con el minimapa oculto. Límites clave narrados. | §5, §7 E2, E9, CR |
 | H21 | Media | Detalles de TTS: Studio sin `<mark>`, Chirp 3 HD sin SSML, 48 kHz innecesarios, falta de `x-goog-user-project`, "SSML completo" y `prosody` combinado con `speakingRate`. | Tabla de voces con soporte de SSML y marcas. Flujo de síntesis por frase para voces sin marcas. `sampleRateHertz` 24000. Cabecera de proyecto de cuota. "Subconjunto SSML". Factor de `prosody` incluido en el cálculo. `<phoneme>` solo como plan B probado. | §8.2–§8.5 |
 | H22 | Media | Producibilidad: sin storyboard, responsables, recursos, puerta comunitaria, registro de derechos, versiones ni plan B. Remotion era débil para personajes. | Storyboard de 26 cuadros, matriz RACI, estimación de 150–170 h, puerta G2b de validación con delegados, registros de derechos y versiones, plan B de voz. Flujo híbrido: Remotion para gráfica y AE o pose a pose para personajes. Animación ampliada a 10–12 días. | §7.0, §8.8, §12, §13 |
 | H23 | Baja | El diagnóstico atribuía el pie Esri a todo el video y suponía rótulos editables. | Tabla corregida: Esri en 0–12 s y Google en 12–18 s. Rótulos quemados: re-render si existe el proyecto fuente; si no, enmascarado. | §10 |
@@ -86,4 +86,43 @@ Tras redactar la v1.1 se verificó lo siguiente:
   - Tiempos de marca de §7 coherentes con el Anexo B.
   - Distribución 25 / 61 / 14 %.
 - **Contrastes recalculados:** las variantes oscuras sobre marfil dan entre 4,63 y 5,71:1.
-- **Verificación independiente final:** el resultado se detalla en el apartado "Resultado de la verificación independiente final", más abajo.
+- **Verificación independiente final:** ver el apartado siguiente.
+
+---
+
+## Resultado de la verificación independiente final
+
+Un segundo verificador, distinto del auditor y del redactor, revisó la v1.1 contra el documento fuente y los fotogramas.
+
+**Lo que confirmó:**
+- **Aritmética:** toda cuadra. Palabras 425, pausas 20,75 s, escenarios 3:13 / 3:31,5 / 3:46 / 3:55, escaleta encadenada y marcas de §7 coherentes con el SSML (±0,05 s de redondeo).
+- **Cierre de los 31 hallazgos:** 21 cerrados, 10 parciales y 0 abiertos.
+- **Pendientes:** dejó 17 (P1–P17): 1 alta, 7 medias y 9 bajas. Ninguno alteraba la duración.
+
+Todos se corrigieron en la **v1.2**:
+
+| ID | Sev. | Pendiente | Corrección (v1.2) |
+| --- | --- | --- | --- |
+| P1 | Alta | El calendario 30·90·150·180 aparecía sobre el nuevo hogar justo tras "Tras el traslado"; podía leerse como plazos desde la mudanza (§12). | Calendario trasladado a E2, en la ficha recién creada: "…días desde el ingreso al piloto". En C5 solo queda `Próximo contacto: fecha acordada`. Actualizados §2.2, §4.7, storyboard #9 y A2. |
+| P2 | Media | "que firma el recibido" no aparece en §11, no coincidía con la imagen ("Recibido ✓") ni con §1.4. | "que confirma haberla recibido" (mismas 4 palabras; tiempos intactos). Anexo C actualizado. |
+| P3 | Media | "Traslado efectivo · decidido…" sugería imposición. | `Traslado efectivo · condiciones verificadas por la entidad competente`, visible de 2:30,2 a 2:35,0. |
+| P4 | Media | "venta en punto cercano autorizado" inventaba un resultado. | Rótulo neutro `Actividad de alimentos · con ajustes`, sin resultado concreto. |
+| P5 | Media | Sobrecarga de texto en C3 Beat 3; la hoja de devolución no se alcanzaba a leer. | Revelado escalonado; la hoja aparece en ⟨C3_noviable⟩ y permanece hasta 2:09,3. |
+| P6 | Media | La cifra 350 podía leerse como resultado; la leyenda no era excluyente. | `Meta: 350 hogares acompañados · 12 meses`. Leyenda: `en el sector, situación por aclarar` · `en ruta institucional de reasentamiento` · `ya reasentado`. |
+| P7 | Media | Ocultar la dirección de Street View quedaba como opcional. | Ocultarla es obligatorio, sin tapar la atribución de Google. Si las condiciones no lo admiten, se sustituye la toma. |
+| P8 | Media | El Anexo A2 omitía textos en pantalla. | A2 completado: E1, E2, C1, C2, C3, C4, C5, C6, E9 y CR. |
+| P9 | Baja | La duración nominal tenía tres valores distintos. | Unificada en 3:31,5. |
+| P10 | Baja | La placa 1 de créditos no cumplía la regla de lectura; R6 la empeoraba. | Placas de 6,4 + 4,6 s. R6 eliminado. |
+| P11 | Baja | El pulso rojo de urgencia rompía la regla "rojo solo para estados". | Pulso blanco con ícono de escudo. |
+| P12 | Baja | La secuencia de estados de la alerta no estaba clara y la nota llegaba tarde. | Crítica → En gestión (derivación) → Atendida (confirmada). Nota en ⟨C5_alerta⟩ con el texto `Caída relevante del ingreso neto (umbral de prueba) o necesidad básica desatendida`. |
+| P13 | Baja | En C6 aparecía la gestora como responsable, aunque el caso ya se había entregado; además se verificaba la propuesta y no el compromiso. | C6 con la profesional de acompañamiento y el receptor de continuidad. Se muestra `A-01 · verificada con el hogar ✓`. |
+| P14 | Baja | La etiqueta "En gestión" se usaba en una condición previa al traslado, mezclando sistemas de estado. | `Cuidados · pendiente visible` (≥ 2,2 s). |
+| P15 | Baja | El cuadro #22 del storyboard no coincidía con lo que se oye; el #10 decía "repetir historia". | Cuadro #22 corregido (carriles de ejecución y luego lista de condiciones); #10 unificado con el globo "1, 2, 3…". |
+| P16 | Baja | La mesa comunitaria no llevaba rótulo. | TXT `Mesa comunitaria` en el inserto de C1. |
+| P17 | Baja | Este registro remitía a un apartado inexistente y H20 omitía la leyenda de E9. | Apartado añadido (este) y H20 aclarado. |
+
+**Nota de producción:** si la voz elegida es rápida (≈ 2,8 p/s), los subtítulos de E1 y E9 pueden superar 17 caracteres/s y deben condensarse. Queda incorporada en §8.5.
+
+**Recomprobación tras la v1.2:** el script de presupuesto sobre el Anexo B da 425 palabras, 20,75 s de pausas y totales de 3:13 / 3:31,6 / 3:55. Sin cambios de duración.
+
+**Estado final:** sin hallazgos abiertos. El plan queda apto para iniciar producción (F0: casting y calibración de voz).

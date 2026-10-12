@@ -1,12 +1,12 @@
 # Plan de animación en motion graphics
 ## Mi Ruta de Reubicación — Bella Flor parte alta, Ciudad Bolívar, Bogotá
 
-**Versión del plan:** 1.1 — corregida tras auditoría independiente (ver `AUDITORIA_PLAN.md`) · 12 de octubre de 2026
+**Versión del plan:** 1.2 — corregida tras auditoría independiente y verificación de cierre (ver `AUDITORIA_PLAN.md`) · 12 de octubre de 2026
 **Documento fuente:** *Mi Ruta de Reubicación. Diseño final del prototipo para Bella Flor parte alta* (versión 12/10/2026), en adelante **"el prototipo"**. Las referencias "§n" remiten a sus secciones.
 **Material audiovisual de partida:** `Bellaflor_ubicacion_con_Street_View.mp4` (zoom espacial, 18 s).
 **Narración:** Google Cloud Text-to-Speech (cuenta configurada por el equipo).
 **Restricción obligatoria:** el video final dura **entre 2:00 y 4:00**.
-**Objetivo de producción:** **3:30** nominal; banda aceptable 3:10–3:50 (cálculo en §8.6).
+**Objetivo de producción:** **3:31,5** nominal; banda aceptable 3:10–3:50 (cálculo en §8.6).
 
 ---
 
@@ -14,7 +14,7 @@
 
 | Parámetro | Especificación |
 | --- | --- |
-| Duración | Nominal 3:31 (211 s, calculada desde el SSML del Anexo B a 2,5 palabras/s). Banda de producción 3:10–3:50. Límite obligatorio 2:00–4:00. |
+| Duración | Nominal 3:31,5 (211,5 s, calculada desde el SSML del Anexo B a 2,5 palabras/s). Banda de producción 3:10–3:50. Límite obligatorio 2:00–4:00. |
 | Formato | 1920 × 1080, 16:9, progresivo. |
 | Cuadros por segundo | 24 fps (igual al video de ubicación; evita conversión de cadencia). |
 | Códec de entrega | H.264 High, MP4, 12–16 Mbps VBR 2 pasadas. Master intermedio ProRes 422 HQ o secuencia PNG. |
@@ -108,7 +108,7 @@ El video representa un **diseño para validar**, no resultados. Cada afirmación
 | Que el piloto o la gestora autorizan el traslado o declaran riesgo. | §4, §11 | C4: la verificación la hace "entidad competente"; la gestora documenta. |
 | Que un taller o una remisión resuelven la necesidad. | §11, §12 | No se representa ningún curso como solución; la alerta se cierra con atención recibida. |
 | Casos familiares expuestos ante delegados u otros hogares. | §4, §5, §9 | C3 separa mesa colectiva y espacio privado. |
-| Seguimientos no financiados presentados como hitos garantizados (48–72 h, 2 semanas). | §12 | No se muestran; el calendario usa los contactos 30·90·150·180 días desde el ingreso. |
+| Seguimientos no financiados presentados como hitos garantizados (48–72 h, 2 semanas), o plazos de contacto leídos como "meses desde la mudanza". | §12 | No se muestran las 48–72 h ni las 2 semanas. El calendario 30·90·150·180 días desde el ingreso al piloto se muestra en E2, al crear la ficha, lejos de la mudanza; en C5 solo `Próximo contacto: fecha acordada`. |
 | Inventar una segunda oferta para simular elección. | §8 paso 2.1 | C2: una tarjeta "opción disponible" + propuestas "en evaluación". |
 | Imágenes catastróficas (deslizamientos, ruinas) o asociar el barrio real al riesgo. | Ética; §15 | Riesgo con iconografía abstracta; la palabra "reasentamiento" llega ya sobre la ilustración. |
 | Afirmar que el punto del mapa delimita la "parte alta". | §3, §6 | Rótulo "Ámbito del piloto: parte alta · delimitación por validar". |
@@ -267,13 +267,13 @@ Ancho 760 px (permite nombres completos de dimensiones y estados en una o dos l�
 
 | Bloque | Se añade | Responsable visible |
 | --- | --- | --- |
-| E2 | Ficha vacía, código, campo responsable | Gestora (respaldo indicado) |
+| E2 | Ficha vacía, código, campo responsable, calendario de contactos programados desde el ingreso al piloto | Gestora (respaldo indicado) |
 | C1 | Prioridades, cinco dimensiones con estado, sello "Revisada por el hogar ✓" | Gestora |
 | C2 | Opción disponible, plan económico (Hoy / Esperado), propuesta `P-01` | Gestora |
 | C3 | Respuesta a `P-01`, acciones `A-01` y `A-02`, hoja de devolución, sello "Preparación entregada" | Gestora |
 | C4 | Lista de condiciones (verificadas por entidad competente), "Recibido ✓", nuevo responsable; situación habitacional actualizada | Equipo de acompañamiento |
 | C5 | Alerta económica y su cierre con evidencia | Equipo de acompañamiento |
-| C6 | Cumplido / Pendiente, `P-01 · comprobada con el hogar ✓`, resultado al cierre, receptor de continuidad | Receptor de continuidad |
+| C6 | Cumplido / Pendiente, `A-01 · verificada con el hogar ✓`, resultado al cierre, receptor de continuidad | Receptor de continuidad |
 
 ---
 
@@ -332,8 +332,8 @@ Cada cuadro se dibuja en F2 a 1920×1080 en escala de grises con anotaciones; lu
 | 6 | 0:16 | Ilustración | La línea se estira hacia la derecha. |
 | 7 | 0:19 | Título | Logotipo tipográfico trazado por la línea. |
 | 8 | 0:26 | Título + puerta | "Complementa…" — puertas de entidades a la derecha. |
-| 9 | 0:34 | Gestora + ficha | Gestora y respaldo; ficha vacía. |
-| 10 | 0:41 | Ficha pasando | Mano a mano; globo "repetir historia" tachado. |
+| 9 | 0:34 | Gestora + ficha | Gestora y respaldo; ficha vacía con `Contactos programados: 30 · 90 · 150 · 180 días desde el ingreso al piloto`. |
+| 10 | 0:41 | Ficha pasando | Mano a mano; globo con "1, 2, 3…" tachado. |
 | 11 | 0:44 | Ruta completa | Seis estaciones → hilos → carril de mesa. |
 | 12 | 0:53 | Casa en ladera | Madre cocinando; vecina con los niños. |
 | 13 | 1:01 | Puerta de la casa | Gestora escucha; mesa comunitaria en inserto. |
@@ -345,7 +345,7 @@ Cada cuadro se dibuja en F2 a 1920×1080 en escala de grises con anotaciones; lu
 | 19 | 1:42 | Mesa técnica | Delegados y entidades ante tablero colectivo. |
 | 20 | 1:51 | Espacio privado | Madre, gestora, un enlace; P-01 → aceptada con ajustes; hoja de devolución. |
 | 21 | 2:02 | Tablero | Desacuerdo sube por escalamiento; otras tarjetas avanzan; sello "Preparación entregada". |
-| 22 | 2:11 | Lista de condiciones | Entidad competente verifica; una condición pendiente se resuelve. |
+| 22 | 2:11 | Carriles de ejecución | Cada entidad ejecuta lo confirmado; lo solicitado, en gris; la gestora registra. A las 2:18, lista de condiciones verificada por la entidad competente, con una pendiente que se resuelve. |
 | 23 | 2:25 | Encuentro de transición | Ficha cambia de mano; "Recibido ✓"; copia para la madre. |
 | 24 | 2:30 | Traslado efectivo | Llaves; situación habitacional actualizada. |
 | 25 | 2:35 | Nuevo hogar + ficha | Economía → Crítica; tarjeta de alerta; cierre con confirmación. |
@@ -376,7 +376,7 @@ Convenciones del guion: **V/O** = narración; **TXT** = texto en pantalla; `⟨m
 
 ### E2 · Gestora, ficha y mapa de la ruta (0:33.2–0:52.4)
 
-- **Imagen 1 (0:33.2–0:44.0):** la gestora entra con un gestor de respaldo detrás (rótulo "Gestora social · mentora de referencia" y, pequeño, "respaldo"). En `⟨E2_ficha⟩` recibe una ficha en blanco con el campo "Responsable". La ficha pasa de su mano a la de otro profesional y vuelve a actualizarse. En `⟨E2_historia⟩` un globo con "1, 2, 3…" se tacha: no hay que repetir la historia.
+- **Imagen 1 (0:33.2–0:44.0):** la gestora entra con un gestor de respaldo detrás (rótulo "Gestora social · mentora de referencia" y, pequeño, "respaldo"). En `⟨E2_ficha⟩` recibe una ficha en blanco con el campo "Responsable" y, en el campo "Próximo contacto", el texto `Contactos programados: 30 · 90 · 150 · 180 días desde el ingreso al piloto` (13 palabras; visible de 0:35.6 a 0:44.0). La ficha pasa de su mano a la de otro profesional y vuelve a actualizarse. En `⟨E2_historia⟩` un globo con "1, 2, 3…" se tacha: no hay que repetir la historia.
 - **V/O:** `⟨E2_gestora⟩` [0:33.2] "Cada hogar tiene una gestora identificable `⟨E2_ficha⟩` [0:35.6] y una ficha que se actualiza y pasa de un responsable a otro: `⟨E2_historia⟩` [0:41.0] la familia no repite su historia."
 - **Imagen 2 (0:44.0–0:52.4), revelado progresivo:** `⟨E2_ruta⟩` las seis estaciones numeradas se encienden una a una sobre la línea; `⟨E2_resil⟩` bajo la ruta se dibujan los cinco hilos con el rótulo "Resiliencia"; `⟨E2_mesas⟩` sobre la ruta aparece el carril de la mesa con la gestora y el rótulo "Mesas de trabajo con acompañamiento de una mentora". Mini-mapa oculto.
 - **V/O:** `⟨E2_ruta⟩` [0:44.0] "La ruta tiene seis etapas, `⟨E2_resil⟩` [0:46.2] atravesadas por la resiliencia `⟨E2_mesas⟩` [0:47.8] y por mesas de trabajo con la gestora como mentora."
@@ -387,7 +387,7 @@ Convenciones del guion: **V/O** = narración; **TXT** = texto en pantalla; `⟨m
 - **Tarjeta (desde 0:52.4, 2 s):** `1 · DIAGNÓSTICO Y CARACTERIZACIÓN`.
 - **Beat 1 · La familia** `⟨C1_familia⟩` [0:52.9–1:00.8]: casa de ladrillo en ladera. La madre cocina y empaca; un cliente compra en la puerta; la vecina recibe a los niños.
   **V/O:** "Sigamos a una familia ficticia: la madre cocina y vende desde casa; una vecina cuida a los niños."
-- **Beat 2 · Escucha** `⟨C1_escucha⟩` [1:00.8–1:05.9]: la gestora conversa en la puerta (no en un despacho). Globos: "conservar mis clientes", "no perder el apoyo de la vecina". Inserto breve de **mesa comunitaria** con voces diversas; alguien levanta la mano y propone.
+- **Beat 2 · Escucha** `⟨C1_escucha⟩` [1:00.8–1:05.9]: la gestora conversa en la puerta (no en un despacho). Globos: "conservar mis clientes", "no perder el apoyo de la vecina". Inserto breve de **mesa comunitaria** (TXT `Mesa comunitaria`) con voces diversas; alguien levanta la mano y propone.
   **V/O:** "La gestora escucha a la familia: qué quiere conservar y qué propone."
 - **Beat 3 · Registro y corrección** `⟨C1_dimensiones⟩` [1:05.9] / `⟨C1_corrige⟩` [1:07.9]: el ícono "Resiliencia" del hilo se despliega en las cinco filas de la ficha, con su estado. La madre toca la ficha y corrige un dato; sello `Revisada por el hogar ✓`.
   **V/O:** "Lo registra en cinco dimensiones, y el hogar corrige su ficha."
@@ -395,7 +395,7 @@ Convenciones del guion: **V/O** = narración; **TXT** = texto en pantalla; `⟨m
 - **Beat 4 · Límites** `⟨C1_nogarantiza⟩` [1:10.8–1:15.4]: plano cercano de la madre y la gestora; dos etiquetas aparecen junto a la ficha.
   **V/O:** "Participar no garantiza vivienda ni obliga a aceptar una alternativa."
   **TXT:** `No garantiza vivienda` · `No obliga a aceptar`.
-- **Beat 5 · Protección urgente** `⟨C1_urgencia⟩` [1:15.4–1:22.8]: plano general de la ruta. Un pulso rojo sale **perpendicular** desde la estación 1 hacia un **canal paralelo** rotulado `Canal de emergencia · autoridad competente` (ícono de escudo). La ficha **sigue** en la ruta; una línea punteada entre ambos indica coordinación con registros separados.
+- **Beat 5 · Protección urgente** `⟨C1_urgencia⟩` [1:15.4–1:22.8]: plano general de la ruta. Un pulso blanco con ícono de escudo sale **perpendicular** desde la estación 1 hacia un **canal paralelo** rotulado `Canal de emergencia · autoridad competente` (ícono de escudo). La ficha **sigue** en la ruta; una línea punteada entre ambos indica coordinación con registros separados.
   **V/O:** "Ante un riesgo inmediato para la vida, se activa enseguida el canal de emergencia, sin esperar etapas."
   **TXT:** `Riesgo inmediato → canal de emergencia` · `Sin esperar ficha, mesa ni acuerdo`.
   **Sonido:** cambio breve de textura musical, sin sirenas ni alarmas.
@@ -419,7 +419,7 @@ Convenciones del guion: **V/O** = narración; **TXT** = texto en pantalla; `⟨m
   **V/O:** "En la mesa técnica, entidades y delegados comunitarios revisan los asuntos colectivos: quién decide, con qué recursos y en qué plazo."
 - **Beat 2 · Espacio privado** `⟨C3_privado⟩` [1:51.1–1:55.4]: corte a una sala pequeña con puerta entornada (`Espacio privado`): la madre, la gestora y un enlace.
   **V/O:** "El caso de la familia se revisa aparte, con ella."
-- **Beat 3 · Incidencia** `⟨C3_incidencia⟩` [1:55.4] / `⟨C3_ajustes⟩` [1:57.6] / `⟨C3_noviable⟩` [1:59.2]: la tarjeta `P-01` recibe la etiqueta de respuesta `Aceptada con ajustes`; el plan de la ficha se redibuja visiblemente (un trazo cambia: "venta en punto cercano autorizado"). De `P-01` nacen `A-01 · Confirmada` y `A-02 · Solicitada`. Una parte marcada `No viable con explicación` muestra un globo de razón y una flecha a `Alternativas`. La gestora entrega una **hoja de devolución** con cinco campos: `Decisión · Razón · Siguiente paso · Responsable · Fecha de revisión`.
+- **Beat 3 · Incidencia** `⟨C3_incidencia⟩` [1:55.4] / `⟨C3_ajustes⟩` [1:57.6] / `⟨C3_noviable⟩` [1:59.2]: la tarjeta `P-01` recibe la etiqueta de respuesta `Aceptada con ajustes`; el plan de la ficha se redibuja visiblemente (un trazo cambia, con el rótulo `Actividad de alimentos · con ajustes`; sin detallar un resultado concreto). De `P-01` nacen `A-01 · Confirmada` y `A-02 · Solicitada`. Una parte marcada `No viable con explicación` muestra un globo de razón y una flecha a `Alternativas`. La gestora entrega una **hoja de devolución** con cinco campos: `Decisión · Razón · Siguiente paso · Responsable · Fecha de revisión`; aparece en `⟨C3_noviable⟩` [1:59.2] y queda en un recuadro de la ficha durante el Beat 4, hasta 2:09.3 (revelado escalonado: etiqueta de respuesta → acciones → no viable → hoja; nunca más de 3 elementos nuevos a la vez).
   **V/O:** "Su propuesta cambia el plan: se acepta con ajustes, y lo no viable se explica."
 - **Beat 4 · Desacuerdo** `⟨C3_desacuerdo⟩` [2:02.2–2:09.3]: de vuelta al tablero, una tarjeta `Desacuerdo` pasa por `Revisión` y sube por una flecha a `Nivel que decide`. Mientras, las demás tarjetas siguen moviéndose (orientación, servicios).
   **V/O:** "Un desacuerdo no congela el caso: se revisa, se escala si hace falta, y lo demás sigue."
@@ -430,26 +430,26 @@ Convenciones del guion: **V/O** = narración; **TXT** = texto en pantalla; `⟨m
 - **Tarjeta:** `4 · EJECUCIÓN`.
 - **Beat 1 · Ejecución por competencias** `⟨C4_ejecuta⟩` [2:11.3–2:18.1]: tres carriles, uno por entidad, ejecutan las acciones confirmadas (`A-01`, gestión documental, acuerdo de cuidado). La gestora acompaña y registra en la ficha. Las acciones solo solicitadas quedan en gris, sin avanzar.
   **V/O:** "Con la preparación entregada, cada entidad ejecuta lo ya confirmado, y el piloto acompaña y registra."
-- **Beat 2 · Preparar no es mudarse** `⟨C4_nomudanza⟩` [2:18.1–2:24.6]: bajo el sello aparece `No autoriza la mudanza`. Una lista de condiciones previas al traslado: `Solución habitacional · Servicios y acceso · Economía · Cuidados · Logística · Continuidad`. Una mano rotulada `Entidad competente` verifica; `Cuidados` queda un momento `En gestión · pendiente visible` y se verifica después de resolverse. La gestora solo documenta.
+- **Beat 2 · Preparar no es mudarse** `⟨C4_nomudanza⟩` [2:18.1–2:24.6]: bajo el sello aparece `No autoriza la mudanza`. Una lista de condiciones previas al traslado: `Solución habitacional · Servicios y acceso · Economía · Cuidados · Logística · Continuidad`. Una mano rotulada `Entidad competente` verifica; `Cuidados` queda un momento como `Cuidados · pendiente visible` (≥ 2,2 s) y se verifica después de resolverse. La gestora solo documenta.
   **V/O:** "Pero preparar no es mudarse: la entidad competente verifica antes las condiciones del traslado."
 - **Beat 3 · Entrega del caso** `⟨C4_entrega⟩` [2:24.6] / `⟨C4_confirma⟩` [2:28.6]: encuentro de transición con la madre, la gestora y la profesional del equipo posterior. La ficha cambia de mano; la receptora toca `Recibido ✓`; la madre recibe su copia y un contacto.
-  **V/O:** "Frente a la familia, la ficha pasa al equipo siguiente, que firma el recibido."
-- **Remate · Traslado efectivo (2:30.2–2:31.7, sin voz, continúa sobre el inicio de C5):** la familia recibe unas llaves. Rótulo `Traslado efectivo · decidido y verificado por la entidad competente`. En la ficha, `Situación habitacional: reubicación definitiva`.
+  **V/O:** "Frente a la familia, la ficha pasa al equipo siguiente, que confirma haberla recibido."
+- **Remate · Traslado efectivo (2:30.2–2:31.7, sin voz, continúa sobre el inicio de C5):** la familia recibe unas llaves. Rótulo `Traslado efectivo · condiciones verificadas por la entidad competente`, visible de 2:30.2 a 2:35.0 (4,8 s; necesita 3,4 s), sobre la tarjeta de C5. En la ficha, `Situación habitacional: reubicación definitiva`.
 
 ### C5 · Acompañamiento (2:31.7–2:48.8)
 
 - **Tarjeta:** `5 · ACOMPAÑAMIENTO`.
-- **Beat 1 · Seguimiento** `⟨C5_seguimiento⟩` [2:32.2–2:35.0]: vivienda nueva genérica; la madre cocina en su nuevo espacio. Calendario pequeño: `Contactos: 30 · 90 · 150 · 180 días desde el ingreso`.
+- **Beat 1 · Seguimiento** `⟨C5_seguimiento⟩` [2:32.2–2:35.0]: vivienda nueva genérica; la madre cocina en su nuevo espacio. En la ficha, el campo `Próximo contacto: fecha acordada` (el calendario de contactos se presentó en E2, anclado al ingreso al piloto, no a la mudanza).
   **V/O:** "Tras el traslado, el seguimiento continúa."
-- **Beat 2 · Alerta** `⟨C5_alerta⟩` [2:35.0] / `⟨C5_tarjeta⟩` [2:41.0]: el nodo de Economía pasa a `Crítica` (triángulo). Se despliega la tarjeta de alerta `Responsable · Acción · Fecha de revisión`, con la nota pequeña `Umbral de prueba: caída importante del ingreso neto o necesidad básica desatendida`.
+- **Beat 2 · Alerta** `⟨C5_alerta⟩` [2:35.0] / `⟨C5_tarjeta⟩` [2:41.0]: el nodo de Economía pasa a `Crítica` (triángulo). Se despliega la tarjeta de alerta `Responsable · Acción · Fecha de revisión`, con la nota pequeña `Caída relevante del ingreso neto (umbral de prueba) o necesidad básica desatendida`, que aparece en `⟨C5_alerta⟩` [2:35.0] (necesita 4,6 s).
   **V/O:** "Si los ingresos caen de forma importante o falta lo básico, se activa una alerta con responsable, acción y fecha."
-- **Beat 3 · Cierre de la alerta** `⟨C5_cierre⟩` [2:43.4–2:48.8]: una remisión aparece como `Derivación` (no cierra la alerta). Luego llega una atención efectiva (`Atención recibida`), la madre la confirma con un gesto y el estado pasa de `En gestión` a `Atendida`.
+- **Beat 3 · Cierre de la alerta** `⟨C5_cierre⟩` [2:43.4–2:48.8]: una remisión aparece como `Derivación` (no cierra la alerta). Luego llega una atención efectiva (`Atención recibida`), la madre la confirma con un gesto. El nodo de Economía pasa de `Crítica` a `En gestión` al registrarse la derivación, y a `Atendida` cuando la madre confirma la atención recibida.
   **V/O:** "Solo se cierra cuando la atención llega y la familia lo confirma."
 
 ### C6 · Cierre y seguimiento (2:48.8–3:02.1)
 
 - **Tarjeta:** `6 · CIERRE Y SEGUIMIENTO`.
-- **Beat 1 · Balance** `⟨C6_revisa⟩` [2:49.3] / `⟨C6_pendiente⟩` [2:52.3]: la familia revisa la ficha con la gestora. Columna `Cumplido ✓` (incluye `P-01 · comprobada con el hogar ✓`) y columna `Pendiente` (incluye `Respuesta sobre el predio de origen · en evaluación por autoridad competente`, §14). Los pendientes pasan al `Receptor de continuidad` con `Próxima acción: fecha`. Tres etiquetas aparecen en fila: `Preparación fortalecida · Adaptación observada · Atención pendiente`; se ilumina **Atención pendiente** para este caso (§13, §19 paso 6).
+- **Beat 1 · Balance** `⟨C6_revisa⟩` [2:49.3] / `⟨C6_pendiente⟩` [2:52.3]: la familia revisa la ficha con la profesional de acompañamiento y el receptor de continuidad. Columna `Cumplido ✓` (incluye `A-01 · verificada con el hogar ✓`, la acción nacida de su propuesta) y columna `Pendiente` (incluye `Respuesta sobre el predio de origen · en evaluación por autoridad competente`, §14). Los pendientes pasan al `Receptor de continuidad` con `Próxima acción: fecha`. Tres etiquetas aparecen en fila: `Preparación fortalecida · Adaptación observada · Atención pendiente`; se ilumina **Atención pendiente** para este caso (§13, §19 paso 6).
   **V/O:** "Al cierre se revisa qué se cumplió; lo pendiente pasa a quien continuará, con fecha y contacto."
 - **Beat 2 · Llaves** `⟨C6_llaves⟩` [2:57.1–3:02.1]: plano cercano de las llaves sobre la mesa, junto a la ficha abierta con los pendientes visibles.
   **V/O:** "Porque entregar las llaves no significa que todo esté resuelto."
@@ -458,14 +458,14 @@ Convenciones del guion: **V/O** = narración; **TXT** = texto en pantalla; `⟨m
 
 - **Imagen 1** `⟨E9_frase⟩` [3:02.7]: la cámara se aleja: toda la ruta con sus hilos y la mesa; la línea turquesa conecta la ladera con el nuevo hogar. La frase aparece por bloques sincronizados.
   **V/O:** "Lo que la familia necesita antes de trasladarse se convierte en compromisos que se acompañan y se comprueban después."
-- **Imagen 2** `⟨E9_piloto⟩` [3:11.9]: retícula de 350 puntos **neutros, todos iguales**. Leyenda con las tres situaciones de ingreso posibles (`permanece en el sector` · `vinculado a una ruta institucional` · `ya reasentado`) **sin asignar proporciones**. En `⟨E9_notraslados⟩` [3:17.5] los puntos no se mueven: ninguno "migra".
+- **Imagen 2** `⟨E9_piloto⟩` [3:11.9]: retícula de 350 puntos **neutros, todos iguales**. Leyenda con las tres situaciones de ingreso posibles (`en el sector, situación por aclarar` · `en ruta institucional de reasentamiento` · `ya reasentado`; 13 palabras, visibles de 3:11.9 a 3:20.5) **sin asignar proporciones**. En `⟨E9_notraslados⟩` [3:17.5] los puntos no se mueven: ninguno "migra".
   **V/O:** "Mi Ruta de Reubicación: doce meses, una meta de trescientos cincuenta hogares acompañados, no de trescientos cincuenta traslados."
-  **TXT:** `350 hogares acompañados · 12 meses` · `Distribución por conocer con la vinculación real` (lectura ≥ 4 s; 12 palabras).
+  **TXT:** `Meta: 350 hogares acompañados · 12 meses` · `Distribución por conocer con la vinculación real` (13 palabras, ≥ 4,9 s; más las 13 de la leyenda, que aparece primero).
 
 ### CR · Créditos (3:20.5–3:31.5), dos placas
 
-- **Placa 1 (6 s, 18 palabras):** `Imágenes: Esri y socios · Google Street View (abr. 2025)` · `Narración: voz sintética, Google Cloud Text-to-Speech` · `Música: [título · autor · licencia]`.
-- **Placa 2 (5 s, 12 palabras):** `Equipo [nombres] · DGIP 2026` · `Fuentes y alcance: ver documento adjunto` · rótulo final `Piloto propuesto · por validar`.
+- **Placa 1 (6,4 s, 18 palabras):** `Imágenes: Esri y socios · Google Street View (abr. 2025)` · `Narración: voz sintética, Google Cloud Text-to-Speech` · `Música: [título · autor · licencia]`.
+- **Placa 2 (4,6 s, 12 palabras; los nombres reales del equipo pueden alargarla: ajustar el remate de E9 si hace falta):** `Equipo [nombres] · DGIP 2026` · `Fuentes y alcance: ver documento adjunto` · rótulo final `Piloto propuesto · por validar`.
 
 Las fuentes normativas e institucionales y la nota "Las mesas, la mentora, el punto D, los tiempos y las metas son propuestas del piloto, no disposiciones oficiales" van en el documento adjunto o la descripción (Anexo D), donde se pueden leer.
 
@@ -535,7 +535,7 @@ Las fuentes normativas e institucionales y la nota "Las mesas, la mentora, el pu
 1. Sintetizar narración v1 por bloque (Anexo B).
 2. Extraer los `timepoints` de cada marca.
 3. Construir el animatic sobre el audio: cada beat de §7 inicia en su marca.
-4. Generar subtítulos desde el texto y los tiempos (máx. 2 líneas, 42 caracteres por línea, ≤ 17 caracteres/s, 1–7 s por subtítulo; revisión manual).
+4. Generar subtítulos desde el texto y los tiempos (máx. 2 líneas, 42 caracteres por línea, ≤ 17 caracteres/s, 1–7 s por subtítulo; revisión manual). Si la voz elegida es rápida (≈ 2,8 p/s), los subtítulos de E1 y E9 superan 17 caracteres/s: condensarlos sin cambiar el sentido.
 5. **Si gana una voz sin marcas** (Chirp 3 HD o Studio): sintetizar **una frase por archivo** según las marcas del Anexo B, medir cada archivo con `ffprobe` y ensamblar en la línea de tiempo con los silencios del SSML como huecos. Los tiempos de marca equivalen al inicio de cada archivo.
 
 ### 8.6 Presupuesto de duración
@@ -562,12 +562,12 @@ Cálculo por bloque desde el Anexo B: duración de audio = palabras ÷ tasa (con
 | Tasa efectiva de la voz | Total | Estado |
 | --- | --- | --- |
 | 2,8 p/s (voz rápida) | 3:13 | Dentro de banda y de límite. |
-| 2,5 p/s (nominal) | 3:31 | Objetivo. |
+| 2,5 p/s (nominal) | 3:31,5 | Objetivo. |
 | 2,3 p/s (mínimo exigido en calibración) | ≈ 3:46 | Dentro de banda. |
 | 2,2 p/s | 3:55 | Dentro del límite obligatorio, fuera de banda → aplicar recortes. |
 | < 2,2 p/s | > 3:55 | **No admitido**: lo impide la calibración de §8.2 paso 4. |
 
-**Recortes preparados** (en orden; cada uno indica la edición concreta):
+**Recortes preparados** (en orden; cada uno indica la edición concreta; los créditos no se recortan porque ya están en el mínimo legible):
 
 | # | Edición | Ahorro aprox. |
 | --- | --- | --- |
@@ -576,7 +576,6 @@ Cálculo por bloque desde el Anexo B: duración de audio = palabras ÷ tasa (con
 | R3 | Inicio de capítulos: `break` de 500 → 300 ms (×6). | −1,2 s |
 | R4 | Remates: C3 y C4 de 1,5 → 1,0 s; E1, C6 y E9 de 1,0 → 0,6 s. | −2,2 s |
 | R5 | C3: "quién decide, con qué recursos y en qué plazo" → "quién decide y en qué plazo". | −1,4 s |
-| R6 | CR: placa 1 de 6 → 5 s. | −1 s |
 
 Si el animatic queda **por debajo de 3:10**, se amplían respiraciones visuales (remates), nunca texto. **Bajo ninguna circunstancia** el master sale de 2:00–4:00; verificación con `ffprobe` en G5.
 
@@ -619,7 +618,7 @@ Los rótulos y coordenadas están **quemados** en el MP4.
 
 1. **Proyecto fuente.** Preguntar al autor del zoom si existe el proyecto o script de origen. Si existe, re-renderizar con: rótulo `BELLA FLOR` + subrótulo `Ámbito del piloto: parte alta · delimitación por validar`, **sin coordenadas**, pie original textual y nuevas duraciones por tramo (0–2,6 s Bogotá; 2,6–5,6 s Ciudad Bolívar; 5,6–10 s Bella Flor). Si no existe, **enmascarar** las placas quemadas con placas nuevas del mismo tamaño y estilo, y re-temporizar con rampas de velocidad e interpolación de cuadros.
 2. **Atribuciones.** Mantener la atribución Esri y socios en todo el tramo satelital. Verificar las condiciones de uso de Esri World Imagery para video y registrar fecha y enlace en el registro de derechos (§12.4).
-3. **Street View.** Usar la captura **completa, sin recortar, sin zoom y sin alterar la atribución de Google**. Si se oculta el panel con la dirección, que sea con un recuadro propio que no tape el logotipo ni el "© Google". Verificar las condiciones vigentes (Google Maps/Earth Additional Terms y Geo Guidelines, google.com/permissions/geoguidelines) y registrarlas.
+3. **Street View.** Usar la captura **completa, sin recortar, sin zoom y sin alterar la atribución de Google**. **Ocultar obligatoriamente** el panel con la dirección ("73c Sur 33 Tv. 27b") con un recuadro propio que no tape el logotipo "Google Maps" ni la línea de captura y "© 2025 Google". Si las condiciones de Google no lo admiten, aplicar el paso 4 (sustituir la toma). Verificar las condiciones vigentes (Google Maps/Earth Additional Terms y Geo Guidelines, google.com/permissions/geoguidelines) y registrarlas.
 4. **Privacidad.** Comprobar el difuminado de rostros de Google. Si la niña u otra persona es identificable, o si las condiciones de Google no permiten tratar la imagen, **sustituir la toma** por (a) una fotografía propia de la calle con consentimiento y sin personas identificables, o (b) una ilustración original rotulada como recreación. Decisión registrada en G2b.
 5. **Frontera real/ilustrado.** Fundido cruzado de la captura a una ilustración **original** (no calcada), antes de la frase sobre reasentamiento.
 6. **Sincronía.** Cada rótulo coincide con su marca de narración (E0 en §7).
@@ -771,7 +770,7 @@ mi-ruta-reubicacion-motion/
 | C3 | "Un desacuerdo no congela el caso: se revisa, se escala si hace falta, y lo demás sigue." | §10 pasos 1–6. |
 | C4 | "Con la preparación entregada, cada entidad ejecuta lo ya confirmado, y el piloto acompaña y registra." | §9 punto D; §4 tabla de etapas (conducción de la ejecución); §11. |
 | C4 | "Pero preparar no es mudarse: la entidad competente verifica antes las condiciones del traslado." | §9 punto D; §11 comprobación previa. |
-| C4 | "Frente a la familia, la ficha pasa al equipo siguiente, que firma el recibido." | §11 entrega del caso. |
+| C4 | "Frente a la familia, la ficha pasa al equipo siguiente, que confirma haberla recibido." | §11 entrega del caso (el receptor confirma acceso y comprensión). |
 | C5 | "Tras el traslado, el seguimiento continúa." | §12. |
 | C5 | "Si los ingresos caen de forma importante o falta lo básico, se activa una alerta con responsable, acción y fecha." | §12 alertas (caída relevante; necesidad básica). |
 | C5 | "Solo se cierra cuando la atención llega y la familia lo confirma." | §12 evidencia para cerrar. |
@@ -785,24 +784,34 @@ mi-ruta-reubicacion-motion/
 | Bloque | Texto | Respaldo |
 | --- | --- | --- |
 | E0 | `Ámbito del piloto: parte alta · delimitación por validar` | §3, §6 actividad 2. |
+| E1 | `MI RUTA DE REUBICACIÓN`; `Piloto propuesto · por validar`; `Más que un traslado, un nuevo comienzo.`; `Narración con voz sintética` | Encabezado; §20; transparencia (H27). |
+| E1 | Puertas `Vivienda` · `Gestión del riesgo` · `Oferta social` | §1; §4 (actores por función, sin aval). |
+| E2 | `Contactos programados: 30 · 90 · 150 · 180 días desde el ingreso al piloto` | §12 seguimiento básico. |
 | E2 | Nombres de etapas; `Resiliencia`; `Mesas de trabajo con acompañamiento de una mentora`; `Gestora social · mentora de referencia` | §1, §5. |
 | C1 | Estados de dimensiones; `Revisada por el hogar ✓` | §5; §7 1.2 paso 5. |
-| C1 | `Riesgo inmediato → canal de emergencia` · `Sin esperar ficha, mesa ni acuerdo` | §3. |
+| C1 | `Mesa comunitaria`; `Resiliencia: cinco dimensiones` | §5. |
+| C1 | `No garantiza vivienda` · `No obliga a aceptar` | §7 1.1 paso 1. |
+| C1 | `Riesgo inmediato → canal de emergencia` · `Sin esperar ficha, mesa ni acuerdo`; `Canal de emergencia · autoridad competente` | §3. |
 | C2 | `Opción disponible` · `en evaluación` · `Autoconstrucción · propuesta comunitaria · requiere evaluación` | §8 paso 2.1. |
-| C2 | `Saldo mensual = ingresos netos − gastos esenciales`; `Escenario adverso` | §8 paso 2.2. |
-| C3 | Columnas `Confirmada · Condicionada · Solicitada · Sin respuesta`; `No viable con explicación` | §9; §8 paso 2.3. |
+| C2 | `Saldo mensual = ingresos netos − gastos esenciales`; `Hoy` / `Esperado`; `Escenario adverso` | §8 paso 2.2. |
+| C2 | `P-01 · Seguir vendiendo cerca del nuevo hogar` · `Responsable: gestora` | §19; §8 paso 2.3. |
+| C3 | `Transporte y cuidado compartidos` (asunto colectivo) | §8 paso 2.4. |
+| C3 | `Espacio privado` | §5; §9 paso 2. |
+| C3 | Columnas `Confirmada · Condicionada · Solicitada · Sin respuesta`; `No viable con explicación`; `Alternativas` | §9; §8 paso 2.3. |
+| C3 | `Actividad de alimentos · con ajustes` | §19 paso 2 (caso ilustrativo, sin resultado concreto). |
 | C3 | `Aceptada con ajustes`; `P-01 → A-01 / A-02` | §8 paso 2.3; §15. |
 | C3 | Hoja `Decisión · Razón · Siguiente paso · Responsable · Fecha de revisión` | §9 paso 6. |
-| C3 | `Revisión` → `Nivel que decide` | §10 pasos 1–5. |
+| C3 | `Desacuerdo` → `Revisión` → `Nivel que decide` | §10 pasos 1–5. |
 | C3 | `Preparación entregada` | §9 punto D. |
-| C4 | `No autoriza la mudanza`; lista de seis condiciones; `En gestión · pendiente visible` | §9; §11. |
+| C4 | `No autoriza la mudanza`; lista de seis condiciones; `Cuidados · pendiente visible`; `Entidad competente` | §9; §11. |
 | C4 | `Recibido ✓` | §11. |
-| C4→C5 | `Traslado efectivo · decidido y verificado por la entidad competente`; `Situación habitacional: reubicación definitiva` | §11; §15. |
-| C5 | `Contactos: 30 · 90 · 150 · 180 días desde el ingreso` | §12. |
-| C5 | `Umbral de prueba: caída importante del ingreso neto o necesidad básica desatendida`; `Derivación`; `Atención recibida` | §12. |
-| C6 | `P-01 · comprobada con el hogar ✓`; `Respuesta sobre el predio de origen · en evaluación por autoridad competente`; `Receptor de continuidad` | §15; §14; §13. |
+| C4→C5 | `Traslado efectivo · condiciones verificadas por la entidad competente`; `Situación habitacional: reubicación definitiva` | §11; §15. |
+| C5 | `Próximo contacto: fecha acordada` | §12 (contactos concertados). |
+| C5 | `Crítica` · `En gestión` · `Atendida`; `Responsable · Acción · Fecha de revisión`; `Caída relevante del ingreso neto (umbral de prueba) o necesidad básica desatendida`; `Derivación`; `Atención recibida` | §12. |
+| C6 | `Cumplido ✓` / `Pendiente`; `A-01 · verificada con el hogar ✓`; `Próxima acción: fecha`; `Respuesta sobre el predio de origen · en evaluación por autoridad competente`; `Receptor de continuidad` | §15; §14; §13. |
 | C6 | `Preparación fortalecida · Adaptación observada · Atención pendiente` | §13. |
-| E9 | `350 hogares acompañados · 12 meses`; `Distribución por conocer con la vinculación real`; tres situaciones de ingreso | §3. |
+| E9 | `Meta: 350 hogares acompañados · 12 meses`; `Distribución por conocer con la vinculación real`; `en el sector, situación por aclarar` · `en ruta institucional de reasentamiento` · `ya reasentado` | Encabezado; §3. |
+| CR | Placa 1 (atribuciones, voz sintética, música); placa 2 (equipo, `Fuentes y alcance: ver documento adjunto`, `Piloto propuesto · por validar`) | §20 reglas; §23. |
 
 ## Anexo B · SSML por bloque (guion congelable)
 
@@ -873,7 +882,7 @@ Generado y medido con el script de presupuesto; cualquier cambio de texto obliga
   <mark name="C4_ejecuta"/>Con la preparación entregada, cada entidad ejecuta lo ya confirmado, y el piloto acompaña y registra. <break time="400ms"/>
   <mark name="C4_nomudanza"/>Pero <prosody rate="92%">preparar no es mudarse:</prosody><break time="250ms"/> la entidad competente verifica antes las condiciones del traslado. <break time="500ms"/>
   <mark name="C4_entrega"/>Frente a la familia, la ficha pasa al equipo siguiente,
-  <mark name="C4_confirma"/>que firma el recibido.
+  <mark name="C4_confirma"/>que confirma haberla recibido.
 </speak>
 
 <!-- C5 -->
@@ -910,7 +919,7 @@ Generado y medido con el script de presupuesto; cualquier cambio de texto obliga
 | Bella Flor | Pausa entre palabras | Sin coma; verificar. |
 | reasentadas | Silabeo | Verificar. |
 | trescientos cincuenta | — | Escrito en palabras. |
-| "firma el recibido" | Entonación | Verificar que suene como expresión, no como pregunta. |
+| "haberla recibido" | Entonación y enlace | Verificar entonación descendente y que no se oiga "haber la". |
 
 ## Anexo D · Ficha de fuentes y alcance (descripción del video o PDF adjunto)
 
