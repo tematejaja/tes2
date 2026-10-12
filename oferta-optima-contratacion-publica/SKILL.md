@@ -1,6 +1,6 @@
 ---
 name: oferta-optima-contratacion-publica
-description: Determina el precio de una oferta óptima en licitaciones y contratación pública (menor precio, medias, puntajes). Calcula piso económico y margen mínimo, estima la probabilidad de adjudicación, simula con Monte Carlo y reporta utilidad esperada, riesgo, caja y sensibilidad. Usar cuando el usuario hable de preparar, fijar o evaluar el precio de una oferta o propuesta económica en una licitación, pliego, concurso o proceso de contratación, de margen mínimo, de probabilidad de ganar una licitación o de estrategia de ofertas competitivas (competitive bidding).
+description: Determina el precio de una oferta óptima en licitaciones y contratación pública (menor precio, medias, puntajes), en cualquier país o entidad. Calcula piso económico y margen mínimo, estima la probabilidad de adjudicación, simula con Monte Carlo y reporta utilidad esperada, riesgo, caja y sensibilidad. Usar cuando el usuario hable de preparar, fijar o evaluar el precio de una oferta o propuesta económica en una licitación, pliego, concurso o proceso de contratación, de margen mínimo, de probabilidad de ganar una licitación o de estrategia de ofertas competitivas (competitive bidding, bid pricing, tender pricing), aunque no mencione la palabra 'óptima' (por ejemplo 'a qué precio me presento', 'cuánto ofertar en el SECOP', 'qué descuento sobre el presupuesto oficial').
 ---
 
 # Oferta óptima en contratación pública
@@ -17,7 +17,7 @@ Responde en el idioma del usuario (por defecto español). Pide al usuario lo que
    - A. Maximizar utilidad esperada con margen mínimo (recomendado para rentabilidad sostenida).
    - B. Maximizar probabilidad de adjudicación con margen mínimo.
    - Definir también margen mínimo, tolerancias `alfa`/`beta` de riesgo, límite de caja y capacidad operativa.
-2. **Extraer las reglas del pliego vigente** (con adendas): presupuesto y topes, admisibilidad, fórmula económica exacta (redondeos, qué ofertas entran en las medias), puntajes no económicos, desempate, método variable, tipo de procedimiento (oferta cerrada vs. subasta). Un pliego modelo no sustituye al pliego del proceso.
+2. **Extraer las reglas del pliego vigente** (con adendas): presupuesto y topes, admisibilidad, fórmula económica exacta (redondeos, qué ofertas entran en las medias), puntajes no económicos, desempate, método variable, tipo de procedimiento (oferta cerrada vs. subasta). Un pliego modelo no sustituye al pliego del proceso. La metodología es independiente del país: usa la normativa, moneda y tributos del proceso concreto; las fórmulas de Colombia Compra Eficiente son solo un ejemplo. Si no tienes el pliego, pídelo o trabaja con escenarios por método y dilo.
 3. **Construir el costo** `C` desagregado: directos, indirectos, garantías/seguros, tributos y retenciones (base neta coherente, sin sumar IVA como utilidad), pagos y caja, financiación, variación de precios, riesgos concretos, preparación de oferta `K`. No duplicar contingencias ni financiación.
 4. **Región factible**: piso `C / (1 - m_min)` (redondeado hacia arriba a la unidad permitida), máximo admisible, límites por ítem, capacidad. Si máximo < piso → no hay oferta factible: revisar costos con justificación o no participar.
 5. **Históricos comparables**: incluir **todas** las ofertas (también las perdedoras), reglas, admisibilidad y resultado; no usar solo precios ganadores. Normalizar (oferta/presupuesto, oferta/costo propio) sin llamarlo margen del competidor.
@@ -30,16 +30,26 @@ Responde en el idioma del usuario (por defecto español). Pide al usuario lo que
 9. **Descartar** candidatos que incumplen margen, riesgo de pérdida/margen al ganar, caja o capacidad.
 10. **Validar y reportar** (ver abajo). Tras el resultado, recomendar registrar ofertas observadas y costos reales.
 
-Para cálculos numéricos usa `scripts/calcular_oferta.py` (piso económico, recargo↔margen, tabla de candidatos con utilidad esperada, Monte Carlo para menor precio):
+Para cálculos numéricos usa `scripts/calcular_oferta.py` (solo biblioteca estándar de Python). Subcomandos:
+
+- `piso`: piso económico, recargo equivalente, redondeo y chequeo contra el máximo admisible.
+- `tabla`: utilidad esperada para probabilidades `precio:q` dadas (o supuestas, decirlo).
+- `montecarlo`: adjudicación por menor precio con rivales simulados.
+- `puntajes`: adjudicación por puntaje total (económico + no económico) con `menor_valor`, `media_aritmetica` o `media_aritmetica_alta`; la propia oferta entra en la media salvo `--excluir-propia`. Las fórmulas son las del modelo CCE 2016 como ejemplo: **compararlas con el pliego vigente** y editar `referencia()`/`puntaje_economico()` si difieren (otras medias, redondeos, puntaje mínimo, precio artificialmente bajo).
+
+Opciones de simulación comunes: `--p-participa` (participación y admisibilidad), `--rho` (correlación entre ofertas rivales por factor común), `--sigma-costo` y `--rho-costo` (costo incierto y relacionado con el mercado), `--alfa`/`--beta` (tolerancias de riesgo condicionadas a ganar), `--maximo`, `--paso`, `--n`, `--semilla`. Los empates se cuentan como pérdida.
 
 ```bash
-python3 <ruta-del-skill>/scripts/calcular_oferta.py --help
-python3 <ruta-del-skill>/scripts/calcular_oferta.py piso --costo 80 --margen-min 0.15
-python3 <ruta-del-skill>/scripts/calcular_oferta.py tabla --costo 80 --margen-min 0.15 --k 1 \
-    --puntos 90:0.80 95:0.65 100:0.50 105:0.30 110:0.20
-python3 <ruta-del-skill>/scripts/calcular_oferta.py montecarlo --costo 80 --margen-min 0.15 --k 1 \
-    --rivales-normal 100:8 98:6 105:10 --paso 0.5 --n 20000 --semilla 1
+S=<ruta-del-skill>/scripts/calcular_oferta.py
+python3 $S piso --costo 80 --margen-min 0.15 --unidad 0.001 --maximo 120
+python3 $S tabla --costo 80 --margen-min 0.15 --k 1 --puntos 90:0.80 95:0.65 100:0.50 105:0.30 110:0.20
+python3 $S montecarlo --costo 80 --margen-min 0.15 --k 1 --rivales-normal 100:8 98:6 105:10 \
+    --rho 0.3 --sigma-costo 0.08 --rho-costo 0.3 --alfa 0.05 --beta 0.30 --paso 0.5 --n 20000 --semilla 1
+python3 $S puntajes --costo 80 --margen-min 0.15 --k 1 --rivales-normal 100:8 98:6 105:10 \
+    --metodo media_aritmetica --pmax 40 --tecnico-propio 55 --tecnico-rivales 55:3 50:3 58:2 --maximo 115
 ```
+
+Cuando el pliego tenga reglas que el script no cubre (ofertas por ítems, cantidades variables, lotes, desempates específicos, método aleatorio), escribe un evaluador propio que reproduzca el pliego, reutilizando la misma estructura: escenarios comunes, misma regla para todos los precios, riesgos condicionados a ganar. Valídalo primero contra procesos históricos con resultado oficial conocido.
 
 ## Reglas que no se deben violar
 
