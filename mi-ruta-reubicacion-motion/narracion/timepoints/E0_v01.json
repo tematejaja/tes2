@@ -1,0 +1,22 @@
+[
+ {
+  "markName": "E0_bogota",
+  "timeSeconds": 0.7917082905769348
+ },
+ {
+  "markName": "E0_cbolivar",
+  "timeSeconds": 3.0147082805633545
+ },
+ {
+  "markName": "E0_bellaflor",
+  "timeSeconds": 6.107374668121338
+ },
+ {
+  "markName": "E0_calle",
+  "timeSeconds": 10.326542854309082
+ },
+ {
+  "markName": "E0_reasent",
+  "timeSeconds": 13.600377082824707
+ }
+]

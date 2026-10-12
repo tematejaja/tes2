@@ -959,3 +959,17 @@ Tipografías: Inter y Atkinson Hyperlegible (SIL Open Font License).
 10. ¿Cuántos hogares se trasladarán en el piloto? *(No se sabe; la meta es acompañar 350, no trasladar 350.)*
 
 Criterio: ≥ 80 % de respuestas correctas en cada pregunta. Si alguna queda por debajo, revisar la escena correspondiente antes de la entrega.
+
+## Anexo F · Resultado del casting y la calibración (fase F0, ejecutada)
+
+Ejecutada con Google Cloud TTS el 12 de octubre de 2026, sobre los SSML del Anexo B (v01).
+
+| Voz | Resultado |
+| --- | --- |
+| `es-US-Neural2-A` (femenina) | Admite SSML y marcas. A velocidad 1,0 da 168,4 s de audio (2,88 p/s) y un video proyectado de 3:08, algo por debajo de la banda. **Elegida para el borrador**, con `speakingRate` 0,95. |
+| `es-US-Chirp3-HD-Aoede` (femenina) | Sin SSML ni marcas; E1 dura 15,6 s y C3 29,6 s a velocidad natural. Requeriría el flujo de §8.5 paso 5. |
+| `es-US-Neural2-B` (masculina) | Admite SSML y marcas; algo más rápida que Neural2-A. |
+
+**Calibración final (Neural2-A, `speakingRate` 0,95):** 176,8 s de audio, tasa efectiva 2,72 p/s, **duración proyectada 3:16,6**. Cumple el mínimo de 2,3 p/s y la banda 3:10–3:50, y queda dentro del límite obligatorio de 2:00–4:00. **Puerta G1 superada en lo que respecta a la duración.**
+
+Los audios `narracion/wav/*_v01.wav` y sus marcas `narracion/timepoints/*_v01.json` son el borrador de narración (voz sintética). Los archivos `casting_*` sirven para la escucha a ciegas de §8.2: la elección definitiva de la voz es una decisión humana.

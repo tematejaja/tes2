@@ -1,0 +1,18 @@
+[
+ {
+  "markName": "C5_seguimiento",
+  "timeSeconds": 0.4964166581630707
+ },
+ {
+  "markName": "C5_alerta",
+  "timeSeconds": 3.5044169425964355
+ },
+ {
+  "markName": "C5_tarjeta",
+  "timeSeconds": 8.952000617980957
+ },
+ {
+  "markName": "C5_cierre",
+  "timeSeconds": 11.586750984191895
+ }
+]

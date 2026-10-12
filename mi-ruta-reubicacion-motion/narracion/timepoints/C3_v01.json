@@ -1,0 +1,26 @@
+[
+ {
+  "markName": "C3_mesa",
+  "timeSeconds": 0.4964166581630707
+ },
+ {
+  "markName": "C3_privado",
+  "timeSeconds": 9.278914451599121
+ },
+ {
+  "markName": "C3_incidencia",
+  "timeSeconds": 12.505414009094238
+ },
+ {
+  "markName": "C3_ajustes",
+  "timeSeconds": 14.252205848693848
+ },
+ {
+  "markName": "C3_noviable",
+  "timeSeconds": 15.732580184936523
+ },
+ {
+  "markName": "C3_desacuerdo",
+  "timeSeconds": 17.939788818359375
+ }
+]

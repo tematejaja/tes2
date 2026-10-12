@@ -1,0 +1,18 @@
+[
+ {
+  "markName": "C4_ejecuta",
+  "timeSeconds": 0.4964166581630707
+ },
+ {
+  "markName": "C4_nomudanza",
+  "timeSeconds": 7.046874523162842
+ },
+ {
+  "markName": "C4_entrega",
+  "timeSeconds": 13.276667594909668
+ },
+ {
+  "markName": "C4_confirma",
+  "timeSeconds": 16.547792434692383
+ }
+]
