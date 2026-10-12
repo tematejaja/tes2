@@ -1,0 +1,8 @@
+<speak>
+  <mark name="E2_gestora"/>Cada hogar tiene una gestora identificable
+  <mark name="E2_ficha"/>y una ficha que se actualiza y pasa de un responsable a otro: <break time="250ms"/>
+  <mark name="E2_historia"/>la familia no repite su historia. <break time="600ms"/>
+  <mark name="E2_ruta"/>La ruta tiene seis etapas, <break time="200ms"/>
+  <mark name="E2_resil"/>atravesadas por la resiliencia
+  <mark name="E2_mesas"/>y por mesas de trabajo con la gestora como mentora.
+</speak>

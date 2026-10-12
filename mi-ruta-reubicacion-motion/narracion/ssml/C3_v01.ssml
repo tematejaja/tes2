@@ -1,0 +1,9 @@
+<speak>
+  <break time="500ms"/>
+  <mark name="C3_mesa"/>En la mesa técnica, entidades y delegados comunitarios revisan los asuntos colectivos: <break time="200ms"/> quién decide, con qué recursos y en qué plazo. <break time="600ms"/>
+  <mark name="C3_privado"/>El caso de la familia se revisa aparte, con ella. <break time="300ms"/>
+  <mark name="C3_incidencia"/>Su propuesta cambia el plan: <break time="200ms"/>
+  <mark name="C3_ajustes"/>se acepta con ajustes,
+  <mark name="C3_noviable"/>y lo no viable se explica. <break time="600ms"/>
+  <mark name="C3_desacuerdo"/>Un desacuerdo no congela el caso: <break time="250ms"/> se revisa, se escala si hace falta, y lo demás sigue.
+</speak>

@@ -1,0 +1,6 @@
+<speak>
+  <break time="500ms"/>
+  <mark name="C6_revisa"/>Al cierre se revisa qué se cumplió; <break time="200ms"/>
+  <mark name="C6_pendiente"/>lo pendiente pasa a quien continuará, con fecha y contacto. <break time="800ms"/>
+  <mark name="C6_llaves"/>Porque entregar las llaves no significa que todo esté resuelto.
+</speak>

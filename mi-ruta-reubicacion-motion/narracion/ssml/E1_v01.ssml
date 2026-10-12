@@ -1,0 +1,6 @@
+<speak>
+  <mark name="E1_titulo"/>Mi Ruta de Reubicación es un piloto propuesto, <break time="200ms"/>
+  <mark name="E1_validar"/>por validar con la comunidad y las entidades. <break time="500ms"/>
+  <mark name="E1_complementa"/>Complementa el acompañamiento institucional que ya existe. <break time="600ms"/>
+  <mark name="E1_idea"/><prosody rate="92%">Más que un traslado, un nuevo comienzo.</prosody>
+</speak>

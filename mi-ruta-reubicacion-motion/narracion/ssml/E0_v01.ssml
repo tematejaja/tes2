@@ -1,0 +1,8 @@
+<speak>
+  <break time="800ms"/>
+  <mark name="E0_bogota"/>Bogotá. <break time="1600ms"/>
+  <mark name="E0_cbolivar"/>Al sur, Ciudad Bolívar. <break time="1400ms"/>
+  <mark name="E0_bellaflor"/>En la parte alta de Bella Flor, familias que construyeron aquí
+  <mark name="E0_calle"/>su vida, sus redes y su sustento. <break time="1000ms"/>
+  <mark name="E0_reasent"/>Algunas ya fueron reasentadas; <break time="300ms"/> otras siguen aquí, con situaciones distintas.
+</speak>

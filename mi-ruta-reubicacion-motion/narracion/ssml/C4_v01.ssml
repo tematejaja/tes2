@@ -1,0 +1,7 @@
+<speak>
+  <break time="500ms"/>
+  <mark name="C4_ejecuta"/>Con la preparación entregada, cada entidad ejecuta lo ya confirmado, y el piloto acompaña y registra. <break time="400ms"/>
+  <mark name="C4_nomudanza"/>Pero <prosody rate="92%">preparar no es mudarse:</prosody><break time="250ms"/> la entidad competente verifica antes las condiciones del traslado. <break time="500ms"/>
+  <mark name="C4_entrega"/>Frente a la familia, la ficha pasa al equipo siguiente,
+  <mark name="C4_confirma"/>que confirma haberla recibido.
+</speak>

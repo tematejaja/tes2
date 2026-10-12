@@ -1,0 +1,7 @@
+<speak>
+  <break time="500ms"/>
+  <mark name="C5_seguimiento"/>Tras el traslado, el seguimiento continúa. <break time="400ms"/>
+  <mark name="C5_alerta"/>Si los ingresos caen de forma importante o falta lo básico, se activa una alerta
+  <mark name="C5_tarjeta"/>con responsable, acción y fecha. <break time="400ms"/>
+  <mark name="C5_cierre"/>Solo se cierra cuando la atención llega y la familia lo confirma.
+</speak>

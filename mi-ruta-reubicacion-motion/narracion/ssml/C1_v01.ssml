@@ -1,0 +1,9 @@
+<speak>
+  <break time="500ms"/>
+  <mark name="C1_familia"/>Sigamos a una familia ficticia: la madre cocina y vende desde casa; <break time="200ms"/> una vecina cuida a los niños. <break time="500ms"/>
+  <mark name="C1_escucha"/>La gestora escucha a la familia: qué quiere conservar y qué propone. <break time="300ms"/>
+  <mark name="C1_dimensiones"/>Lo registra en cinco dimensiones,
+  <mark name="C1_corrige"/>y el hogar corrige su ficha. <break time="500ms"/>
+  <mark name="C1_nogarantiza"/>Participar no garantiza vivienda ni obliga a aceptar una alternativa. <break time="600ms"/>
+  <mark name="C1_urgencia"/>Ante un riesgo inmediato para la vida, se activa enseguida el canal de emergencia, sin esperar etapas.
+</speak>
