@@ -97,7 +97,7 @@ function minimap(cur) {
   return g;
 }
 function topLabels(t) {
-  let g = rect(1290, 22, 490, 48, { r: 12, fill: 'rgba(19,32,43,.88)' }) + text(1535, 55, 'PILOTO PROPUESTO · POR VALIDAR', { size: 22, weight: 800, fill: C.teal, anchor: 'middle', ls: 1 });
+  let g = rect(1290, 22, 490, 48, { r: 12, fill: 'rgba(19,32,43,.88)' }) + text(1535, 55, 'PILOTO PROPUESTO', { size: 22, weight: 800, fill: C.teal, anchor: 'middle', ls: 1 });
   const ilus = (t >= 12.3 && t < TL.blocks.E9.start) || (t >= TL.marks.E9_final - .3 && t < TL.cr_start);
   if (ilus) g += rect(1290, 76, 490, 44, { r: 12, fill: 'rgba(244,239,230,.94)', stroke: C.ink, sw: 2 }) + text(1535, 106, 'RECREACIÓN ILUSTRADA · FAMILIA FICTICIA', { size: 19, weight: 800, anchor: 'middle', ls: .5 });
   return g;

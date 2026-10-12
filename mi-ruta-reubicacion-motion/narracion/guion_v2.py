@@ -14,7 +14,7 @@ G = {
        ("E1_compromisos", "y quedan compromisos sin verificar.", 500),
        ("E1_titulo", "Por eso proponemos Mi Ruta de Reubicación,", 100),
        ("E1_complementa", "un piloto que complementa lo que ya hacen las entidades del Distrito", 0),
-       ("E1_validar", "y que todavía debemos validar con ellas y con la comunidad.", 450),
+       ("E1_validar", "y que construimos y validamos con ellas y con la comunidad.", 450),
        ("E1_idea", "~Más que un traslado, un nuevo comienzo.", 0)],
 "E2": [("E2_como", "¿Cómo funciona? Con tres piezas.", 250),
        ("E2_gestora", "Una gestora social con nombre propio, que acompaña a cada hogar.", 250),

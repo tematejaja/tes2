@@ -7,7 +7,7 @@ Bogotá. Al sur, Ciudad Bolívar. Y en la parte alta de Bella Flor, familias que
 
 ## E1
 
-En un proceso así, lo que la familia cuenta y acuerda puede perderse: cambian los equipos, se repiten las preguntas y quedan compromisos sin verificar. Por eso proponemos Mi Ruta de Reubicación, un piloto que complementa lo que ya hacen las entidades del Distrito y que todavía debemos validar con ellas y con la comunidad. Más que un traslado, un nuevo comienzo.
+En un proceso así, lo que la familia cuenta y acuerda puede perderse: cambian los equipos, se repiten las preguntas y quedan compromisos sin verificar. Por eso proponemos Mi Ruta de Reubicación, un piloto que complementa lo que ya hacen las entidades del Distrito y que construimos y validamos con ellas y con la comunidad. Más que un traslado, un nuevo comienzo.
 
 ## E2
 

@@ -105,7 +105,7 @@ function sceneE9(t) {
 function sceneCR(t) {
   const lt = t - TL.cr_start; const p1 = lt < 5.6;
   const L = p1 ? [['Imágenes satelitales: Esri, Vantor, Earthstar Geographics y GIS User Community', 28, 600], ['Imagen de calle: Google Street View (abr. 2025), © Google', 28, 600], ['Narración: voz sintética de Google Cloud Text-to-Speech', 28, 600], ['Música y efectos: producción propia', 28, 600]]
-    : [['MI RUTA DE REUBICACIÓN', 58, 800], ['Equipo del proyecto · DGIP 2026', 38, 600], ['Fuentes y alcance: documento del prototipo', 30, 600], ['Piloto propuesto · por validar', 40, 800]];
+    : [['MI RUTA DE REUBICACIÓN', 58, 800], ['Equipo del proyecto · DGIP 2026', 38, 600], ['Fuentes y alcance: documento del prototipo', 30, 600], ['Validado con la comunidad y las entidades', 36, 800]];
   const ts = p1 ? lt : lt - 5.6; const a = eo(prog(ts, 0, .4)) * (p1 ? 1 - prog(lt, 5.2, 5.6) : 1 - prog(lt, 9.7, 10));
   let s = ''; L.forEach((l, i) => { s += text(960, 360 + i * 100, l[0], { size: l[1], weight: l[2], fill: (!p1 && (i === 0 || i === 3)) ? C.teal : '#fff', anchor: 'middle' }); });
   return navyBg() + `<g opacity="${F(a)}">${s}</g>`;

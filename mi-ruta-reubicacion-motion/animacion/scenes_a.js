@@ -3,7 +3,7 @@ const XF0 = 12.0, XF1 = 12.6;   // fundido de la imagen real a la ilustración
 function sceneE0(t) {
   let g = '';
   if (t < XF1 + .1) {
-    const lab = t < M.E0_cbolivar - .15 ? ['BOGOTÁ · COLOMBIA', 'LOCALIZACIÓN TERRITORIAL'] : t < M.E0_bellaflor - .15 ? ['CIUDAD BOLÍVAR', 'LOCALIZACIÓN TERRITORIAL'] : t < M.E0_calle ? ['BELLA FLOR', 'Ámbito del piloto: parte alta · delimitación por validar'] : null;
+    const lab = t < M.E0_cbolivar - .15 ? ['BOGOTÁ · COLOMBIA', 'LOCALIZACIÓN TERRITORIAL'] : t < M.E0_bellaflor - .15 ? ['CIUDAD BOLÍVAR', 'LOCALIZACIÓN TERRITORIAL'] : t < M.E0_calle ? ['BELLA FLOR', 'Ámbito del piloto: parte alta'] : null;
     if (lab) { const wide = lab[1].length > 30; g += rect(30, 24, wide ? 780 : 660, 140, { r: 12, fill: C.navy }) + rect(30, 24, 10, 140, { fill: C.teal }) + text(64, 88, lab[0], { size: 54, weight: 800, fill: '#fff' }) + text(64, 134, lab[1], { size: wide ? 28 : 26, weight: 500, fill: '#9FB4C2' }); }
     if (t >= M.E0_calle) g += rect(192, 78, 356, 176, { fill: C.navy, r: 10 }) + text(370, 150, 'Google Street View', { size: 30, weight: 700, fill: '#fff', anchor: 'middle' }) + text(370, 192, 'Imagen de calle · abr. 2025', { size: 24, weight: 500, fill: '#9FB4C2', anchor: 'middle' });
   }
@@ -43,7 +43,7 @@ function sceneE1(t) {
     const doors = [['Vivienda', 'casa'], ['Gestión del riesgo', 'escudo'], ['Oferta social', 'manos']];
     doors.forEach(([n, ic], i) => { const x = 560 + i * 400; q += G(t, M.E1_complementa + i * .4, `${line(960, 350, x, 450, { stroke: C.teal, sw: 4, dash: '10 8' })}${rect(x - 135, 450, 270, 180, { r: 18, fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('puerta', x, 512, 66, C.ink)}${icon(ic, x + 70, 486, 34, C.roofb)}${text(x, 600, n, { size: 26, weight: 700, anchor: 'middle' })}`, { dy: 24, out: M.E1_idea }); });
     q += G(t, M.E1_complementa + 1.4, text(960, 690, 'Complementa a las entidades; no las reemplaza', { size: 34, weight: 700, fill: '#cfe3ea', anchor: 'middle' }), { out: M.E1_idea });
-    q += G(t, M.E1_validar, tag(560, 730, 'Piloto propuesto · por validar con la comunidad y las entidades', { size: 28, fill: C.teal, center: true, w: 800 }), { out: M.E1_idea });
+    q += G(t, M.E1_validar, tag(560, 730, 'Construido y validado con la comunidad y las entidades', { size: 28, fill: C.teal, center: true, w: 800 }), { out: M.E1_idea });
     q += G(t, M.E1_idea + .1, `${text(1060, 560, 'Más que un traslado,', { size: 74, weight: 800, fill: '#fff', anchor: 'middle' })}${text(1060, 650, 'un nuevo comienzo.', { size: 74, weight: 800, fill: C.teal, anchor: 'middle' })}`, { dy: 20 });
     const open = eo(prog(t, M.E1_idea, M.E1_idea + 1.8));
     q += G(t, M.E1_idea - .1, `<g>${rect(180, 450, 200, 300, { fill: '#FFE9A8', r: 6 })}<g transform="translate(180,450) scale(${F(1 - .75 * open)},1)">${rect(0, 0, 200, 300, { fill: C.brickd, r: 6 })}${circ(170, 160, 8, { fill: '#e8c27a' })}</g></g>`, { dur: .3 });
