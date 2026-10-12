@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Síntesis y calibración de la narración con Google Cloud Text-to-Speech.
 
-Solo usa la biblioteca estándar. Requiere `gcloud auth login` (o
-GOOGLE_APPLICATION_CREDENTIALS con `gcloud auth application-default login`)
-y el proyecto de cuota en GOOGLE_CLOUD_PROJECT.
+Solo usa la biblioteca estándar. Credenciales: variable de entorno GOOGLE_API_KEY (clave de API) o, si no existe,
+`gcloud auth login` con GOOGLE_CLOUD_PROJECT como proyecto de cuota.
 
 Uso (desde la carpeta narracion/):
   python3 sintetizar.py voces                       # lista voces es-US
@@ -38,10 +37,15 @@ def token():
 
 
 def llamar(url, cuerpo=None):
-    h = {"Authorization": f"Bearer {token()}", "Content-Type": "application/json"}
-    proyecto = os.environ.get("GOOGLE_CLOUD_PROJECT")
-    if proyecto:
-        h["x-goog-user-project"] = proyecto
+    h = {"Content-Type": "application/json"}
+    clave = os.environ.get("GOOGLE_API_KEY")
+    if clave:  # clave de API: nunca se guarda en archivos del repositorio
+        url += ("&" if "?" in url else "?") + "key=" + clave
+    else:
+        h["Authorization"] = f"Bearer {token()}"
+        proyecto = os.environ.get("GOOGLE_CLOUD_PROJECT")
+        if proyecto:
+            h["x-goog-user-project"] = proyecto
     req = urllib.request.Request(url, data=None if cuerpo is None else json.dumps(cuerpo).encode(), headers=h)
     try:
         with urllib.request.urlopen(req, timeout=120) as r:
