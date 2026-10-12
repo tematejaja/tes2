@@ -7,6 +7,6 @@
   <mark name="C1_ficha"/>Con eso llena la ficha de caracterización familiar,
   <mark name="C1_dimensiones"/>en cinco dimensiones: vivienda, economía, redes de cuidado, servicios y participación. <break time="250ms"/>
   <mark name="C1_corrige"/>La familia la revisa y la corrige. <break time="250ms"/>
-  <mark name="C1_nogarantiza"/>Y desde el primer día sabe que participar no le garantiza vivienda, ni la obliga a aceptar una alternativa. <break time="400ms"/>
-  <mark name="C1_urgencia"/>Y ante un riesgo inmediato para la vida, se activa el canal de emergencia, sin esperar ninguna etapa.
+  <mark name="C1_nogarantiza"/>Desde el primer día, ella sabe que participar no le garantiza vivienda, ni la obliga a aceptar una alternativa. <break time="400ms"/>
+  <mark name="C1_urgencia"/>Si hay un riesgo inmediato para la vida, se activa el canal de emergencia, sin esperar ninguna etapa.
 </speak>

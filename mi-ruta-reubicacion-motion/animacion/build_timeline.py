@@ -35,24 +35,34 @@ for b in BLOQUES:
 tl["cr_start"] = t; tl["total"] = t + CR
 # partir cues largos en trozos <= 84 caracteres (2 líneas de 42) con tiempo proporcional
 STOP = {"se","lo","los","la","las","una","un","de","del","que","sobre","no","y","o","a","al","en","con","por","para","su","sus","el","le","cada","es","entre","sin"}
+PROT = ["durante doce meses", 'ficha de caracterización familiar', 'ficha de caracterización', 'preparación entregada', 'entidad competente', 'receptor de continuidad', 'doce meses', 'trescientos cincuenta hogares', 'una casa nueva', 'nuestra historia', 'Mi Ruta de Reubicación', 'mesa comunitaria', 'mesa técnica', 'plan económico de transición', 'hoja de devolución', 'canal de emergencia', 'atención pendiente', 'Bella Flor', 'Ciudad Bolívar', 'la mamá', 'gestora social', 'nuevo hogar', 'nueva vivienda']
+def dentro(ws, k):
+    """True si cortar antes de ws[k] parte un término protegido."""
+    low = " ".join(ws).lower(); pos = len(" ".join(ws[:k]))
+    for p in PROT:
+        for m in __import__("re").finditer(__import__("re").escape(p.lower()), low):
+            if m.start() < pos < m.end(): return True
+    return False
 def partir(txt, maxc):
     """Parte en dos cerca de la mitad, sin dejar al final de la primera parte una palabra átona."""
     ws = txt.split(); best = None
     for k in range(1, len(ws)):
         a = " ".join(ws[:k]); b = " ".join(ws[k:])
         if max(len(a), len(b)) > maxc * 1.25: continue
-        pen = abs(len(a) - len(b)) + (60 if ws[k-1].lower().strip(",;:") in STOP else 0) - (25 if ws[k-1][-1] in ",;:" else 0)
+        pen = abs(len(a) - len(b)) + (60 if ws[k-1].lower().strip(",;:") in STOP else 0) - (25 if ws[k-1][-1] in ",;:" else 0) + (200 if dentro(ws, k) else 0) + (40 if ws[k].lower() in ("que", "de") else 0)
         if best is None or pen < best[0]: best = (pen, a, b)
     return [best[1], best[2]] if best else [txt]
 def trocear(txt, maxc=84):
     import re
     if len(txt) <= maxc: return [txt]
-    cl = [c.strip() for c in re.split(r"(?<=[,;:])\s+", txt) if c.strip()]
-    out = []; cur = ""
-    for c in cl:
-        if cur and len(cur) + 1 + len(c) > maxc: out.append(cur); cur = c
-        else: cur = (cur + " " + c).strip()
-    if cur: out.append(cur)
+    out = []
+    for parte in [p.strip() for p in re.split(r"(?<=[;:])\s+", txt) if p.strip()]:
+        if len(parte) <= maxc: out.append(parte); continue
+        cur = ""
+        for c in [c.strip() for c in re.split(r"(?<=,)\s+", parte) if c.strip()]:
+            if cur and len(cur) + 1 + len(c) > maxc: out.append(cur); cur = c
+            else: cur = (cur + " " + c).strip()
+        if cur: out.append(cur)
     res = []
     for o in out:
         res += trocear(" ".join(partir(o, maxc)[0:1]), maxc) + trocear(" ".join(partir(o, maxc)[1:]), maxc) if len(o) > maxc else [o]

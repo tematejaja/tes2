@@ -64,7 +64,7 @@ for b in ("C1", "C2", "C3", "C4", "C5", "C6"): campana(B[b]["start"] + .05, 523,
 campana(M["C1_corrige"] + .3, 784, .10)                  # ficha revisada por el hogar
 pulso(M["C1_urgencia"] + .5, 98, .22)                    # canal de emergencia
 campana(M["C3_incidencia"] + .4, 988, .09)               # propuesta aceptada con ajustes
-campana(M["C3_entregada"] + .3, 587, .12)                # preparación entregada
+campana(B["C3"]["start"] + B["C3"]["audio"] - 1.6, 587, .12)   # sello: preparación entregada
 campana(M["C4_confirma"] + .2, 880, .10)                 # recibido
 pulso(M["C5_alerta"] + .4, 98, .22)                      # alerta
 campana(M["C5_cierre"] + .7, 1046, .11)                  # alerta cerrada con confirmación

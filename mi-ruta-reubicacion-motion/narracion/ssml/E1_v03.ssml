@@ -2,7 +2,7 @@
   <mark name="E1_problema"/>En un proceso así, lo que la familia cuenta y acuerda puede perderse: <break time="150ms"/>
   <mark name="E1_equipos"/>cambian los equipos, <break time="100ms"/>
   <mark name="E1_preguntas"/>se repiten las preguntas <break time="100ms"/>
-  <mark name="E1_compromisos"/>y quedan compromisos que nadie verifica. <break time="500ms"/>
+  <mark name="E1_compromisos"/>y hay compromisos que se quedan sin verificar. <break time="500ms"/>
   <mark name="E1_titulo"/>Por eso proponemos Mi Ruta de Reubicación: <break time="100ms"/>
   <mark name="E1_complementa"/>un piloto que complementa lo que ya hacen las entidades del Distrito,
   <mark name="E1_validar"/>y que construimos y validamos con ellas y con la comunidad.

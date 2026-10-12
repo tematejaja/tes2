@@ -2,7 +2,7 @@
   <break time="400ms"/>
   <mark name="C2_plan"/>En la segunda etapa se arma el plan de reubicación. <break time="200ms"/>
   <mark name="C2_opciones"/>Se comparan las opciones reales, aunque sea una sola: costo y cercanía al trabajo, al colegio y a la red de cuidado. <break time="300ms"/>
-  <mark name="C2_presupuesto"/>Y se hace un plan económico de transición: <break time="100ms"/>
+  <mark name="C2_presupuesto"/>Luego se hace un plan económico de transición: <break time="100ms"/>
   <mark name="C2_saldo"/>ingresos netos menos gastos esenciales, hoy y en la nueva vivienda. <break time="300ms"/>
   <mark name="C2_propuesta"/>La familia propone seguir vendiendo sus almuerzos cerca del nuevo hogar,
   <mark name="C2_codigo"/>y la gestora se encarga de que le respondan.

@@ -10,13 +10,13 @@ function sceneC1(t) {
   let b = landscape(t * 8, 0) + houseBig(780, 835, 420, 330) + person(640, 830, 1.0, { ...P.madre, arm2: 30 }) + person(300, 830, 1.0, P.vecina) + person(400, 830, .62, P.hijo) + person(450, 830, .55, P.hija);
   const gx = lerp(1500, 930, eo(prog(t, M.C1_escucha - .2, M.C1_escucha + 1.4)));
   b += person(gx, 830, 1.0, { ...P.gestora, flip: true, arm2: 40 }) + G(t, M.C1_escucha + 1.0, tag(830, 590, 'Gestora social', { size: 22, center: true, w: 200 }), {});
-  b += G(t, M.C1_escucha + 1.6, bubble(440, 300, 400, 84, 'Conservar a mis clientes', 0, { tx: 610, size: 26 }), {});
-  b += G(t, M.C1_escucha + 3.2, bubble(60, 430, 600, 84, 'Seguir vendiendo cerca del nuevo hogar', 0, { tx: 580, size: 26 }), {});
+  b += G(t, M.C1_escucha + 1.6, bubble(440, 300, 400, 84, 'Conservar a mis clientes', { tx: 610, size: 26 }), {});
+  b += G(t, M.C1_escucha + 3.2, bubble(60, 430, 600, 84, 'Seguir vendiendo cerca del nuevo hogar', { tx: 580, size: 26 }), {});
   const ix = 1240, iy = 150;
   let ins = rect(ix, iy + 40, 620, 330, { r: 18, fill: C.ivory, stroke: C.ink, sw: 3 }) + `<ellipse cx="${ix + 310}" cy="${iy + 250}" rx="250" ry="38" fill="#8a6a4a" stroke="${C.ink}" stroke-width="3"/>`;
   [['#B5483B', C.skin2], ['#6A5A8C', C.skin3], ['#2F6DB5', C.skin1], ['#2E9E6A', C.skin2], ['#D07A2D', C.skin3]].forEach((c, i) => { ins += miniPerson(ix + 90 + i * 110, iy + 250, c[0], c[1], i === 2); });
   ins += tag(ix + 20, iy - 16, 'Mesa comunitaria', { size: 26, fill: C.teal });
-  ins += G(t, M.C1_mesa + .9, bubble(ix + 250, iy + 70, 220, 56, 'Propongo…', 0, { tx: ix + 330, size: 24 }), {});
+  ins += G(t, M.C1_mesa + .9, bubble(ix + 250, iy + 70, 220, 56, 'Propongo…', { tx: ix + 330, size: 24 }), {});
   b += G(t, M.C1_mesa - .1, ins, { dx: 60, dy: 0 });
   g += win(t, M.C1_escucha, M.C1_ficha, b);
   // C · ficha de caracterización
@@ -32,7 +32,7 @@ function sceneC1(t) {
   g += win(t, M.C1_ficha, M.C1_urgencia, c);
   // D · protección urgente
   let d = navyBg() + stationsRow(470, 0);
-  d += rect(220, 395, 220, 56, { r: 10, fill: C.ivory, stroke: C.ink, sw: 2 }) + text(330, 432, 'Ficha familiar', { size: 26, weight: 800, anchor: 'middle' });
+  d += rect(170, 395, 320, 56, { r: 10, fill: C.ivory, stroke: C.ink, sw: 2 }) + text(330, 432, 'Ficha de caracterización', { size: 22, weight: 800, anchor: 'middle' });
   d += line(160, 720, 1760, 720, { stroke: '#fff', sw: 6, dash: '18 12' }) + tag(250, 650, 'Canal de emergencia · autoridad competente', { size: 28 });
   const pp = eio(prog(t, M.C1_urgencia + .3, M.C1_urgencia + 1.5));
   d += line(160, 470, 160, lerp(470, 720, pp), { stroke: '#fff', sw: 8 }) + circ(160, lerp(470, 720, pp), 16, { fill: '#fff' });
@@ -87,7 +87,7 @@ function sceneC3(t) {
   a += person(340, 800, .8, { ...P.enl1, arm2: 70 }) + person(600, 800, .8, P.enl2) + person(860, 800, .8, P.enl3) + person(1100, 800, .8, { ...P.gestora, flip: true }) + person(1290, 800, .8, { ...P.del1, flip: true, arm2: lt > 2 && lt < 5 ? 155 : 14 }) + person(1470, 800, .8, { ...P.del2, flip: true });
   a += tableTop(240, 690, 1350);
   a += G(t, M.C3_entidades + .5, [[340, 'Entidad de', 'vivienda'], [600, 'Entidad de gestión', 'del riesgo'], [860, 'Entidad de', 'oferta social']].map(([x, l1, l2]) => `${rect(x - 112, 724, 224, 84, { r: 12, fill: C.ivory, stroke: C.ink, sw: 2 })}${text(x, 756, l1, { size: 20, weight: 700, anchor: 'middle' })}${text(x, 786, l2, { size: 20, weight: 700, anchor: 'middle' })}`).join('') + [['Gestora', 1100], ['Delegada', 1290], ['Delegado', 1470]].map(([n, x]) => `${rect(x - 66, 740, 132, 50, { r: 12, fill: C.ivory, stroke: C.ink, sw: 2 })}${text(x, 773, n, { size: 21, weight: 700, anchor: 'middle' })}`).join(''), {});
-  a += G(t, M.C3_mesa + 3.0, bubble(1100, 560, 380, 64, 'Proponemos ajustar el horario', 0, { tx: 1290, size: 22 }), { out: M.C3_privado - .4 });
+  a += G(t, M.C3_mesa + 3.0, bubble(1100, 560, 380, 64, 'Proponemos ajustar el horario', { tx: 1290, size: 22 }), { out: M.C3_privado - .4 });
   g += win(t, B.C3.start, M.C3_privado, a, .01, .35);
   // espacio privado
   let b = roomBg() + rect(380, 140, 1160, 660, { fill: '#D9D1BF', stroke: C.ink, sw: 6 }) + tag(420, 170, 'Espacio privado', { size: 38, fill: C.teal }) + icon('candado', 880, 205, 44, C.ink);
@@ -103,16 +103,17 @@ function sceneC3(t) {
   c += G(t, M.C3_noviable, `${rect(260, 610, 360, 100, { r: 14, fill: '#FBE3E1', stroke: C.critd, sw: 3 })}${text(440, 655, 'No viable', { size: 30, weight: 800, fill: C.critd, anchor: 'middle' })}${text(440, 690, 'con su explicación', { size: 23, weight: 700, fill: C.critd, anchor: 'middle' })}${arrow(626, 660, 760, 660, {})}${chip(770, 630, 'Alternativas', { size: 26 })}`, { dy: 12 });
   c += G(t, M.C3_hoja, `${rect(1110, 160, 660, 600, { r: 22, fill: C.ivory, stroke: C.ink, sw: 4 })}${text(1440, 220, 'HOJA DE DEVOLUCIÓN', { size: 34, weight: 800, anchor: 'middle' })}` +
     [['Qué se decidió', 'Aceptada con ajustes'], ['Por qué', 'Razones de cada entidad'], ['Qué sigue', 'Siguiente paso y fecha'], ['Quién responde', 'Responsable']].map(([f, v], i) => `${line(1140, 255 + i * 122, 1740, 255 + i * 122, { stroke: C.slate, sw: 2 })}${text(1150, 300 + i * 122, f, { size: 30, weight: 800 })}${text(1150, 342 + i * 122, v, { size: 26, weight: 500, fill: C.noned })}`).join(''), { dx: 40, dy: 0 });
-  g += win(t, M.C3_incidencia, M.C3_desacuerdo, c);
+  g += win(t, M.C3_incidencia, M.C3_desacuerdo + 1.4, c);
   // desacuerdo y preparación entregada
   let d = roomBg() + board(330, 130, 1260, 330, [{ col: 0, row: 0, t: 'Ruta de bus escolar' }, { col: 0, row: 1, t: 'Cuidado compartido', fill: '#DDEBFA' }, { col: 1, row: 0, t: 'Horario de transporte', fill: '#E3F3E6' }], 'Lo demás sigue avanzando');
   [['Desacuerdo', 450, '#FBD6D2'], ['Revisión', 860, '#FFF1B8'], ['Nivel que decide', 1290, '#DDEBFA']].forEach(([n, x, f], i, arr) => {
-    d += G(t, M.C3_desacuerdo + .3 + i * .9, `${rect(x - 165, 560, 330, 100, { r: 16, fill: f, stroke: C.ink, sw: 3.5 })}${text(x, 622, n, { size: 34, weight: 800, anchor: 'middle' })}`, { dy: 12 });
-    if (i < 2) d += G(t, M.C3_desacuerdo + 1.0 + i * .9, arrow(x + 172, 610, arr[i + 1][1] - 172, 610, {}), {});
+    d += G(t, M.C3_desacuerdo + 1.5 + i * .8, `${rect(x - 165, 560, 330, 100, { r: 16, fill: f, stroke: C.ink, sw: 3.5 })}${text(x, 622, n, { size: 34, weight: 800, anchor: 'middle' })}`, { dy: 12 });
+    if (i < 2) d += G(t, M.C3_desacuerdo + 2.1 + i * .8, arrow(x + 172, 610, arr[i + 1][1] - 172, 610, {}), {});
   });
-  d += G(t, M.C3_desacuerdo + 2.0, text(960, 720, 'El caso se escala, pero no se congela', { size: 32, weight: 700, anchor: 'middle' }), {});
+  d += G(t, M.C3_desacuerdo + 2.6, text(960, 720, 'El caso se escala, pero no se congela', { size: 32, weight: 700, anchor: 'middle' }), { out: M.C3_entregada });
+  d += G(t, M.C3_entregada + .2, [['Ficha al día ✓', 520], ['Plan de reubicación ✓', 960], ['Respuestas y pendientes ✓', 1400]].map(([s, x]) => tag(x - 170, 700, s, { size: 28, fill: '#DDF3E6', stroke: C.okd, color: C.okd, center: true, w: 340 })).join(''), { dy: 10 });
   const ts = B.C3.start + B.C3.audio - 1.7; const sa = eo(prog(t, ts, ts + .5));
   if (sa > 0) d += rect(0, 0, W, H, { fill: C.navy, op: F(.55 * sa) }) + `<g opacity="${F(sa)}" transform="rotate(-4 960 470)">${rect(470, 400, 980, 140, { r: 14, fill: '#fff', stroke: C.okd, sw: 8 })}${text(960, 492, 'PREPARACIÓN ENTREGADA', { size: 64, weight: 800, fill: C.okd, anchor: 'middle', ls: 2 })}</g>`;
-  g += win(t, M.C3_desacuerdo, undefined, d);
+  g += win(t, M.C3_desacuerdo + 1.4, undefined, d);
   return g;
 }

@@ -97,19 +97,21 @@ function minimap(cur) {
   return g;
 }
 function topLabels(t) {
-  let g = rect(1290, 22, 490, 48, { r: 12, fill: 'rgba(19,32,43,.88)' }) + text(1535, 55, 'PILOTO PROPUESTO', { size: 22, weight: 800, fill: C.teal, anchor: 'middle', ls: 1 });
-  const ilus = (t >= 12.3 && t < TL.blocks.E9.start) || (t >= TL.marks.E9_final - .3 && t < TL.cr_start);
+  let g = rect(1290, 22, 490, 48, { r: 12, fill: t < 10 ? C.navy : 'rgba(19,32,43,.88)' }) + text(1535, 55, 'PILOTO PROPUESTO', { size: 22, weight: 800, fill: C.teal, anchor: 'middle', ls: 1 });
+  const ilus = (t >= 9.3 && t < TL.blocks.E9.start) || (t >= TL.marks.E9_final - .3 && t < TL.cr_start);
   if (ilus) g += rect(1290, 76, 490, 44, { r: 12, fill: 'rgba(244,239,230,.94)', stroke: C.ink, sw: 2 }) + text(1535, 106, 'RECREACIÓN ILUSTRADA · FAMILIA FICTICIA', { size: 19, weight: 800, anchor: 'middle', ls: .5 });
   return g;
 }
 const STOPW = new Set(['se','lo','los','la','las','una','un','de','del','que','sobre','no','y','o','a','al','en','con','por','para','su','sus','el','le','cada','es','entre','sin']);
+const PROT = ["ficha de caracterización familiar", "ficha de caracterización", "preparación entregada", "entidad competente", "receptor de continuidad", "doce meses", "trescientos cincuenta hogares", "una casa nueva", "nuestra historia", "Mi Ruta de Reubicación", "mesa comunitaria", "mesa técnica", "plan económico de transición", "hoja de devolución", "canal de emergencia", "atención pendiente", "Bella Flor", "Ciudad Bolívar", "la mamá", "gestora social", "nuevo hogar", "nueva vivienda"];
+function splitsProt(ws, k) { const low = ws.join(' ').toLowerCase(), pos = ws.slice(0, k).join(' ').length; for (const p of PROT) { let i = low.indexOf(p.toLowerCase()); while (i >= 0) { if (i < pos && pos < i + p.length) return true; i = low.indexOf(p.toLowerCase(), i + 1); } } return false; }
 function wrapLines(s, max = 44) {
   if (s.length <= max) return [s];
   const ws = s.split(' '); let best = null;
   for (let k = 1; k < ws.length; k++) {
     const a = ws.slice(0, k).join(' '), b = ws.slice(k).join(' ');
     if (Math.max(a.length, b.length) > max + 8) continue;
-    const pen = Math.abs(a.length - b.length) + (STOPW.has(ws[k - 1].toLowerCase().replace(/[,;:]/g, '')) ? 60 : 0) - (/[,;:]$/.test(ws[k - 1]) ? 20 : 0);
+    const pen = Math.abs(a.length - b.length) + (STOPW.has(ws[k - 1].toLowerCase().replace(/[,;:]/g, '')) ? 60 : 0) - (/[,;:]$/.test(ws[k - 1]) ? 20 : 0) + (splitsProt(ws, k) ? 200 : 0) + (['que', 'de'].includes(ws[k].toLowerCase()) ? 40 : 0);
     if (!best || pen < best[0]) best = [pen, a, b];
   }
   return best ? [best[1], best[2]] : [s];

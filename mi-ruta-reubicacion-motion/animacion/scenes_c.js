@@ -20,7 +20,7 @@ function sceneC4(t) {
   b += text(1500, 318, 'Verifica: entidad competente', { size: 22, weight: 800, fill: C.roofb, anchor: 'end' });
   const conds = ['Vivienda', 'Servicios y acceso', 'Economía del hogar', 'Cuidado', 'Logística del traslado', 'Quién sigue acompañando'];
   conds.forEach((c, i) => {
-    const y = 380 + i * 66, t0 = M.C4_condiciones + 1.2 + i * 1.0, care = i === 3, done = care ? t > t0 + 1.8 : t > t0;
+    const y = 380 + i * 66, t0 = M.C4_condiciones + .5 + i * .55, care = i === 3, done = care ? t > t0 + .9 : t > t0;
     b += text(450, y + 8, c, { size: 30, weight: 700 }) + line(430, y + 28, 1490, y + 28, { stroke: C.slate, sw: 2 });
     if (done) b += stIcon('atendida', 1330, y - 2, 19) + text(1362, y + 8, 'Verificada', { size: 25, weight: 700, fill: C.okd });
     else if (care && t > t0) b += tag(1150, y - 24, 'Pendiente visible', { size: 22, fill: '#FFF1B8', stroke: C.warnd });
@@ -32,7 +32,7 @@ function sceneC4(t) {
   c += person(700, 830, 1.0, { ...P.madre, arm2: 25 }) + person(1010, 830, 1.0, { ...P.gestora, arm2: t < M.C4_entrega + 2.8 ? 70 : 14 }) + person(1420, 830, 1.0, { ...P.prof, flip: true, arm1: 40 });
   const kout = B.C4.start + B.C4.audio - .45;
   c += G(t, M.C4_entrega - .2, rect(fx - 135, 400, 270, 108, { r: 12, fill: C.ivory, stroke: C.ink, sw: 3 }) + text(fx, 440, 'Ficha de caracterización', { size: 20, weight: 800, anchor: 'middle' }) + text(fx, 466, 'familiar', { size: 20, weight: 800, anchor: 'middle' }) + circ(fx, 490, 10, { fill: t > M.C4_entrega + 2.2 ? '#7A4FA8' : C.roofb }), { out: kout, dy: 0 });
-  c += G(t, M.C4_entrega + .3, tag(1420 - 110, 560, 'Equipo siguiente', { size: 22, center: true, w: 220 }), { out: kout });
+  c += G(t, M.C4_entrega + .3, tag(1420 - 170, 560, 'Profesional de acompañamiento', { size: 21, center: true, w: 340 }), { out: kout });
   c += G(t, M.C4_confirma, tag(1290, 300, 'Recibido ✓', { size: 36, fill: '#DDF3E6', stroke: C.okd, color: C.okd, sw: 4 }), { dy: -10, out: kout });
   c += G(t, M.C4_confirma + .5, `${rect(640, 470, 120, 74, { r: 10, fill: C.ivory, stroke: C.ink, sw: 3 })}${text(700, 514, 'Copia', { size: 24, weight: 800, anchor: 'middle' })}`, { dy: -10, out: kout });
   const ka = prog(t, B.C4.start + B.C4.audio - .2, B.C4.start + B.C4.audio + .5);
@@ -57,13 +57,13 @@ function sceneC5(t) {
   [['Responsable', 'Profesional de acompañamiento'], ['Acción', 'Gestionar la atención con quien corresponda'], ['Fecha de revisión', 'Fecha acordada con la familia']].forEach((fl, i) => {
     g += G(t, M.C5_tarjeta + i * .5, `${line(130, 470 + i * 84, 880, 470 + i * 84, { stroke: C.slate, sw: 2 })}${text(140, 504 + i * 84, fl[0] + ':', { size: 24, weight: 800, fill: C.noned })}${text(140, 536 + i * 84, fl[1], { size: 24, weight: 600 })}`, { dy: 8 });
   });
-  g += G(t, M.C5_nocierra, tag(110, 770, 'Oficio o remisión enviada: la alerta sigue abierta', { size: 22, fill: '#FFF1B8', stroke: C.warnd }), { dy: 8, out: M.C5_cierre + .4 });
-  g += G(t, M.C5_cierre + .6, tag(110, 770, 'La ayuda llegó y la familia lo confirmó ✓', { size: 22, fill: '#DDF3E6', stroke: C.okd, color: C.okd }), { dy: 8 });
+  g += G(t, M.C5_nocierra, tag(110, 770, 'Oficio o remisión enviada: la alerta sigue abierta', { size: 22, fill: '#FFF1B8', stroke: C.warnd }), { dy: 8, out: M.C5_cierre + .8 });
+  g += G(t, M.C5_cierre + 1.15, tag(110, 770, 'La ayuda llegó y la familia lo confirmó ✓', { size: 22, fill: '#DDF3E6', stroke: C.okd, color: C.okd }), { dy: 8 });
   return g;
 }
 function sceneC6(t) {
   let g = roomBg();
-  let a = roomBg() + person(260, 830, .85, P.madre) + person(470, 830, .85, P.prof) + person(1640, 830, .85, { ...P.rec, flip: true });
+  let a = roomBg() + person(260, 830, .85, P.madre) + person(470, 830, .85, P.prof) + person(1640, 830, .85, { ...P.rec, flip: true }) + tag(470 - 175, 596, 'Profesional de acompañamiento', { size: 20, center: true, w: 350 });
   a += rect(140, 150, 600, 330, { r: 20, fill: C.ivory, stroke: C.okd, sw: 5 }) + text(440, 208, 'Cumplido ✓', { size: 42, weight: 800, fill: C.okd, anchor: 'middle' });
   a += G(t, M.C6_revisa + .7, chip(170, 245, 'Compromiso A-01 · verificado con el hogar', { size: 23, fill: '#DDF3E6', stroke: C.okd }), { dy: 10 });
   a += rect(790, 150, 650, 330, { r: 20, fill: C.ivory, stroke: C.warnd, sw: 5 }) + text(1115, 208, 'Pendiente', { size: 42, weight: 800, fill: C.warnd, anchor: 'middle' });
@@ -82,7 +82,7 @@ function sceneC6(t) {
 function sceneE9(t) {
   let g = navyBg();
   // meta de acompañamiento
-  let b = navyBg() + G(t, M.E9_piloto + .2, text(960, 200, 'Meta: acompañar 350 hogares durante 12 meses', { size: 54, weight: 800, fill: '#fff', anchor: 'middle' }), { dy: 10 });
+  let b = navyBg() + G(t, B.E9.start, text(960, 200, 'Meta: acompañar 350 hogares durante 12 meses', { size: 54, weight: 800, fill: '#fff', anchor: 'middle' }), { dy: 10 });
   const n = Math.floor(350 * eo(prog(t, M.E9_piloto + .6, M.E9_piloto + 3.2)));
   for (let i = 0; i < n; i++) b += circ(380 + (i % 35) * 32, 280 + Math.floor(i / 35) * 34, 11, { fill: C.slate });
   b += G(t, M.E9_piloto + 2.4, text(960, 665, 'Incluye hogares que siguen en el sector, en ruta de reasentamiento y ya reasentados · distribución por conocer', { size: 24, weight: 600, fill: '#cfe3ea', anchor: 'middle' }), { dy: 8 });
@@ -100,18 +100,19 @@ function sceneE9(t) {
   let c = landscape(t * 14, 0) + rect(0, 0, W, H, { fill: '#F2B233', op: .10 });
   c += path('M-40 800 Q480 760 960 790 T1960 770', { stroke: C.teal, sw: 12 });
   const k = prog(t, M.E9_final - .3, B.E9.end); const wx = lerp(560, 960, k);
-  c += person(wx, 830, 1.0, { ...P.madre, arm2: 18 }) + person(wx - 90, 830, .6, P.hijo) + person(wx + 110, 830, 1.0, { ...P.gestora, arm1: -12 }) + person(wx - 160, 830, .55, P.hija);
-  c += G(t, M.E9_final + 3.0, `${rect(470, 170, 980, 170, { r: 22, fill: 'rgba(19,32,43,.9)' })}${text(960, 240, 'Más que un traslado,', { size: 60, weight: 800, fill: '#fff', anchor: 'middle' })}${text(960, 312, 'un nuevo comienzo.', { size: 60, weight: 800, fill: C.teal, anchor: 'middle' })}`, { dy: 12 });
+  c += person(wx - 300, 830, 1.0, P.vecina) + person(wx, 830, 1.0, { ...P.madre, arm2: 18 }) + person(wx - 90, 830, .6, P.hijo) + person(wx + 110, 830, 1.0, { ...P.gestora, arm1: -12 }) + person(wx - 160, 830, .55, P.hija);
+  [['olla', 'su trabajo', 560], ['manos', 'sus vecinos', 960], ['persona', 'quien le cuida a los niños', 1360]].forEach(([ic, s, x], i) => { c += G(t, M.E9_final + 2.2 + i * .5, `${circ(x, 440, 34, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon(ic, x, 440, 40, C.roofb)}${stIcon('atendida', x + 30, 412, 13)}${tag(x - 130, 484, s, { size: 24, center: true, w: 260 })}`, { dy: 10 }); });
+  c += G(t, M.E9_final + 5.6, `${rect(470, 170, 980, 170, { r: 22, fill: 'rgba(19,32,43,.9)' })}${text(960, 240, 'Más que un traslado,', { size: 60, weight: 800, fill: '#fff', anchor: 'middle' })}${text(960, 312, 'un nuevo comienzo.', { size: 60, weight: 800, fill: C.teal, anchor: 'middle' })}`, { dy: 12 });
   g += win(t, M.E9_final - .3, undefined, c, .6);
   return g;
 }
 function sceneCR(t) {
-  const lt = t - TL.cr_start; const a = eo(prog(lt, .9, 1.5)) * (1 - prog(lt, 6.1, 6.5));
+  const lt = t - TL.cr_start; const a = eo(prog(lt, .9, 1.5));
   const L = [['MI RUTA DE REUBICACIÓN', 54, 800, C.teal], ['Equipo del proyecto · DGIP 2026', 34, 700, '#fff'], ['Imágenes: Esri y socios · Google Street View (abr. 2025), © Google', 26, 600, '#cfe3ea'], ['Narración: voz sintética de Google Cloud Text-to-Speech · Música: producción propia', 26, 600, '#cfe3ea'], ['Validado con la comunidad y las entidades', 34, 800, C.teal]];
   let s = ''; L.forEach((l, i) => { s += text(960, 330 + i * 95, l[0], { size: l[1], weight: l[2], fill: l[3], anchor: 'middle' }); });
   let g = navyBg();
   if (lt < .9) g += `<g opacity="${F(1 - eo(prog(lt, 0, .9)))}">${sceneE9(TL.cr_start - .001)}</g>`;
-  return g + `<g opacity="${F(a)}">${s}</g>`;
+  return g + `<g opacity="${F(a)}">${s}</g>` + rect(0, 0, W, H, { fill: '#000', op: F(prog(lt, 5.2, 6.5)) });
 }
 function frameSVG(t) {
   let blk = null; for (const b of Object.keys(B)) if (t >= B[b].start && t < B[b].end) blk = b;
