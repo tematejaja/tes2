@@ -3,7 +3,7 @@ const PROF = { color: '#7A4FA8', label: 'Profesional de acompañamiento' };
 function sceneC4(t) {
   let g = roomBg();
   let a = roomBg() + text(960, 190, 'Cada entidad cumple lo ya confirmado', { size: 40, weight: 800, anchor: 'middle' });
-  [['Entidad de vivienda', 'A-01 · confirmado', true], ['Entidad de gestión del riesgo', 'Acuerdo de cuidado · confirmado', true], ['Entidad de oferta social', 'A-02 · solo solicitado', false]].forEach(([n, s, ok], i) => {
+  [['Entidad de vivienda', 'A-01 · confirmado', true], ['Entidad de oferta social', 'Acuerdo de cuidado · confirmado', true], ['Entidad de gestión del riesgo', 'A-02 · solo solicitado', false]].forEach(([n, s, ok], i) => {
     const y = 240 + i * 165;
     a += rect(330, y, 1400, 140, { r: 18, fill: '#fff', stroke: C.ink, sw: 3 }) + text(360, y + 52, n, { size: 28, weight: 800 });
     const k = ok ? eo(prog(t, M.C4_ejecuta + .6 + i * .5, M.C4_ejecuta + 4.6 + i * .5)) : .1;
@@ -30,9 +30,11 @@ function sceneC4(t) {
   let c = roomBg() + G(t, M.C4_entrega, tag(960 - 220, 190, 'Entrega del caso, frente a la familia', { size: 32, fill: C.teal, center: true, w: 440 }), {});
   const mv = eio(prog(t, M.C4_entrega + .6, M.C4_entrega + 2.6)), fx = lerp(1040, 1310, mv);
   c += person(700, 830, 1.0, { ...P.madre, arm2: 25 }) + person(1010, 830, 1.0, { ...P.gestora, arm2: t < M.C4_entrega + 2.8 ? 70 : 14 }) + person(1420, 830, 1.0, { ...P.prof, flip: true, arm1: 40 });
-  c += rect(fx - 95, 400, 190, 108, { r: 12, fill: C.ivory, stroke: C.ink, sw: 3 }) + text(fx, 440, 'Ficha de', { size: 22, weight: 800, anchor: 'middle' }) + text(fx, 466, 'caracterización', { size: 22, weight: 800, anchor: 'middle' }) + circ(fx, 490, 10, { fill: t > M.C4_entrega + 2.2 ? '#7A4FA8' : C.roofb });
-  c += G(t, M.C4_confirma, tag(1290, 300, 'Recibido ✓', { size: 36, fill: '#DDF3E6', stroke: C.okd, color: C.okd, sw: 4 }), { dy: -10 });
-  c += G(t, M.C4_confirma + .5, `${rect(640, 470, 120, 74, { r: 10, fill: C.ivory, stroke: C.ink, sw: 3 })}${text(700, 514, 'Copia', { size: 24, weight: 800, anchor: 'middle' })}`, { dy: -10 });
+  const kout = B.C4.start + B.C4.audio - .45;
+  c += G(t, M.C4_entrega - .2, rect(fx - 135, 400, 270, 108, { r: 12, fill: C.ivory, stroke: C.ink, sw: 3 }) + text(fx, 440, 'Ficha de caracterización', { size: 20, weight: 800, anchor: 'middle' }) + text(fx, 466, 'familiar', { size: 20, weight: 800, anchor: 'middle' }) + circ(fx, 490, 10, { fill: t > M.C4_entrega + 2.2 ? '#7A4FA8' : C.roofb }), { out: kout, dy: 0 });
+  c += G(t, M.C4_entrega + .3, tag(1420 - 110, 560, 'Equipo siguiente', { size: 22, center: true, w: 220 }), { out: kout });
+  c += G(t, M.C4_confirma, tag(1290, 300, 'Recibido ✓', { size: 36, fill: '#DDF3E6', stroke: C.okd, color: C.okd, sw: 4 }), { dy: -10, out: kout });
+  c += G(t, M.C4_confirma + .5, `${rect(640, 470, 120, 74, { r: 10, fill: C.ivory, stroke: C.ink, sw: 3 })}${text(700, 514, 'Copia', { size: 24, weight: 800, anchor: 'middle' })}`, { dy: -10, out: kout });
   const ka = prog(t, B.C4.start + B.C4.audio - .2, B.C4.start + B.C4.audio + .5);
   if (ka > 0) c += `<g opacity="${F(ka)}">${rect(0, 0, W, H, { fill: C.navy, op: .5 })}${rect(620, 300, 680, 340, { r: 24, fill: 'rgba(19,32,43,.96)' })}${icon('llave', 960, 430, 150, C.teal)}${text(960, 555, 'Traslado efectivo', { size: 48, weight: 800, fill: '#fff', anchor: 'middle' })}${text(960, 600, 'condiciones verificadas por la entidad competente', { size: 24, weight: 600, fill: '#cfe3ea', anchor: 'middle' })}</g>`;
   g += win(t, M.C4_entrega, undefined, c);
@@ -44,7 +46,7 @@ function sceneC5(t) {
   for (let r = 0; r < 4; r++) for (let c = 0; c < 4; c++) g += rect(220 + c * 145, 300 + r * 120, 90, 80, { fill: (r === 3 && c === 1) ? '#FFE9A8' : '#52687A', stroke: C.ink, sw: 2 });
   g += rect(450, 735, 100, 100, { fill: '#52687A', stroke: C.ink, sw: 2 });
   const conf = t > M.C5_cierre + 1.6 && t < M.C5_cierre + 3.2;
-  g += person(900, 830, 1.0, { ...P.madre, arm2: conf ? 140 : 25 }) + rect(960, 775, 110, 12, { fill: '#6b4a32' }) + icon('olla', 1015, 750, 44, C.ink);
+  g += person(1010, 830, 1.0, { ...P.madre, arm2: conf ? 140 : 25 }) + rect(1050, 775, 100, 12, { fill: '#6b4a32' }) + icon('olla', 1100, 750, 44, C.ink);
   const econ = t < M.C5_alerta + .3 ? 'atendida' : t < M.C5_cierre + .6 ? 'critica' : t < M.C5_cierre + 2.0 ? 'gestion' : 'atendida';
   const f = ficha(0, 0, { rows: ['atendida', econ, 'atendida', 'gestion', 'atendida'], resp: PROF, hab: 'reubicación definitiva', extra: ['Próximo contacto: fecha acordada'] });
   g += G(t, B.C5.start + .3, scaled(1110, 140, .8, f.svg), { dx: 60, dy: 0 });
@@ -67,9 +69,8 @@ function sceneC6(t) {
   a += rect(790, 150, 650, 330, { r: 20, fill: C.ivory, stroke: C.warnd, sw: 5 }) + text(1115, 208, 'Pendiente', { size: 42, weight: 800, fill: C.warnd, anchor: 'middle' });
   a += G(t, M.C6_revisa + 1.2, `${text(820, 272, 'Respuesta sobre el predio de origen', { size: 26, weight: 700 })}${text(820, 310, 'en evaluación por la autoridad competente', { size: 23, weight: 600, fill: C.noned })}`, { dy: 10 });
   a += G(t, M.C6_pendiente + .4, `${arrow(1445, 360, 1620, 560, {})}${tag(1640 - 160, 572, 'Receptor de continuidad', { size: 22, center: true, w: 320 })}${tag(1470, 214, 'Próxima acción: fecha', { size: 24 })}`, { dy: 10 });
-  [['Preparación fortalecida', 0], ['Adaptación observada', 1], ['Atención pendiente', 2]].forEach(([n, i]) => { const on = i === 2 && t > M.C6_pendiente + 2.2;
-    a += G(t, M.C6_pendiente + 1.2 + i * .3, `${rect(160 + i * 450, 510, 420, 70, { r: 14, fill: on ? '#FFF1B8' : '#F2EEE5', stroke: on ? C.warnd : C.noned, sw: on ? 5 : 2.5 })}${text(370 + i * 450, 556, n, { size: 28, weight: 800, fill: on ? C.warnd : C.noned, anchor: 'middle' })}`, { dy: 8 }); });
-  a += G(t, M.C6_pendiente + 2.4, text(780, 625, 'Resultado de este caso: atención pendiente, con quien continúa', { size: 26, weight: 600, fill: C.ink, anchor: 'middle' }), {});
+  [['Preparación fortalecida', 0], ['Adaptación observada', 1], ['Atención pendiente', 2]].forEach(([n, i]) => { const on = i === 2 && t > M.C6_resultado + 1.2;
+    a += G(t, M.C6_resultado + i * .3, `${rect(160 + i * 450, 510, 420, 70, { r: 14, fill: on ? '#FFF1B8' : '#F2EEE5', stroke: on ? C.warnd : C.noned, sw: on ? 5 : 2.5 })}${text(370 + i * 450, 556, n, { size: 28, weight: 800, fill: on ? C.warnd : C.noned, anchor: 'middle' })}`, { dy: 8 }); });
   g += win(t, B.C6.start, M.C6_llaves, a, .01, .35);
   let b = roomBg() + tableTop(560, 660, 800) + person(300, 830, .95, P.madre) + person(1640, 830, .95, { ...P.rec, flip: true });
   b += G(t, M.C6_llaves, icon('llave', 700, 615, 130, C.ink), { dy: -30 });
@@ -80,35 +81,37 @@ function sceneC6(t) {
 }
 function sceneE9(t) {
   let g = navyBg();
+  // meta de acompañamiento
+  let b = navyBg() + G(t, M.E9_piloto + .2, text(960, 200, 'Meta: acompañar 350 hogares durante 12 meses', { size: 54, weight: 800, fill: '#fff', anchor: 'middle' }), { dy: 10 });
+  const n = Math.floor(350 * eo(prog(t, M.E9_piloto + .6, M.E9_piloto + 3.2)));
+  for (let i = 0; i < n; i++) b += circ(380 + (i % 35) * 32, 280 + Math.floor(i / 35) * 34, 11, { fill: C.slate });
+  b += G(t, M.E9_piloto + 2.4, text(960, 665, 'Incluye hogares que siguen en el sector, en ruta de reasentamiento y ya reasentados · distribución por conocer', { size: 24, weight: 600, fill: '#cfe3ea', anchor: 'middle' }), { dy: 8 });
+  b += G(t, M.E9_notraslados, text(960, 760, 'Meta de acompañamiento, no de traslados', { size: 48, weight: 800, fill: C.teal, anchor: 'middle' }), { dy: 10 });
+  g += win(t, B.E9.start, M.E9_frase, b, .01, .4);
+  // frase central
   let a = navyBg() + line(260, 330, 1660, 330, { stroke: C.teal, sw: 8 });
   ETAPAS.forEach((_, i) => { a += circ(260 + i * 280, 330, 20, { fill: C.teal, stroke: '#fff', sw: 3 }); });
   a += icon('casa', 150, 330, 70, '#cfe3ea') + icon('casa', 1770, 330, 70, C.teal) + text(150, 400, 'antes', { size: 24, weight: 700, fill: '#cfe3ea', anchor: 'middle' }) + text(1770, 400, 'después', { size: 24, weight: 700, fill: C.teal, anchor: 'middle' });
   a += G(t, M.E9_frase + .2, text(960, 520, 'Lo que una familia necesita antes de trasladarse', { size: 52, weight: 800, fill: '#fff', anchor: 'middle' }), { dy: 14 });
-  a += G(t, M.E9_frase + 3.2, text(960, 600, 'se convierte en compromisos', { size: 52, weight: 800, fill: C.teal, anchor: 'middle' }), { dy: 14 });
-  a += G(t, M.E9_frase + 5.4, text(960, 680, 'que alguien acompaña y comprueba después.', { size: 52, weight: 800, fill: '#fff', anchor: 'middle' }), { dy: 14 });
-  g += win(t, B.E9.start, M.E9_piloto, a, .01, .4);
-  let b = navyBg() + G(t, M.E9_piloto + .2, text(960, 200, 'Meta: acompañar 350 hogares durante 12 meses', { size: 54, weight: 800, fill: '#fff', anchor: 'middle' }), { dy: 10 });
-  const n = Math.floor(350 * eo(prog(t, M.E9_piloto + .6, M.E9_piloto + 3.2)));
-  for (let i = 0; i < n; i++) b += circ(380 + (i % 35) * 32, 280 + Math.floor(i / 35) * 34, 11, { fill: C.slate });
-  b += G(t, M.E9_piloto + 2.0, ['siguen en el sector', 'en una ruta de reasentamiento', 'ya reasentados'].map((l, i) => tag([300, 760, 1300][i], 655, l, { size: 24 })).join(''), { dy: 10 });
-  b += G(t, M.E9_notraslados, `${text(960, 790, 'Acompañarlos, no trasladarlos a todos', { size: 46, weight: 800, fill: C.teal, anchor: 'middle' })}`, { dy: 10 });
-  g += win(t, M.E9_piloto, M.E9_final, b);
-  // cierre humano: caminar acompañados
+  a += G(t, M.E9_frase + 2.9, text(960, 600, 'se convierte en compromisos', { size: 52, weight: 800, fill: C.teal, anchor: 'middle' }), { dy: 14 });
+  a += G(t, M.E9_frase + 5.0, text(960, 680, 'que alguien acompaña y comprueba después.', { size: 52, weight: 800, fill: '#fff', anchor: 'middle' }), { dy: 14 });
+  g += win(t, M.E9_frase, M.E9_final, a);
+  // cierre humano: la familia sigue adelante, acompañada
   let c = landscape(t * 14, 0) + rect(0, 0, W, H, { fill: '#F2B233', op: .10 });
   c += path('M-40 800 Q480 760 960 790 T1960 770', { stroke: C.teal, sw: 12 });
-  const k = prog(t, M.E9_final - .3, B.E9.end); const wx = lerp(560, 940, k);
-  c += person(wx, 830, 1.0, { ...P.madre, arm2: 18 }) + person(wx - 90, 830, .6, P.hijo) + person(wx + 110, 830, 1.0, { ...P.gestora, flip: false, arm1: -12 }) + person(wx - 160, 830, .55, P.hija);
-  c += G(t, M.E9_final + 2.2, `${rect(470, 170, 980, 170, { r: 22, fill: 'rgba(19,32,43,.9)' })}${text(960, 240, 'Más que un traslado,', { size: 60, weight: 800, fill: '#fff', anchor: 'middle' })}${text(960, 312, 'un nuevo comienzo.', { size: 60, weight: 800, fill: C.teal, anchor: 'middle' })}`, { dy: 12 });
+  const k = prog(t, M.E9_final - .3, B.E9.end); const wx = lerp(560, 960, k);
+  c += person(wx, 830, 1.0, { ...P.madre, arm2: 18 }) + person(wx - 90, 830, .6, P.hijo) + person(wx + 110, 830, 1.0, { ...P.gestora, arm1: -12 }) + person(wx - 160, 830, .55, P.hija);
+  c += G(t, M.E9_final + 3.0, `${rect(470, 170, 980, 170, { r: 22, fill: 'rgba(19,32,43,.9)' })}${text(960, 240, 'Más que un traslado,', { size: 60, weight: 800, fill: '#fff', anchor: 'middle' })}${text(960, 312, 'un nuevo comienzo.', { size: 60, weight: 800, fill: C.teal, anchor: 'middle' })}`, { dy: 12 });
   g += win(t, M.E9_final - .3, undefined, c, .6);
   return g;
 }
 function sceneCR(t) {
-  const lt = t - TL.cr_start; const p1 = lt < 5.6;
-  const L = p1 ? [['Imágenes satelitales: Esri, Vantor, Earthstar Geographics y GIS User Community', 28, 600], ['Imagen de calle: Google Street View (abr. 2025), © Google', 28, 600], ['Narración: voz sintética de Google Cloud Text-to-Speech', 28, 600], ['Música y efectos: producción propia', 28, 600]]
-    : [['MI RUTA DE REUBICACIÓN', 58, 800], ['Equipo del proyecto · DGIP 2026', 38, 600], ['Fuentes y alcance: documento del prototipo', 30, 600], ['Validado con la comunidad y las entidades', 36, 800]];
-  const ts = p1 ? lt : lt - 5.6; const a = eo(prog(ts, 0, .4)) * (p1 ? 1 - prog(lt, 5.2, 5.6) : 1 - prog(lt, 9.7, 10));
-  let s = ''; L.forEach((l, i) => { s += text(960, 360 + i * 100, l[0], { size: l[1], weight: l[2], fill: (!p1 && (i === 0 || i === 3)) ? C.teal : '#fff', anchor: 'middle' }); });
-  return navyBg() + `<g opacity="${F(a)}">${s}</g>`;
+  const lt = t - TL.cr_start; const a = eo(prog(lt, .9, 1.5)) * (1 - prog(lt, 6.1, 6.5));
+  const L = [['MI RUTA DE REUBICACIÓN', 54, 800, C.teal], ['Equipo del proyecto · DGIP 2026', 34, 700, '#fff'], ['Imágenes: Esri y socios · Google Street View (abr. 2025), © Google', 26, 600, '#cfe3ea'], ['Narración: voz sintética de Google Cloud Text-to-Speech · Música: producción propia', 26, 600, '#cfe3ea'], ['Validado con la comunidad y las entidades', 34, 800, C.teal]];
+  let s = ''; L.forEach((l, i) => { s += text(960, 330 + i * 95, l[0], { size: l[1], weight: l[2], fill: l[3], anchor: 'middle' }); });
+  let g = navyBg();
+  if (lt < .9) g += `<g opacity="${F(1 - eo(prog(lt, 0, .9)))}">${sceneE9(TL.cr_start - .001)}</g>`;
+  return g + `<g opacity="${F(a)}">${s}</g>`;
 }
 function frameSVG(t) {
   let blk = null; for (const b of Object.keys(B)) if (t >= B[b].start && t < B[b].end) blk = b;
@@ -120,14 +123,14 @@ function frameSVG(t) {
   g += topLabels(t) + (blk === 'CR' ? '' : subtitles(t));
   return g;
 }
-const NBG = 300;
+const NBG = 240;
 window.setFrame = async function (n) {
   const t = n / TL.fps; window.__t = t;
   const bg = document.getElementById('bg'), bg2 = document.getElementById('bg2');
   if (t < XF1 + .1) {
-    const src = 'bg2/' + String(Math.min(n + 1, NBG)).padStart(5, '0') + '.jpg';
+    const src = 'bg3/' + String(Math.min(n + 1, NBG)).padStart(5, '0') + '.jpg';
     if (bg.getAttribute('src') !== src) { bg.src = src; bg2.src = src; }
-    bg.style.display = 'block'; bg2.style.display = (t >= M.E0_calle) ? 'block' : 'none';
+    bg.style.display = 'block'; bg2.style.display = (t >= SV_START) ? 'block' : 'none';
     await Promise.all([bg.decode().catch(() => {}), bg2.decode().catch(() => {})]);
   } else { bg.style.display = 'none'; bg2.style.display = 'none'; }
   const svg = document.getElementById('svg'); svg.innerHTML = frameSVG(t); fitTags(svg);

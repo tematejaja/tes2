@@ -56,7 +56,7 @@ function ficha(x, y, o = {}) {
   const rc = o.resp?.color ?? C.roofb;
   g += text(x + 28, y + 88, 'Responsable:', { size: 24, weight: 600 }) + circ(x + 228, y + 80, 15, { fill: rc, stroke: C.ink, sw: 2.5 }) + circ(x + 228, y + 75, 6, { fill: C.ivory }) +
     text(x + 254, y + 88, o.resp?.label ?? 'Gestora social', { size: 24, weight: 700 });
-  g += text(x + 28, y + 126, 'Situación habitacional: ' + (o.hab ?? 'sin traslado'), { size: 22, weight: 600, fill: C.noned });
+  g += text(x + 28, y + 126, 'Situación habitacional: ' + (o.hab ?? 'sin traslado'), { size: 23, weight: 700, fill: '#3E4852' });
   cy = y + 150;
   if (pr) {
     g += line(x + 20, cy, x + w - 20, cy, { stroke: C.slate, sw: 2 });
@@ -71,7 +71,7 @@ function ficha(x, y, o = {}) {
       g += icon(ic, x + 48, ry - 8, 34, C.ink) + text(x + 84, ry, name, { size: 24, weight: 600 });
       if (st) {
         g += stIcon(st, x + 510, ry - 8, 15);
-        if (st === 'sin') g += text(x + 538, ry - 10, 'Sin información', { size: 19, weight: 600, fill: C.noned }) + text(x + 538, ry + 12, 'suficiente', { size: 19, weight: 600, fill: C.noned });
+        if (st === 'sin') g += text(x + 538, ry - 10, 'Sin información', { size: 22, weight: 700, fill: C.noned }) + text(x + 538, ry + 14, 'suficiente', { size: 22, weight: 700, fill: C.noned });
         else g += text(x + 538, ry, STTXT[st], { size: 22, weight: 700, fill: { atendida: C.okd, gestion: C.warnd, critica: C.critd }[st] });
       }
     });
@@ -102,12 +102,20 @@ function topLabels(t) {
   if (ilus) g += rect(1290, 76, 490, 44, { r: 12, fill: 'rgba(244,239,230,.94)', stroke: C.ink, sw: 2 }) + text(1535, 106, 'RECREACIÓN ILUSTRADA · FAMILIA FICTICIA', { size: 19, weight: 800, anchor: 'middle', ls: .5 });
   return g;
 }
+const STOPW = new Set(['se','lo','los','la','las','una','un','de','del','que','sobre','no','y','o','a','al','en','con','por','para','su','sus','el','le','cada','es','entre','sin']);
 function wrapLines(s, max = 44) {
-  const ws = s.split(' '); const out = []; let cur = '';
-  for (const w of ws) { if ((cur + ' ' + w).trim().length > max && cur) { out.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); }
-  if (cur) out.push(cur); return out;
+  if (s.length <= max) return [s];
+  const ws = s.split(' '); let best = null;
+  for (let k = 1; k < ws.length; k++) {
+    const a = ws.slice(0, k).join(' '), b = ws.slice(k).join(' ');
+    if (Math.max(a.length, b.length) > max + 8) continue;
+    const pen = Math.abs(a.length - b.length) + (STOPW.has(ws[k - 1].toLowerCase().replace(/[,;:]/g, '')) ? 60 : 0) - (/[,;:]$/.test(ws[k - 1]) ? 20 : 0);
+    if (!best || pen < best[0]) best = [pen, a, b];
+  }
+  return best ? [best[1], best[2]] : [s];
 }
 function subtitles(t) {
+  if (TL.marks.E9_frase && t >= TL.marks.E9_frase && t < TL.marks.E9_final) return '';
   const c = TL.cues.find(c => t >= c.s && t < c.e + .05); if (!c) return '';
   const ls = wrapLines(c.text); const n = ls.length;
   const widest = Math.max(...ls.map(l => l.length)); const bw = Math.min(1700, widest * 25.5 + 70), bh = n * 58 + 26;
@@ -121,7 +129,7 @@ function chapterCard(t, i, b) {
   const lt = t - TL.blocks[b].start; if (lt < 0 || lt > 2.2) return '';
   const a = eo(prog(lt, 0, .35)) * (1 - prog(lt, 1.8, 2.2));
   const dx = (1 - eo(prog(lt, 0, .5))) * -80;
-  let g = rect(0, 0, W, H, { fill: C.navy, op: F(.62 * a) }) + `<g data-qa="skip" opacity="${F(a)}" transform="translate(${F(dx)},0)">`;
+  let g = rect(0, 0, W, H, { fill: C.navy, op: F(.82 * a) }) + `<g data-qa="skip" opacity="${F(a)}" transform="translate(${F(dx)},0)">`;
   g += rect(0, 300, 1130, 150, { r: 0, fill: 'rgba(19,32,43,.92)' }) + rect(0, 300, 14, 150, { fill: C.teal });
   g += text(70, 358, `ETAPA ${i}`, { size: 28, weight: 700, fill: C.teal, ls: 4 });
   g += text(70, 416, ETAPAS[i - 1].toUpperCase(), { size: 54, weight: 800, fill: '#fff', ls: 2 });

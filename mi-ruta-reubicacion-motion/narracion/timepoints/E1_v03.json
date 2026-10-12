@@ -1,0 +1,30 @@
+[
+ {
+  "markName": "E1_problema",
+  "timeSeconds": 0.014999999664723873
+ },
+ {
+  "markName": "E1_equipos",
+  "timeSeconds": 4.073166370391846
+ },
+ {
+  "markName": "E1_preguntas",
+  "timeSeconds": 5.2699995040893555
+ },
+ {
+  "markName": "E1_compromisos",
+  "timeSeconds": 6.768706798553467
+ },
+ {
+  "markName": "E1_titulo",
+  "timeSeconds": 9.431666374206543
+ },
+ {
+  "markName": "E1_complementa",
+  "timeSeconds": 11.920915603637695
+ },
+ {
+  "markName": "E1_validar",
+  "timeSeconds": 15.483041763305664
+ }
+]

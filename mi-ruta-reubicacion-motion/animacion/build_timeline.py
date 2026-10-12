@@ -6,9 +6,9 @@ from pathlib import Path
 R = Path(__file__).resolve().parent.parent
 BLOQUES = ["E0","E1","E2","C1","C2","C3","C4","C5","C6","E9"]
 import os
-V = os.environ.get("GUION_VERSION", "v02")
-REMATE = dict(E0=0.3,E1=0.6,E2=0.5,C1=0.5,C2=0.5,C3=1.4,C4=1.4,C5=0.5,C6=0.8,E9=0.5)
-CR = 10.0
+V = os.environ.get("GUION_VERSION", "v03")
+REMATE = dict(E0=0.3,E1=0.4,E2=0.4,C1=0.4,C2=0.4,C3=0.9,C4=0.9,C5=0.4,C6=0.5,E9=1.6)
+CR = 6.5
 tl = {"fps": 24, "blocks": {}, "marks": {}, "cues": []}
 t = 0.0
 for b in BLOQUES:
@@ -34,15 +34,34 @@ for b in BLOQUES:
     t += dur + REMATE[b]
 tl["cr_start"] = t; tl["total"] = t + CR
 # partir cues largos en trozos <= 84 caracteres (2 líneas de 42) con tiempo proporcional
+STOP = {"se","lo","los","la","las","una","un","de","del","que","sobre","no","y","o","a","al","en","con","por","para","su","sus","el","le","cada","es","entre","sin"}
+def partir(txt, maxc):
+    """Parte en dos cerca de la mitad, sin dejar al final de la primera parte una palabra átona."""
+    ws = txt.split(); best = None
+    for k in range(1, len(ws)):
+        a = " ".join(ws[:k]); b = " ".join(ws[k:])
+        if max(len(a), len(b)) > maxc * 1.25: continue
+        pen = abs(len(a) - len(b)) + (60 if ws[k-1].lower().strip(",;:") in STOP else 0) - (25 if ws[k-1][-1] in ",;:" else 0)
+        if best is None or pen < best[0]: best = (pen, a, b)
+    return [best[1], best[2]] if best else [txt]
 def trocear(txt, maxc=84):
-    import math
-    n = max(1, math.ceil(len(txt) / maxc)); tgt = len(txt) / n
-    ws = txt.split(); out=[]; cur=""
-    for w in ws:
-        if cur and len(cur) + 1 + len(w) > maxc or (cur and len(cur) >= tgt * .92 and len(out) < n - 1): out.append(cur); cur=w
-        else: cur = (cur+" "+w).strip()
+    import re
+    if len(txt) <= maxc: return [txt]
+    cl = [c.strip() for c in re.split(r"(?<=[,;:])\s+", txt) if c.strip()]
+    out = []; cur = ""
+    for c in cl:
+        if cur and len(cur) + 1 + len(c) > maxc: out.append(cur); cur = c
+        else: cur = (cur + " " + c).strip()
     if cur: out.append(cur)
-    return out
+    res = []
+    for o in out:
+        res += trocear(" ".join(partir(o, maxc)[0:1]), maxc) + trocear(" ".join(partir(o, maxc)[1:]), maxc) if len(o) > maxc else [o]
+    # unir trozos muy cortos con el vecino
+    fin = []
+    for r in res:
+        if fin and (len(r) < 18 or len(fin[-1]) < 18) and len(fin[-1]) + 1 + len(r) <= maxc + 10: fin[-1] += " " + r
+        else: fin.append(r)
+    return fin
 final = []
 for c in tl["cues"]:
     parts = trocear(c["text"]); tot = sum(len(p) for p in parts); s = c["s"]

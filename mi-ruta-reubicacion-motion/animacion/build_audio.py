@@ -6,8 +6,8 @@ from pathlib import Path
 R = Path(__file__).resolve().parent.parent; A = Path(__file__).parent
 SR = 48000
 import os
-V = os.environ.get("GUION_VERSION", "v02")
-tl = json.load(open(A / "timeline.json")); N = int((tl["total"] + 1.0) * SR)
+V = os.environ.get("GUION_VERSION", "v03")
+tl = json.load(open(A / "timeline.json")); N = int(tl["total"] * SR)
 
 def leer(p):
     w = wave.open(str(p)); x = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32) / 32768
@@ -28,17 +28,17 @@ acordes = [[220.0, 261.6, 329.6], [174.6, 220.0, 261.6], [196.0, 261.6, 329.6], 
 mus = np.zeros(N, np.float32); k = 0; t0 = 0.0
 while t0 < tl["total"]:
     for f in acordes[k % 4]:
-        y = nota(f, 10.5, amp=.11); s = int(t0 * SR); e = min(N, s + len(y)); mus[s:e] += y[:e - s]
+        y = nota(f, 10.5, amp=.045); s = int(t0 * SR); e = min(N, s + len(y)); mus[s:e] += y[:e - s]
     # arpegio suave (pluck): solo desde el motivo de la ruta (E1) en adelante
     if t0 >= tl["blocks"]["E1"]["start"] - 1:
         for j, f in enumerate(acordes[k % 4] * 2):
             ts = t0 + 1.0 + j * 1.3; s = int(ts * SR)
             if s >= N: break
-            n = int(1.6 * SR); tt = np.arange(n) / SR; y = np.sin(2 * np.pi * f * 2 * tt) * np.exp(-tt * 2.6) * .045
+            n = int(1.6 * SR); tt = np.arange(n) / SR; y = np.sin(2 * np.pi * f * 2 * tt) * np.exp(-tt * 2.6) * .02
             e = min(N, s + n); mus[s:e] += y[:e - s].astype(np.float32)
     t0 += 8.0; k += 1
 # intro más tenue y salida con fundido
-fade_in = np.minimum(1, np.arange(N) / (3 * SR)); fade_out = np.minimum(1, (N - np.arange(N)) / (4 * SR))
+fade_in = np.minimum(1, np.arange(N) / (3 * SR)); fade_out = np.minimum(1, (N - np.arange(N)) / (3 * SR))
 mus *= fade_in * fade_out
 # ducking según la envolvente de la voz
 def mm(x, n):

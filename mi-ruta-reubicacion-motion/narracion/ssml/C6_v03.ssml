@@ -1,0 +1,7 @@
+<speak>
+  <break time="400ms"/>
+  <mark name="C6_revisa"/>En la sexta etapa, cierre y seguimiento, se revisa con la familia qué se cumplió. <break time="250ms"/>
+  <mark name="C6_pendiente"/>Lo pendiente, como el futuro del predio donde vivían, pasa a un receptor de continuidad. <break time="300ms"/>
+  <mark name="C6_resultado"/>El caso cierra con atención pendiente, pero con alguien que sigue. <break time="500ms"/>
+  <mark name="C6_llaves"/><prosody rate="92%">Porque entregar las llaves no significa que todo esté resuelto.</prosody>
+</speak>

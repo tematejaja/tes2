@@ -1,0 +1,8 @@
+<speak>
+  <break time="400ms"/>
+  <mark name="C5_traslado"/>Ya en la nueva vivienda llega la quinta etapa: el acompañamiento. <break time="300ms"/>
+  <mark name="C5_alerta"/>Si meses después los ingresos de la mamá bajan mucho, se activa una alerta,
+  <mark name="C5_tarjeta"/>con responsable, acción y fecha. <break time="300ms"/>
+  <mark name="C5_nocierra"/>Y no se cierra con un oficio o una remisión,
+  <mark name="C5_cierre"/>sino cuando la ayuda llega y la familia lo confirma.
+</speak>
