@@ -1,0 +1,12 @@
+<speak>
+  <break time="300ms"/>
+  <mark name="C3_entidades"/>En la tercera etapa, articulación institucional, responden las entidades. <break time="100ms"/>
+  <mark name="C3_mesa"/>En la mesa técnica, con delegados de la comunidad, cada entidad dice qué puede hacer y cuándo. <break time="200ms"/>
+  <mark name="C3_privado"/>El caso de cada familia se revisa aparte, con ella presente. <break time="200ms"/>
+  <mark name="C3_incidencia"/>Aquí la propuesta de la mamá sí cambia el plan: se acepta con ajustes;
+  <mark name="C3_noviable"/>lo que no es viable se le explica, con alternativas. <break time="150ms"/>
+  <mark name="C3_hoja"/>Todo queda por escrito en una hoja de devolución. <break time="200ms"/>
+  <mark name="C3_desacuerdo"/>Si hay desacuerdo, el caso se escala, pero no se congela. <break time="300ms"/>
+  <mark name="C3_entregada"/>Con la ficha, el plan y las respuestas listos, se marca un hito:
+  <mark name="C3_sello"/>la preparación entregada.
+</speak>

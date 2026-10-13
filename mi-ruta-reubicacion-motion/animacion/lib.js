@@ -76,6 +76,10 @@ function icon(name, x, y, s = 40, col = C.ink) {
     persona: `<circle cx="0" cy="-10" r="8" ${st}/><path d="M-14 18 Q-14 2 0 2 Q14 2 14 18" ${st}/>`,
     calendario: `<rect x="-16" y="-12" width="32" height="30" rx="4" ${st}/><path d="M-16 -3 H16 M-8 -17 V-9 M8 -17 V-9" ${st}/>`,
     lupa: `<circle cx="-4" cy="-4" r="11" ${st}/><path d="M4 4 L16 16" ${st}/>`,
+    banco: `<path d="M-19 -7 L0 -18 L19 -7 Z M-17 17 H17 M-12 -2 V12 M-4 -2 V12 M4 -2 V12 M12 -2 V12" ${st}/>`,
+    birrete: `<path d="M-20 -6 L0 -15 L20 -6 L0 3 Z M-11 -1 V9 Q0 15 11 9 V-1 M20 -6 V8" ${st}/>`,
+    grafico: `<path d="M-18 -18 V18 H18 M-12 10 L-4 0 L4 4 L14 -10" ${st}/>`,
+    tarjeta: `<rect x="-18" y="-12" width="36" height="24" rx="4" ${st}/><path d="M-18 -4 H18 M-12 6 H-2" ${st}/>`,
   };
   return `<g ${T}>${sh[name] || ''}</g>`;
 }

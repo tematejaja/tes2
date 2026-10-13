@@ -1,0 +1,38 @@
+[
+ {
+  "markName": "C1_familia",
+  "timeSeconds": 0.5238
+ },
+ {
+  "markName": "C1_vecina",
+  "timeSeconds": 6.5981
+ },
+ {
+  "markName": "C1_escucha",
+  "timeSeconds": 9.4371
+ },
+ {
+  "markName": "C1_mesa",
+  "timeSeconds": 17.6048
+ },
+ {
+  "markName": "C1_ficha",
+  "timeSeconds": 22.0905
+ },
+ {
+  "markName": "C1_dimensiones",
+  "timeSeconds": 26.2362
+ },
+ {
+  "markName": "C1_corrige",
+  "timeSeconds": 33.1838
+ },
+ {
+  "markName": "C1_nogarantiza",
+  "timeSeconds": 35.4752
+ },
+ {
+  "markName": "C1_urgencia",
+  "timeSeconds": 42.48
+ }
+]

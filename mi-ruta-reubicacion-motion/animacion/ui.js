@@ -61,7 +61,7 @@ function ficha(x, y, o = {}) {
   if (pr) {
     g += line(x + 20, cy, x + w - 20, cy, { stroke: C.slate, sw: 2 });
     g += text(x + 28, cy + 36, 'Prioridades:', { size: 24, weight: 800 });
-    g += text(x + 190, cy + 36, '• Seguir vendiendo comida', { size: 24, weight: 500 }) + text(x + 190, cy + 72, '• Conservar el apoyo de cuidado', { size: 24, weight: 500 });
+    g += text(x + 190, cy + 36, '• Seguir trabajando desde casa', { size: 24, weight: 500 }) + text(x + 190, cy + 72, '• Conservar el apoyo de cuidado', { size: 24, weight: 500 });
     cy += 96;
   }
   if (rows) {
@@ -84,26 +84,33 @@ function ficha(x, y, o = {}) {
   return { svg: g, h };
 }
 const ETAPAS = ['Diagnóstico y caracterización', 'Plan de reubicación', 'Articulación institucional', 'Ejecución', 'Acompañamiento', 'Cierre y seguimiento'];
-function minimap(cur) {
-  let g = rect(30, 24, 560, 96, { r: 16, fill: 'rgba(19,32,43,.82)' });
+// minimapa: seis etapas + carril continuo de las mesas de trabajo (técnicas y comunitarias) en todo el proceso
+const MESA_ON = () => [[M.C1_mesa, M.C1_ficha], [M.C2_participa, M.C2_presupuesto], [M.C3_entidades, M.C3_privado]];
+function minimap(cur, t = 0) {
+  let g = rect(30, 20, 750, 112, { r: 16, fill: 'rgba(19,32,43,.86)' });
   for (let i = 0; i < 6; i++) {
     const x = 70 + i * 90;
-    if (i < 5) g += line(x + 17, 62, x + 73, 62, { stroke: i < cur ? C.teal : '#4a5b69', sw: 4 });
+    if (i < 5) g += line(x + 17, 50, x + 73, 50, { stroke: i < cur ? C.teal : '#4a5b69', sw: 4 });
     const on = i === cur;
-    g += circ(x, 62, on ? 19 : 14, { fill: on ? C.teal : (i < cur ? '#2c8f80' : '#33434f'), stroke: on ? '#fff' : 'none', sw: 3 });
-    g += text(x, 69, String(i + 1), { size: on ? 21 : 17, weight: 800, fill: on ? C.ink : '#fff', anchor: 'middle' });
+    g += circ(x, 50, on ? 19 : 14, { fill: on ? C.teal : (i < cur ? '#2c8f80' : '#33434f'), stroke: on ? '#fff' : 'none', sw: 3 });
+    g += text(x, 57, String(i + 1), { size: on ? 21 : 17, weight: 800, fill: on ? C.ink : '#fff', anchor: 'middle' });
   }
-  g += text(60, 108, ETAPAS[cur], { size: 20, weight: 700, fill: '#fff' });
+  // carril de mesas: recorre las seis etapas y se ilumina cuando la narración habla de una mesa
+  const hi = MESA_ON().some(([a, b]) => t >= a && t < b);
+  g += line(56, 86, 534, 86, { stroke: hi ? C.teal : '#8FA3B3', sw: hi ? 5 : 4, dash: '10 7' });
+  g += circ(70 + cur * 90, 86, 7, { fill: hi ? C.teal : '#cfe3ea' });
+  g += icon('mesa', 560, 84, 26, hi ? C.teal : '#cfe3ea') + text(582, 93, 'Mesas de trabajo', { size: 19, weight: 700, fill: hi ? C.teal : '#cfe3ea' });
+  g += text(60, 120, ETAPAS[cur], { size: 20, weight: 700, fill: '#fff' });
   return g;
 }
 function topLabels(t) {
   let g = (t < 10 ? rect(1290, 8, 490, 62, { r: 12, fill: C.navy }) : rect(1290, 22, 490, 48, { r: 12, fill: 'rgba(19,32,43,.88)' })) + text(1535, 55, 'PILOTO PROPUESTO', { size: 22, weight: 800, fill: C.teal, anchor: 'middle', ls: 1 });
-  const ilus = (t >= 9.3 && t < TL.blocks.E9.start) || (t >= TL.marks.E9_final - .3 && t < TL.cr_start);
+  const ilus = (t >= XF0 && t < TL.blocks.E9.start) || (t >= TL.marks.E9_final - .3 && t < TL.cr_start);
   if (ilus) g += rect(1290, 76, 490, 44, { r: 12, fill: 'rgba(244,239,230,.94)', stroke: C.ink, sw: 2 }) + text(1535, 106, 'RECREACIÓN ILUSTRADA · FAMILIA FICTICIA', { size: 19, weight: 800, anchor: 'middle', ls: .5 });
   return g;
 }
 const STOPW = new Set(['se','lo','los','la','las','una','un','de','del','que','sobre','no','y','o','a','al','en','con','por','para','su','sus','el','le','cada','es','entre','sin']);
-const PROT = ["ficha de caracterización familiar", "ficha de caracterización", "preparación entregada", "entidad competente", "receptor de continuidad", "doce meses", "trescientos cincuenta hogares", "una casa nueva", "nuestra historia", "Mi Ruta de Reubicación", "mesa comunitaria", "mesa técnica", "plan económico de transición", "hoja de devolución", "canal de emergencia", "atención pendiente", "Bella Flor", "Ciudad Bolívar", "la mamá", "gestora social", "nuevo hogar", "nueva vivienda"];
+const PROT = ["ficha de caracterización familiar", "ficha de caracterización", "preparación entregada", "entidad competente", "receptor de continuidad", "doce meses", "trescientos cincuenta hogares", "doscientos hogares", "resiliencia financiera", "primera cuenta bancaria", "socio académico", "oferta de vivienda", "lugar de riesgo", "mesas de trabajo", "descripción pública", "paso a paso", "cabeza de hogar", "gastos esenciales", "ingresos netos", "una casa nueva", "nuestra historia", "Mi Ruta de Reubicación", "mesa comunitaria", "mesa técnica", "plan económico de transición", "hoja de devolución", "canal de emergencia", "atención pendiente", "Bella Flor", "Ciudad Bolívar", "la mamá", "gestora social", "nuevo hogar", "nueva vivienda"];
 function splitsProt(ws, k) { const low = ws.join(' ').toLowerCase(), pos = ws.slice(0, k).join(' ').length; for (const p of PROT) { let i = low.indexOf(p.toLowerCase()); while (i >= 0) { if (i < pos && pos < i + p.length) return true; i = low.indexOf(p.toLowerCase(), i + 1); } } return false; }
 function wrapLines(s, max = 44) {
   if (s.length <= max) return [s];

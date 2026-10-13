@@ -1,5 +1,5 @@
 // ===== E0 (gancho), E1 (problema y propuesta), E2 (tres piezas y ruta) =====
-const XF0 = 9.3, XF1 = 9.9, SV_START = 6.5;   // fundido de la imagen real a la ilustración; inicio de Street View
+const XF0 = M.E0_pregunta - .1, XF1 = XF0 + .6, SV_START = 6.5;   // fundido de la imagen real a la ilustración (con la pregunta); inicio de Street View
 function sceneE0(t) {
   let g = '';
   if (t < XF1 + .1) {
@@ -32,7 +32,15 @@ function sceneE1(t) {
   for (let i = 0; i < 5; i++) { const t0 = M.E1_equipos + i * .45; const q = prog(t, t0, t0 + 1.6); if (q > 0 && q < 1) { const px = lerp(380, 1540, eio(prog(t0, M.E1_equipos - .4, M.E1_preguntas + .6))) + i * 14; p += `<g opacity="${F(1 - q)}" transform="translate(${F(px)},${F(640 + q * 160)}) rotate(${F(q * 140 - 30)})">${rect(-24, -16, 48, 32, { fill: '#fff', stroke: C.ink, sw: 2 })}</g>`; } }
   p += win(t, M.E1_preguntas, tA, xs.map((x, i) => bubble(x - 205, 244, 410, 66, '¿Cuántos viven en la casa?', { tx: x - 40, size: 25 })).join(''), .3, .3);
   p += win(t, M.E1_compromisos, tA, `${rect(560, 680, 800, 120, { r: 16, fill: C.ivory, stroke: C.ink, sw: 3 })}${text(600, 728, 'Compromiso acordado', { size: 30, weight: 800 })}${text(600, 772, '¿Quién verifica que se cumplió?', { size: 28, weight: 600, fill: C.critd })}${text(1300, 760, '?', { size: 70, weight: 800, fill: C.critd, anchor: 'middle' })}`);
-  g += win(t, B.E1.start, tA, p, .4, .35);
+  g += win(t, B.E1.start, M.E1_guia, p, .4, .35);
+  // --- no existe una descripción pública, paso a paso, del proceso
+  let r = navyBg() + text(960, 200, '¿Cómo es una reubicación, paso a paso?', { size: 50, weight: 800, fill: '#fff', anchor: 'middle' });
+  r += rect(560, 250, 800, 470, { r: 20, fill: C.ivory, stroke: C.ink, sw: 4 }) + rect(560, 250, 800, 74, { r: 20, fill: '#DCD5C8' }) + rect(560, 300, 800, 24, { fill: '#DCD5C8' });
+  r += text(600, 298, 'Descripción pública del proceso', { size: 30, weight: 800, fill: C.noned });
+  for (let i = 0; i < 5; i++) { const y = 380 + i * 66;
+    r += G(t, M.E1_guia + .3 + i * .22, `${circ(620, y, 20, { fill: '#fff', stroke: C.noned, sw: 3, dash: '5 5' })}${text(620, y + 8, String(i + 1), { size: 22, weight: 800, fill: C.noned, anchor: 'middle' })}${line(664, y, 1180, y, { stroke: C.slate, sw: 10, dash: '22 14' })}${text(1250, y + 14, '?', { size: 40, weight: 800, fill: C.noned, anchor: 'middle' })}`, { dy: 8, dur: .3 }); }
+  r += G(t, M.E1_guia + 1.6, tag(960 - 330, 740, 'Hoy no existe de forma pública', { size: 34, fill: '#FBE3E1', stroke: C.critd, color: C.critd, center: true, w: 660, sw: 3.5 }), { dy: 10 });
+  g += win(t, M.E1_guia, tA, r, .35, .35);
   // --- la propuesta
   if (t >= tA - .05) {
     let q = landscape(t * 8, 0) + rect(0, 0, W, H, { fill: C.navy, op: .62 });
@@ -40,11 +48,12 @@ function sceneE1(t) {
     q += `<clipPath id="ct"><rect x="0" y="0" width="${F(W * tw)}" height="${H}"/></clipPath>`;
     q += `<g clip-path="url(#ct)">${text(960, 300, 'MI RUTA DE REUBICACIÓN', { size: 108, weight: 800, fill: '#fff', anchor: 'middle', ls: 3 })}</g>`;
     q += line(0, 350, 1920 * Math.min(1, tw * 1.05), 350, { stroke: C.teal, sw: 10 });
+    q += G(t, tA + 2.3, tag(960 - 260, 372, 'Una ruta clara, paso a paso', { size: 32, fill: C.teal, center: true, w: 520 }), { dy: 8, out: B.E1.end - .4 });
     const doors = [['Vivienda', 'casa'], ['Gestión del riesgo', 'escudo'], ['Oferta social', 'manos']];
-    doors.forEach(([n, ic], i) => { const x = 560 + i * 400; q += G(t, M.E1_complementa + i * .4, `${line(960, 350, x, 450, { stroke: C.teal, sw: 4, dash: '10 8' })}${rect(x - 135, 450, 270, 180, { r: 18, fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('puerta', x, 512, 66, C.ink)}${icon(ic, x + 70, 486, 34, C.roofb)}${text(x, 600, n, { size: 26, weight: 700, anchor: 'middle' })}`, { dy: 24, out: B.E1.end - .4 }); });
-    q += G(t, M.E1_complementa + 1.4, rect(560, 650, 800, 58, { r: 14, fill: 'rgba(19,32,43,.9)' }) + text(960, 690, 'Complementa a las entidades; no las reemplaza', { size: 32, weight: 700, fill: '#fff', anchor: 'middle' }), { out: B.E1.end - .4 });
-    q += G(t, M.E1_validar, tag(560, 730, 'Construido y validado con la comunidad y las entidades', { size: 28, fill: C.teal, center: true, w: 800 }), { out: B.E1.end - .4 });
-    q += G(t, tA + .4, tag(40, 770, 'Narración con voz sintética', { size: 24, fill: 'rgba(244,239,230,.95)' }), { out: tA + 4.4 });
+    doors.forEach(([n, ic], i) => { const x = 560 + i * 400; q += G(t, M.E1_complementa + i * .4, `${line(960, 428, x, 470, { stroke: C.teal, sw: 4, dash: '10 8' })}${rect(x - 135, 470, 270, 170, { r: 18, fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('puerta', x, 528, 62, C.ink)}${icon(ic, x + 70, 502, 34, C.roofb)}${text(x, 612, n, { size: 26, weight: 700, anchor: 'middle' })}`, { dy: 24, out: B.E1.end - .4 }); });
+    q += G(t, M.E1_complementa + 1.4, rect(560, 656, 800, 58, { r: 14, fill: 'rgba(19,32,43,.9)' }) + text(960, 696, 'Complementa a las entidades; no las reemplaza', { size: 32, weight: 700, fill: '#fff', anchor: 'middle' }), { out: B.E1.end - .4 });
+    q += G(t, M.E1_validar, tag(560, 732, 'Construido y validado con la comunidad y las entidades', { size: 28, fill: C.teal, center: true, w: 800 }), { out: B.E1.end - .4 });
+    q += G(t, tA + .4, tag(40, 790, 'Narración con voz sintética', { size: 24, fill: 'rgba(244,239,230,.95)' }), { out: tA + 4.4 });
     g += `<g opacity="${F(eo(prog(t, tA - .05, tA + .35)) * (1 - prog(t, B.E1.end - .45, B.E1.end - .05)))}">${q}</g>`;
   }
   return g;
@@ -76,7 +85,11 @@ function sceneE2(t) {
       m += G(t, tR + i * .27, `${circ(xs[i], 520, 30, { fill: C.teal, stroke: '#fff', sw: 4 })}${text(xs[i], 531, String(i + 1), { size: 32, weight: 800, fill: C.ink, anchor: 'middle' })}${text(xs[i], 585, lw.slice(0, h).join(' '), { size: 28, weight: 700, fill: '#fff', anchor: 'middle' })}${text(xs[i], 618, lw.slice(h).join(' '), { size: 28, weight: 700, fill: '#fff', anchor: 'middle' })}`, { dy: 10, dur: .35 }); });
     m += G(t, M.E2_resil - .1, text(160, 680, 'RESILIENCIA · cinco dimensiones', { size: 30, weight: 800, fill: C.teal, ls: 1 }), { dy: 6 });
     m += DIMS.map((d, i) => G(t, M.E2_resil + i * .2, `${icon(d[1], 190, 715 + i * 38, 28, C.slate)}${text(225, 724 + i * 38, d[0], { size: 23, weight: 600, fill: '#cfe3ea' })}${line(600, 715 + i * 38, lerp(600, 1760, eio(prog(t, M.E2_resil + i * .2, M.E2_resil + 1.3 + i * .2))), 715 + i * 38, { stroke: C.slate, sw: 5 })}`, { dy: 6 })).join('');
-    m += G(t, M.E2_mesas, `${line(160, 395, 1760, 395, { stroke: C.slate, sw: 5, dash: '14 10' })}${circ(300, 395, 36, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('mesa', 300, 395, 50, C.ink)}${circ(420, 395, 26, { fill: C.roofb, stroke: '#fff', sw: 3 })}${circ(420, 388, 10, { fill: C.ivory })}${text(160, 340, 'MESAS DE TRABAJO CON ACOMPAÑAMIENTO DE UNA MENTORA', { size: 30, weight: 800, fill: C.teal, ls: 1 })}`, { dy: -10 });
+    m += G(t, M.E2_resil + 5.1, `${rect(166, 734, 424, 38, { r: 10, stroke: C.teal, sw: 3 })}${tag(1290, 729, 'Incluye la resiliencia financiera', { size: 24, fill: C.teal })}`, { dx: 20, dy: 0 });
+    const lane = eio(prog(t, M.E2_mesas + .2, M.E2_mesas + 2.2));
+    m += G(t, M.E2_mesas, `${line(160, 395, lerp(160, 1760, lane), 395, { stroke: C.slate, sw: 5, dash: '14 10' })}${circ(250, 395, 34, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('mesa', 250, 395, 46, C.ink)}${circ(340, 395, 34, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('manos', 340, 395, 44, C.ink)}${text(160, 340, 'MESAS DE TRABAJO · TÉCNICAS Y COMUNITARIAS', { size: 30, weight: 800, fill: C.teal, ls: 1 })}`, { dy: -10 });
+    m += G(t, M.E2_mesas + 2.8, tag(1310, 312, 'En todo el proceso', { size: 26, fill: C.teal }), { dy: -6 });
+    m += G(t, M.E2_mesas + 1.2, tag(392, 371, 'con la gestora como mentora', { size: 22 }), { dx: -10, dy: 0 });
     g += `<g opacity="${F(eo(prog(t, tR - .05, tR + .35)))}">${m}</g></g>`;
   }
   g += rect(0, 0, W, H, { fill: C.navy, op: F(1 - prog(t, B.E2.start, B.E2.start + .45)) });

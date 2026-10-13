@@ -1,0 +1,9 @@
+<speak>
+  <break time="300ms"/>
+  <mark name="C4_ejecuta"/>En la cuarta etapa, ejecución, cada entidad cumple lo que confirmó. <break time="200ms"/>
+  <mark name="C4_finanzas"/>Por ejemplo, para fortalecer su resiliencia financiera, la mamá recibe formación y abre su primera cuenta bancaria. <break time="250ms"/>
+  <mark name="C4_nomudanza"/>Pero ojo: preparación entregada no es mudanza. <break time="150ms"/>
+  <mark name="C4_condiciones"/>Antes del traslado, la entidad competente verifica las condiciones. <break time="250ms"/>
+  <mark name="C4_entrega"/>Luego, en la entrega del caso, la gestora pasa la ficha al equipo siguiente,
+  <mark name="C4_confirma"/>que confirma haberla recibido.
+</speak>

@@ -1,0 +1,10 @@
+<speak>
+  <break time="300ms"/>
+  <mark name="C2_plan"/>En la segunda etapa se arma el plan de reubicación. <break time="100ms"/>
+  <mark name="C2_opciones"/>Se comparan las opciones reales: costo y cercanía al trabajo, al colegio y a la red de cuidado. <break time="150ms"/>
+  <mark name="C2_participa"/>Y aquí la comunidad participa en la oferta de vivienda: lo que propuso en la mesa comunitaria se evalúa con la entidad competente. <break time="200ms"/>
+  <mark name="C2_presupuesto"/>Luego se hace un plan económico de transición:
+  <mark name="C2_saldo"/>ingresos netos menos gastos esenciales, hoy y en la nueva vivienda. <break time="200ms"/>
+  <mark name="C2_propuesta"/>La mamá propone una vivienda con espacio para su cocina, para seguir trabajando desde casa,
+  <mark name="C2_codigo"/>y la gestora se encarga de que la entidad le responda.
+</speak>

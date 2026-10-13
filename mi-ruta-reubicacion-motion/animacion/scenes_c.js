@@ -6,13 +6,24 @@ function sceneC4(t) {
   [['Entidad de vivienda', 'A-01 · confirmado', true], ['Entidad de oferta social', 'Acuerdo de cuidado · confirmado', true], ['Entidad de gestión del riesgo', 'A-02 · solo solicitado', false]].forEach(([n, s, ok], i) => {
     const y = 240 + i * 165;
     a += rect(330, y, 1400, 140, { r: 18, fill: '#fff', stroke: C.ink, sw: 3 }) + text(360, y + 52, n, { size: 28, weight: 800 });
-    const k = ok ? eo(prog(t, M.C4_ejecuta + .6 + i * .5, M.C4_ejecuta + 4.6 + i * .5)) : .1;
+    const k = ok ? eo(prog(t, M.C4_ejecuta + .4 + i * .4, M.C4_ejecuta + 2.8 + i * .4)) : .1;
     a += rect(360, y + 80, 920, 28, { r: 14, fill: '#E4E8EA' }) + rect(360, y + 80, 920 * k, 28, { r: 14, fill: ok ? C.ok : C.none });
     a += chip(1310, y + 34, s, { size: 22, fill: ok ? '#DDF3E6' : '#ECEFF1', stroke: ok ? C.okd : C.noned });
     if (!ok) a += text(1310, y + 126, 'no se presenta como un hecho', { size: 21, weight: 600, fill: C.noned });
   });
   a += person(150, 830, 1.0, { ...P.gestora, arm2: 60 }) + G(t, M.C4_ejecuta + .8, tag(40, 590, 'Acompaña y registra', { size: 22 }), {});
-  g += win(t, B.C4.start, M.C4_nomudanza, a, .01, .35);
+  g += win(t, B.C4.start, M.C4_finanzas, a, .01, .35);
+  // ejemplo: resiliencia financiera de la mamá antes del traslado
+  const tf = M.C4_finanzas;
+  let f = roomBg() + text(960, 200, 'Antes del traslado: resiliencia financiera', { size: 42, weight: 800, anchor: 'middle' });
+  f += person(430, 830, 1.0, { ...P.madre, arm2: t > tf + 5.4 ? 70 : 20 }) + tag(430 - 150, 562, 'Mamá · cabeza de hogar', { size: 24, center: true, w: 300 });
+  f += person(1730, 830, .95, { ...P.gestora, flip: true });
+  f += rect(690, 270, 880, 440, { r: 24, fill: C.ivory, stroke: C.ink, sw: 4 }) + rect(690, 270, 880, 70, { r: 24, fill: C.navy }) + rect(690, 316, 880, 24, { fill: C.navy }) + text(1130, 318, 'RESILIENCIA FINANCIERA DEL HOGAR', { size: 28, weight: 800, fill: C.teal, anchor: 'middle', ls: 1 });
+  [['birrete', 'Formación financiera', 'capacitación previa al reasentamiento', 4.3], ['banco', 'Primera cuenta bancaria', 'abierta a su nombre', 5.4]].forEach(([ic, s1, s2, dt], i) => {
+    const y = 432 + i * 150;
+    f += G(t, tf + dt, `${circ(780, y, 46, { fill: '#fff', stroke: C.ink, sw: 3 })}${icon(ic, 780, y, 54, C.roofb)}${text(850, y - 4, s1, { size: 34, weight: 800 })}${text(850, y + 36, s2, { size: 26, weight: 600, fill: C.noned })}${stIcon('atendida', 1500, y, 22)}`, { dx: 30, dy: 0 });
+  });
+  g += win(t, M.C4_finanzas, M.C4_nomudanza, f);
   // preparación entregada no es mudanza: condiciones previas
   let b = roomBg() + rect(380, 140, 1160, 680, { r: 24, fill: C.ivory, stroke: C.ink, sw: 4 });
   b += text(960, 205, 'Antes del traslado: condiciones verificadas', { size: 38, weight: 800, anchor: 'middle' });
@@ -76,16 +87,48 @@ function sceneC6(t) {
   b += G(t, M.C6_llaves, icon('llave', 700, 615, 130, C.ink), { dy: -30 });
   const f = ficha(0, 0, { resp: { color: '#2F7A8A', label: 'Receptor de continuidad' }, hab: 'reubicación definitiva', extra: ['Pendiente: respuesta sobre el predio de origen', 'Próxima acción: fecha acordada'] });
   b += G(t, M.C6_llaves - .1, scaled(860, 150, .9, f.svg), { dy: 24 });
-  g += win(t, M.C6_llaves, undefined, b);
+  g += win(t, M.C6_llaves, M.C6_retorno, b);
+  // el gran reto: familias que no logran instalarse y vuelven al lugar de riesgo
+  const tr = M.C6_retorno;
+  let r = landscape(t * 8, .1);
+  r += `<ellipse cx="1500" cy="650" rx="330" ry="150" fill="rgba(214,69,65,.12)" stroke="${C.critd}" stroke-width="5" stroke-dasharray="16 12"/>`;
+  r += rect(150, 380, 460, 455, { fill: '#C9CED2', stroke: C.ink, sw: 3 });
+  for (let rr = 0; rr < 3; rr++) for (let cc = 0; cc < 3; cc++) r += rect(190 + cc * 140, 410 + rr * 105, 90, 72, { fill: '#52687A', stroke: C.ink, sw: 2 });
+  r += rect(330, 735, 100, 100, { fill: '#52687A', stroke: C.ink, sw: 2 }) + tag(380 - 120, 326, 'Nueva vivienda', { size: 24, center: true, w: 240 });
+  r += G(t, tr + 1.0, tag(1500 - 210, 470, 'Lugar de origen · zona de riesgo', { size: 24, fill: '#FBE3E1', stroke: C.critd, color: C.critd, center: true, w: 420 }), { dy: 8 });
+  const wk = eio(prog(t, tr + 1.4, tr + 6.2)), wx = lerp(560, 1120, wk);
+  r += G(t, tr + 1.2, `${path('M470 800 Q900 690 1330 720', { stroke: C.critd, sw: 5, dash: '14 10' })}${arrow(1300, 716, 1340, 722, { stroke: C.critd, sw: 5, head: 22 })}`, {});
+  r += person(wx, 830, .9, { ...P.madre, arm2: 20 }) + person(wx - 80, 830, .56, P.hijo) + person(wx - 140, 830, .5, P.hija);
+  r += rect(260, 150, 1400, 116, { r: 18, fill: 'rgba(19,32,43,.94)' }) + text(960, 194, 'Un gran reto, según los actores del proceso', { size: 26, weight: 600, fill: '#cfe3ea', anchor: 'middle' }) + text(960, 246, 'Familias que no logran instalarse y vuelven al riesgo', { size: 40, weight: 800, fill: '#fff', anchor: 'middle' });
+  r += G(t, tr + 5.0, tag(960 - 450, 290, 'En la etapa 5, el acompañamiento alerta si hay intención de regresar', { size: 24, center: true, w: 900 }), { dy: 8 });
+  g += win(t, M.C6_retorno, M.C6_medicion, r);
+  // medir el impacto y el valor del reasentamiento, con un socio académico
+  const tm = M.C6_medicion;
+  let z = roomBg() + text(960, 205, 'Medir el impacto y el valor del reasentamiento', { size: 44, weight: 800, anchor: 'middle' });
+  z += rect(250, 262, 830, 470, { r: 22, fill: '#fff', stroke: C.ink, sw: 4 }) + text(290, 318, 'Seguimiento en el tiempo', { size: 28, weight: 800 });
+  // momentos de medición (sin curvas de resultado: el documento pide no atribuir causalidad con un simple antes y después)
+  z += line(400, 420, lerp(400, 960, eio(prog(t, tm + .3, tm + 1.6))), 420, { stroke: C.slate, sw: 8 });
+  [['Antes', 420], ['Durante', 680], ['Después', 940]].forEach(([n, x], k) => {
+    z += G(t, tm + .4 + k * .45, `${circ(x, 420, 36, { fill: '#fff', stroke: C.ink, sw: 3 })}${icon('lupa', x, 420, 40, C.ink)}${text(x, 494, n, { size: 26, weight: 800, anchor: 'middle' })}`, { dy: 8 });
+    z += G(t, tm + 2.0 + k * .15, rect(x - 35, 540, 70, 44, { r: 10, fill: '#DDF3E6', stroke: C.okd, sw: 3 }), { dy: 6 });
+    z += G(t, tm + 2.7 + k * .15, rect(x - 35, 610, 70, 44, { r: 10, fill: '#DDEBFA', stroke: C.roofb, sw: 3 }), { dy: 6 });
+  });
+  z += G(t, tm + 2.0, text(270, 571, 'Impacto', { size: 22, weight: 800, fill: C.okd }), {}) + G(t, tm + 2.7, text(270, 641, 'Valor', { size: 22, weight: 800, fill: C.roofb }), {});
+  z += G(t, tm + 3.2, text(665, 706, 'Mismas preguntas en cada momento', { size: 22, weight: 600, fill: C.noned, anchor: 'middle' }), {});
+  z += G(t, tm + 2.0, `${rect(1130, 270, 560, 92, { r: 16, fill: '#DDF3E6', stroke: C.okd, sw: 3 })}${rect(1160, 300, 50, 32, { r: 8, fill: '#DDF3E6', stroke: C.okd, sw: 3 })}${text(1240, 326, 'Impacto en las familias', { size: 28, weight: 800, fill: C.okd })}`, { dx: 30, dy: 0 });
+  z += G(t, tm + 2.7, `${rect(1130, 380, 560, 92, { r: 16, fill: '#DDEBFA', stroke: C.roofb, sw: 3 })}${rect(1160, 410, 50, 32, { r: 8, fill: '#DDEBFA', stroke: C.roofb, sw: 3 })}${text(1240, 436, 'Valor del proceso', { size: 28, weight: 800, fill: C.roofb })}`, { dx: 30, dy: 0 });
+  z += G(t, tm + 4.4, `${rect(1130, 490, 560, 92, { r: 16, fill: '#FFF1B8', stroke: C.warnd, sw: 3 })}${text(1410, 548, 'Hoy no se mide de forma sistemática', { size: 25, weight: 800, fill: C.warnd, anchor: 'middle' })}`, { dx: 30, dy: 0 });
+  z += G(t, tm + 6.4, `${rect(1130, 600, 560, 132, { r: 16, fill: C.ivory, stroke: C.ink, sw: 3 })}${circ(1200, 666, 40, { fill: '#fff', stroke: C.ink, sw: 3 })}${icon('birrete', 1200, 666, 50, C.roofb)}${text(1262, 656, 'Con un socio académico', { size: 28, weight: 800 })}${text(1262, 694, 'aliado que la propuesta busca sumar', { size: 22, weight: 600, fill: C.noned })}`, { dx: 30, dy: 0 });
+  g += win(t, M.C6_medicion, undefined, z);
   g += rect(0, 0, W, H, { fill: C.navy, op: F(prog(t, B.C6.end - .45, B.C6.end - .05)) });
   return g;
 }
 function sceneE9(t) {
   let g = navyBg();
   // meta de acompañamiento
-  let b = navyBg() + G(t, B.E9.start, text(960, 200, 'Meta: acompañar 350 hogares durante 12 meses', { size: 54, weight: 800, fill: '#fff', anchor: 'middle' }), { dy: 10 });
-  const n = Math.floor(350 * eo(prog(t, M.E9_piloto + .6, M.E9_piloto + 3.2)));
-  for (let i = 0; i < n; i++) b += circ(380 + (i % 35) * 32, 280 + Math.floor(i / 35) * 34, 11, { fill: C.slate });
+  let b = navyBg() + G(t, B.E9.start, text(960, 200, 'Meta: acompañar 200 hogares durante 12 meses', { size: 54, weight: 800, fill: '#fff', anchor: 'middle' }), { dy: 10 });
+  const n = Math.floor(200 * eo(prog(t, M.E9_piloto + .6, M.E9_piloto + 3.2)));
+  for (let i = 0; i < n; i++) b += circ(618 + (i % 20) * 36, 282 + Math.floor(i / 20) * 35, 12, { fill: C.slate });
   b += G(t, M.E9_piloto + 2.4, text(960, 665, 'Incluye hogares que siguen en el sector, en ruta de reasentamiento y ya reasentados · distribución por conocer', { size: 24, weight: 600, fill: '#cfe3ea', anchor: 'middle' }), { dy: 8 });
   b += G(t, M.E9_notraslados, text(960, 760, 'Meta de acompañamiento, no de traslados', { size: 48, weight: 800, fill: C.teal, anchor: 'middle' }), { dy: 10 });
   g += win(t, B.E9.start, M.E9_frase, b, .01, .4);
@@ -109,11 +152,11 @@ function sceneE9(t) {
 }
 function sceneCR(t) {
   const lt = t - TL.cr_start; const a = eo(prog(lt, .9, 1.5));
-  const L = [['MI RUTA DE REUBICACIÓN', 54, 800, C.teal], ['Equipo del proyecto · DGIP 2026', 34, 700, '#fff'], ['Imágenes: Esri y socios · Google Street View (abr. 2025), © Google', 26, 600, '#cfe3ea'], ['Narración: voz sintética de Google Cloud Text-to-Speech · Música: producción propia', 26, 600, '#cfe3ea'], ['Validado con la comunidad y las entidades', 34, 800, C.teal]];
+  const L = [['MI RUTA DE REUBICACIÓN', 54, 800, C.teal], ['Equipo del proyecto · DGIP 2026', 34, 700, '#fff'], ['Imágenes: Esri y socios · Google Street View (abr. 2025), © Google', 26, 600, '#cfe3ea'], ['Narración: voz sintética de HeyGen · Música: producción propia', 26, 600, '#cfe3ea'], ['Validado con la comunidad y las entidades', 34, 800, C.teal]];
   let s = ''; L.forEach((l, i) => { s += text(960, 330 + i * 95, l[0], { size: l[1], weight: l[2], fill: l[3], anchor: 'middle' }); });
   let g = navyBg();
   if (lt < .9) g += `<g opacity="${F(1 - eo(prog(lt, 0, .9)))}">${sceneE9(TL.cr_start - .001)}</g>`;
-  return g + `<g opacity="${F(a)}">${s}</g>` + rect(0, 0, W, H, { fill: '#000', op: F(prog(lt, 5.2, 6.3)) });
+  return g + `<g opacity="${F(a)}">${s}</g>` + rect(0, 0, W, H, { fill: '#000', op: F(prog(lt, 4.8, 5.9)) });
 }
 function frameSVG(t) {
   let blk = null; for (const b of Object.keys(B)) if (t >= B[b].start && t < B[b].end) blk = b;
@@ -121,8 +164,8 @@ function frameSVG(t) {
   const idx = { C1: 0, C2: 1, C3: 2, C4: 3, C5: 4, C6: 5 }; let g = '';
   const S = { E0: sceneE0, E1: sceneE1, E2: sceneE2, C1: sceneC1, C2: sceneC2, C3: sceneC3, C4: sceneC4, C5: sceneC5, C6: sceneC6, E9: sceneE9, CR: sceneCR };
   if (blk) g += S[blk](t);
-  if (blk in idx) g += minimap(idx[blk]) + chapterCard(t, idx[blk] + 1, blk);
-  const fin = blk === 'CR' ? 1 - prog(t - TL.cr_start, 5.2, 6.3) : 1;
+  if (blk in idx) g += minimap(idx[blk], t) + chapterCard(t, idx[blk] + 1, blk);
+  const fin = blk === 'CR' ? 1 - prog(t - TL.cr_start, 4.8, 5.9) : 1;
   g += `<g opacity="${F(fin)}">${topLabels(t)}</g>` + (blk === 'CR' ? '' : subtitles(t));
   return g;
 }

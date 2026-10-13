@@ -3,520 +3,581 @@
  "blocks": {
   "E0": {
    "start": 0.0,
-   "audio": 21.299541666666666,
-   "end": 21.599541666666667,
+   "audio": 19.547291666666666,
+   "end": 19.847291666666667,
    "tail": 0.3
   },
   "E1": {
-   "start": 21.599541666666667,
-   "audio": 19.434458333333332,
-   "end": 41.434,
+   "start": 19.847291666666667,
+   "audio": 23.630791666666667,
+   "end": 43.87808333333333,
    "tail": 0.4
   },
   "E2": {
-   "start": 41.434,
-   "audio": 31.138708333333334,
-   "end": 72.97270833333334,
+   "start": 43.878083333333336,
+   "audio": 32.922625,
+   "end": 77.20070833333334,
    "tail": 0.4
   },
   "C1": {
-   "start": 72.97270833333333,
-   "audio": 43.39570833333333,
-   "end": 116.76841666666667,
+   "start": 77.20070833333332,
+   "audio": 44.814708333333336,
+   "end": 122.41541666666666,
    "tail": 0.4
   },
   "C2": {
-   "start": 116.76841666666667,
-   "audio": 23.91358333333333,
-   "end": 141.082,
+   "start": 122.41541666666666,
+   "audio": 30.06025,
+   "end": 152.87566666666666,
    "tail": 0.4
   },
   "C3": {
-   "start": 141.082,
-   "audio": 34.725208333333335,
-   "end": 176.70720833333334,
-   "tail": 0.9
+   "start": 152.87566666666666,
+   "audio": 33.96008333333333,
+   "end": 187.53574999999998,
+   "tail": 0.7
   },
   "C4": {
-   "start": 176.7072083333333,
-   "audio": 20.493333333333332,
-   "end": 198.10054166666666,
-   "tail": 0.9
+   "start": 187.53575,
+   "audio": 26.054666666666666,
+   "end": 214.29041666666666,
+   "tail": 0.7
   },
   "C5": {
-   "start": 198.10054166666663,
-   "audio": 17.688458333333333,
-   "end": 216.18899999999996,
+   "start": 214.29041666666666,
+   "audio": 16.692416666666666,
+   "end": 231.38283333333334,
    "tail": 0.4
   },
   "C6": {
-   "start": 216.18899999999996,
-   "audio": 18.414791666666666,
-   "end": 235.10379166666664,
+   "start": 231.38283333333334,
+   "audio": 33.05825,
+   "end": 264.9410833333333,
    "tail": 0.5
   },
   "E9": {
-   "start": 235.10379166666664,
-   "audio": 27.559583333333332,
-   "end": 264.263375,
+   "start": 264.9410833333333,
+   "audio": 26.426833333333335,
+   "end": 292.96791666666667,
    "tail": 1.6
   }
  },
  "marks": {
-  "E0_bogota": 0.7917082905769348,
-  "E0_cbolivar": 2.1354167461395264,
-  "E0_bellaflor": 4.531541347503662,
-  "E0_pregunta": 9.815625190734863,
-  "E0_demas": 15.00141716003418,
-  "E1_problema": 21.61454166633139,
-  "E1_equipos": 25.66962480799357,
-  "E1_preguntas": 26.857208254496257,
-  "E1_compromisos": 28.356040957132976,
-  "E1_titulo": 31.13991451517741,
-  "E1_complementa": 33.62916374460856,
-  "E1_validar": 37.19128990427653,
-  "E2_como": 41.434,
-  "E2_gestora": 43.803958639144895,
-  "E2_ficha": 48.06891678237915,
-  "E2_historia": 52.56962393188476,
-  "E2_compromisos": 55.04766558074951,
-  "E2_ruta": 59.738496765136716,
-  "E2_resil": 61.96745489501953,
-  "E2_mesas": 68.30970571899414,
-  "C1_familia": 73.36970831831296,
-  "C1_vecina": 78.41104136784871,
-  "C1_escucha": 81.61395703633626,
-  "C1_mesa": 88.88220750172933,
-  "C1_ficha": 92.23691617329915,
-  "C1_dimensiones": 95.09929143269856,
-  "C1_corrige": 101.27370702107747,
-  "C1_nogarantiza": 103.51841603597005,
-  "C1_urgencia": 110.08024846394856,
-  "C2_plan": 117.16341664759318,
-  "C2_opciones": 120.14700009791056,
-  "C2_presupuesto": 127.30079200236003,
-  "C2_saldo": 129.88229110209147,
-  "C2_propuesta": 133.94200065104167,
-  "C2_codigo": 137.76291778055827,
-  "C3_entidades": 141.4769999809265,
-  "C3_mesa": 146.11595795822143,
-  "C3_privado": 151.6306249923706,
-  "C3_incidencia": 155.46191619110107,
-  "C3_noviable": 159.6679146118164,
-  "C3_hoja": 162.83345530700683,
-  "C3_desacuerdo": 165.7547886199951,
-  "C3_entregada": 169.60662196350097,
-  "C4_ejecuta": 177.11087497862178,
-  "C4_nomudanza": 182.9425827840169,
-  "C4_condiciones": 186.33058327229816,
-  "C4_entrega": 190.4217078069051,
-  "C4_confirma": 194.87899940999347,
-  "C5_traslado": 198.50258331052459,
-  "C5_alerta": 202.58383233896888,
-  "C5_tarjeta": 206.889207438151,
-  "C5_nocierra": 209.24941690317786,
-  "C5_cierre": 212.35904176584876,
-  "C6_revisa": 216.58399998092648,
-  "C6_pendiente": 221.52333341979977,
-  "C6_resultado": 226.71154199981686,
-  "C6_llaves": 230.6483753814697,
-  "E9_piloto": 235.5078333145777,
-  "E9_notraslados": 241.28270812098182,
-  "E9_frase": 244.55337567392982,
-  "E9_final": 251.8402914530436
+  "E0_bogota": 0.9413,
+  "E0_cbolivar": 2.1807,
+  "E0_bellaflor": 4.4,
+  "E0_pregunta": 8.9704,
+  "E0_demas": 13.8244,
+  "E1_problema": 20.105591666666665,
+  "E1_equipos": 23.700991666666667,
+  "E1_preguntas": 25.023091666666666,
+  "E1_compromisos": 26.252391666666668,
+  "E1_guia": 28.786191666666667,
+  "E1_titulo": 34.066491666666664,
+  "E1_complementa": 37.76319166666667,
+  "E1_validar": 40.538491666666665,
+  "E2_como": 43.878083333333336,
+  "E2_gestora": 46.79468333333334,
+  "E2_ficha": 51.116083333333336,
+  "E2_historia": 55.81398333333334,
+  "E2_compromisos": 57.95608333333334,
+  "E2_ruta": 62.77568333333333,
+  "E2_resil": 64.88938333333334,
+  "E2_mesas": 72.17348333333334,
+  "C1_familia": 77.71170833333332,
+  "C1_vecina": 83.49150833333333,
+  "C1_escucha": 86.10800833333332,
+  "C1_mesa": 93.60070833333333,
+  "C1_ficha": 97.90310833333332,
+  "C1_dimensiones": 101.86040833333333,
+  "C1_corrige": 107.93610833333332,
+  "C1_nogarantiza": 110.15680833333332,
+  "C1_urgencia": 116.79090833333333,
+  "C2_plan": 122.96641666666666,
+  "C2_opciones": 126.15571666666666,
+  "C2_participa": 131.48861666666664,
+  "C2_presupuesto": 138.19511666666665,
+  "C2_saldo": 140.66441666666665,
+  "C2_propuesta": 144.74711666666667,
+  "C2_codigo": 149.70041666666665,
+  "C3_entidades": 153.42666666666665,
+  "C3_mesa": 158.13976666666667,
+  "C3_privado": 163.97206666666665,
+  "C3_incidencia": 167.71836666666667,
+  "C3_noviable": 171.83316666666667,
+  "C3_hoja": 174.72646666666665,
+  "C3_desacuerdo": 177.54186666666666,
+  "C3_entregada": 181.07076666666666,
+  "C3_sello": 185.27516666666668,
+  "C4_ejecuta": 188.08675,
+  "C4_finanzas": 192.31305,
+  "C4_nomudanza": 199.54045000000002,
+  "C4_condiciones": 202.96845000000002,
+  "C4_entrega": 207.11995000000002,
+  "C4_confirma": 211.75825,
+  "C5_traslado": 214.84141666666665,
+  "C5_alerta": 218.91621666666666,
+  "C5_tarjeta": 222.80191666666667,
+  "C5_nocierra": 224.72941666666665,
+  "C5_cierre": 227.96011666666666,
+  "C6_revisa": 231.93383333333333,
+  "C6_pendiente": 236.92013333333333,
+  "C6_resultado": 241.95613333333333,
+  "C6_llaves": 245.69503333333333,
+  "C6_retorno": 248.93403333333333,
+  "C6_medicion": 256.16333333333336,
+  "E9_piloto": 265.6034833333333,
+  "E9_notraslados": 270.86788333333334,
+  "E9_frase": 274.02008333333333,
+  "E9_final": 280.9469833333333
  },
  "cues": [
   {
-   "s": 0.792,
-   "e": 2.085,
+   "s": 0.941,
+   "e": 2.131,
    "text": "Bogotá."
   },
   {
-   "s": 2.135,
-   "e": 4.482,
+   "s": 2.181,
+   "e": 4.35,
    "text": "Al sur, Ciudad Bolívar."
   },
   {
-   "s": 4.532,
-   "e": 9.766,
+   "s": 4.4,
+   "e": 8.92,
    "text": "Y en la parte alta de Bella Flor, familias que levantaron aquí sus casas y su vida."
   },
   {
-   "s": 9.816,
-   "e": 12.359,
+   "s": 8.97,
+   "e": 11.347,
    "text": "Cuando a una de ellas le hablan de reubicarse,"
   },
   {
-   "s": 12.409,
-   "e": 14.951,
+   "s": 11.397,
+   "e": 13.774,
    "text": "la pregunta no es solo a qué casa va a llegar."
   },
   {
-   "s": 15.001,
-   "e": 17.528,
+   "s": 13.824,
+   "e": 16.116,
    "text": "Es qué va a pasar con todo lo demás:"
   },
   {
-   "s": 17.578,
-   "e": 21.25,
+   "s": 16.166,
+   "e": 19.497,
    "text": "su trabajo, sus vecinos, quien le cuida a los niños."
   },
   {
-   "s": 21.615,
-   "e": 25.62,
+   "s": 20.106,
+   "e": 23.651,
    "text": "En un proceso así, lo que la familia cuenta y acuerda puede perderse:"
   },
   {
-   "s": 25.67,
-   "e": 26.807,
+   "s": 23.701,
+   "e": 24.973,
    "text": "cambian los equipos,"
   },
   {
-   "s": 26.857,
-   "e": 28.306,
+   "s": 25.023,
+   "e": 26.202,
    "text": "se repiten las preguntas"
   },
   {
-   "s": 28.356,
-   "e": 31.09,
+   "s": 26.252,
+   "e": 28.736,
    "text": "y hay compromisos que se quedan sin verificar."
   },
   {
-   "s": 31.14,
-   "e": 33.579,
-   "text": "Por eso proponemos Mi Ruta de Reubicación:"
+   "s": 28.786,
+   "e": 32.359,
+   "text": "Además, hoy no existe una descripción pública, paso a paso,"
   },
   {
-   "s": 33.629,
-   "e": 37.141,
-   "text": "un piloto que complementa lo que ya hacen las entidades del Distrito,"
+   "s": 32.409,
+   "e": 34.016,
+   "text": "de cómo es una reubicación."
   },
   {
-   "s": 37.191,
-   "e": 40.984,
+   "s": 34.066,
+   "e": 37.713,
+   "text": "Por eso proponemos Mi Ruta de Reubicación: una ruta clara,"
+  },
+  {
+   "s": 37.763,
+   "e": 40.488,
+   "text": "que complementa lo que ya hacen las entidades del Distrito,"
+  },
+  {
+   "s": 40.538,
+   "e": 43.428,
    "text": "y que construimos y validamos con ellas y con la comunidad."
   },
   {
-   "s": 41.434,
-   "e": 43.754,
+   "s": 43.878,
+   "e": 46.745,
    "text": "¿Cómo funciona? Con tres piezas."
   },
   {
-   "s": 43.804,
-   "e": 48.019,
+   "s": 46.795,
+   "e": 51.066,
    "text": "Primero, una gestora social con nombre propio, y otra de respaldo."
   },
   {
-   "s": 48.069,
-   "e": 52.52,
+   "s": 51.116,
+   "e": 55.764,
    "text": "Segundo, una ficha de caracterización familiar que pasa de un equipo a otro,"
   },
   {
-   "s": 52.57,
-   "e": 54.998,
+   "s": 55.814,
+   "e": 57.906,
    "text": "para que la familia no repita su historia."
   },
   {
-   "s": 55.048,
-   "e": 59.688,
+   "s": 57.956,
+   "e": 62.726,
    "text": "Y tercero, compromisos con responsable, fecha y prueba de cumplimiento."
   },
   {
-   "s": 59.738,
-   "e": 61.917,
+   "s": 62.776,
+   "e": 64.839,
    "text": "Todo esto avanza en seis etapas."
   },
   {
-   "s": 61.967,
-   "e": 63.41,
-   "text": "En todas hay dos apoyos:"
+   "s": 64.889,
+   "e": 66.379,
+   "text": "Y en todas hay dos apoyos:"
   },
   {
-   "s": 63.46,
-   "e": 68.26,
-   "text": "la resiliencia, o sea, que la familia pueda enfrentar el cambio y pedir apoyo;"
+   "s": 66.429,
+   "e": 70.051,
+   "text": "la resiliencia, para que la familia pueda enfrentar el cambio,"
   },
   {
-   "s": 68.31,
-   "e": 72.523,
-   "text": "y las mesas de trabajo, donde la gestora acompaña como mentora."
+   "s": 70.101,
+   "e": 72.123,
+   "text": "incluida su resiliencia financiera;"
   },
   {
-   "s": 73.37,
-   "e": 78.361,
-   "text": "Sigamos a una familia ficticia. La mamá prepara almuerzos y los vende en el barrio;"
+   "s": 72.173,
+   "e": 76.751,
+   "text": "y las mesas de trabajo, técnicas y comunitarias, que acompañan todo el proceso."
   },
   {
-   "s": 78.411,
-   "e": 81.564,
+   "s": 77.712,
+   "e": 81.005,
+   "text": "Sigamos a una familia ficticia. La mamá es cabeza de hogar:"
+  },
+  {
+   "s": 81.055,
+   "e": 83.442,
+   "text": "prepara almuerzos y los vende en el barrio;"
+  },
+  {
+   "s": 83.492,
+   "e": 86.058,
    "text": "mientras trabaja, una vecina le cuida a los niños."
   },
   {
-   "s": 81.614,
-   "e": 86.694,
+   "s": 86.108,
+   "e": 91.347,
    "text": "En la primera etapa, diagnóstico y caracterización, la gestora escucha a la familia:"
   },
   {
-   "s": 86.744,
-   "e": 88.832,
+   "s": 91.397,
+   "e": 93.551,
    "text": "qué quiere conservar y qué propone."
   },
   {
-   "s": 88.882,
-   "e": 92.187,
-   "text": "En la mesa comunitaria, los vecinos también proponen."
+   "s": 93.601,
+   "e": 97.853,
+   "text": "En la mesa comunitaria, los vecinos también proponen qué vivienda necesitan."
   },
   {
-   "s": 92.237,
-   "e": 95.049,
-   "text": "Con eso llena la ficha de caracterización familiar,"
+   "s": 97.903,
+   "e": 101.81,
+   "text": "Con eso, la gestora llena la ficha de caracterización familiar,"
   },
   {
-   "s": 95.099,
-   "e": 96.575,
+   "s": 101.86,
+   "e": 103.311,
    "text": "en cinco dimensiones:"
   },
   {
-   "s": 96.625,
-   "e": 101.224,
+   "s": 103.361,
+   "e": 107.886,
    "text": "vivienda, economía, redes de cuidado, servicios y participación."
   },
   {
-   "s": 101.274,
-   "e": 103.468,
+   "s": 107.936,
+   "e": 110.107,
    "text": "La familia la revisa y la corrige."
   },
   {
-   "s": 103.518,
-   "e": 107.704,
-   "text": "Desde el primer día, ella sabe que participar no le garantiza vivienda,"
+   "s": 110.157,
+   "e": 114.253,
+   "text": "Desde el primer día sabe que participar no le garantiza vivienda,"
   },
   {
-   "s": 107.754,
-   "e": 110.03,
+   "s": 114.303,
+   "e": 116.741,
    "text": "ni la obliga a aceptar una alternativa."
   },
   {
-   "s": 110.08,
-   "e": 114.683,
-   "text": "Si hay un riesgo inmediato para la vida, se activa el canal de emergencia,"
+   "s": 116.791,
+   "e": 121.965,
+   "text": "Y si hay un riesgo inmediato para la vida, se activa el canal de emergencia, sin esperar."
   },
   {
-   "s": 114.733,
-   "e": 116.318,
-   "text": "sin esperar ninguna etapa."
-  },
-  {
-   "s": 117.163,
-   "e": 120.097,
+   "s": 122.966,
+   "e": 126.106,
    "text": "En la segunda etapa se arma el plan de reubicación."
   },
   {
-   "s": 120.147,
-   "e": 123.394,
-   "text": "Se comparan las opciones reales, aunque sea una sola:"
+   "s": 126.156,
+   "e": 127.921,
+   "text": "Se comparan las opciones reales:"
   },
   {
-   "s": 123.444,
-   "e": 127.251,
+   "s": 127.971,
+   "e": 131.439,
    "text": "costo y cercanía al trabajo, al colegio y a la red de cuidado."
   },
   {
-   "s": 127.301,
-   "e": 129.832,
+   "s": 131.489,
+   "e": 134.298,
+   "text": "Y aquí la comunidad participa en la oferta de vivienda:"
+  },
+  {
+   "s": 134.348,
+   "e": 138.145,
+   "text": "lo que propuso en la mesa comunitaria se evalúa con la entidad competente."
+  },
+  {
+   "s": 138.195,
+   "e": 140.614,
    "text": "Luego se hace un plan económico de transición:"
   },
   {
-   "s": 129.882,
-   "e": 133.892,
+   "s": 140.664,
+   "e": 144.697,
    "text": "ingresos netos menos gastos esenciales, hoy y en la nueva vivienda."
   },
   {
-   "s": 133.942,
-   "e": 137.713,
-   "text": "La familia propone seguir vendiendo sus almuerzos cerca del nuevo hogar,"
+   "s": 144.747,
+   "e": 147.779,
+   "text": "La mamá propone una vivienda con espacio para su cocina,"
   },
   {
-   "s": 137.763,
-   "e": 140.632,
-   "text": "y la gestora se encarga de que le respondan."
+   "s": 147.829,
+   "e": 149.65,
+   "text": "para seguir trabajando desde casa,"
   },
   {
-   "s": 141.477,
-   "e": 146.066,
+   "s": 149.7,
+   "e": 152.426,
+   "text": "y la gestora se encarga de que la entidad le responda."
+  },
+  {
+   "s": 153.427,
+   "e": 158.09,
    "text": "En la tercera etapa, articulación institucional, responden las entidades."
   },
   {
-   "s": 146.116,
-   "e": 149.031,
+   "s": 158.14,
+   "e": 161.225,
    "text": "En la mesa técnica, con delegados de la comunidad,"
   },
   {
-   "s": 149.081,
-   "e": 151.581,
+   "s": 161.275,
+   "e": 163.922,
    "text": "cada entidad dice qué puede hacer y cuándo."
   },
   {
-   "s": 151.631,
-   "e": 155.412,
+   "s": 163.972,
+   "e": 167.668,
    "text": "El caso de cada familia se revisa aparte, con ella presente."
   },
   {
-   "s": 155.462,
-   "e": 159.618,
+   "s": 167.718,
+   "e": 171.783,
    "text": "Aquí la propuesta de la mamá sí cambia el plan: se acepta con ajustes;"
   },
   {
-   "s": 159.668,
-   "e": 162.783,
+   "s": 171.833,
+   "e": 174.676,
    "text": "lo que no es viable se le explica, con alternativas."
   },
   {
-   "s": 162.833,
-   "e": 165.705,
+   "s": 174.726,
+   "e": 177.492,
    "text": "Todo queda por escrito en una hoja de devolución."
   },
   {
-   "s": 165.755,
-   "e": 169.557,
+   "s": 177.542,
+   "e": 181.021,
    "text": "Si hay desacuerdo, el caso se escala, pero no se congela."
   },
   {
-   "s": 169.607,
-   "e": 174.015,
+   "s": 181.071,
+   "e": 185.225,
    "text": "Con la ficha, el plan y las respuestas listos, se marca un hito:"
   },
   {
-   "s": 174.065,
-   "e": 175.757,
+   "s": 185.275,
+   "e": 186.786,
    "text": "la preparación entregada."
   },
   {
-   "s": 177.111,
-   "e": 181.501,
-   "text": "En la cuarta etapa, ejecución, cada entidad cumple lo que confirmó,"
+   "s": 188.087,
+   "e": 192.263,
+   "text": "En la cuarta etapa, ejecución, cada entidad cumple lo que confirmó."
   },
   {
-   "s": 181.551,
-   "e": 182.893,
-   "text": "y el piloto acompaña."
+   "s": 192.313,
+   "e": 195.75,
+   "text": "Por ejemplo, para fortalecer su resiliencia financiera,"
   },
   {
-   "s": 182.943,
-   "e": 186.281,
+   "s": 195.8,
+   "e": 199.49,
+   "text": "la mamá recibe formación y abre su primera cuenta bancaria."
+  },
+  {
+   "s": 199.54,
+   "e": 202.918,
    "text": "Pero ojo: preparación entregada no es mudanza."
   },
   {
-   "s": 186.331,
-   "e": 190.372,
+   "s": 202.968,
+   "e": 207.07,
    "text": "Antes del traslado, la entidad competente verifica las condiciones."
   },
   {
-   "s": 190.422,
-   "e": 194.829,
+   "s": 207.12,
+   "e": 211.708,
    "text": "Luego, en la entrega del caso, la gestora pasa la ficha al equipo siguiente,"
   },
   {
-   "s": 194.879,
-   "e": 197.151,
+   "s": 211.758,
+   "e": 213.54,
    "text": "que confirma haberla recibido."
   },
   {
-   "s": 198.503,
-   "e": 202.534,
+   "s": 214.841,
+   "e": 218.866,
    "text": "Ya en la nueva vivienda llega la quinta etapa: el acompañamiento."
   },
   {
-   "s": 202.584,
-   "e": 206.839,
+   "s": 218.916,
+   "e": 222.752,
    "text": "Si meses después los ingresos de la mamá bajan mucho, se activa una alerta,"
   },
   {
-   "s": 206.889,
-   "e": 209.199,
+   "s": 222.802,
+   "e": 224.679,
    "text": "con responsable, acción y fecha."
   },
   {
-   "s": 209.249,
-   "e": 212.309,
+   "s": 224.729,
+   "e": 227.91,
    "text": "La alerta no se cierra con un oficio o una remisión,"
   },
   {
-   "s": 212.359,
-   "e": 215.739,
+   "s": 227.96,
+   "e": 230.933,
    "text": "sino cuando la ayuda llega y la familia lo confirma."
   },
   {
-   "s": 216.584,
-   "e": 221.473,
+   "s": 231.934,
+   "e": 236.87,
    "text": "En la sexta etapa, cierre y seguimiento, se revisa con la familia qué se cumplió."
   },
   {
-   "s": 221.523,
-   "e": 224.634,
+   "s": 236.92,
+   "e": 239.938,
    "text": "Lo pendiente, como el futuro del predio donde vivían,"
   },
   {
-   "s": 224.684,
-   "e": 226.662,
+   "s": 239.988,
+   "e": 241.906,
    "text": "pasa a un receptor de continuidad."
   },
   {
-   "s": 226.712,
-   "e": 230.598,
+   "s": 241.956,
+   "e": 245.645,
    "text": "El caso cierra con atención pendiente, pero con alguien que sigue."
   },
   {
-   "s": 230.648,
-   "e": 234.554,
+   "s": 245.695,
+   "e": 248.884,
    "text": "Porque entregar las llaves no significa que todo esté resuelto."
   },
   {
-   "s": 235.508,
-   "e": 238.703,
-   "text": "Mi Ruta de Reubicación propone acompañar durante doce meses"
+   "s": 248.934,
+   "e": 251.839,
+   "text": "Los actores del proceso nos advirtieron de un gran reto:"
   },
   {
-   "s": 238.753,
-   "e": 241.233,
-   "text": "a trescientos cincuenta hogares de Bella Flor:"
+   "s": 251.889,
+   "e": 256.113,
+   "text": "familias que no logran instalarse en su nuevo hogar y vuelven al lugar de riesgo."
   },
   {
-   "s": 241.283,
-   "e": 244.503,
+   "s": 256.163,
+   "e": 260.663,
+   "text": "Por eso, la propuesta también busca medir el impacto y el valor del reasentamiento,"
+  },
+  {
+   "s": 260.713,
+   "e": 264.391,
+   "text": "algo que hoy no se hace, y sumar a un socio académico para lograrlo."
+  },
+  {
+   "s": 265.603,
+   "e": 267.794,
+   "text": "Mi Ruta de Reubicación propone acompañar"
+  },
+  {
+   "s": 267.844,
+   "e": 270.818,
+   "text": "durante doce meses a doscientos hogares de Bella Flor:"
+  },
+  {
+   "s": 270.868,
+   "e": 273.97,
    "text": "una meta de acompañamiento, no de traslados."
   },
   {
-   "s": 244.553,
-   "e": 248.303,
+   "s": 274.02,
+   "e": 277.582,
    "text": "Lo que una familia necesita antes de trasladarse se convierte"
   },
   {
-   "s": 248.353,
-   "e": 251.79,
+   "s": 277.632,
+   "e": 280.897,
    "text": "en compromisos que alguien acompaña y comprueba después."
   },
   {
-   "s": 251.84,
-   "e": 255.237,
+   "s": 280.947,
+   "e": 284.215,
    "text": "Para que la mamá de nuestra historia no tenga que escoger"
   },
   {
-   "s": 255.287,
-   "e": 257.474,
+   "s": 284.265,
+   "e": 286.369,
    "text": "entre una casa nueva y todo lo demás;"
   },
   {
-   "s": 257.524,
-   "e": 261.404,
+   "s": 286.419,
+   "e": 290.154,
    "text": "para que reubicarse no sea empezar de cero, sino seguir adelante,"
   },
   {
-   "s": 261.454,
-   "e": 262.613,
+   "s": 290.204,
+   "e": 291.318,
    "text": "con alguien al lado."
   }
  ],
- "cr_start": 264.263375,
- "total": 270.763375
+ "cr_start": 292.96791666666667,
+ "total": 298.96791666666667
 }

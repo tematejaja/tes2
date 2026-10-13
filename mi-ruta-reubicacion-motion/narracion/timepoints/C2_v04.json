@@ -1,0 +1,30 @@
+[
+ {
+  "markName": "C2_plan",
+  "timeSeconds": 0.551
+ },
+ {
+  "markName": "C2_opciones",
+  "timeSeconds": 3.7403
+ },
+ {
+  "markName": "C2_participa",
+  "timeSeconds": 9.0732
+ },
+ {
+  "markName": "C2_presupuesto",
+  "timeSeconds": 15.7797
+ },
+ {
+  "markName": "C2_saldo",
+  "timeSeconds": 18.249
+ },
+ {
+  "markName": "C2_propuesta",
+  "timeSeconds": 22.3317
+ },
+ {
+  "markName": "C2_codigo",
+  "timeSeconds": 27.285
+ }
+]

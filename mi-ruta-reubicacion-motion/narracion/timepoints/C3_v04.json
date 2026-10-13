@@ -1,0 +1,38 @@
+[
+ {
+  "markName": "C3_entidades",
+  "timeSeconds": 0.551
+ },
+ {
+  "markName": "C3_mesa",
+  "timeSeconds": 5.2641
+ },
+ {
+  "markName": "C3_privado",
+  "timeSeconds": 11.0964
+ },
+ {
+  "markName": "C3_incidencia",
+  "timeSeconds": 14.8427
+ },
+ {
+  "markName": "C3_noviable",
+  "timeSeconds": 18.9575
+ },
+ {
+  "markName": "C3_hoja",
+  "timeSeconds": 21.8508
+ },
+ {
+  "markName": "C3_desacuerdo",
+  "timeSeconds": 24.6662
+ },
+ {
+  "markName": "C3_entregada",
+  "timeSeconds": 28.1951
+ },
+ {
+  "markName": "C3_sello",
+  "timeSeconds": 32.3995
+ }
+]

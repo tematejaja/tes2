@@ -1,0 +1,34 @@
+[
+ {
+  "markName": "E2_como",
+  "timeSeconds": 0.0
+ },
+ {
+  "markName": "E2_gestora",
+  "timeSeconds": 2.9166
+ },
+ {
+  "markName": "E2_ficha",
+  "timeSeconds": 7.238
+ },
+ {
+  "markName": "E2_historia",
+  "timeSeconds": 11.9359
+ },
+ {
+  "markName": "E2_compromisos",
+  "timeSeconds": 14.078
+ },
+ {
+  "markName": "E2_ruta",
+  "timeSeconds": 18.8976
+ },
+ {
+  "markName": "E2_resil",
+  "timeSeconds": 21.0113
+ },
+ {
+  "markName": "E2_mesas",
+  "timeSeconds": 28.2954
+ }
+]

@@ -17,5 +17,11 @@ ffmpeg -framerate 24 -i frames/f_%05d.jpg -i mezcla.wav -t 196.599 -af "loudnorm
 - Muestras sueltas para revisar: `python3 render_frames.py --muestras 22 46 70` (segundos) → `muestras/`.
 - Créditos y textos de pantalla: `scenes3.js` (función `sceneCR` para los créditos; el nombre real del equipo
   sustituye a "Equipo del proyecto · DGIP 2026").
-- Si cambia la voz o un texto: regenerar los audios (`../narracion/sintetizar.py`), luego `build_timeline.py`
-  y volver a renderizar.
+- Si cambia la voz o un texto: regenerar los audios y luego `build_timeline.py` y volver a renderizar.
+  Voz actual (v04, HeyGen · Camila Vega; clave en `HEYGEN_API_KEY`, nunca en el repositorio):
+  ```bash
+  cd ../narracion && python3 guion_v4.py                                   # ssml/*_v04.ssml (texto entre marcas) y GUION_v4.md
+  GUION_VERSION=v04 HEYGEN_SPEED=1.05 python3 heygen/sintetizar_heygen.py  # crudo: heygen/crudo/*_v04.wav + marcas por palabra
+  GUION_VERSION=v04 TEMPO=1.025 CAP=0.38 python3 heygen/ajustar_pausas.py  # silencios ≤ 0,38 s + tempo leve → wav/ y timepoints/
+  ```
+  El bloque E9 se sintetizó a velocidad 1,0, en una pasada previa con el mismo texto.

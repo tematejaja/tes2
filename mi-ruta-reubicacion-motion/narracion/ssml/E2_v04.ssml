@@ -1,0 +1,10 @@
+<speak>
+  <mark name="E2_como"/>¿Cómo funciona? Con tres piezas. <break time="150ms"/>
+  <mark name="E2_gestora"/>Primero, una gestora social con nombre propio, y otra de respaldo. <break time="200ms"/>
+  <mark name="E2_ficha"/>Segundo, una ficha de caracterización familiar que pasa de un equipo a otro,
+  <mark name="E2_historia"/>para que la familia no repita su historia. <break time="200ms"/>
+  <mark name="E2_compromisos"/>Y tercero, compromisos con responsable, fecha y prueba de cumplimiento. <break time="350ms"/>
+  <mark name="E2_ruta"/>Todo esto avanza en seis etapas. <break time="150ms"/>
+  <mark name="E2_resil"/>Y en todas hay dos apoyos: la resiliencia, para que la familia pueda enfrentar el cambio, incluida su resiliencia financiera;
+  <mark name="E2_mesas"/>y las mesas de trabajo, técnicas y comunitarias, que acompañan todo el proceso.
+</speak>

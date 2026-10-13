@@ -1,0 +1,26 @@
+[
+ {
+  "markName": "C6_revisa",
+  "timeSeconds": 0.5648
+ },
+ {
+  "markName": "C6_pendiente",
+  "timeSeconds": 5.7857
+ },
+ {
+  "markName": "C6_resultado",
+  "timeSeconds": 11.0276
+ },
+ {
+  "markName": "C6_llaves",
+  "timeSeconds": 15.0081
+ },
+ {
+  "markName": "C6_retorno",
+  "timeSeconds": 18.4214
+ },
+ {
+  "markName": "C6_medicion",
+  "timeSeconds": 26.1081
+ }
+]

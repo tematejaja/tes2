@@ -994,3 +994,31 @@ Archivo: `render/mi_ruta_reubicacion_v1.mp4` (1920×1080, 24 fps, H.264 + AAC). 
 ## Anexo H · Versión final del video (v5)
 
 `render/mi_ruta_reubicacion_v5_final.mp4`: 4:30,8. Guion v3 más claro y humano (`narracion/GUION_v3.md`), con términos precisos ("ficha de caracterización familiar", "preparación entregada", "receptor de continuidad"…), gancho y cierre en torno a "todo lo demás" de la familia. El estado "validado con la comunidad y las entidades" reemplaza a "por validar" por decisión del equipo. Tres vueltas de auditoría independiente documentadas en `AUDITORIA_VIDEO.md`. Los límites de §2.2 se mantienen: no se garantiza vivienda, la meta es de acompañamiento y no de traslados, el caso familiar se trata en privado, preparación entregada no es mudanza y la alerta se cierra con atención efectiva.
+
+## Anexo I · Versión v6: voz HeyGen y comentarios del equipo
+
+`render/mi_ruta_reubicacion_v6.mp4`, de 4:59 (tope acordado: 5:00). Guion v4 (`narracion/GUION_v4.md`).
+
+**Voz.** Camila Vega de HeyGen (`voice_id 6ce26db0cb6f4e7881b85452619f7f19`), elegida por el equipo, reemplaza a Google Neural2.
+- **Síntesis:** `narracion/heygen/sintetizar_heygen.py` sintetiza cada bloque completo a velocidad 1,05 (E9 a 1,0), para conservar la prosodia.
+- **Marcas:** como HeyGen no admite marcas SSML, se obtienen alineando los tiempos por palabra con el texto de cada segmento (alineación del 100 % en los diez bloques).
+- **Ajuste de duración:** `narracion/heygen/ajustar_pausas.py` acorta los silencios internos a un máximo de 0,38 s (las pausas dramáticas del gancho y del cierre se mantienen) y aplica un tempo global de ×1,025 con rubberband, que no altera el tono. Ese ajuste reasigna las marcas y los tiempos por palabra.
+
+**Matriz de trazabilidad de los comentarios:**
+
+| # | Comentario | Cambio en narración | Cambio en pantalla |
+| --- | --- | --- | --- |
+| 1 | La ruta nace también porque no existe una descripción pública, paso a paso, del proceso | E1_guia: "Además, hoy no existe una descripción pública, paso a paso, de cómo es una reubicación." E1_titulo: "…una ruta clara," | Nuevo tramo: "Descripción pública del proceso" con pasos vacíos y "?", más el rótulo "Hoy no existe de forma pública". En el título, el rótulo "Una ruta clara, paso a paso". |
+| 2 | Resiliencia financiera, con un ejemplo de la familia (capacitación antes del reasentamiento y primera cuenta bancaria) | E2_resil: "…incluida su resiliencia financiera". C4_finanzas: "Por ejemplo, para fortalecer su resiliencia financiera, la mamá recibe formación y abre su primera cuenta bancaria." | E2: se resalta "Economía y medios de vida" con el rótulo "Incluye la resiliencia financiera". C4: tarjeta "Resiliencia financiera del hogar" con "Formación financiera · capacitación previa al reasentamiento ✓", "Primera cuenta bancaria ✓" y la mamá rotulada como "cabeza de hogar". |
+| 3 | El retorno al lugar de origen como gran reto, y la medición de impacto y valor con un socio académico | C6_retorno: "Los actores del proceso nos advirtieron de un gran reto…". C6_medicion: "…medir el impacto y el valor del reasentamiento, algo que hoy no se hace, y sumar a un socio académico para lograrlo." | C6: escena de retorno (nueva vivienda → lugar de origen en zona de riesgo) con el rótulo de la alerta de la etapa 5 por intención de regresar (alerta del documento, §12). Tablero "Seguimiento en el tiempo" con "Impacto en las familias", "Valor del proceso", "Hoy no se mide de forma sistemática" y "Con un socio académico", presentado como aliado que la propuesta busca sumar, no como uno ya confirmado. |
+| 4 | Las mesas técnicas como proceso continuo junto a los seis pasos | E2_mesas: "…las mesas de trabajo, técnicas y comunitarias, que acompañan todo el proceso." | El minimapa de las seis etapas suma un carril continuo, "Mesas de trabajo", que se ilumina cuando la narración habla de una mesa (C1 mesa comunitaria, C2 participación, C3 mesa técnica). En E2, el carril recorre las seis etapas con el rótulo "En todo el proceso". |
+| 5 | No quedaba clara la participación en la oferta de vivienda | C1_mesa: "…los vecinos también proponen qué vivienda necesitan." C2_participa: "Y aquí la comunidad participa en la oferta de vivienda: lo que propuso en la mesa comunitaria se evalúa con la entidad competente." | C1: "Mesa comunitaria · propuestas de vivienda", con el globo "Viviendas con espacio para trabajar". C2: Mesa comunitaria → "Viviendas con espacio para trabajar" y "Autoconstrucción" → "Se evalúan con la entidad competente". |
+| 6 | El ejemplo de propuesta ("seguir vendiendo almuerzos") era una decisión individual que no requería a la entidad | C2_propuesta: "La mamá propone una vivienda con espacio para su cocina, para seguir trabajando desde casa, y la gestora se encarga de que la entidad le responda." | P-01 pasa a ser "Vivienda con espacio para su cocina · para seguir trabajando desde casa", con "Responde: entidad de vivienda". En C3 se acepta con ajustes. La prioridad en la ficha pasa a ser "Seguir trabajando desde casa". |
+| 7 | Meta más viable: 200 hogares | E9_piloto: "…acompañar durante doce meses a doscientos hogares de Bella Flor" | "Meta: acompañar 200 hogares durante 12 meses", con 200 puntos (20 × 10). |
+
+**Además:**
+- Los créditos dicen "Narración: voz sintética de HeyGen".
+- El sello "Preparación entregada" tiene su propia marca (C3_sello).
+- Los fundidos de E0 se calculan a partir de las marcas.
+
+**Límite operativo.** Los créditos de API de HeyGen se agotaron al terminar la síntesis. Cualquier cambio de texto futuro requiere recargar créditos; los ajustes de ritmo, en cambio, pueden hacerse sin costo con `ajustar_pausas.py`.

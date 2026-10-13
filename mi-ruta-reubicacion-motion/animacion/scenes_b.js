@@ -11,12 +11,12 @@ function sceneC1(t) {
   const gx = lerp(1500, 930, eo(prog(t, M.C1_escucha - .2, M.C1_escucha + 1.4)));
   b += person(gx, 830, 1.0, { ...P.gestora, flip: true, arm2: 40 }) + G(t, M.C1_escucha + 1.0, tag(830, 590, 'Gestora social', { size: 22, center: true, w: 200 }), {});
   b += G(t, M.C1_escucha + 1.6, bubble(440, 300, 400, 84, 'Conservar a mis clientes', { tx: 610, size: 26 }), {});
-  b += G(t, M.C1_escucha + 3.2, bubble(60, 430, 600, 84, 'Seguir vendiendo cerca del nuevo hogar', { tx: 580, size: 26 }), {});
+  b += G(t, M.C1_escucha + 3.2, bubble(60, 430, 600, 84, 'Poder seguir trabajando desde casa', { tx: 580, size: 26 }), {});
   const ix = 1240, iy = 150;
   let ins = rect(ix, iy + 40, 620, 330, { r: 18, fill: C.ivory, stroke: C.ink, sw: 3 }) + `<ellipse cx="${ix + 310}" cy="${iy + 250}" rx="250" ry="38" fill="#8a6a4a" stroke="${C.ink}" stroke-width="3"/>`;
   [['#B5483B', C.skin2], ['#6A5A8C', C.skin3], ['#2F6DB5', C.skin1], ['#2E9E6A', C.skin2], ['#D07A2D', C.skin3]].forEach((c, i) => { ins += miniPerson(ix + 90 + i * 110, iy + 250, c[0], c[1], i === 2); });
-  ins += tag(ix + 20, iy - 16, 'Mesa comunitaria', { size: 26, fill: C.teal });
-  ins += G(t, M.C1_mesa + .9, bubble(ix + 250, iy + 70, 220, 56, 'Propongo…', { tx: ix + 330, size: 24 }), {});
+  ins += tag(ix + 20, iy - 16, 'Mesa comunitaria · propuestas de vivienda', { size: 26, fill: C.teal });
+  ins += G(t, M.C1_mesa + 2.6, bubble(ix + 60, iy + 56, 500, 54, 'Viviendas con espacio para trabajar', { tx: ix + 330, size: 24 }), {});
   b += G(t, M.C1_mesa - .1, ins, { dx: 60, dy: 0 });
   g += win(t, M.C1_escucha, M.C1_ficha, b);
   // C · ficha de caracterización
@@ -49,8 +49,13 @@ function sceneC2(t) {
   a += G(t, M.C2_plan, text(960, 205, 'Plan de reubicación: las opciones reales', { size: 44, weight: 800, anchor: 'middle' }), {});
   a += G(t, M.C2_opciones + .2, `${rect(330, 260, 600, 440, { r: 22, fill: C.ivory, stroke: C.ink, sw: 4 })}${text(630, 320, 'Opción disponible', { size: 40, weight: 800, anchor: 'middle' })}` +
     [['moneda', 'Costo'], ['trabajo', 'Cercanía al trabajo'], ['puerta', 'Cercanía al colegio'], ['manos', 'Red de cuidado']].map((o, i) => `${rect(360 + (i % 2) * 280, 360 + Math.floor(i / 2) * 150, 260, 130, { r: 14, fill: '#fff', stroke: C.slate, sw: 2 })}${icon(o[0], 490 + (i % 2) * 280, 405 + Math.floor(i / 2) * 150, 50, C.roofb)}${text(490 + (i % 2) * 280, 465 + Math.floor(i / 2) * 150, o[1], { size: 23, weight: 700, anchor: 'middle' })}`).join(''), { dy: 30 });
-  a += G(t, M.C2_opciones + 2.2, `${rect(1000, 260, 560, 150, { r: 18, fill: '#EDEAE2', stroke: C.noned, sw: 3, dash: '10 8' })}${text(1280, 320, 'Propuesta de la familia', { size: 32, weight: 800, fill: C.noned, anchor: 'middle' })}${text(1280, 365, 'en evaluación', { size: 28, weight: 600, fill: C.noned, anchor: 'middle' })}`, { dy: 24 });
-  a += G(t, M.C2_opciones + 3.4, `${rect(1000, 450, 560, 200, { r: 18, fill: '#EDEAE2', stroke: C.noned, sw: 3, dash: '10 8' })}${text(1280, 505, 'Autoconstrucción', { size: 32, weight: 800, fill: C.noned, anchor: 'middle' })}${text(1280, 550, 'propuesta comunitaria', { size: 26, weight: 600, fill: C.noned, anchor: 'middle' })}${text(1280, 592, 'requiere evaluación', { size: 26, weight: 600, fill: C.noned, anchor: 'middle' })}`, { dy: 24 });
+  // la comunidad participa en la oferta de vivienda: sus propuestas se evalúan con la entidad competente
+  const pt = M.C2_participa;
+  a += G(t, pt + .1, tag(1000, 250, 'La comunidad participa en la oferta de vivienda', { size: 26, fill: C.teal }), { dy: 10 });
+  a += G(t, pt + 1.2, `${circ(1070, 440, 46, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('mesa', 1070, 440, 56, C.ink)}${text(1070, 520, 'Mesa', { size: 22, weight: 800, anchor: 'middle' })}${text(1070, 548, 'comunitaria', { size: 22, weight: 800, anchor: 'middle' })}`, { dy: 10 });
+  a += G(t, pt + 2.8, `${arrow(1124, 440, 1172, 400, {})}${rect(1180, 330, 520, 100, { r: 16, fill: '#fff', stroke: C.ink, sw: 3 })}${text(1440, 372, 'Viviendas con espacio para trabajar', { size: 24, weight: 800, anchor: 'middle' })}${text(1440, 406, 'propuesta de la comunidad', { size: 21, weight: 600, fill: C.noned, anchor: 'middle' })}`, { dy: 10 });
+  a += G(t, pt + 3.4, `${arrow(1124, 452, 1172, 490, {})}${rect(1180, 450, 520, 100, { r: 16, fill: '#fff', stroke: C.ink, sw: 3 })}${text(1440, 492, 'Autoconstrucción', { size: 24, weight: 800, anchor: 'middle' })}${text(1440, 526, 'propuesta de la comunidad', { size: 21, weight: 600, fill: C.noned, anchor: 'middle' })}`, { dy: 10 });
+  a += G(t, pt + 4.6, `${arrow(1440, 556, 1440, 598, {})}${rect(1180, 604, 520, 76, { r: 16, fill: '#DDEBFA', stroke: C.roofb, sw: 3 })}${text(1440, 652, 'Se evalúan con la entidad competente', { size: 24, weight: 800, fill: C.roofb, anchor: 'middle' })}`, { dy: 10 });
   g += win(t, B.C2.start, M.C2_presupuesto, a, .01, .35);
   // plan económico de transición
   let b = roomBg(); const px = 360, py = 170, pw = 1200, ph = 600;
@@ -64,10 +69,11 @@ function sceneC2(t) {
   g += win(t, M.C2_presupuesto, M.C2_propuesta, b);
   // propuesta
   let c = roomBg() + person(260, 830, 1.0, { ...P.madre, arm2: 60 }) + person(1700, 830, 1.0, { ...P.gestora, flip: true });
-  const full = 'Seguir vendiendo almuerzos cerca del nuevo hogar'; const n = Math.floor(full.length * eo(prog(t, M.C2_propuesta + .4, M.C2_propuesta + 3.0)));
-  c += G(t, M.C2_propuesta, `${rect(470, 240, 980, 380, { r: 22, fill: C.ivory, stroke: C.ink, sw: 4 })}${text(510, 320, 'Propuesta de la familia', { size: 30, weight: 700, fill: C.noned })}${text(510, 390, full.slice(0, n), { size: 36, weight: 800 })}`, { dy: 20 });
-  c += G(t, M.C2_propuesta + 2.0, `${tag(510, 440, 'Código P-01', { size: 30, fill: C.teal })}${tag(820, 444, 'En evaluación', { size: 26, fill: '#FBE9B7', color: C.warnd })}`, { dy: 10 });
-  c += G(t, M.C2_codigo, `${line(510, 520, 1410, 520, { stroke: C.slate, sw: 2 })}${tag(510, 540, 'Gestiona la respuesta: gestora', { size: 25 })}${tag(1000, 540, 'Responde: entidad competente', { size: 25 })}`, { dy: 10 });
+  const full = 'Vivienda con espacio para su cocina'; const n = Math.floor(full.length * eo(prog(t, M.C2_propuesta + .4, M.C2_propuesta + 2.6)));
+  c += G(t, M.C2_propuesta, `${rect(470, 230, 980, 440, { r: 22, fill: C.ivory, stroke: C.ink, sw: 4 })}${text(510, 300, 'Propuesta de la familia', { size: 30, weight: 700, fill: C.noned })}${text(510, 370, full.slice(0, n), { size: 40, weight: 800 })}`, { dy: 20 });
+  c += G(t, M.C2_propuesta + 2.9, text(510, 420, 'para seguir trabajando desde casa', { size: 32, weight: 600 }), { dy: 8 });
+  c += G(t, M.C2_propuesta + 3.6, `${tag(510, 456, 'Código P-01', { size: 30, fill: C.teal })}${tag(820, 460, 'En evaluación', { size: 26, fill: '#FBE9B7', color: C.warnd })}`, { dy: 10 });
+  c += G(t, M.C2_codigo, `${line(510, 548, 1410, 548, { stroke: C.slate, sw: 2 })}${tag(510, 570, 'Gestiona la respuesta: gestora', { size: 23 })}${tag(950, 570, 'Responde: entidad de vivienda', { size: 23 })}`, { dy: 10 });
   g += win(t, M.C2_propuesta, undefined, c);
   return g;
 }
@@ -97,7 +103,7 @@ function sceneC3(t) {
   g += win(t, M.C3_privado, M.C3_incidencia, b);
   // respuesta a la propuesta y hoja de devolución
   let c = roomBg() + person(150, 830, .85, P.madre);
-  c += rect(260, 160, 720, 270, { r: 20, fill: C.ivory, stroke: C.ink, sw: 4 }) + tag(285, 182, 'P-01', { size: 32, fill: C.teal }) + text(285, 290, 'Seguir vendiendo almuerzos', { size: 32, weight: 800 }) + text(285, 332, 'cerca del nuevo hogar', { size: 32, weight: 800 });
+  c += rect(260, 160, 720, 270, { r: 20, fill: C.ivory, stroke: C.ink, sw: 4 }) + tag(285, 182, 'P-01', { size: 32, fill: C.teal }) + text(285, 290, 'Vivienda con espacio para su cocina', { size: 32, weight: 800 }) + text(285, 332, 'para seguir trabajando desde casa', { size: 28, weight: 600 });
   c += G(t, M.C3_incidencia + .3, chip(285, 356, 'Respuesta: aceptada con ajustes', { size: 26, fill: '#DDF3E6', stroke: C.okd, color: C.okd, sw: 3.5 }), { dy: 10 });
   c += G(t, M.C3_incidencia + 1.4, `${arrow(470, 432, 380, 500, {})}${arrow(770, 432, 850, 500, {})}${chip(190, 510, 'Compromiso A-01 · confirmado', { size: 24, fill: '#DDF3E6', stroke: C.okd })}${chip(700, 510, 'A-02 · solicitado', { size: 24, fill: '#EEF3FA', stroke: C.roofb })}`, { dy: 12 });
   c += G(t, M.C3_noviable, `${rect(260, 610, 360, 100, { r: 14, fill: '#FBE3E1', stroke: C.critd, sw: 3 })}${text(440, 655, 'No viable', { size: 30, weight: 800, fill: C.critd, anchor: 'middle' })}${text(440, 690, 'con su explicación', { size: 23, weight: 700, fill: C.critd, anchor: 'middle' })}${arrow(626, 660, 760, 660, {})}${chip(770, 630, 'Alternativas', { size: 26 })}`, { dy: 12 });
@@ -112,7 +118,7 @@ function sceneC3(t) {
   });
   d += G(t, M.C3_desacuerdo + 2.6, text(960, 720, 'El caso se escala, pero no se congela', { size: 32, weight: 700, anchor: 'middle' }), { out: M.C3_entregada });
   d += G(t, M.C3_entregada + .2, [['Ficha al día ✓', 520], ['Plan de reubicación ✓', 960], ['Respuestas y pendientes ✓', 1400]].map(([s, x]) => tag(x - 170, 700, s, { size: 28, fill: '#DDF3E6', stroke: C.okd, color: C.okd, center: true, w: 340 })).join(''), { dy: 10 });
-  const ts = B.C3.start + B.C3.audio - 1.7; const sa = eo(prog(t, ts, ts + .5));
+  const ts = M.C3_sello - .15; const sa = eo(prog(t, ts, ts + .5));
   if (sa > 0) d += rect(0, 0, W, H, { fill: C.navy, op: F(.55 * sa) }) + `<g opacity="${F(sa)}" transform="rotate(-4 960 470)">${rect(470, 400, 980, 140, { r: 14, fill: '#fff', stroke: C.okd, sw: 8 })}${text(960, 492, 'PREPARACIÓN ENTREGADA', { size: 64, weight: 800, fill: C.okd, anchor: 'middle', ls: 2 })}</g>`;
   g += win(t, M.C3_desacuerdo + 1.4, undefined, d);
   return g;

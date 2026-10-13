@@ -6,9 +6,9 @@ from pathlib import Path
 R = Path(__file__).resolve().parent.parent
 BLOQUES = ["E0","E1","E2","C1","C2","C3","C4","C5","C6","E9"]
 import os
-V = os.environ.get("GUION_VERSION", "v03")
-REMATE = dict(E0=0.3,E1=0.4,E2=0.4,C1=0.4,C2=0.4,C3=0.9,C4=0.9,C5=0.4,C6=0.5,E9=1.6)
-CR = 6.5
+V = os.environ.get("GUION_VERSION", "v04")
+REMATE = dict(E0=0.3,E1=0.4,E2=0.4,C1=0.4,C2=0.4,C3=0.7,C4=0.7,C5=0.4,C6=0.5,E9=1.6)
+CR = 6.0
 tl = {"fps": 24, "blocks": {}, "marks": {}, "cues": []}
 t = 0.0
 for b in BLOQUES:
@@ -35,7 +35,7 @@ for b in BLOQUES:
 tl["cr_start"] = t; tl["total"] = t + CR
 # partir cues largos en trozos <= 84 caracteres (2 líneas de 42) con tiempo proporcional
 STOP = {"se","lo","los","la","las","una","un","de","del","que","sobre","no","y","o","a","al","en","con","por","para","su","sus","el","le","cada","es","entre","sin"}
-PROT = ["durante doce meses", 'ficha de caracterización familiar', 'ficha de caracterización', 'preparación entregada', 'entidad competente', 'receptor de continuidad', 'doce meses', 'trescientos cincuenta hogares', 'una casa nueva', 'nuestra historia', 'Mi Ruta de Reubicación', 'mesa comunitaria', 'mesa técnica', 'plan económico de transición', 'hoja de devolución', 'canal de emergencia', 'atención pendiente', 'Bella Flor', 'Ciudad Bolívar', 'la mamá', 'gestora social', 'nuevo hogar', 'nueva vivienda']
+PROT = ["durante doce meses", 'doscientos hogares', 'resiliencia financiera', 'primera cuenta bancaria', 'socio académico', 'oferta de vivienda', 'formación financiera', 'gastos esenciales', 'ingresos netos', 'nuevo hogar', 'lugar de riesgo', 'mesas de trabajo', 'descripción pública', 'paso a paso', 'cabeza de hogar', 'ficha de caracterización familiar', 'ficha de caracterización', 'preparación entregada', 'entidad competente', 'receptor de continuidad', 'doce meses', 'trescientos cincuenta hogares', 'una casa nueva', 'nuestra historia', 'Mi Ruta de Reubicación', 'mesa comunitaria', 'mesa técnica', 'plan económico de transición', 'hoja de devolución', 'canal de emergencia', 'atención pendiente', 'Bella Flor', 'Ciudad Bolívar', 'la mamá', 'gestora social', 'nuevo hogar', 'nueva vivienda']
 def dentro(ws, k):
     """True si cortar antes de ws[k] parte un término protegido."""
     low = " ".join(ws).lower(); pos = len(" ".join(ws[:k]))

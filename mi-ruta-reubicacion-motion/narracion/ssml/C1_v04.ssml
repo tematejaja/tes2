@@ -1,0 +1,12 @@
+<speak>
+  <break time="300ms"/>
+  <mark name="C1_familia"/>Sigamos a una familia ficticia. La mamá es cabeza de hogar: prepara almuerzos y los vende en el barrio;
+  <mark name="C1_vecina"/>mientras trabaja, una vecina le cuida a los niños. <break time="300ms"/>
+  <mark name="C1_escucha"/>En la primera etapa, diagnóstico y caracterización, la gestora escucha a la familia: qué quiere conservar y qué propone. <break time="150ms"/>
+  <mark name="C1_mesa"/>En la mesa comunitaria, los vecinos también proponen qué vivienda necesitan. <break time="200ms"/>
+  <mark name="C1_ficha"/>Con eso, la gestora llena la ficha de caracterización familiar,
+  <mark name="C1_dimensiones"/>en cinco dimensiones: vivienda, economía, redes de cuidado, servicios y participación. <break time="150ms"/>
+  <mark name="C1_corrige"/>La familia la revisa y la corrige. <break time="150ms"/>
+  <mark name="C1_nogarantiza"/>Desde el primer día sabe que participar no le garantiza vivienda, ni la obliga a aceptar una alternativa. <break time="300ms"/>
+  <mark name="C1_urgencia"/>Y si hay un riesgo inmediato para la vida, se activa el canal de emergencia, sin esperar.
+</speak>
