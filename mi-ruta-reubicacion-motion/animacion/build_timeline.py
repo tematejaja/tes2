@@ -7,8 +7,8 @@ R = Path(__file__).resolve().parent.parent
 BLOQUES = ["E0","E1","E2","C1","C2","C3","C4","C5","C6","E9"]
 import os
 V = os.environ.get("GUION_VERSION", "v04")
-REMATE = dict(E0=0.3,E1=0.4,E2=0.4,C1=0.4,C2=0.4,C3=0.7,C4=0.7,C5=0.4,C6=0.5,E9=1.6)
-CR = 6.0
+REMATE = dict(E0=0.3,E1=0.4,E2=0.4,C1=0.4,C2=0.4,C3=0.7,C4=1.4,C5=0.4,C6=0.5,E9=2.0)
+CR = 5.6
 tl = {"fps": 24, "blocks": {}, "marks": {}, "cues": []}
 t = 0.0
 for b in BLOQUES:
@@ -34,8 +34,8 @@ for b in BLOQUES:
     t += dur + REMATE[b]
 tl["cr_start"] = t; tl["total"] = t + CR
 # partir cues largos en trozos <= 84 caracteres (2 líneas de 42) con tiempo proporcional
-STOP = {"se","lo","los","la","las","una","un","de","del","que","sobre","no","y","o","a","al","en","con","por","para","su","sus","el","le","cada","es","entre","sin"}
-PROT = ["durante doce meses", 'doscientos hogares', 'resiliencia financiera', 'primera cuenta bancaria', 'socio académico', 'oferta de vivienda', 'formación financiera', 'gastos esenciales', 'ingresos netos', 'nuevo hogar', 'lugar de riesgo', 'mesas de trabajo', 'descripción pública', 'paso a paso', 'cabeza de hogar', 'ficha de caracterización familiar', 'ficha de caracterización', 'preparación entregada', 'entidad competente', 'receptor de continuidad', 'doce meses', 'trescientos cincuenta hogares', 'una casa nueva', 'nuestra historia', 'Mi Ruta de Reubicación', 'mesa comunitaria', 'mesa técnica', 'plan económico de transición', 'hoja de devolución', 'canal de emergencia', 'atención pendiente', 'Bella Flor', 'Ciudad Bolívar', 'la mamá', 'gestora social', 'nuevo hogar', 'nueva vivienda']
+STOP = {"nos","me","te","les","se","lo","los","la","las","una","un","de","del","que","sobre","no","y","o","a","al","en","con","por","para","su","sus","el","le","cada","es","entre","sin"}
+PROT = ["durante doce meses", "técnicas y comunitarias", 'doscientos hogares', 'resiliencia financiera', 'primera cuenta bancaria', 'socio académico', 'oferta de vivienda', 'formación financiera', 'gastos esenciales', 'ingresos netos', 'nuevo hogar', 'lugar de riesgo', 'mesas de trabajo', 'descripción pública', 'paso a paso', 'cabeza de hogar', 'ficha de caracterización familiar', 'ficha de caracterización', 'preparación entregada', 'entidad competente', 'receptor de continuidad', 'doce meses', 'trescientos cincuenta hogares', 'una casa nueva', 'nuestra historia', 'Mi Ruta de Reubicación', 'mesa comunitaria', 'mesa técnica', 'plan económico de transición', 'hoja de devolución', 'canal de emergencia', 'atención pendiente', 'Bella Flor', 'Ciudad Bolívar', 'la mamá', 'gestora social', 'nuevo hogar', 'nueva vivienda']
 def dentro(ws, k):
     """True si cortar antes de ws[k] parte un término protegido."""
     low = " ".join(ws).lower(); pos = len(" ".join(ws[:k]))
@@ -49,7 +49,7 @@ def partir(txt, maxc):
     for k in range(1, len(ws)):
         a = " ".join(ws[:k]); b = " ".join(ws[k:])
         if max(len(a), len(b)) > maxc * 1.25: continue
-        pen = abs(len(a) - len(b)) + (60 if ws[k-1].lower().strip(",;:") in STOP else 0) - (25 if ws[k-1][-1] in ",;:" else 0) + (200 if dentro(ws, k) else 0) + (40 if ws[k].lower() in ("que", "de") else 0)
+        pen = abs(len(a) - len(b)) + (50 if min(len(a), len(b)) < 16 else 0) + (60 if ws[k-1].lower().strip(",;:") in STOP else 0) - (25 if ws[k-1][-1] in ",;:" else 0) + (200 if dentro(ws, k) else 0) + (40 if ws[k].lower() in ("que", "de") else 0)
         if best is None or pen < best[0]: best = (pen, a, b)
     return [best[1], best[2]] if best else [txt]
 def trocear(txt, maxc=84):

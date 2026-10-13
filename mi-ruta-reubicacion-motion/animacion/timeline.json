@@ -40,26 +40,26 @@
   "C4": {
    "start": 187.53575,
    "audio": 26.054666666666666,
-   "end": 214.29041666666666,
-   "tail": 0.7
+   "end": 214.99041666666668,
+   "tail": 1.4
   },
   "C5": {
-   "start": 214.29041666666666,
+   "start": 214.99041666666668,
    "audio": 16.692416666666666,
-   "end": 231.38283333333334,
+   "end": 232.08283333333335,
    "tail": 0.4
   },
   "C6": {
-   "start": 231.38283333333334,
+   "start": 232.08283333333333,
    "audio": 33.05825,
-   "end": 264.9410833333333,
+   "end": 265.6410833333333,
    "tail": 0.5
   },
   "E9": {
-   "start": 264.9410833333333,
+   "start": 265.6410833333333,
    "audio": 26.426833333333335,
-   "end": 292.96791666666667,
-   "tail": 1.6
+   "end": 294.06791666666663,
+   "tail": 2.0
   }
  },
  "marks": {
@@ -115,21 +115,21 @@
   "C4_condiciones": 202.96845000000002,
   "C4_entrega": 207.11995000000002,
   "C4_confirma": 211.75825,
-  "C5_traslado": 214.84141666666665,
-  "C5_alerta": 218.91621666666666,
-  "C5_tarjeta": 222.80191666666667,
-  "C5_nocierra": 224.72941666666665,
-  "C5_cierre": 227.96011666666666,
-  "C6_revisa": 231.93383333333333,
-  "C6_pendiente": 236.92013333333333,
-  "C6_resultado": 241.95613333333333,
-  "C6_llaves": 245.69503333333333,
-  "C6_retorno": 248.93403333333333,
-  "C6_medicion": 256.16333333333336,
-  "E9_piloto": 265.6034833333333,
-  "E9_notraslados": 270.86788333333334,
-  "E9_frase": 274.02008333333333,
-  "E9_final": 280.9469833333333
+  "C5_traslado": 215.54141666666666,
+  "C5_alerta": 219.61621666666667,
+  "C5_tarjeta": 223.5019166666667,
+  "C5_nocierra": 225.42941666666667,
+  "C5_cierre": 228.66011666666668,
+  "C6_revisa": 232.6338333333333,
+  "C6_pendiente": 237.6201333333333,
+  "C6_resultado": 242.65613333333332,
+  "C6_llaves": 246.39503333333332,
+  "C6_retorno": 249.63403333333332,
+  "C6_medicion": 256.86333333333334,
+  "E9_piloto": 266.3034833333333,
+  "E9_notraslados": 271.5678833333333,
+  "E9_frase": 274.7200833333333,
+  "E9_final": 281.6469833333333
  },
  "cues": [
   {
@@ -463,121 +463,121 @@
    "text": "que confirma haberla recibido."
   },
   {
-   "s": 214.841,
-   "e": 218.866,
+   "s": 215.541,
+   "e": 219.566,
    "text": "Ya en la nueva vivienda llega la quinta etapa: el acompañamiento."
   },
   {
-   "s": 218.916,
-   "e": 222.752,
+   "s": 219.616,
+   "e": 223.452,
    "text": "Si meses después los ingresos de la mamá bajan mucho, se activa una alerta,"
   },
   {
-   "s": 222.802,
-   "e": 224.679,
+   "s": 223.502,
+   "e": 225.379,
    "text": "con responsable, acción y fecha."
   },
   {
-   "s": 224.729,
-   "e": 227.91,
+   "s": 225.429,
+   "e": 228.61,
    "text": "La alerta no se cierra con un oficio o una remisión,"
   },
   {
-   "s": 227.96,
-   "e": 230.933,
+   "s": 228.66,
+   "e": 231.633,
    "text": "sino cuando la ayuda llega y la familia lo confirma."
   },
   {
-   "s": 231.934,
-   "e": 236.87,
+   "s": 232.634,
+   "e": 237.57,
    "text": "En la sexta etapa, cierre y seguimiento, se revisa con la familia qué se cumplió."
   },
   {
-   "s": 236.92,
-   "e": 239.938,
+   "s": 237.62,
+   "e": 240.638,
    "text": "Lo pendiente, como el futuro del predio donde vivían,"
   },
   {
-   "s": 239.988,
-   "e": 241.906,
+   "s": 240.688,
+   "e": 242.606,
    "text": "pasa a un receptor de continuidad."
   },
   {
-   "s": 241.956,
-   "e": 245.645,
+   "s": 242.656,
+   "e": 246.345,
    "text": "El caso cierra con atención pendiente, pero con alguien que sigue."
   },
   {
-   "s": 245.695,
-   "e": 248.884,
+   "s": 246.395,
+   "e": 249.584,
    "text": "Porque entregar las llaves no significa que todo esté resuelto."
   },
   {
-   "s": 248.934,
-   "e": 251.839,
+   "s": 249.634,
+   "e": 252.539,
    "text": "Los actores del proceso nos advirtieron de un gran reto:"
   },
   {
-   "s": 251.889,
-   "e": 256.113,
+   "s": 252.589,
+   "e": 256.813,
    "text": "familias que no logran instalarse en su nuevo hogar y vuelven al lugar de riesgo."
   },
   {
-   "s": 256.163,
-   "e": 260.663,
+   "s": 256.863,
+   "e": 261.363,
    "text": "Por eso, la propuesta también busca medir el impacto y el valor del reasentamiento,"
   },
   {
-   "s": 260.713,
-   "e": 264.391,
+   "s": 261.413,
+   "e": 265.091,
    "text": "algo que hoy no se hace, y sumar a un socio académico para lograrlo."
   },
   {
-   "s": 265.603,
-   "e": 267.794,
+   "s": 266.303,
+   "e": 268.494,
    "text": "Mi Ruta de Reubicación propone acompañar"
   },
   {
-   "s": 267.844,
-   "e": 270.818,
+   "s": 268.544,
+   "e": 271.518,
    "text": "durante doce meses a doscientos hogares de Bella Flor:"
   },
   {
-   "s": 270.868,
-   "e": 273.97,
+   "s": 271.568,
+   "e": 274.67,
    "text": "una meta de acompañamiento, no de traslados."
   },
   {
-   "s": 274.02,
-   "e": 277.582,
+   "s": 274.72,
+   "e": 278.282,
    "text": "Lo que una familia necesita antes de trasladarse se convierte"
   },
   {
-   "s": 277.632,
-   "e": 280.897,
+   "s": 278.332,
+   "e": 281.597,
    "text": "en compromisos que alguien acompaña y comprueba después."
   },
   {
-   "s": 280.947,
-   "e": 284.215,
+   "s": 281.647,
+   "e": 284.915,
    "text": "Para que la mamá de nuestra historia no tenga que escoger"
   },
   {
-   "s": 284.265,
-   "e": 286.369,
+   "s": 284.965,
+   "e": 287.069,
    "text": "entre una casa nueva y todo lo demás;"
   },
   {
-   "s": 286.419,
-   "e": 290.154,
+   "s": 287.119,
+   "e": 290.854,
    "text": "para que reubicarse no sea empezar de cero, sino seguir adelante,"
   },
   {
-   "s": 290.204,
-   "e": 291.318,
+   "s": 290.904,
+   "e": 292.018,
    "text": "con alguien al lado."
   }
  ],
- "cr_start": 292.96791666666667,
- "total": 298.96791666666667
+ "cr_start": 294.06791666666663,
+ "total": 299.66791666666666
 }

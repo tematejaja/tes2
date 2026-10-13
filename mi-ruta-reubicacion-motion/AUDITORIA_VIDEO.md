@@ -63,3 +63,34 @@ También se aplicaron dos pulidos: las seis condiciones verificadas más tiempo 
 - Sustituir el lema en pantalla del cierre. Se conservó "Más que un traslado, un nuevo comienzo", que es la idea central del documento.
 - Ajustar el brazo de la figura de la mesa técnica.
 - Tres cortes de línea de subtítulo discutibles.
+
+---
+
+# Versión v6: voz HeyGen y comentarios del equipo
+
+## Vuelta 1, sobre el video v6 (veredicto: listo con ajustes)
+
+Auditoría independiente sobre `render/mi_ruta_reubicacion_v6.mp4`.
+- **Método:** 299 fotogramas a 1 fps; luminancia de los 7.175 fotogramas; EBU R128 y `silencedetect`; tiempos por palabra frente a lo que aparece en pantalla; cortes de subtítulos recalculados con el código real.
+- **Comentarios del equipo:** 6 de 7 cumplían; el 5 (participación en la oferta de vivienda) era parcial.
+- **Restricciones:** ningún "350" residual, duración de 4:58,97 y audio en −14,0 LUFS / −1,5 dBTP.
+
+| # | Severidad | Hallazgo | Corrección aplicada en v6_final |
+| --- | --- | --- | --- |
+| 1 | ALTA | Destello de un fotograma al iniciar C1, C2, C4 y C5: la capa de la tarjeta de capítulo entraba desde 0. | La capa oscura empieza opaca. Fundido a azul al final de E0, E2 y C1–C5, y entrada desde azul en las seis etapas. |
+| 2 | MEDIA | Cortes de escena clara a azul (E0→E1 y "Tres piezas"→ruta). | Fundido a azul al final de E0. El fondo beige de E2 se mantiene hasta que la ruta termina de entrar. |
+| 3 | MEDIA | Interfaz del navegador visible en Street View (barra, minimapa con "Expand", controles, pie) y difuminado de bordes duros. | Zoom ×1,35 durante Street View, que deja fuera de cuadro toda la interfaz. El rótulo propio tapa la tarjeta de dirección e incluye "© Google". Difuminado con máscara radial suave y fundido de 0,3 s desde el satélite. |
+| 4 | MEDIA | La familia que "vuelve al riesgo" era la protagonista, y el cierre ocurría sobre el barrio de origen. | En el retorno aparece una familia genérica. En el cierre, la familia camina hacia el edificio "Nueva vivienda". |
+| 5 | MEDIA | Las propuestas colectivas de vivienda no volvían a aparecer (comentario 5 parcial). | La mesa técnica pasa a "asuntos colectivos: vivienda, transporte y cuidado", con "Viviendas con espacio para trabajar" (condicionada) y "Autoconstrucción · requiere estudios" (solicitada). Lo mismo en el tablero "Lo demás sigue avanzando". |
+| 6 | MEDIA | Elementos que aparecían de 3 a 5,5 s antes de nombrarse. | Resincronizados con los tiempos reales por palabra: tarjeta y gestora de respaldo (E2), globos de la mamá, "No garantiza" / "No obliga" (C1), compromiso, predio y receptor (C6). |
+| 7 | BAJA | Cortes de línea de subtítulos ("nos / advirtieron", "técnicas / y comunitarias"). | "nos", "me", "te" y "les" pasan a palabras átonas; "técnicas y comunitarias" queda protegido; se penalizan las líneas de menos de 16 caracteres (en la pantalla y en SRT/VTT). |
+| 9 | BAJA | Coherencia del caso. | "Parte no viable". A-02 pasa a "Entidad de desarrollo económico" (§4 del documento). "Cada opción se compara por" en lugar de "Opción disponible". |
+| 10 | BAJA | El lema entraba sobre "no sea empezar de cero". | Entra con "con alguien al lado". La cola de E9 sube a 2,0 s. |
+| 11 | BAJA | Tiempos de lectura cortos. | "Recibido ✓" dura unos 1,7 s. Tarjetas de capítulo de 2,0 s. Créditos legibles unos 3,6 s. Cola de C4 de 1,4 s para "Traslado efectivo". |
+| 12 | BAJA | Términos. | "Ficha de caracterización familiar" en E1 y en C1 (urgencia). "Capacitación antes de mudarse". La mentora se explica: "Gestora como mentora: orienta y devuelve los acuerdos". |
+| 13 | BAJA | Medición: un antes y un después podía leerse como prueba causal. | Se muestran solo momentos de medición, sin curvas, con la nota "Con método: un antes y un después no basta para probar causas". |
+| 14 | BAJA | La tarjeta de etapa 1 caía sobre la presentación de la familia. | La tarjeta de C1 llega con "En la primera etapa…". |
+| 15 | BAJA | Minimapa poco legible a 720p. | Textos de 21 y 23 px. |
+| 8, 16 | BAJA | Escala "200 m" bajo el subtítulo, y ritmo denso. | Sin cambios: la escala es parte del video fuente y no hay margen de duración, porque el tope es de 5:00. |
+
+Duración resultante: 4:59,7.

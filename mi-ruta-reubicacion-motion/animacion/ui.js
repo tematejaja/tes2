@@ -87,7 +87,7 @@ const ETAPAS = ['Diagnóstico y caracterización', 'Plan de reubicación', 'Arti
 // minimapa: seis etapas + carril continuo de las mesas de trabajo (técnicas y comunitarias) en todo el proceso
 const MESA_ON = () => [[M.C1_mesa, M.C1_ficha], [M.C2_participa, M.C2_presupuesto], [M.C3_entidades, M.C3_privado]];
 function minimap(cur, t = 0) {
-  let g = rect(30, 20, 750, 112, { r: 16, fill: 'rgba(19,32,43,.86)' });
+  let g = rect(30, 20, 780, 112, { r: 16, fill: 'rgba(19,32,43,.86)' });
   for (let i = 0; i < 6; i++) {
     const x = 70 + i * 90;
     if (i < 5) g += line(x + 17, 50, x + 73, 50, { stroke: i < cur ? C.teal : '#4a5b69', sw: 4 });
@@ -99,8 +99,8 @@ function minimap(cur, t = 0) {
   const hi = MESA_ON().some(([a, b]) => t >= a && t < b);
   g += line(56, 86, 534, 86, { stroke: hi ? C.teal : '#8FA3B3', sw: hi ? 5 : 4, dash: '10 7' });
   g += circ(70 + cur * 90, 86, 7, { fill: hi ? C.teal : '#cfe3ea' });
-  g += icon('mesa', 560, 84, 26, hi ? C.teal : '#cfe3ea') + text(582, 93, 'Mesas de trabajo', { size: 19, weight: 700, fill: hi ? C.teal : '#cfe3ea' });
-  g += text(60, 120, ETAPAS[cur], { size: 20, weight: 700, fill: '#fff' });
+  g += icon('mesa', 560, 84, 26, hi ? C.teal : '#cfe3ea') + text(582, 93, 'Mesas de trabajo', { size: 21, weight: 700, fill: hi ? C.teal : '#cfe3ea' });
+  g += text(60, 122, ETAPAS[cur], { size: 23, weight: 700, fill: '#fff' });
   return g;
 }
 function topLabels(t) {
@@ -109,8 +109,8 @@ function topLabels(t) {
   if (ilus) g += rect(1290, 76, 490, 44, { r: 12, fill: 'rgba(244,239,230,.94)', stroke: C.ink, sw: 2 }) + text(1535, 106, 'RECREACIÓN ILUSTRADA · FAMILIA FICTICIA', { size: 19, weight: 800, anchor: 'middle', ls: .5 });
   return g;
 }
-const STOPW = new Set(['se','lo','los','la','las','una','un','de','del','que','sobre','no','y','o','a','al','en','con','por','para','su','sus','el','le','cada','es','entre','sin']);
-const PROT = ["ficha de caracterización familiar", "ficha de caracterización", "preparación entregada", "entidad competente", "receptor de continuidad", "doce meses", "trescientos cincuenta hogares", "doscientos hogares", "resiliencia financiera", "primera cuenta bancaria", "socio académico", "oferta de vivienda", "lugar de riesgo", "mesas de trabajo", "descripción pública", "paso a paso", "cabeza de hogar", "gastos esenciales", "ingresos netos", "una casa nueva", "nuestra historia", "Mi Ruta de Reubicación", "mesa comunitaria", "mesa técnica", "plan económico de transición", "hoja de devolución", "canal de emergencia", "atención pendiente", "Bella Flor", "Ciudad Bolívar", "la mamá", "gestora social", "nuevo hogar", "nueva vivienda"];
+const STOPW = new Set(['nos','me','te','les','se','lo','los','la','las','una','un','de','del','que','sobre','no','y','o','a','al','en','con','por','para','su','sus','el','le','cada','es','entre','sin']);
+const PROT = ["técnicas y comunitarias", "ficha de caracterización familiar", "ficha de caracterización", "preparación entregada", "entidad competente", "receptor de continuidad", "doce meses", "trescientos cincuenta hogares", "doscientos hogares", "resiliencia financiera", "primera cuenta bancaria", "socio académico", "oferta de vivienda", "lugar de riesgo", "mesas de trabajo", "descripción pública", "paso a paso", "cabeza de hogar", "gastos esenciales", "ingresos netos", "una casa nueva", "nuestra historia", "Mi Ruta de Reubicación", "mesa comunitaria", "mesa técnica", "plan económico de transición", "hoja de devolución", "canal de emergencia", "atención pendiente", "Bella Flor", "Ciudad Bolívar", "la mamá", "gestora social", "nuevo hogar", "nueva vivienda"];
 function splitsProt(ws, k) { const low = ws.join(' ').toLowerCase(), pos = ws.slice(0, k).join(' ').length; for (const p of PROT) { let i = low.indexOf(p.toLowerCase()); while (i >= 0) { if (i < pos && pos < i + p.length) return true; i = low.indexOf(p.toLowerCase(), i + 1); } } return false; }
 function wrapLines(s, max = 44) {
   if (s.length <= max) return [s];
@@ -118,7 +118,7 @@ function wrapLines(s, max = 44) {
   for (let k = 1; k < ws.length; k++) {
     const a = ws.slice(0, k).join(' '), b = ws.slice(k).join(' ');
     if (Math.max(a.length, b.length) > max + 8) continue;
-    const pen = Math.abs(a.length - b.length) + (STOPW.has(ws[k - 1].toLowerCase().replace(/[,;:]/g, '')) ? 60 : 0) - (/[,;:]$/.test(ws[k - 1]) ? 20 : 0) + (splitsProt(ws, k) ? 200 : 0) + (['que', 'de'].includes(ws[k].toLowerCase()) ? 40 : 0);
+    const pen = Math.abs(a.length - b.length) + (Math.min(a.length, b.length) < 16 ? 50 : 0) + (STOPW.has(ws[k - 1].toLowerCase().replace(/[,;:]/g, '')) ? 60 : 0) - (/[,;:]$/.test(ws[k - 1]) ? 20 : 0) + (splitsProt(ws, k) ? 200 : 0) + (['que', 'de'].includes(ws[k].toLowerCase()) ? 40 : 0);
     if (!best || pen < best[0]) best = [pen, a, b];
   }
   return best ? [best[1], best[2]] : [s];
@@ -134,11 +134,14 @@ function subtitles(t) {
   return g + '</g>';
 }
 // tarjeta de capítulo: aparece al inicio del bloque
+// (la capa oscura empieza ya opaca para que la escena nueva no destelle; en C1 la tarjeta llega con "En la primera etapa")
 function chapterCard(t, i, b) {
-  const lt = t - TL.blocks[b].start; if (lt < 0 || lt > 2.2) return '';
-  const a = eo(prog(lt, 0, .35)) * (1 - prog(lt, 1.8, 2.2));
+  const st = b === 'C1' ? M.C1_escucha - .2 : TL.blocks[b].start;
+  const lt = t - st; if (lt < 0 || lt > 2.0) return '';
+  const a = eo(prog(lt, 0, .35)) * (1 - prog(lt, 1.6, 2.0));
+  const dim = b === 'C1' ? a : 1 - prog(lt, 1.6, 2.0);
   const dx = (1 - eo(prog(lt, 0, .5))) * -80;
-  let g = rect(0, 0, W, H, { fill: C.navy, op: F(.82 * a) }) + `<g data-qa="skip" opacity="${F(a)}" transform="translate(${F(dx)},0)">`;
+  let g = rect(0, 0, W, H, { fill: C.navy, op: F(.82 * dim) }) + `<g data-qa="skip" opacity="${F(a)}" transform="translate(${F(dx)},0)">`;
   g += rect(0, 300, 1130, 150, { r: 0, fill: 'rgba(19,32,43,.92)' }) + rect(0, 300, 14, 150, { fill: C.teal });
   g += text(70, 358, `ETAPA ${i}`, { size: 28, weight: 700, fill: C.teal, ls: 4 });
   g += text(70, 416, ETAPAS[i - 1].toUpperCase(), { size: 54, weight: 800, fill: '#fff', ls: 2 });

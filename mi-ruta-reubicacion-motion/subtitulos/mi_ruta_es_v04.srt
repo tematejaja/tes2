@@ -263,93 +263,93 @@ Luego, en la entrega del caso, la gestora pasa la ficha al equipo siguiente,
 que confirma haberla recibido.
 
 67
-00:03:34,841 --> 00:03:38,866
+00:03:35,541 --> 00:03:39,566
 Ya en la nueva vivienda llega la quinta etapa: el acompañamiento.
 
 68
-00:03:38,916 --> 00:03:42,752
+00:03:39,616 --> 00:03:43,452
 Si meses después los ingresos de la mamá bajan mucho, se activa una alerta,
 
 69
-00:03:42,802 --> 00:03:44,679
+00:03:43,502 --> 00:03:45,379
 con responsable, acción y fecha.
 
 70
-00:03:44,729 --> 00:03:47,910
+00:03:45,429 --> 00:03:48,610
 La alerta no se cierra con un oficio o una remisión,
 
 71
-00:03:47,960 --> 00:03:50,933
+00:03:48,660 --> 00:03:51,633
 sino cuando la ayuda llega y la familia lo confirma.
 
 72
-00:03:51,934 --> 00:03:56,870
+00:03:52,634 --> 00:03:57,570
 En la sexta etapa, cierre y seguimiento, se revisa con la familia qué se cumplió.
 
 73
-00:03:56,920 --> 00:03:59,938
+00:03:57,620 --> 00:04:00,638
 Lo pendiente, como el futuro del predio donde vivían,
 
 74
-00:03:59,988 --> 00:04:01,906
+00:04:00,688 --> 00:04:02,606
 pasa a un receptor de continuidad.
 
 75
-00:04:01,956 --> 00:04:05,645
+00:04:02,656 --> 00:04:06,345
 El caso cierra con atención pendiente, pero con alguien que sigue.
 
 76
-00:04:05,695 --> 00:04:08,884
+00:04:06,395 --> 00:04:09,584
 Porque entregar las llaves no significa que todo esté resuelto.
 
 77
-00:04:08,934 --> 00:04:11,839
+00:04:09,634 --> 00:04:12,539
 Los actores del proceso nos advirtieron de un gran reto:
 
 78
-00:04:11,889 --> 00:04:16,113
+00:04:12,589 --> 00:04:16,813
 familias que no logran instalarse en su nuevo hogar y vuelven al lugar de riesgo.
 
 79
-00:04:16,163 --> 00:04:20,663
+00:04:16,863 --> 00:04:21,363
 Por eso, la propuesta también busca medir el impacto y el valor del reasentamiento,
 
 80
-00:04:20,713 --> 00:04:24,391
+00:04:21,413 --> 00:04:25,091
 algo que hoy no se hace, y sumar a un socio académico para lograrlo.
 
 81
-00:04:25,603 --> 00:04:27,794
+00:04:26,303 --> 00:04:28,494
 Mi Ruta de Reubicación propone acompañar
 
 82
-00:04:27,844 --> 00:04:30,818
+00:04:28,544 --> 00:04:31,518
 durante doce meses a doscientos hogares de Bella Flor:
 
 83
-00:04:30,868 --> 00:04:33,970
+00:04:31,568 --> 00:04:34,670
 una meta de acompañamiento, no de traslados.
 
 84
-00:04:34,020 --> 00:04:37,582
+00:04:34,720 --> 00:04:38,282
 Lo que una familia necesita antes de trasladarse se convierte
 
 85
-00:04:37,632 --> 00:04:40,897
+00:04:38,332 --> 00:04:41,597
 en compromisos que alguien acompaña y comprueba después.
 
 86
-00:04:40,947 --> 00:04:44,215
+00:04:41,647 --> 00:04:44,915
 Para que la mamá de nuestra historia no tenga que escoger
 
 87
-00:04:44,265 --> 00:04:46,369
+00:04:44,965 --> 00:04:47,069
 entre una casa nueva y todo lo demás;
 
 88
-00:04:46,419 --> 00:04:50,154
+00:04:47,119 --> 00:04:50,854
 para que reubicarse no sea empezar de cero, sino seguir adelante,
 
 89
-00:04:50,204 --> 00:04:51,318
+00:04:50,904 --> 00:04:52,018
 con alguien al lado.

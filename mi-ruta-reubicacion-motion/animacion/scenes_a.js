@@ -5,7 +5,7 @@ function sceneE0(t) {
   if (t < XF1 + .1) {
     const lab = t < M.E0_cbolivar - .15 ? ['BOGOTÁ · COLOMBIA', 'LOCALIZACIÓN TERRITORIAL'] : t < M.E0_bellaflor - .15 ? ['CIUDAD BOLÍVAR', 'LOCALIZACIÓN TERRITORIAL'] : t < SV_START ? ['BELLA FLOR', 'Ámbito del piloto: parte alta'] : null;
     if (lab) { const wide = lab[1].length > 30; g += rect(26, 20, 744, 170, { r: 12, fill: C.navy }) + rect(26, 20, 10, 170, { fill: C.teal }) + text(64, 88, lab[0], { size: 54, weight: 800, fill: '#fff' }) + text(64, 134, lab[1], { size: wide ? 28 : 26, weight: 500, fill: '#9FB4C2' }); }
-    if (t >= SV_START) g += rect(192, 78, 356, 176, { fill: C.navy, r: 10 }) + text(370, 150, 'Google Street View', { size: 30, weight: 700, fill: '#fff', anchor: 'middle' }) + text(370, 192, 'Imagen de calle · abr. 2025', { size: 24, weight: 500, fill: '#9FB4C2', anchor: 'middle' });
+    if (t >= SV_START) g += `<g>${rect(-12, -12, 512, 172, { fill: C.navy, r: 12 })}${text(244, 72, 'Google Street View', { size: 32, weight: 700, fill: '#fff', anchor: 'middle' })}${text(244, 118, 'Imagen de calle · abr. 2025 · © Google', { size: 22, weight: 500, fill: '#9FB4C2', anchor: 'middle' })}</g>`;
   }
   const a = eio(prog(t, XF0, XF1));
   if (a > 0) {
@@ -28,7 +28,7 @@ function sceneE1(t) {
   xs.forEach((x, i) => { p += rect(x - 210, 330, 420, 280, { r: 22, fill: '#1E3140', stroke: '#4a6273', sw: 3 }) + icon('persona', x - 60, 420, 56, '#cfe3ea') + icon('persona', x + 60, 420, 56, '#cfe3ea') + text(x, 520, ['Equipo de hoy', 'Otro equipo', 'Un tercer equipo'][i], { size: 30, weight: 700, fill: '#fff', anchor: 'middle' }); });
   // la ficha viaja y pierde hojas
   const k = eio(prog(t, M.E1_equipos - .4, M.E1_preguntas + .6)); const fx = lerp(380, 1540, k);
-  p += rect(fx - 165, 560, 330, 90, { r: 10, fill: C.ivory, stroke: C.ink, sw: 3 }) + text(fx, 615, 'Ficha de caracterización', { size: 22, weight: 800, anchor: 'middle' });
+  p += rect(fx - 215, 560, 430, 90, { r: 10, fill: C.ivory, stroke: C.ink, sw: 3 }) + text(fx, 615, 'Ficha de caracterización familiar', { size: 22, weight: 800, anchor: 'middle' });
   for (let i = 0; i < 5; i++) { const t0 = M.E1_equipos + i * .45; const q = prog(t, t0, t0 + 1.6); if (q > 0 && q < 1) { const px = lerp(380, 1540, eio(prog(t0, M.E1_equipos - .4, M.E1_preguntas + .6))) + i * 14; p += `<g opacity="${F(1 - q)}" transform="translate(${F(px)},${F(640 + q * 160)}) rotate(${F(q * 140 - 30)})">${rect(-24, -16, 48, 32, { fill: '#fff', stroke: C.ink, sw: 2 })}</g>`; } }
   p += win(t, M.E1_preguntas, tA, xs.map((x, i) => bubble(x - 205, 244, 410, 66, '¿Cuántos viven en la casa?', { tx: x - 40, size: 25 })).join(''), .3, .3);
   p += win(t, M.E1_compromisos, tA, `${rect(560, 680, 800, 120, { r: 16, fill: C.ivory, stroke: C.ink, sw: 3 })}${text(600, 728, 'Compromiso acordado', { size: 30, weight: 800 })}${text(600, 772, '¿Quién verifica que se cumplió?', { size: 28, weight: 600, fill: C.critd })}${text(1300, 760, '?', { size: 70, weight: 800, fill: C.critd, anchor: 'middle' })}`);
@@ -59,16 +59,17 @@ function sceneE1(t) {
   return g;
 }
 function sceneE2(t) {
-  let g = t < M.E2_ruta ? roomBg() : navyBg();
+  let g = t < M.E2_ruta + .35 ? roomBg() : navyBg();
   const tR = M.E2_ruta;
   // --- tres piezas
   let p = roomBg() + text(960, 205, '¿Cómo funciona? Tres piezas que trabajan juntas', { size: 46, weight: 800, anchor: 'middle' });
   const cx = [390, 960, 1530], cw = 520, cy = 250, chh = 560;
   const card = (i, title, title2) => rect(cx[i] - cw / 2, cy, cw, chh, { r: 24, fill: C.ivory, stroke: C.ink, sw: 4 }) + rect(cx[i] - cw / 2, cy, cw, 70, { r: 24, fill: C.navy }) + rect(cx[i] - cw / 2, cy + 46, cw, 24, { fill: C.navy }) + text(cx[i], cy + 47, title, { size: title.length > 30 ? 23 : 30, weight: 800, fill: C.teal, anchor: 'middle' }) + (title2 ? text(cx[i], cy + 112, title2, { size: 28, weight: 800, anchor: 'middle' }) : '');
-  p += G(t, M.E2_como + .6, card(0, '1 · Gestora social', '') + person(cx[0] - 90, 640, .95, { ...P.gestora, arm2: 40 }) + person(cx[0] + 120, 640, .92, { ...P.gestor, longhair: true, hair: '#4a3020' }) + tag(cx[0] + 120 - 90, 652, 'gestora de respaldo', { size: 20, center: true, w: 180 }) +
+  p += G(t, M.E2_gestora + .5, card(0, '1 · Gestora social', '') + person(cx[0] - 90, 640, .95, { ...P.gestora, arm2: 40 }) +
     text(cx[0], 730, 'Con nombre propio', { size: 28, weight: 700, anchor: 'middle' }) + text(cx[0], 772, 'acompaña a cada hogar', { size: 26, weight: 500, anchor: 'middle' }), { dy: 24 });
+  p += G(t, M.E2_gestora + 3.0, person(cx[0] + 120, 640, .92, { ...P.gestor, longhair: true, hair: '#4a3020' }) + tag(cx[0] + 120 - 90, 652, 'gestora de respaldo', { size: 20, center: true, w: 180 }), { dy: 16 });
   // marcos punteados de las tarjetas 2 y 3 mientras llegan
-  [1, 2].forEach(i => { p += G(t, M.E2_como + .8, `${rect(cx[i] - cw / 2, cy, cw, chh, { r: 24, fill: 'rgba(255,255,255,.35)', stroke: C.noned, sw: 3, dash: '12 10' })}${text(cx[i], cy + 47, i === 1 ? '2 · Ficha de caracterización familiar' : '3 · Compromisos', { size: i === 1 ? 23 : 30, weight: 800, fill: C.noned, anchor: 'middle' })}`, { out: i === 1 ? M.E2_ficha : M.E2_compromisos, outdur: .2 }); });
+  [0, 1, 2].forEach(i => { p += G(t, M.E2_como + .8, `${rect(cx[i] - cw / 2, cy, cw, chh, { r: 24, fill: 'rgba(255,255,255,.35)', stroke: C.noned, sw: 3, dash: '12 10' })}${text(cx[i], cy + 47, ['1 · Gestora social', '2 · Ficha de caracterización familiar', '3 · Compromisos'][i], { size: i === 1 ? 23 : 30, weight: 800, fill: C.noned, anchor: 'middle' })}`, { out: [M.E2_gestora + .5, M.E2_ficha, M.E2_compromisos][i], outdur: .2 }); });
   const k = eio(prog(t, M.E2_ficha + 1.0, M.E2_ficha + 3.0)); const fx = lerp(cx[1] - 140, cx[1] + 140, k);
   p += G(t, M.E2_ficha, card(1, '2 · Ficha de caracterización familiar', '') + circ(cx[1] - 170, 440, 40, { fill: C.roofb, stroke: C.ink, sw: 3 }) + text(cx[1] - 170, 512, 'Equipo 1', { size: 22, weight: 700, anchor: 'middle' }) + circ(cx[1] + 170, 440, 40, { fill: '#7A4FA8', stroke: C.ink, sw: 3 }) + text(cx[1] + 170, 512, 'Equipo 2', { size: 22, weight: 700, anchor: 'middle' }) +
     rect(fx - 56, 400, 112, 80, { r: 8, fill: '#fff', stroke: C.ink, sw: 3 }) + line(fx - 36, 425, fx + 36, 425, { stroke: C.slate, sw: 5 }) + line(fx - 36, 445, fx + 26, 445, { stroke: C.slate, sw: 5 }) + line(fx - 36, 465, fx + 16, 465, { stroke: C.slate, sw: 5 }) +
@@ -89,7 +90,7 @@ function sceneE2(t) {
     const lane = eio(prog(t, M.E2_mesas + .2, M.E2_mesas + 2.2));
     m += G(t, M.E2_mesas, `${line(160, 395, lerp(160, 1760, lane), 395, { stroke: C.slate, sw: 5, dash: '14 10' })}${circ(250, 395, 34, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('mesa', 250, 395, 46, C.ink)}${circ(340, 395, 34, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('manos', 340, 395, 44, C.ink)}${text(160, 340, 'MESAS DE TRABAJO · TÉCNICAS Y COMUNITARIAS', { size: 30, weight: 800, fill: C.teal, ls: 1 })}`, { dy: -10 });
     m += G(t, M.E2_mesas + 2.8, tag(1310, 312, 'En todo el proceso', { size: 26, fill: C.teal }), { dy: -6 });
-    m += G(t, M.E2_mesas + 1.2, tag(392, 371, 'con la gestora como mentora', { size: 22 }), { dx: -10, dy: 0 });
+    m += G(t, M.E2_mesas + 1.2, tag(392, 371, 'Gestora como mentora: orienta y devuelve los acuerdos', { size: 22 }), { dx: -10, dy: 0 });
     g += `<g opacity="${F(eo(prog(t, tR - .05, tR + .35)))}">${m}</g></g>`;
   }
   g += rect(0, 0, W, H, { fill: C.navy, op: F(1 - prog(t, B.E2.start, B.E2.start + .45)) });
