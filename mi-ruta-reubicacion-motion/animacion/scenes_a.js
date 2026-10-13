@@ -4,8 +4,8 @@ function sceneE0(t) {
   let g = '';
   if (t < XF1 + .1) {
     const lab = t < M.E0_cbolivar - .15 ? ['BOGOTÁ · COLOMBIA', 'LOCALIZACIÓN TERRITORIAL'] : t < M.E0_bellaflor - .15 ? ['CIUDAD BOLÍVAR', 'LOCALIZACIÓN TERRITORIAL'] : t < SV_START ? ['BELLA FLOR', 'Ámbito del piloto: parte alta'] : null;
-    if (lab) { const wide = lab[1].length > 30; g += rect(26, 20, 744, 170, { r: 12, fill: C.navy }) + rect(26, 20, 10, 170, { fill: C.teal }) + text(64, 88, lab[0], { size: 54, weight: 800, fill: '#fff' }) + text(64, 134, lab[1], { size: wide ? 28 : 26, weight: 500, fill: '#9FB4C2' }); }
-    if (t >= SV_START) g += `<g>${rect(-12, -12, 512, 172, { fill: C.navy, r: 12 })}${text(244, 72, 'Google Street View', { size: 32, weight: 700, fill: '#fff', anchor: 'middle' })}${text(244, 118, 'Imagen de calle · abr. 2025 · © Google', { size: 22, weight: 500, fill: '#9FB4C2', anchor: 'middle' })}</g>`;
+    if (lab) { const wide = lab[1].length > 30; g += rect(26, 20, 744, 170, { r: 12, fill: C.navy }) + rect(26, 20, 10, 170, { fill: C.teal }) + `<g opacity="${F(1 - prog(t, SV_START - SV_XF, SV_START))}">` + text(64, 88, lab[0], { size: 54, weight: 800, fill: '#fff' }) + text(64, 134, lab[1], { size: wide ? 28 : 26, weight: 500, fill: '#9FB4C2' }) + '</g>'; }
+    if (t >= SV_START - SV_XF) g += `<g opacity="${F(prog(t, SV_START - SV_XF, SV_START))}">${rect(-12, -12, 512, 172, { fill: C.navy, r: 12 })}${text(244, 72, 'Google Street View', { size: 32, weight: 700, fill: '#fff', anchor: 'middle' })}${text(244, 118, 'Imagen de calle · abr. 2025 · © Google', { size: 22, weight: 500, fill: '#9FB4C2', anchor: 'middle' })}</g>`;
   }
   const a = eio(prog(t, XF0, XF1));
   if (a > 0) {
@@ -59,7 +59,7 @@ function sceneE1(t) {
   return g;
 }
 function sceneE2(t) {
-  let g = t < M.E2_ruta + .35 ? roomBg() : navyBg();
+  let g = t < M.E2_ruta + .5 ? roomBg() : navyBg();
   const tR = M.E2_ruta;
   // --- tres piezas
   let p = roomBg() + text(960, 205, '¿Cómo funciona? Tres piezas que trabajan juntas', { size: 46, weight: 800, anchor: 'middle' });
@@ -91,7 +91,7 @@ function sceneE2(t) {
     m += G(t, M.E2_mesas, `${line(160, 395, lerp(160, 1760, lane), 395, { stroke: C.slate, sw: 5, dash: '14 10' })}${circ(250, 395, 34, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('mesa', 250, 395, 46, C.ink)}${circ(340, 395, 34, { fill: C.ivory, stroke: C.ink, sw: 3 })}${icon('manos', 340, 395, 44, C.ink)}${text(160, 340, 'MESAS DE TRABAJO · TÉCNICAS Y COMUNITARIAS', { size: 30, weight: 800, fill: C.teal, ls: 1 })}`, { dy: -10 });
     m += G(t, M.E2_mesas + 2.8, tag(1310, 312, 'En todo el proceso', { size: 26, fill: C.teal }), { dy: -6 });
     m += G(t, M.E2_mesas + 1.2, tag(392, 371, 'Gestora como mentora: orienta y devuelve los acuerdos', { size: 22 }), { dx: -10, dy: 0 });
-    g += `<g opacity="${F(eo(prog(t, tR - .05, tR + .35)))}">${m}</g></g>`;
+    g += `<g opacity="${F(eio(prog(t, tR - .2, tR + .5)))}">${m}</g></g>`;
   }
   g += rect(0, 0, W, H, { fill: C.navy, op: F(1 - prog(t, B.E2.start, B.E2.start + .45)) });
   return g;

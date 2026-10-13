@@ -1,6 +1,6 @@
 // ===== C1 diagnóstico, C2 plan, C3 articulación =====
 function sceneC1(t) {
-  let g = t < M.C1_urgencia ? landscape(t * 8, 0) : navyBg();
+  let g = t < M.C1_urgencia + .4 ? landscape(t * 8, t > M.C1_ficha ? .35 : 0) : navyBg();
   // A · la familia
   let a = landscape(t * 8, 0) + familyScene(t);
   a += G(t, M.C1_familia + .3, tag(520, 580, 'Familia ficticia', { size: 24, center: true, w: 240 }), {});

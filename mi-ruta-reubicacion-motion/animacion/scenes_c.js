@@ -38,7 +38,7 @@ function sceneC4(t) {
   });
   g += win(t, M.C4_nomudanza, M.C4_entrega, b);
   // entrega del caso
-  let c = roomBg() + G(t, M.C4_entrega, tag(960 - 220, 190, 'Entrega del caso, frente a la familia', { size: 32, fill: C.teal, center: true, w: 440 }), {});
+  let c = roomBg() + G(t, M.C4_entrega, tag(960 - 220, 190, 'Entrega del caso, frente a la familia', { size: 32, fill: C.teal, center: true, w: 440 }), { out: B.C4.start + B.C4.audio - .1 });
   const mv = eio(prog(t, M.C4_entrega + .6, M.C4_entrega + 2.6)), fx = lerp(1040, 1310, mv);
   c += person(700, 830, 1.0, { ...P.madre, arm2: 25 }) + person(1010, 830, 1.0, { ...P.gestora, arm2: t < M.C4_entrega + 2.8 ? 70 : 14 }) + person(1420, 830, 1.0, { ...P.prof, flip: true, arm1: 40 });
   const kout = B.C4.start + B.C4.audio - .1;
@@ -47,7 +47,7 @@ function sceneC4(t) {
   c += G(t, M.C4_confirma, tag(1290, 300, 'Recibido ✓', { size: 36, fill: '#DDF3E6', stroke: C.okd, color: C.okd, sw: 4 }), { dy: -10, out: kout });
   c += G(t, M.C4_confirma + .5, `${rect(640, 470, 120, 74, { r: 10, fill: C.ivory, stroke: C.ink, sw: 3 })}${text(700, 514, 'Copia', { size: 24, weight: 800, anchor: 'middle' })}`, { dy: -10, out: kout });
   const ka = prog(t, B.C4.start + B.C4.audio + .2, B.C4.start + B.C4.audio + .6);
-  if (ka > 0) c += `<g opacity="${F(ka)}">${rect(0, 0, W, H, { fill: C.navy, op: .5 })}${rect(620, 300, 680, 340, { r: 24, fill: 'rgba(19,32,43,.96)' })}${icon('llave', 960, 430, 150, C.teal)}${text(960, 555, 'Traslado efectivo', { size: 48, weight: 800, fill: '#fff', anchor: 'middle' })}${text(960, 600, 'condiciones verificadas por la entidad competente', { size: 24, weight: 600, fill: '#cfe3ea', anchor: 'middle' })}</g>`;
+  if (ka > 0) c += `<g opacity="${F(ka)}">${rect(0, 0, W, H, { fill: C.navy, op: .5 })}${rect(620, 210, 680, 340, { r: 24, fill: 'rgba(19,32,43,.96)' })}${icon('llave', 960, 340, 150, C.teal)}${text(960, 465, 'Traslado efectivo', { size: 48, weight: 800, fill: '#fff', anchor: 'middle' })}${text(960, 510, 'condiciones verificadas por la entidad competente', { size: 24, weight: 600, fill: '#cfe3ea', anchor: 'middle' })}</g>`;
   g += win(t, M.C4_entrega, undefined, c);
   return g;
 }

@@ -94,3 +94,17 @@ Auditoría independiente sobre `render/mi_ruta_reubicacion_v6.mp4`.
 | 8, 16 | BAJA | Escala "200 m" bajo el subtítulo, y ritmo denso. | Sin cambios: la escala es parte del video fuente y no hay margen de duración, porque el tope es de 5:00. |
 
 Duración resultante: 4:59,7.
+
+## Vuelta 2, sobre `v6_final` (veredicto: listo con ajustes, ya aplicados)
+
+Las 16 correcciones de la Vuelta 1 quedaron verificadas como resueltas (la #7, solo en la pantalla). Los 7 comentarios del equipo cumplen. Voz alineada con 0 ms de desfase en los 10 bloques. SRT idéntico al guion. Audio: −14,0 LUFS, −1,5 dBTP. Sin ningún "350".
+
+| # | Severidad | Hallazgo | Corrección |
+| --- | --- | --- | --- |
+| M1 | MEDIA | Corte seco de claro a azul a las 1:56,79, al entrar a la urgencia de C1. | El paisaje se mantiene, con velo, hasta que el azul de la urgencia termina de entrar en fundido. |
+| B1 | BAJA | SRT/VTT en una sola línea. | Corte en dos líneas con las mismas reglas que los subtítulos en pantalla. |
+| B2 | BAJA | El rótulo de Street View cambiaba en seco. | Rótulos cruzados durante el fundido de 0,3 s. |
+| B3 | BAJA | "Traslado efectivo" tapaba las cabezas. | Tarjeta 90 px más arriba; el rótulo "Entrega del caso" sale antes. |
+| B4 | BAJA | Fundido beige → azul muy rápido (1:02,75). | Fundido de 0,7 s con curva suave. |
+
+Quedan como hallazgos aceptados la escala "200 m" bajo el subtítulo y el ritmo denso (no hay margen de duración).

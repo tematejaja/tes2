@@ -85,12 +85,21 @@ json.dump(tl, open(Path(__file__).parent/"timeline.json","w"), ensure_ascii=Fals
 print("total %.1f s = %d:%04.1f" % (tl["total"], tl["total"]//60, tl["total"]%60))
 for b,v in tl["blocks"].items(): print(b, round(v["start"],1), round(v["end"],1))
 print("cr", round(tl["cr_start"],1), "cues", len(final))
-# SRT / VTT
+# SRT / VTT (dos líneas con las mismas reglas que los subtítulos en pantalla, ui.js wrapLines)
+def lineas(s, mx=44):
+    if len(s) <= mx: return s
+    ws = s.split(); best = None
+    for k in range(1, len(ws)):
+        a, c = " ".join(ws[:k]), " ".join(ws[k:])
+        if max(len(a), len(c)) > mx + 8: continue
+        pen = abs(len(a) - len(c)) + (50 if min(len(a), len(c)) < 16 else 0) + (60 if ws[k-1].lower().strip(",;:") in STOP else 0) - (20 if ws[k-1][-1] in ",;:" else 0) + (200 if dentro(ws, k) else 0) + (40 if ws[k].lower() in ("que", "de") else 0)
+        if best is None or pen < best[0]: best = (pen, a, c)
+    return best[1] + "\n" + best[2] if best else s
 def f(x, sep):
     h=int(x//3600); m=int(x%3600//60); s=x%60
     return f"{h:02d}:{m:02d}:{int(s):02d}{sep}{int(round((s-int(s))*1000)):03d}"
-srt = "\n".join(f"{i+1}\n{f(c['s'],',')} --> {f(c['e'],',')}\n{c['text']}\n" for i,c in enumerate(final))
-vtt = "WEBVTT\n\n" + "\n".join(f"{f(c['s'],'.')} --> {f(c['e'],'.')}\n{c['text']}\n" for c in final)
+srt = "\n".join(f"{i+1}\n{f(c['s'],',')} --> {f(c['e'],',')}\n{lineas(c['text'])}\n" for i,c in enumerate(final))
+vtt = "WEBVTT\n\n" + "\n".join(f"{f(c['s'],'.')} --> {f(c['e'],'.')}\n{lineas(c['text'])}\n" for c in final)
 (R/"subtitulos").mkdir(exist_ok=True)
 (R/f"subtitulos/mi_ruta_es_{V}.srt").write_text(srt); (R/f"subtitulos/mi_ruta_es_{V}.vtt").write_text(vtt)
 
