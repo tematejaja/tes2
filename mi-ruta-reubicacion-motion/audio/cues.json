@@ -1,0 +1,440 @@
+{
+ "fps": 24,
+ "duration_s": 299.668,
+ "energy": "calm",
+ "lufs": -14,
+ "kit": "audio/kit",
+ "music": {
+  "file": "audio/music.wav",
+  "start_s": 0,
+  "loop": false,
+  "fade_out_s": 3.0
+ },
+ "voice": [
+  {
+   "file": "audio/vo.wav",
+   "start_s": 0
+  }
+ ],
+ "silence_ok": [
+  [
+   298.668,
+   299.668
+  ]
+ ],
+ "cues": [
+  {
+   "id": "e0-pregunta",
+   "t": 9.27,
+   "sound": "ui/kenney-interface-select-005",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "e0-demas",
+   "t": 13.824,
+   "sound": "pop/kenney-interface-drop-002",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "e0-icono1",
+   "t": 15.124,
+   "sound": "pop/kenney-interface-drop-003",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "e0-icono2",
+   "t": 16.024,
+   "sound": "pop/kenney-interface-drop-004",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.4,
+   "visual": "appear"
+  },
+  {
+   "id": "e1-noexiste",
+   "t": 30.386,
+   "sound": "ui/kenney-interface-select-002",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "e1-titulo",
+   "t": 34.116,
+   "sound": "tap/kenney-impact-impact-wood-heavy-003+boom/kenney-scifi-low-frequency-explosion-000",
+   "weight": "hero",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear",
+   "stop_before": true,
+   "build": true
+  },
+  {
+   "id": "e1-puertas",
+   "t": 37.763,
+   "sound": "tap/kenney-impact-impact-wood-medium-000",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "e1-validado",
+   "t": 40.538,
+   "sound": "ui/kenney-interface-select-001",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "e2-gestora",
+   "t": 47.295,
+   "sound": "tap/kenney-impact-impact-wood-medium-002",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.4,
+   "visual": "appear"
+  },
+  {
+   "id": "e2-ficha",
+   "t": 51.116,
+   "sound": "tap/kenney-impact-impact-wood-medium-003",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "e2-historia",
+   "t": 55.814,
+   "sound": "tap/kenney-impact-impact-wood-light-003",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "e2-ruta",
+   "t": 62.576,
+   "sound": "swish/kenney-rpg-cloth1",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "e2-financiera",
+   "t": 69.989,
+   "sound": "tap/kenney-impact-impact-wood-medium-004",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "e2-todo",
+   "t": 74.973,
+   "sound": "ui/kenney-interface-select-006",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "etapa1",
+   "t": 85.908,
+   "sound": "swish/kenney-rpg-cloth1",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "move"
+  },
+  {
+   "id": "c1-conservar",
+   "t": 91.408,
+   "sound": "pop/kenney-interface-drop-002",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.2,
+   "visual": "appear"
+  },
+  {
+   "id": "c1-propone",
+   "t": 92.608,
+   "sound": "pop/kenney-interface-drop-003",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.4,
+   "visual": "appear"
+  },
+  {
+   "id": "c1-mesa",
+   "t": 96.201,
+   "sound": "pop/kenney-interface-drop-004",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.4,
+   "visual": "appear"
+  },
+  {
+   "id": "c1-revisada",
+   "t": 108.136,
+   "sound": "tap/kenney-impact-impact-wood-medium-001",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "c1-nogarantiza",
+   "t": 112.657,
+   "sound": "tap/kenney-impact-impact-plank-medium-003",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.4,
+   "visual": "appear"
+  },
+  {
+   "id": "c1-noobliga",
+   "t": 114.257,
+   "sound": "tap/kenney-impact-impact-punch-medium-000",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.4,
+   "visual": "appear"
+  },
+  {
+   "id": "etapa2",
+   "t": 122.415,
+   "sound": "paper/kenney-casino-cards-pack-open-2",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "move"
+  },
+  {
+   "id": "c2-propuesta1",
+   "t": 134.289,
+   "sound": "tap/kenney-impact-impact-wood-medium-000",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "c2-propuesta2",
+   "t": 134.889,
+   "sound": "tap/kenney-impact-impact-wood-medium-002",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "c2-evalua",
+   "t": 136.089,
+   "sound": "chime/kenney-interface-glass-001",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "c2-p01",
+   "t": 148.347,
+   "sound": "tap/kenney-impact-impact-punch-medium-001",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "etapa3",
+   "t": 152.876,
+   "sound": "swish/kenney-rpg-cloth1",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "move"
+  },
+  {
+   "id": "c3-aceptada",
+   "t": 168.018,
+   "sound": "chime/kenney-interface-glass-001",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "c3-hoja",
+   "t": 174.726,
+   "sound": "swish/kenney-casino-card-slide-4",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.4,
+   "visual": "appear"
+  },
+  {
+   "id": "c3-sello",
+   "t": 185.225,
+   "sound": "tap/kenney-impact-impact-punch-medium-004+boom/kenney-scifi-low-frequency-explosion-001",
+   "weight": "hero",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear",
+   "stop_before": true,
+   "build": true
+  },
+  {
+   "id": "etapa4",
+   "t": 187.536,
+   "sound": "swish/kenney-casino-card-slide-4",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "move"
+  },
+  {
+   "id": "c4-formacion",
+   "t": 196.613,
+   "sound": "ui/kenney-interface-select-003",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.2,
+   "visual": "appear"
+  },
+  {
+   "id": "c4-recibido",
+   "t": 211.758,
+   "sound": "pop/kenney-interface-drop-001",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "c4-traslado",
+   "t": 213.89,
+   "sound": "tap/kenney-impact-impact-wood-medium-001+boom/kenney-scifi-low-frequency-explosion-000",
+   "weight": "hero",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear",
+   "stop_before": true,
+   "build": true
+  },
+  {
+   "id": "etapa5",
+   "t": 214.99,
+   "sound": "swish/kenney-rpg-cloth1",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "move"
+  },
+  {
+   "id": "c5-alerta",
+   "t": 219.916,
+   "sound": "tap/kenney-impact-impact-wood-heavy-003",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "c5-cerrada",
+   "t": 229.81,
+   "sound": "chime/kenney-interface-glass-001",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "etapa6",
+   "t": 232.083,
+   "sound": "swish/kenney-casino-card-slide-4",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "move"
+  },
+  {
+   "id": "c6-cumplido",
+   "t": 236.534,
+   "sound": "ui/kenney-interface-select-004",
+   "weight": "support",
+   "align": "peak",
+   "pan": -0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "c6-receptor",
+   "t": 240.52,
+   "sound": "tap/kenney-impact-impact-wood-medium-004",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.4,
+   "visual": "appear"
+  },
+  {
+   "id": "c6-llaves",
+   "t": 246.495,
+   "sound": "tap/kenney-impact-impact-plate-heavy-001",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "c6-socio",
+   "t": 263.263,
+   "sound": "ui/kenney-interface-select-005",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.3,
+   "visual": "appear"
+  },
+  {
+   "id": "e9-notraslados",
+   "t": 271.568,
+   "sound": "ui/kenney-interface-select-007",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "e9-lema",
+   "t": 290.747,
+   "sound": "chime/kenney-interface-glass-001",
+   "weight": "support",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear"
+  },
+  {
+   "id": "cr-titulo",
+   "t": 294.61,
+   "sound": "tap/kenney-impact-impact-plank-medium-003+boom/kenney-scifi-low-frequency-explosion-001",
+   "weight": "hero",
+   "align": "peak",
+   "pan": 0.0,
+   "visual": "appear",
+   "stop_before": true,
+   "build": true
+  }
+ ]
+}

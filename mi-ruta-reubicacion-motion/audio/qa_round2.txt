@@ -1,0 +1,147 @@
+pass  offset                 encoded audio vs mix.wav: worst 0 samples (0.00 ms), lags [0, 0, 0]
+pass  loudness               integrated -14.11 LUFS, target -14
+pass  true peak              -1.97 dBTP (limit -1.0)
+pass  picture e0-pregunta    appear at frame 222: change at frame 221 (10.93 vs local 0.15)
+pass  picture e0-demas       appear at frame 332: change at frame 332 (2.76 vs local 0.09)
+warn  picture e0-icono1      appear at frame 363: change at frame 364 (0.12 vs local 0.07)
+warn  picture e0-icono2      appear at frame 385: change at frame 386 (0.12 vs local 0.07)
+pass  picture e1-noexiste    appear at frame 729: change at frame 730 (0.53 vs local 0.02)
+pass  picture e1-titulo      appear at frame 819: change at frame 818 (11.64 vs local 1.13)
+pass  picture e1-puertas     appear at frame 906: change at frame 907 (2.64 vs local 0.04)
+pass  picture e1-validado    appear at frame 973: change at frame 973 (1.28 vs local 0.03)
+pass  picture e2-gestora     appear at frame 1135: change at frame 1136 (1.12 vs local 0.00)
+pass  picture e2-ficha       appear at frame 1227: change at frame 1227 (1.79 vs local 0.00)
+pass  picture e2-historia    appear at frame 1340: change at frame 1340 (3.96 vs local 0.00)
+warn  picture e2-ruta        appear at frame 1502: change at frame 1503 (2.64 vs local 2.50)
+warn  picture e2-financiera  appear at frame 1680: change at frame 1681 (0.28 vs local 0.00)
+warn  picture e2-todo        appear at frame 1799: change at frame 1800 (0.14 vs local 0.00)
+pass  picture etapa1         move at frame 2062: motion peak at frame 2063
+pass  picture c1-conservar   appear at frame 2194: change at frame 2194 (3.97 vs local 0.06)
+warn  picture c1-propone     appear at frame 2223: change at frame 2224 (0.35 vs local 0.05)
+warn  picture c1-mesa        appear at frame 2309: change at frame 2310 (0.20 vs local 0.05)
+pass  picture c1-revisada    appear at frame 2595: change at frame 2596 (1.01 vs local 0.03)
+warn  picture c1-nogarantiza appear at frame 2704: change at frame 2705 (0.17 vs local 0.03)
+warn  picture c1-noobliga    appear at frame 2742: change at frame 2743 (0.20 vs local 0.03)
+pass  picture etapa2         move at frame 2938: motion peak at frame 2939
+warn  picture c2-propuesta1  appear at frame 3223: change at frame 3224 (0.25 vs local 0.00)
+warn  picture c2-propuesta2  appear at frame 3237: change at frame 3238 (0.17 vs local 0.06)
+warn  picture c2-evalua      appear at frame 3266: change at frame 3267 (0.11 vs local 0.00)
+warn  picture c2-p01         appear at frame 3560: change at frame 3561 (0.16 vs local 0.03)
+pass  picture etapa3         move at frame 3669: motion peak at frame 3668
+warn  picture c3-aceptada    appear at frame 4032: change at frame 4032 (0.40 vs local 0.11)
+pass  picture c3-hoja        appear at frame 4193: change at frame 4194 (3.28 vs local 0.00)
+pass  picture c3-sello       appear at frame 4445: change at frame 4444 (20.65 vs local 0.00)
+pass  picture etapa4         move at frame 4501: motion peak at frame 4499
+warn  picture c4-formacion   appear at frame 4719: change at frame 4720 (0.21 vs local 0.00)
+pass  picture c4-recibido    appear at frame 5082: change at frame 5083 (5.49 vs local 0.00)
+pass  picture c4-traslado    appear at frame 5133: change at frame 5134 (10.16 vs local 0.32)
+pass  picture etapa5         move at frame 5160: motion peak at frame 5157
+pass  picture c5-alerta      appear at frame 5278: change at frame 5279 (3.83 vs local 0.51)
+warn  picture c5-cerrada     appear at frame 5515: change at frame 5515 (0.09 vs local 0.06)
+pass  picture etapa6         move at frame 5570: motion peak at frame 5569
+warn  picture c6-cumplido    appear at frame 5677: change at frame 5678 (0.14 vs local 0.01)
+warn  picture c6-receptor    appear at frame 5772: change at frame 5773 (0.11 vs local 0.00)
+pass  picture c6-llaves      appear at frame 5916: change at frame 5915 (2.13 vs local 0.34)
+warn  picture c6-socio       appear at frame 6318: change at frame 6319 (0.20 vs local 0.00)
+pass  picture e9-notraslados appear at frame 6518: change at frame 6518 (1.82 vs local 0.00)
+pass  picture e9-lema        appear at frame 6978: change at frame 6979 (3.21 vs local 0.21)
+FAIL  picture cr-titulo      appear at frame 7071: change at frame 7072 (2.23 vs local 0.97)
+pass  sync e0-pregunta       peak 0.00 frames from its cue
+pass  audible e0-pregunta    stands out by 1.9 dB in 1000-2000 Hz over music+voice
+pass  sync e0-demas          peak 0.00 frames from its cue
+FAIL  audible e0-demas       stands out by 1.3 dB in 500-1000 Hz over music+voice
+pass  sync e0-icono1         peak 0.00 frames from its cue
+pass  audible e0-icono1      stands out by 1.5 dB in 500-1000 Hz over music+voice
+pass  sync e0-icono2         peak 0.00 frames from its cue
+FAIL  audible e0-icono2      stands out by 0.9 dB in 500-1000 Hz over music+voice
+pass  sync e1-noexiste       peak 0.00 frames from its cue
+pass  audible e1-noexiste    stands out by 2.1 dB in 500-1000 Hz over music+voice
+pass  sync e1-titulo         peak 0.00 frames from its cue
+pass  audible e1-titulo      stands out by 2.4 dB in 125-250 Hz over music+voice
+FAIL  hero body e1-titulo    main band 125-250 Hz lifted 2.4 dB (needs 3)
+pass  sync e1-puertas        peak 0.00 frames from its cue
+pass  audible e1-puertas     stands out by 2.4 dB in 125-250 Hz over music+voice
+pass  sync e1-validado       peak 0.00 frames from its cue
+FAIL  audible e1-validado    stands out by 0.5 dB in 2000-4000 Hz over music+voice
+pass  sync e2-gestora        peak 0.00 frames from its cue
+pass  audible e2-gestora     stands out by 4.3 dB in 250-500 Hz over music+voice
+pass  sync e2-ficha          peak 0.00 frames from its cue
+pass  audible e2-ficha       stands out by 2.7 dB in 125-250 Hz over music+voice
+pass  sync e2-historia       peak 0.00 frames from its cue
+pass  audible e2-historia    stands out by 1.9 dB in 125-250 Hz over music+voice
+pass  sync e2-ruta           peak 0.00 frames from its cue
+pass  audible e2-ruta        stands out by 7.0 dB in 1000-2000 Hz over music+voice
+pass  sync e2-financiera     peak 0.00 frames from its cue
+pass  audible e2-financiera  stands out by 3.5 dB in 125-250 Hz over music+voice
+pass  sync e2-todo           peak 1.00 frames from its cue
+pass  audible e2-todo        stands out by 2.6 dB in 500-1000 Hz over music+voice
+pass  sync etapa1            peak 0.00 frames from its cue
+FAIL  audible etapa1         stands out by 1.2 dB in 1000-2000 Hz over music+voice
+pass  sync c1-conservar      peak 0.00 frames from its cue
+pass  audible c1-conservar   stands out by 2.3 dB in 500-1000 Hz over music+voice
+pass  sync c1-propone        peak 0.00 frames from its cue
+pass  audible c1-propone     stands out by 2.0 dB in 500-1000 Hz over music+voice
+pass  sync c1-mesa           peak 0.00 frames from its cue
+pass  audible c1-mesa        stands out by 2.6 dB in 500-1000 Hz over music+voice
+pass  sync c1-revisada       peak 0.00 frames from its cue
+pass  audible c1-revisada    stands out by 2.4 dB in 125-250 Hz over music+voice
+pass  sync c1-nogarantiza    peak 0.00 frames from its cue
+FAIL  audible c1-nogarantiza stands out by 0.2 dB in 250-500 Hz over music+voice
+pass  sync c1-noobliga       peak 0.00 frames from its cue
+FAIL  audible c1-noobliga    stands out by 1.0 dB in 250-500 Hz over music+voice
+pass  sync etapa2            peak 0.00 frames from its cue
+pass  audible etapa2         stands out by 1.8 dB in 2000-4000 Hz over music+voice
+pass  sync c2-propuesta1     peak 0.00 frames from its cue
+pass  audible c2-propuesta1  stands out by 2.0 dB in 250-500 Hz over music+voice
+pass  sync c2-propuesta2     peak 0.00 frames from its cue
+FAIL  audible c2-propuesta2  stands out by 0.7 dB in 125-250 Hz over music+voice
+pass  sync c2-evalua         peak 0.01 frames from its cue
+pass  audible c2-evalua      stands out by 1.7 dB in 2000-4000 Hz over music+voice
+pass  sync c2-p01            peak 0.00 frames from its cue
+pass  audible c2-p01         stands out by 1.9 dB in 125-250 Hz over music+voice
+pass  sync etapa3            peak 0.00 frames from its cue
+pass  audible etapa3         stands out by 2.0 dB in 1000-2000 Hz over music+voice
+pass  sync c3-aceptada       peak 0.01 frames from its cue
+pass  audible c3-aceptada    stands out by 4.2 dB in 1000-2000 Hz over music+voice
+pass  sync c3-hoja           peak 0.00 frames from its cue
+FAIL  audible c3-hoja        stands out by 0.2 dB in 1000-2000 Hz over music+voice
+pass  sync c3-sello          peak 0.00 frames from its cue
+pass  audible c3-sello       stands out by 2.7 dB in 125-250 Hz over music+voice
+FAIL  hero body c3-sello     main band 125-250 Hz lifted 2.7 dB (needs 3)
+pass  sync etapa4            peak 0.00 frames from its cue
+FAIL  audible etapa4         stands out by 0.1 dB in 1000-2000 Hz over music+voice
+pass  sync c4-formacion      peak 0.00 frames from its cue
+pass  audible c4-formacion   stands out by 1.6 dB in 2000-4000 Hz over music+voice
+pass  sync c4-recibido       peak 0.00 frames from its cue
+pass  audible c4-recibido    stands out by 2.2 dB in 1000-2000 Hz over music+voice
+pass  sync c4-traslado       peak 0.00 frames from its cue
+pass  audible c4-traslado    stands out by 2.0 dB in 125-250 Hz over music+voice
+FAIL  hero body c4-traslado  main band 125-250 Hz lifted 2.0 dB (needs 3)
+pass  sync etapa5            peak 0.01 frames from its cue
+FAIL  audible etapa5         stands out by 1.4 dB in 1000-2000 Hz over music+voice
+pass  sync c5-alerta         peak 0.00 frames from its cue
+pass  audible c5-alerta      stands out by 1.7 dB in 125-250 Hz over music+voice
+pass  sync c5-cerrada        peak 0.01 frames from its cue
+pass  audible c5-cerrada     stands out by 1.9 dB in 1000-2000 Hz over music+voice
+pass  sync etapa6            peak 0.00 frames from its cue
+FAIL  audible etapa6         stands out by 0.1 dB in 1000-2000 Hz over music+voice
+pass  sync c6-cumplido       peak 0.00 frames from its cue
+pass  audible c6-cumplido    stands out by 1.9 dB in 1000-2000 Hz over music+voice
+pass  sync c6-receptor       peak 0.00 frames from its cue
+pass  audible c6-receptor    stands out by 2.4 dB in 125-250 Hz over music+voice
+pass  sync c6-llaves         peak 0.00 frames from its cue
+pass  audible c6-llaves      stands out by 1.8 dB in 1000-2000 Hz over music+voice
+pass  sync c6-socio          peak 0.00 frames from its cue
+pass  audible c6-socio       stands out by 1.7 dB in 1000-2000 Hz over music+voice
+pass  sync e9-notraslados    peak 0.00 frames from its cue
+pass  audible e9-notraslados stands out by 2.0 dB in 4000-8000 Hz over music+voice
+pass  sync e9-lema           peak 0.01 frames from its cue
+pass  audible e9-lema        stands out by 1.6 dB in 2000-4000 Hz over music+voice
+pass  sync cr-titulo         peak 0.00 frames from its cue
+pass  audible cr-titulo      stands out by 2.8 dB in 125-250 Hz over music+voice
+FAIL  hero body cr-titulo    main band 125-250 Hz lifted 2.8 dB (needs 3)
+pass  voice                  music sits 15.7 LU under the voice (median while speaking)
+pass  music                  median -29.4 LUFS short-term; unplanned dips at []
+pass  silence                none
+
+FAILED: 16 failed, 19 warnings. Picture: audio/qa.png

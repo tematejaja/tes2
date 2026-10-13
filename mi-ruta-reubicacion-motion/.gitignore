@@ -1,1 +1,7 @@
 narracion/heygen/cache/
+sound-layer/
+audio/kit/
+audio/stems/
+audio/music_src/
+audio/*.wav
+out/
